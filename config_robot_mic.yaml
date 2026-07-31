@@ -113,3 +113,10 @@ tts:
   speaker_port: 17891
   voice: /home/unitree/NhanHuynh/go2_jetson_demo/models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx
   piper_bin: /home/unitree/piper/piper
+
+# 2026-07-31: KHONG dung cong goi ten o day (require_name mac dinh false) —
+#   da thu va BO: STT nghe chu "Gô" thanh "vô"/"ngô" nen cong chan luon ca lenh
+#   THAT. Cach chan false-trigger dang dung thay the: chay bang PUSH-TO-TALK
+#   (assistant_ptt.py --key space) -> mic chi mo dung luc bam phim.
+#   Cong goi ten van dung cho buoi dien 2 con (config_cho_A/B.yaml), o do no
+#   giai bai toan khac: hai con khoi tra loi chong len nhau.

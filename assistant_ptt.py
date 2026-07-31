@@ -1,33 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-assistant_ptt.py — GoVoice PUSH-TO-TALK (bam-de-noi).
+assistant_ptt.py — GoVoice PUSH-TO-TALK (bam-de-noi), MIC ROBOT.
 
-Khac assistant_realtime.py (nghe LIEN TUC): file nay CHI nghe khi ban BAM PHIM 'T'.
-Bam T -> noi 1 cau -> VAD tu ngat khi im lang -> STT -> nghi -> noi + hanh dong.
-Xong, bam T lan nua de noi cau tiep. Dung cho NGOAI TROI on ao (mic khong tu nghe
-tap am xung quanh, chi mo mic dung luc ban bam).
+Khac assistant_realtime.py (nghe LIEN TUC): file nay CHI nghe khi ban BAM PHIM.
+Bam phim -> noi 1 cau -> VAD tu ngat khi im lang -> STT -> nghi -> noi + hanh dong.
+Xong, bam lan nua de noi cau tiep.
+
+VI SAO CAN: mic robot nam ngay tren than may, nghe ca tieng quat/dong co cua chinh
+no. Nghe LIEN TUC thi thinh thoang VAD+STT "bay" ra cau co nghia du KHONG ai noi
+(do duoc bang mic_debug.py tren con B: 2/5 doan 5s im lang van ra cau tieng Viet).
+PTT cat tan goc — mic chi mo dung luc ban bam phim.
 
 Dung chung "bo nao" + robot + safety + VAD voi assistant_realtime (KHONG sua file do).
 
-CHAY:
+CHAY (can go2_audio_bridge.py chay san de cau mic robot -> UDP):
   # robot GIA (dry-run, an toan test logic):
-  python3 assistant_ptt.py
+  python3 assistant_ptt.py --config config_robot_mic.yaml --key space
   # robot THAT tren Jetson:
-  python3 assistant_ptt.py --real
-  # doi phim kich hoat (mac dinh 't'):
-  python3 assistant_ptt.py --key space
+  python3 assistant_ptt.py --config config_robot_mic.yaml --key space --real
 """
 
 import argparse
+import socket
 import sys
 import time
 
-import numpy as np
-
 from assistant_realtime import GoVoiceRT, load_config
-from audio_io import (SR, FRAME_SAMPLES, FRAME_BYTES, get_listener,
-                      resolve_input_device, ensure_capture_gain)
+from audio_io import FRAME_BYTES, get_listener, _den_on
 
 
 def build_stt(cfg):
@@ -52,61 +52,61 @@ def build_stt(cfg):
                initial_prompt=s.get("initial_prompt"))
 
 
-def capture_one(device, seg, max_wait_s=8.0, stall_s=1.5, mic_gain=25):
-    """Mo mic, thu DUNG 1 cau roi dong. VAD (seg) tu ngat khi im lang.
-    Tra ve audio float32 16k, hoac None neu: khong noi gi trong max_wait_s,
-    hoac mic treo (khong ra du lieu) qua stall_s."""
-    import sounddevice as sd
-    try:
-        from scipy.signal import resample_poly
-    except Exception:
-        resample_poly = None
+class UdpCapture:
+    """Thu 1 cau tu MIC ROBOT (UDP do go2_audio_bridge.py ban sang).
 
-    device = resolve_input_device(device)     # "auto"/ten sai -> tu tim mic USB
-    ensure_capture_gain(device, mic_gain)     # hub hay reset gain -> dat lai muc chuan (25%)
-    cap_sr = SR
-    try:
-        di = sd.query_devices(device, "input")
-        dsr = int(round(di.get("default_samplerate") or SR))
-        if dsr != SR and dsr % SR == 0:
-            cap_sr = dsr
-    except Exception:
-        pass
-    down = cap_sr // SR
-    blocksize = FRAME_SAMPLES * down
+    Bridge ban UDP LIEN TUC, khong the "dong mic" giua cac lan bam. Nen giu socket
+    mo suot, va ngay TRUOC moi lan thu thi VUT HET goi da don lai — khong lam vay
+    se nghe lai am thanh cua luc CHUA bam phim, dung cai ma push-to-talk sinh ra
+    de tranh.
+    """
 
-    seg.reset()
-    t0 = time.time()
-    last_ok = t0
-    with sd.RawInputStream(samplerate=cap_sr, blocksize=blocksize,
-                           dtype="int16", channels=1, device=device) as stream:
+    def __init__(self, listener):
+        self.seg = listener.seg
+        self.den = listener.den
+        self.addr = listener.addr
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.sock.bind(listener.addr)
+        self.leftover = b""
+
+    def _drain(self):
+        self.sock.setblocking(False)
+        try:
+            while True:
+                try:
+                    self.sock.recv(65536)
+                except (BlockingIOError, OSError):
+                    break
+        finally:
+            self.sock.setblocking(True)
+        self.leftover = b""
+
+    def capture_one(self, max_wait_s=8.0):
+        """Thu DUNG 1 cau roi thoi. None neu khong noi gi trong max_wait_s."""
+        self.seg.reset()
+        self._drain()
+        t0 = time.time()
+        self.sock.settimeout(0.3)
         while True:
-            if stream.read_available < blocksize:
-                time.sleep(0.005)
-                now = time.time()
-                # chua noi gi ma qua han cho -> thoi (bam T lai)
-                if not seg.recording and now - t0 > max_wait_s:
-                    return None
-                # mic treo giua chung -> bo, tranh dung mai
-                if now - last_ok > stall_s:
+            try:
+                data, _ = self.sock.recvfrom(4096)
+            except socket.timeout:
+                if not self.seg.recording and time.time() - t0 > max_wait_s:
                     return None
                 continue
-            data, _overflow = stream.read(blocksize)
-            last_ok = time.time()
-            if cap_sr == SR:
-                frame = bytes(data)
-            else:
-                x = np.frombuffer(bytes(data), dtype=np.int16).astype(np.float32)
-                if resample_poly is not None:
-                    y = resample_poly(x, SR, cap_sr)
-                else:
-                    y = x[::down]
-                frame = np.clip(y, -32768, 32767).astype(np.int16).tobytes()
-            if len(frame) != FRAME_BYTES:
-                continue
-            utt = seg.feed(frame)          # tu gom + tu ngat khi im lang
-            if utt is not None:
-                return utt
+            self.leftover += data
+            while len(self.leftover) >= FRAME_BYTES:
+                frame = self.leftover[:FRAME_BYTES]
+                self.leftover = self.leftover[FRAME_BYTES:]
+                if _den_on(self.den):
+                    frame = self.den.process_frame(frame)
+                    if not frame:
+                        continue
+                utt = self.seg.feed(frame)
+                if utt is not None:
+                    return utt
+            if not self.seg.recording and time.time() - t0 > max_wait_s:
+                return None
 
 
 class _KeyReader:
@@ -131,30 +131,34 @@ class _KeyReader:
 
 
 def main():
-    ap = argparse.ArgumentParser(description="GoVoice PUSH-TO-TALK (bam T de noi)")
-    ap.add_argument("--config", default="config.yaml")
+    ap = argparse.ArgumentParser(
+        description="GoVoice PUSH-TO-TALK (mic ROBOT, bam phim de noi)")
+    ap.add_argument("--config", default="config_robot_mic.yaml")
     ap.add_argument("--real", action="store_true", help="dieu khien robot THAT")
     ap.add_argument("--no-tts", action="store_true")
-    ap.add_argument("--key", default="t",
-                    help="phim kich hoat (mac dinh 't'; dung 'space' cho phim cach)")
+    ap.add_argument("--key", default="space",
+                    help="phim kich hoat (mac dinh 'space'; hoac mot ky tu vd 't')")
     a = ap.parse_args()
 
     trigger = " " if a.key.lower() == "space" else a.key.lower()[:1]
     cfg = load_config(a.config)
+    cfg_audio = cfg.get("audio", {})
+    if (cfg_audio.get("backend") or "local").lower() != "udp":
+        sys.exit(f"[ptt] config '{a.config}' khong dung mic ROBOT.\n"
+                 f"  -> can 'audio.backend: udp' (vd config_robot_mic.yaml)")
+
     gv = GoVoiceRT(cfg, force_real=a.real, no_tts=a.no_tts)
     stt = build_stt(cfg)
-
-    # Tai dung mic + VAD tu config (device, do nhay, thoi gian ngat...) — nhung TU doc.
-    listener = get_listener(cfg.get("audio", {}), mute=gv.mute)
-    device = getattr(listener, "device", cfg.get("audio", {}).get("input_device"))
-    seg = listener.seg
+    listener = get_listener(cfg_audio, mute=gv.mute)
+    udp = UdpCapture(listener)
 
     key = _KeyReader()
     tname = "PHIM CACH" if trigger == " " else f"phim '{trigger.upper()}'"
     print("=" * 60)
-    print(" GoVoice PUSH-TO-TALK — bam de noi")
-    print(f"  • Bam {tname}  -> noi 1 cau (tu ngat khi im lang)")
+    print(" GoVoice PUSH-TO-TALK — mic ROBOT")
+    print(f"  • Bam {tname}  -> noi 1 cau (tu ngat khi ban dung noi)")
     print("  • Bam 'q' (hoac Ctrl+C) -> thoat")
+    print(f"  • mic ROBOT qua UDP {udp.addr} (nho chay go2_audio_bridge.py)")
     print("=" * 60)
 
     try:
@@ -171,7 +175,7 @@ def main():
                 time.sleep(0.02)
 
             print("\r🎤 [nghe] noi di... (tu ngat khi ban dung noi)        ", flush=True)
-            utt = capture_one(device, seg, mic_gain=getattr(listener, "mic_gain", 25))
+            utt = udp.capture_one()
             if utt is None:
                 print("   (khong nghe thay gi — bam de noi lai)")
                 continue
