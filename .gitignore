@@ -1,0 +1,32 @@
+# Model weights & file nhi phan nang — dong bo rieng giua 2 con qua scp
+# (xem HUONG_DAN_JETSON.md), khong dua vao git vi GitHub chan file >100MB.
+models/
+govoice_stt_b1/
+*.gguf
+*.onnx
+*.bin
+*.pt
+*.pth
+librnnoise.so
+
+# Ghi am test/debug — sinh ra khi chay, khong phai input can luu
+*.wav
+mic_debug/
+denoise_ab/
+
+# llama.cpp la repo ngoai, tu clone theo RUN.md/HUONG_DAN_JETSON.md — khong
+# phai code cua du an nay
+llama.cpp/
+
+# Backup tar cu — tu gio git history dam nhan vai tro nay
+backups/
+
+# Sach huong dan Go2 (tai lieu ben ngoai, khong phai code du an)
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor — settings.json chua duong dan tuyet doi rieng cua may nay
+.vscode/

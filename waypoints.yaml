@@ -1,0 +1,16 @@
+# ============================================================
+#  waypoints.yaml — cac diem da dat ten tren BAN DO SLAM cua ban
+#  Dinh dang:  ten_diem: [x, y, yaw]   (toa do tren frame "map")
+#
+#  CACH LAY TOA DO: mo RViz voi map dang chay, bam nut "Publish Point"
+#  roi click vao diem muon luu -> xem toa do o topic /clicked_point:
+#     ros2 topic echo /clicked_point --once
+#  Chep x, y vao day (yaw = huong robot quay mat toi, rad, 0 = truc x).
+#
+#  Khi noi "ra cho cai cua" -> LLM goi go_to("cua") -> gui goal Nav2.
+# ============================================================
+
+cua: [2.0, 0.5, 0.0]          # vi du: cai cua
+ban: [1.0, -1.5, 1.57]        # vi du: cai ban
+goc phong: [3.5, 2.0, 0.0]    # vi du: goc phong
+cho sac: [0.0, 0.0, 0.0]      # vi du: diem xuat phat / cho sac

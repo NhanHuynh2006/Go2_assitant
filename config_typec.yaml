@@ -1,0 +1,78 @@
+# ============================================================
+#  config_typec.yaml — BIEN THE cho MIC MOI cam cong TYPE-C cua hub.
+#  Khac config.yaml DUY NHAT o audio.input_device: "auto"
+#  ("auto" = tu quet va chon mic USB dau tien, bo qua card noi bo Jetson
+#   -> khong can biet ten mic moi la gi).
+#
+#  CHAY:
+#    python3 assistant_realtime.py --mode voice --real --config config_typec.yaml
+#    python3 assistant_ptt.py --real --config config_typec.yaml
+#  (mic cu CS202 jack 3.5: dung config.yaml nhu binh thuong)
+# ============================================================
+
+llm:
+  endpoint: "http://127.0.0.1:8080"
+  temperature: 0.2
+  n_predict: 80
+  timeout_s: 60
+  fewshot: false                       # model DA FINE-TUNE
+
+stt:
+  backend: transducer
+  transducer_model: /home/unitree/NhanHuynh/go2_jetson_demo/models/zipformer-vi-30M
+  hotwords_file: /home/unitree/NhanHuynh/go2_jetson_demo/hotwords.txt
+  hotwords_score: 3.0
+  device: cpu
+
+audio:
+  backend: local
+  input_device: "auto"     # ← MIC TYPE-C: tu tim mic USB (khac voi config.yaml dung "CS202")
+  silence_end_ms: 220      # hoi tang (200->220) de bot cat vun cau
+  mic_gain: 35             # MIC TYPE-C: 35% = du to, KHONG vo tieng o khoang cach demo.
+                           #   (60% -> VO TIENG/clip khi noi gan -> VAD truot, "khong nghe gi").
+                           #   STT deu nho -> tang 40/45; noi gan bi re/dinh chu -> ha 30/25.
+  vad_aggressiveness: 2    # 2 = bat duoc giong nho/xa tot hon (3 gat qua, bo giong khi noi xa)
+  min_utterance_s: 0.5     # bo mảnh < 0.5s (tiếng động ngắn/1 âm ảo)
+  noise_gate_rms: 130      # CONG BIEN DO san TOI THIEU tuyet doi (chong nhieu rat nho).
+  noise_gate_factor: 3.5   # THICH NGHI: giong phai to hon NEN nhieu (uoc luong bam muc yen)
+                           #   >= 3 lan moi tinh la 'noi'. Nguong tu bam theo do on cua phong.
+                           #   Con che loi khi im -> tang 3.5/4.0; NOI xa bi bo -> ha 2.5/2.0.
+
+  # ---- KHU NHIEU BANG AI (denoiser.py) — cam TRUOC VAD ----
+  # GTCRN: mang khu nhieu 23.7k tham so, chay qua sherpa-onnx (CUNG thu vien voi STT).
+  # Do tren chinh Jetson nay: RTF 0.155 (2 thread) = ~4.6ms/khung 30ms -> thua realtime.
+  #
+  # LUU Y: cac so do duoc la tren MIC ROBOT (xem CHONG_ON_MIC.md, config_robot_mic.yaml).
+  #   Voi mic type-C nay CHUA do (luc lam mic khong cam). Kiem tra bang:
+  #       python3 test_denoise.py --record-local 6 --say "đi thẳng ba mét"
+  #   Neu thay TE HON mic thuong -> chi can doi thanh `denoise: false`.
+  denoise:
+    backend: gtcrn
+    model: /home/unitree/NhanHuynh/go2_jetson_demo/models/denoiser/gtcrn_simple.onnx
+    num_threads: 2         # 2 la du; tang len khong nhanh hon dang ke, chi cuop CPU cua LLM
+    mix: 0.9               # 0.9 THANG trong benchmark (35/36 cau, it rac nhat).
+                           #   1.0 = khu 100% -> bao dong nham NHIEU HON (4 vs 1 tren 30s on thuan)
+                           #   0.95 = WER tot nhat (10.5%) neu can doc chinh xac hon
+    gain: 1.0              # khuech dai sau khi khu; nang 1.5-2.0 neu STT nghe "nho" di
+
+robot:
+  dry_run: true
+  iface: eth0
+  # DA NANG GIOI HAN cho chuyen dong MUOT + di DU quang duong (2026-07-12).
+  # Muon CHAM/AN TOAN lai thi ha max_vx/max_vyaw; muon lai cap khoang cach thi ha max_step_m.
+  max_vx: 0.6              # m/s tien/lui (cu 0.3) — nhanh hon, van la di bo thong thuong
+  max_vy: 0.4              # m/s sang ngang (cu 0.25)
+  max_vyaw: 1.5            # rad/s xoay (cu 0.8) — xoay nhanh, dut khoat hon
+  max_duration: 20.0       # 1 lenh di LIEN TUC toi 20s (cu 3.0) -> muot, khong ngat khuc
+  max_step_m: 10.0         # BO cap 50cm (cu 0.5): lenh 'X met' di DU X met, khong dung giua chung
+  require_stand_before_move: true   # van tu dung day truoc khi di (giu an toan)
+  motion_mode: ai          # TU chuyen sang che do AI moi lan chay --real (khoi bat app dien thoai)
+                           #   -> mo khoa acrobatic (dung 2 chan/trong chuoi/bat toi). Dat "normal"
+                           #   neu muon co dien; xoa dong nay neu KHONG muon tu doi mode.
+
+tts:
+  enabled: true
+  output: robot                     # ← ra LOA ROBOT qua WebRTC
+  speaker_port: 17891
+  voice: /home/unitree/NhanHuynh/go2_jetson_demo/models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx
+  piper_bin: /home/unitree/piper/piper

@@ -1,0 +1,13 @@
+T1 — LLM server:
+
+./llama.cpp/build/bin/llama-server -m govoice-qwen2.5-1.5b-q4_k_m.gguf -ngl 99 -c 2048 --port 8080
+
+T2 — loa robot (để NGHE Gô nói):
+
+export PYTHONPATH=~/go2_webrtc_new:$PYTHONPATH; export GO2_IP=192.168.123.161
+python3 go2_tts_speaker.py
+
+T3 — trợ lý
+
+fuser -k /dev/snd/pcmC*D0c 2>/dev/null; sleep 1
+python3 assistant_realtime.py --mode voice --real --config config_typec.yaml

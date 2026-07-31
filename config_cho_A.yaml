@@ -1,0 +1,134 @@
+# ============================================================
+#  config_cho_A.yaml — CAU HINH CHO **CON GÔ** khi bieu dien 2 CON CUNG LUC.
+#
+#  Giong config_hoinghi.yaml, THEM khoi `assistant` = CONG GOI TEN:
+#  hai con dung canh nhau deu nghe cung mot cau hoi, nen moi con CHI tra loi
+#  khi duoc goi DUNG TEN no -> khan gia biet con nao dang noi, khong chong tieng.
+#
+#  Luat cong goi ten:
+#    "Gô oi, ban ten gi"   -> con nay tra loi + GIU LUOT {floor_hold_s} giay
+#    "the con ban thi sao"     -> van la no tra loi (dang giu luot, khoi goi ten lai)
+#    "[ oi, ..."             -> no NHA LUOT ngay, im
+#    "dung lai"                -> CA HAI cung dung (emergency di TRUOC cong goi ten)
+#
+#  Con nay la con THU NHAT trong lenh --robots cua go2_troupe.py -> phase 0.
+#
+#  CHAY (tren Jetson cua con Gô):
+#    T1: llama-server ... --port 8080
+#    T2: export PYTHONPATH=~/go2_webrtc_new:$PYTHONPATH; export GO2_IP=192.168.123.161
+#        python3 go2_audio_bridge.py --gain 2.5
+#    T3: python3 assistant_realtime.py --mode voice --config config_cho_A.yaml --real
+#
+#  ⚠️ SUA `pa_host` thanh IP LAPTOP tren wifi hoi truong.
+# ============================================================
+
+llm:
+  endpoint: "http://127.0.0.1:8080"
+  temperature: 0.2
+  n_predict: 80
+  timeout_s: 60
+  fewshot: false                       # model DA FINE-TUNE
+
+stt:
+  backend: transducer
+  transducer_model: /home/unitree/NhanHuynh/go2_jetson_demo/models/zipformer-vi-30M
+  hotwords_file: /home/unitree/NhanHuynh/go2_jetson_demo/hotwords.txt
+  hotwords_score: 3.0
+  device: cpu
+
+audio:
+  backend: udp
+  udp_host: "127.0.0.1"    # nhan tu go2_audio_bridge.py
+  udp_port: 17890
+  silence_end_ms: 240      # hoi tang (200->220) de bot cat vun cau
+  vad_aggressiveness: 2    # 2 = bat duoc giong nho/xa tot hon (3 gat qua, bo giong khi noi xa)
+  min_utterance_s: 0.5     # bo mảnh < 0.5s (tiếng động ngắn/1 âm ảo)
+  noise_gate_rms: 130      # CONG BIEN DO san TOI THIEU tuyet doi (chong nhieu rat nho).
+  noise_gate_factor: 2.0   # Giong phai to hon NEN nhieu bao nhieu LAN moi tinh la 'noi'.
+                           #   DO LAI 2026-07-30 tren giong THAT qua mic robot:
+                           #     3.5 -> chi bat 1/4 cau (cong qua chat, chan luon giong)
+                           #     2.0 -> bat 4/4 cau, ma 60s on thuan van ra 0 chu rac
+                           #   (So cu 3.5 do tren audio bi GIAN 2x vi bug dem kenh trong
+                           #    go2_audio_bridge.py -> khong con gia tri.)
+                           #   Con che loi khi im -> tang 2.5; noi xa bi bo -> ha 1.6.
+  # ---- CHUAN HOA DO TO tung cau (audio_io.chuan_hoa_do_to) ----
+  # Keo moi CAU ve cung mot muc do to, co TRAN chong vo tieng. Dat SAU khi cat cau
+  # nen KHONG dung toi cong bien do da tinh chinh.
+  # DO THAT (gia lap noi gan/xa bang cach nhan bien do vao 0.35x..3.0x):
+  #     gain co dinh 1.6 : bat 2.8/4, WER 36.0%, do LECH WER 32.1%  (3.0x -> 0/4, sap han)
+  #     chuan hoa 0.03   : bat 3.2/4, WER 27.6%, do LECH WER 13.7%  <- ON DINH hon han
+  # ⚠️ TO HON KHONG TOT HON: target_rms 0.06/0.10/0.15 lam WER xau di 16% -> 27%.
+  #    0.03 la diem ngot cua zipformer-vi. Dung nang len vi "nghe hoi nho".
+  normalize:
+    target_rms: 0.03
+    peak_ceiling: 0.95
+    max_gain: 8.0
+    min_gain: 0.3
+
+
+  # ---- KHU NHIEU BANG AI (denoiser.py) — cam TRUOC VAD ----
+  # GTCRN: mang khu nhieu 23.7k tham so, chay qua sherpa-onnx (CUNG thu vien voi STT).
+  # Do tren chinh Jetson nay: RTF 0.155 (2 thread) = ~4.6ms/khung 30ms -> thua realtime.
+  #
+  # KHONG DUOC TAT khoi nay khi dung mic robot (xem CHONG_ON_MIC.md).
+  # Tu do lai:  python3 mic_debug.py --seconds 25   (ghi giong that + chi ra cho tac)
+  denoise:
+    # HAI TANG NOI TIEP — do duoc WER 5.0% (GTCRN don: 16.2%):
+    #   1) specsub: TRU PHO bang "van tay" nhieu ghi san cua CHINH con robot.
+    #      Tieng quat/dong co la nhieu ON DINH -> hoc thuoc pho roi tru thang,
+    #      khong can mang neural. Cuc re: RTF 0.007.
+    #   2) gtcrn : mang neural, don not phan nhieu THAY DOI (nguoi noi chuyen,
+    #      va cham) ma specsub khong xu ly duoc.
+    backend: specsub+gtcrn
+    model: /home/unitree/NhanHuynh/go2_jetson_demo/models/denoiser/gtcrn_simple.onnx
+    profile: /home/unitree/NhanHuynh/go2_jetson_demo/robot_noise60s_v2.wav
+    over_sub: 4.0          # tru DU bao nhieu lan van tay. Do: 4.0 va 6.0 deu cho WER 5.0%;
+                           #   lay 4.0 cho con bien an toan neu muc nhieu troi mot chut.
+    floor: 0.06            # san khuech dai — chong "musical noise" (tieng lanh canh)
+    num_threads: 2
+    mix: 1.0
+    gain: 1.0              # do to giao cho `normalize` ben tren
+    # ⚠️ VAN TAY GAN VOI MUC AM LUONG. Doi `--gain` cua bridge, doi con robot, hay
+    #    doi cho dat robot nhieu -> phai GHI LAI van tay:
+    #        python3 go2_audio_bridge.py --record 60 --gain 2.5
+    #        mv robot_mic_test.wav robot_noise60s_v2.wav
+    #    (robot BAT, phong yen, KHONG ai noi). He thong TU CANH BAO neu lech >2.5x.
+    # Muon quay ve chi dung GTCRN: doi backend thanh `gtcrn` (ben hon truoc thay doi
+    # muc am luong, nhung WER cao hon 3 lan).
+
+robot:
+  dry_run: true
+  iface: eth0
+  # DA NANG GIOI HAN cho chuyen dong MUOT + di DU quang duong (2026-07-12).
+  # Muon CHAM/AN TOAN lai thi ha max_vx/max_vyaw; muon lai cap khoang cach thi ha max_step_m.
+  max_vx: 0.6              # m/s tien/lui (cu 0.3) — nhanh hon, van la di bo thong thuong
+  max_vy: 0.4              # m/s sang ngang (cu 0.25)
+  max_vyaw: 1.5            # rad/s xoay (cu 0.8) — xoay nhanh, dut khoat hon
+  max_duration: 20.0       # 1 lenh di LIEN TUC toi 20s (cu 3.0) -> muot, khong ngat khuc
+  max_step_m: 10.0         # BO cap 50cm (cu 0.5): lenh 'X met' di DU X met, khong dung giua chung
+  require_stand_before_move: true   # van tu dung day truoc khi di (giu an toan)
+  motion_mode: ai          # TU chuyen sang che do AI moi lan chay --real (khoi bat app dien thoai)
+                           #   -> mo khoa acrobatic (dung 2 chan/trong chuoi/bat toi). Dat "normal"
+                           #   neu muon co dien; xoa dong nay neu KHONG muon tu doi mode.
+
+tts:
+  enabled: true
+  output: pa                        # ← ra LOA HOI TRUONG qua laptop (pc_speaker.py)
+                                    #   doi thanh "robot+pa" neu muon ra CA HAI loa
+                                    #   doi thanh "robot" de quay ve loa robot nhu cu
+  pa_host: 192.168.123.99           # ⚠️ IP LAPTOP — SUA cho dung truoc buoi dien!
+                                    #   (kiem tra tren laptop bang: ip -brief addr)
+  pa_port: 17892
+  speaker_port: 17891
+  voice: /home/unitree/NhanHuynh/go2_jetson_demo/models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx
+  piper_bin: /home/unitree/piper/piper
+
+assistant:
+  name: "Gô"
+  require_name: true          # BAT vi co 2 con. De 1 con thi dat false (tra loi moi cau)
+  wake_names: ["gô", "go", "gôn"]
+                              # them cac cach STT hay doc trech di. TRANH tu thong dung
+                              # (co/con/la/hai/ban...) — he thong se canh bao neu trung.
+  other_names: ["mun", "mung"]
+                              # nghe ten con KIA -> im ngay
+  floor_hold_s: 12            # giu luot noi 12s de MC hoi noi tiep khoi goi ten lai

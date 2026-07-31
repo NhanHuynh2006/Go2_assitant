@@ -1,0 +1,23 @@
+# GoVoice — phu thuoc Python (cai: pip3 install --user -r requirements.txt)
+# Luu y he thong: sudo apt install -y libportaudio2 ffmpeg
+# Chay tren PYTHON HE THONG (khong dung venv). Ngoai ra can cai rieng (khong qua file nay):
+#   - cyclonedds, unitree_sdk2py (-e git+https://github.com/unitreerobotics/unitree_sdk2_python.git)
+#   - PYTHONPATH=~/go2_webrtc_new (repo rieng, khong phai pip package)
+numpy
+scipy
+scikit-learn
+requests
+pyyaml
+sounddevice
+webrtcvad-wheels
+soundfile
+sentencepiece
+sherpa-onnx
+aiortc
+av
+# faster-whisper: KHONG can neu dung stt.backend=transducer (mac dinh cac config hien tai).
+#   Can ctranslate2 build rieng cho Jetson aarch64 (khong co wheel PyPI) — chi cai neu quay
+#   lai backend PhoWhisper.
+# piper-tts: piper-tts>=1.3 (ban co PiperVoice/streaming) doi hoi Python>=3.9, KHONG cai duoc
+#   tren python3.8 he thong. tts_engine.py da tu fallback goi binary ~/piper/piper khi
+#   thieu module 'piper' — khong can lam gi them.

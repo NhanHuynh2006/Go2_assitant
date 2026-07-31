@@ -1,0 +1,99 @@
+ĐI THẲNG
+TIẾN LÊN
+ĐI TỚI
+ĐI TỚI TRƯỚC
+BƯỚC TỚI
+LÙI LẠI
+ĐI LÙI
+SANG TRÁI
+SANG PHẢI
+QUA TRÁI
+QUA PHẢI
+XOAY TRÁI
+XOAY PHẢI
+QUAY TRÁI
+QUAY PHẢI
+RẼ TRÁI
+RẼ PHẢI
+XOAY VÒNG
+XOAY TẠI CHỖ
+QUAY TẠI CHỖ
+CHÀO
+VẪY TAY
+BẮT TAY
+NHẢY
+MÚA
+NHẢY MÚA
+ĐỔI ĐIỆU
+VƯƠN VAI
+DUỖI NGƯỜI
+THẢ TIM
+NẰM XUỐNG
+NGỒI XUỐNG
+NẰM NGHỈ
+NGHỈ
+ĐỨNG DẬY
+ĐỨNG LÊN
+DẬY ĐI
+DỪNG LẠI
+DỪNG NGAY
+NGƯNG LẠI
+ĐỨNG YÊN
+MÉT
+GIÂY
+ĐỘ
+VÒNG
+MỘT
+HAI
+BA
+BỐN
+NĂM
+SÁU
+BẢY
+TÁM
+CHÍN
+MƯỜI
+CHÍN MƯƠI ĐỘ
+BỐN MƯƠI LĂM ĐỘ
+MỘT TRĂM TÁM MƯƠI ĐỘ
+BA MƯƠI ĐỘ
+SÁU MƯƠI ĐỘ
+MỘT TRĂM HAI MƯƠI ĐỘ
+MỘT MÉT
+HAI MÉT
+BA MÉT
+NỬA MÉT
+MÉT RƯỠI
+MỘT GIÂY
+HAI GIÂY
+BA GIÂY
+NĂM GIÂY
+MỘT VÒNG
+HAI VÒNG
+BA VÒNG
+CỬA
+CỬA SỔ
+CÁI BÀN
+CÁI GHẾ
+CHỖ SẠC
+GÓC PHÒNG
+BẾP
+PHÒNG KHÁCH
+CHỖ CŨ
+ĐI TỚI CÁI BÀN
+RA CHỖ CỬA
+VỀ CHỖ CŨ
+TỚI CHỖ SẠC
+RỒI
+SAU ĐÓ
+TIẾP THEO
+XONG
+DỪNG LẠI NGAY
+ĐỨNG YÊN ĐÓ
+KHẨN CẤP
+QUAY ĐẦU
+ĐI CHẬM THÔI
+ĐI NHANH LÊN
+LÙI RA
+TIẾN VÀO
+QUAY VỀ

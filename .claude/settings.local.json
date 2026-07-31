@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fuser -v /dev/snd/*)",
+      "Bash(curl -s -m 3 http://127.0.0.1:8080/health)",
+      "Read(//proc/asound/**)",
+      "Bash(python3 -)",
+      "Bash(kill -9 10780 12108)",
+      "Bash(echo \"exit=$?  \\(124 = timed out/hung\\)\")",
+      "Bash(fuser /dev/snd/pcmC2D0c)",
+      "Bash(curl -s -m3 http://127.0.0.1:8080/health)",
+      "Bash(python3 -c \"import sounddevice as sd; print\\([d['name'] for d in sd.query_devices\\(\\) if d['max_input_channels']>0 and 'CS202' in d['name']] or 'CS202 MISSING \\(busy\\)'\\)\")",
+      "Bash(top -bn1)",
+      "Bash(kill -9 12669)",
+      "Bash(ldd ./llama.cpp/build/bin/llama-server)",
+      "Bash(timeout 4 tegrastats --interval 1000)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('assistant_ptt.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(echo \"exit=$? \\(124=hung\\)\")",
+      "Bash(python3 -c \"import faster_whisper; print\\('faster_whisper', faster_whisper.__version__\\)\")",
+      "Bash(python3 -c \"import ctranslate2 as c; print\\('cuda devices:', c.get_cuda_device_count\\(\\)\\)\")",
+      "Bash(export HF_HUB_OFFLINE=1)",
+      "Bash(python3 text_normalizer.py)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('text_normalizer.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python3 -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\)\\) for f in ['text_normalizer.py','assistant_realtime.py']]; print\\('syntax OK'\\)\")",
+      "Bash(lsusb)",
+      "Bash(lsusb -t)",
+      "Bash(dmesg)",
+      "Bash(journalctl -k -n 40 --no-pager)",
+      "Bash(/usr/bin/lsusb)",
+      "Bash(timeout 15 bash -c ' *)",
+      "Bash(timeout 12 bash -c ' *)",
+      "Bash(timeout 25 bash -c ' *)",
+      "Bash(timeout 10 cat /proc/asound/cards)",
+      "Read(//sys/bus/usb/devices/**)",
+      "Bash(timeout 8 ls /sys/bus/usb/devices/)",
+      "Bash(timeout 10 amixer -c 2 scontrols)",
+      "Bash(timeout 10 amixer -c 2 scontents)"
+    ]
+  }
+}

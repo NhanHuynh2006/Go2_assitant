@@ -1,0 +1,31 @@
+# ============================================================
+#  grammar.gbnf — EP llama.cpp chi duoc sinh JSON dung schema:
+#  {"say": "...", "actions": [{"tool": "...", "args": {...}}, ...]}
+#
+#  Day la "vu khi bi mat" cho do tin cay + toc do:
+#  - Model KHONG THE sinh lung tung -> khong bao gio co lenh rac
+#  - Output ngan gon -> it token -> phan hoi nhanh hon
+#  (Ky thuat: grammar-constrained decoding cua llama.cpp)
+# ============================================================
+
+root ::= "{" ws "\"say\"" ws ":" ws string ws "," ws "\"actions\"" ws ":" ws actionlist ws "}"
+
+actionlist ::= "[" ws "]" | "[" ws action (ws "," ws action)* ws "]"
+
+action ::= "{" ws "\"tool\"" ws ":" ws toolname ws "," ws "\"args\"" ws ":" ws argsobj ws "}"
+
+toolname ::= "\"move\"" | "\"action\"" | "\"stop\"" | "\"go_to\""
+
+argsobj ::= "{" ws "}" | "{" ws pair (ws "," ws pair)* ws "}"
+
+pair ::= string ws ":" ws value
+
+value ::= string | number | "true" | "false"
+
+string ::= "\"" stringchar* "\""
+
+stringchar ::= [^"\\\x7F\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F])
+
+number ::= "-"? [0-9]+ ("." [0-9]+)?
+
+ws ::= [ \t\n\r]*
