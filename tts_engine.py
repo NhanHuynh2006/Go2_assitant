@@ -186,7 +186,17 @@ class TTS:
 
     def _emit(self, wav_bytes, ms):
         """Dua audio ra dau ra theo self.output."""
-        if self.output == "robot+pa":
+        # ⚠️ "robot+bt" — CA HAI cung luc, va day la LUOI AN TOAN co chu y.
+        # Tiet muc phong van chi hoi MOT con, nhung khong biet truoc la A hay B,
+        # va loa BTC co the hong ngay hom do. Phat song song ra CA loa robot lan
+        # ngo ra mac dinh cua Jetson (= loa Bluetooth neu da ghep): loa BTC chet
+        # thi loa robot van keu, khong phai lam gi ca.
+        # Gui loa robot TRUOC vi duong WebRTC lau hon, de hai ben ra tieng gan
+        # nhau hon.
+        if self.output == "robot+bt":
+            self._send_to_robot(wav_bytes)
+            self._play_file(wav_bytes)
+        elif self.output == "robot+pa":
             self._send_to_pa(wav_bytes)
             self._send_to_robot(wav_bytes)
         elif self.output == "pa":

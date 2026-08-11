@@ -116,7 +116,7 @@ tts:
   output: pa                        # ← ra LOA HOI TRUONG qua laptop (pc_speaker.py)
                                     #   doi thanh "robot+pa" neu muon ra CA HAI loa
                                     #   doi thanh "robot" de quay ve loa robot nhu cu
-  pa_host: 192.168.123.99           # ⚠️ IP LAPTOP — SUA cho dung truoc buoi dien!
+  pa_host: 10.30.107.188           # ⚠️ IP LAPTOP — SUA cho dung truoc buoi dien!
                                     #   (kiem tra tren laptop bang: ip -brief addr)
   pa_port: 17892
   speaker_port: 17891

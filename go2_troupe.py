@@ -103,7 +103,7 @@ class Dancer:
         from unitree_sdk2py.go2.sport.sport_client import SportClient
         ChannelFactoryInitialize(0, self.iface)
         self.sport = SportClient()
-        self.sport.SetTimeout(10.0)
+        self.sport.SetTimeout(0.3)   # xem ghi chu trong go2_choreo.py: 10s = treo 10s khi rot phan hoi
         self.sport.Init()
 
     def stand(self):
@@ -175,6 +175,90 @@ class Dancer:
         return done
 
 
+def run_choreo(choreo, opts, t_local, dancer, stop_flag=None):
+    """Diễn theo KỊCH BẢN của go2_choreo.py thay vì công thức "cứ N beat".
+
+    Nhạc trưởng gửi nguyên cả kịch bản (đã phân tích phổ năng lượng bài nhạc từ
+    trước), nên hai con dùng CHUNG một bản — khỏi lo mỗi con tự phân tích ra một
+    kiểu. Ở đây chỉ việc chạy đúng phần vai của mình, lấy `t_local` (giờ địa
+    phương đã bù lệch đồng hồ) làm giây 0 của bài.
+    """
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                    "..", "go2_audio"))
+    import go2_choreo
+    # KIEU SHOW: chay ban sao cua go2_show.py tren ca hai con.
+    #
+    # Chon o day chu khong o `go2_choreo.run` vi day la hai vong lap khac han
+    # nhau: ban kich ban ban dong tac theo MOC GIAY da bien dao san, con ban
+    # show quyet dinh theo CHI SO BEAT (i%16 / i%32 / i%64). Ban show tu dong
+    # bo: cung `beat_times` + cung `t_local` la ra cung mot chuoi.
+    if opts.get("kieu_show"):
+        # Truyen qua bien moi truong vi go2_choreo doc no luc nap module.
+        if opts.get("nhan"):
+            go2_choreo.TEN_NHAN = [x.strip() for x in opts["nhan"].split(",")
+                                   if x.strip()]
+        if opts.get("cat_dance") is not None:
+            os.environ["GO2_CAT_DANCE"] = str(opts["cat_dance"])
+            go2_choreo.CAT_DANCE = float(opts["cat_dance"])
+        return go2_choreo.run_show(
+            choreo, opts["role"], latency=opts.get("latency", 0.15),
+            dry=dancer.dry, iface=dancer.iface, t0=t_local,
+            stunts=opts.get("stunts", True), special=opts.get("special", True),
+            quiet=opts.get("quiet", True), already_up=not dancer.dry,
+            stop_flag=stop_flag)
+    go2_choreo.run(choreo, opts["role"], latency=opts.get("latency", 0.15),
+                   dry=dancer.dry, iface=dancer.iface, t0=t_local,
+                   travel=opts.get("travel", 1.0),
+                   leash=opts.get("leash", go2_choreo.LEASH_R),
+                   quiet=opts.get("quiet", True),
+                   # `prepare` đã cho robot đứng dậy rồi. Không báo cho
+                   # go2_choreo biết thì nó đứng dậy LẦN NỮA, tốn thêm 3 giây —
+                   # và 3 giây đó rơi vào SAU khi nhạc đã bắt đầu, nên mất đúng
+                   # đoạn mở bài (robot đứng ngơ rồi mới nhún).
+                   already_up=not dancer.dry,
+                   recenter=opts.get("recenter", True),
+                   # ⚠️ PHAI TRUYEN stop_flag. Thieu no thi vong nhay ben
+                   # go2_choreo khong co cach nao biet la da co lenh dung, va
+                   # con cho cu nhay het bai du nhac truong da tat tu lau.
+                   stop_flag=stop_flag)
+    return len(choreo["parts"][opts["role"]])
+
+
+def _canh_ket_noi(conn, stop_flag, ten):
+    """Canh chung: nhac truong dut ket noi thi bat `stop_flag`.
+
+    ⚠️ VI SAO CAN. Trong luc dien, agent nam TRON trong `run_choreo` — no khong
+    doc socket duoc, nen lenh "stop" gui toi cung khong ai nghe. Duong dung duy
+    nhat truoc day la `dien.sh` SSH sang tung con `kill -INT`, ma duong do phu
+    thuoc wifi: rot mang mot cai la hai con nhay het bai trong khi nguoi dung da
+    bam Ctrl+C tu lau va dang dung nhin.
+    Doc mot byte kieu PEEK: khong lay mat du lieu cua ai, chi de biet dau ben kia
+    con song hay khong. recv tra b"" = da dong.
+
+    Tra ve mot Event — `set()` no de bao canh xong (khi bai ket thuc binh thuong).
+    """
+    xong = threading.Event()
+
+    def _canh():
+        while not xong.is_set() and not stop_flag.is_set():
+            try:
+                if not conn.recv(1, socket.MSG_PEEK | socket.MSG_DONTWAIT):
+                    print(f"[{ten}] MAT KET NOI toi nhac truong -> dung ngay")
+                    stop_flag.set()
+                    return
+            except BlockingIOError:
+                pass                      # con song, chua co gi de doc
+            except OSError:
+                print(f"[{ten}] socket hong -> dung ngay")
+                stop_flag.set()
+                return
+            time.sleep(0.2)
+
+    th = threading.Thread(target=_canh, daemon=True)
+    th.start()
+    return xong
+
+
 def run_agent(name, host, port, dry, iface, clock_skew=0.0):
     """Chạy trên Jetson của MỖI con chó. Chờ nhạc trưởng sai bảo.
 
@@ -188,7 +272,11 @@ def run_agent(name, host, port, dry, iface, clock_skew=0.0):
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     srv.bind((host, port))
-    srv.listen(4)
+    # ⚠️ Hang doi 4 la QUA IT. Moi cu do cong (hoac lan chay truoc chet nua
+    # chung) deu chiem mot cho; day len la nhac truong THAT ket noi vao se bi
+    # HET GIO — dung loi da gap: agent van song, cong van mo, ma conduct bao
+    # TimeoutError.
+    srv.listen(32)
     print(f"🐕 CHO '{name}' san sang — nghe tai {host}:{port}"
           f"{' [DIEN TAP]' if dry else ''}")
     print("   Cho nhac truong ket noi. Ctrl+C de thoat.\n")
@@ -202,13 +290,22 @@ def run_agent(name, host, port, dry, iface, clock_skew=0.0):
         print(f"[{name}] nhac truong {addr[0]} da ket noi")
         rd = LineReader(conn)
         stop_flag.clear()
+        da_bat_tay = False          # da nhan duoc tin nhan hop le nao chua
         beats, opts = [], {}
         try:
             while True:
-                msg = rd.recv(timeout=600)
+                # ⚠️ Tin nhan DAU TIEN phai toi nhanh (nhac truong gui `prepare`
+                # ngay sau khi ket noi). Cho 600s ngay tu dau nghia la: chi can
+                # MOT ket noi rac (phep do cong, lan chay truoc dut giua chung)
+                # la agent ngoi im 10 PHUT, khong accept ai nua — nhac truong
+                # that ket noi vao chi con nuoc het gio.
+                # Sau khi da bat tay xong thi moi cho lau, vi con doi nguoi bam
+                # Enter (MC gioi thieu bao lau khong biet truoc).
+                msg = rd.recv(timeout=(600 if da_bat_tay else 15))
                 if msg is None:
                     break
                 cmd = msg.get("cmd")
+                da_bat_tay = True
 
                 if cmd == "ping":
                     # SNTP: t2 = lúc nhận, t3 = lúc trả lời (giờ ĐỊA PHƯƠNG)
@@ -217,18 +314,42 @@ def run_agent(name, host, port, dry, iface, clock_skew=0.0):
                                     "t2": t2, "t3": time.time()})
 
                 elif cmd == "prepare":
-                    beats = msg["beats"]
+                    beats = msg.get("beats", [])
                     opts = msg.get("opts", {})
-                    print(f"[{name}] nhan {len(beats)} beat, pha={opts.get('phase')} "
-                          f"-> dung day...")
+                    choreo = msg.get("choreo")        # kịch bản từ go2_choreo.py
+                    if choreo:
+                        print(f"[{name}] nhan KICH BAN vai {opts.get('role')} "
+                              f"({len(choreo['parts'][opts['role']])} cue) -> dung day...")
+                    else:
+                        print(f"[{name}] nhan {len(beats)} beat, "
+                              f"pha={opts.get('phase')} -> dung day...")
                     try:
                         dancer.connect()
-                        dancer.stand()
+                        # ⚠️ KHÔNG cho đứng dậy ở đây khi diễn thật.
+                        # Trên sân khấu, người ta điều khiển chó đi lên trước rồi
+                        # mới chạy lệnh; MC còn giới thiệu vài phút. Nếu `prepare`
+                        # cho đứng dậy luôn thì chó đứng chôn chân suốt lúc MC nói
+                        # — vừa tốn pin vừa lộ. Giờ chỉ nối SportClient; đứng dậy
+                        # để dành cho lệnh `stand` (bấm Enter mới gửi).
+                        if opts.get("stand_now", True):
+                            dancer.stand()
                         send_msg(conn, {"cmd": "ready", "name": name})
-                        print(f"[{name}] SAN SANG")
+                        print(f"[{name}] SAN SANG"
+                              + ("" if opts.get("stand_now", True) else " (chua dung day — cho lenh)"))
                     except Exception as e:
                         send_msg(conn, {"cmd": "error", "name": name, "msg": str(e)})
                         print(f"[{name}] LOI chuan bi: {e}")
+
+                elif cmd == "stand":
+                    # Đứng dậy NGAY (không canh giờ). Gửi khi người điều khiển đã
+                    # bấm Enter; xong xuôi mới tính mốc khởi diễn cho cả hai con.
+                    try:
+                        print(f"[{name}] dung day...")
+                        dancer.stand()
+                        send_msg(conn, {"cmd": "stood", "name": name})
+                        print(f"[{name}] DA DUNG")
+                    except Exception as e:
+                        send_msg(conn, {"cmd": "error", "name": name, "msg": str(e)})
 
                 elif cmd == "go":
                     t_local = float(msg["t_local"])
@@ -239,9 +360,20 @@ def run_agent(name, host, port, dry, iface, clock_skew=0.0):
                         time.sleep(wait)
                     t_real = _real_clock()
                     print(f"[{name}] BAT DAU THAT luc {t_real:.4f} (dong ho THAT)")
-                    n = dancer.dance(beats, t_local, opts, stop_flag)
+                    if choreo:
+                        # Canh cua so trong luc dang nhay: nhac truong tat
+                        # (Ctrl+C tren laptop) thi socket dut -> bat stop_flag.
+                        canh = _canh_ket_noi(conn, stop_flag, name)
+                        try:
+                            n = run_choreo(choreo, opts, t_local, dancer,
+                                           stop_flag=stop_flag)
+                        finally:
+                            canh.set()
+                        dancer.rest()
+                    else:
+                        n = dancer.dance(beats, t_local, opts, stop_flag)
+                        dancer.rest()
                     print(f"[{name}] xong {n} beat")
-                    dancer.rest()
                     send_msg(conn, {"cmd": "done", "name": name, "beats": n})
 
                 elif cmd == "stop":
@@ -277,23 +409,42 @@ class Robot:
         self.sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         self.rd = LineReader(self.sock)
 
-    def measure_offset(self, rounds=15):
-        """SNTP: lấy mẫu có RTT NHỎ NHẤT — mẫu đó ít bị wifi làm nhiễu nhất."""
+    def measure_offset(self, rounds=20, can_it_nhat=3):
+        """SNTP: lấy mẫu có RTT NHỎ NHẤT — mẫu đó ít bị wifi làm nhiễu nhất.
+
+        ⚠️ MỘT GÓI MẤT KHÔNG ĐƯỢC PHÉP LÀM SẬP BUỔI DIỄN.
+        Bản cũ gọi `recv(timeout=5)` trần: chỉ cần MỘT lần không có hồi đáp là
+        ném TimeoutError ra ngoài và cả tiết mục dừng — đã xảy ra thật, đúng lúc
+        wifi xấu (RTT vọt từ 0.3ms lên 31ms). Trên sân khấu thì đó là hỏng cả
+        chương trình chỉ vì một gói tin.
+        Giờ: gói nào mất thì bỏ qua gói đó, thử tiếp; chỉ báo lỗi khi KHÔNG thu
+        nổi `can_it_nhat` mẫu tốt trong toàn bộ số vòng.
+        """
         best = None
+        tot = 0
         for _ in range(rounds):
-            t1 = time.time()
-            send_msg(self.sock, {"cmd": "ping", "t1": t1})
-            m = self.rd.recv(timeout=5)
-            t4 = time.time()
+            try:
+                t1 = time.time()
+                send_msg(self.sock, {"cmd": "ping", "t1": t1})
+                m = self.rd.recv(timeout=2.0)
+                t4 = time.time()
+            except (socket.timeout, TimeoutError, OSError):
+                continue                      # gói này mất -> thử gói sau
             if not m or m.get("cmd") != "pong":
                 continue
             rtt = (t4 - t1) - (m["t3"] - m["t2"])
             off = ((m["t2"] - t1) + (m["t3"] - t4)) / 2.0
+            tot += 1
             if best is None or rtt < best[0]:
                 best = (rtt, off)
             time.sleep(0.02)
-        if best is None:
-            raise RuntimeError(f"{self.name}: khong do duoc lech dong ho")
+        if best is None or tot < can_it_nhat:
+            raise RuntimeError(
+                f"{self.name}: chi thu duoc {tot} mau dong ho (can >={can_it_nhat}). "
+                f"Wifi qua yeu -> dua router lai gan, hoac doi kenh 5GHz.")
+        if tot < rounds // 2:
+            print(f"   ⚠️ {self.name}: mat {rounds - tot}/{rounds} goi — wifi yeu, "
+                  f"nen kiem tra truoc khi dien that")
         self.rtt, self.offset = best
         return self.rtt, self.offset
 
@@ -322,8 +473,24 @@ def play_local(path):
     return None
 
 
-def run_conduct(addrs, music, opts, lead_s, play_here, dry):
-    beats, dur = detect_beats(music)
+def run_conduct(addrs, music, opts, lead_s, play_here, dry, choreo_path=None,
+                nhac_robot=None, nhac_jetson=None,
+                wait_enter=False):
+    choreo = None
+    if choreo_path:
+        with open(choreo_path, encoding="utf-8") as f:
+            choreo = json.load(f)
+        dur = float(choreo["duration"])
+        roles = sorted(choreo["parts"])
+        print(f"[nhac] dung KICH BAN {os.path.basename(choreo_path)} — "
+              f"{choreo['tempo']:.0f} BPM · {dur:.0f}s · vai: {', '.join(roles)}")
+        if len(addrs) > len(roles):
+            sys.exit(f"kich ban chi co {len(roles)} vai ({', '.join(roles)}) "
+                     f"nhung co {len(addrs)} con")
+        beats = []
+    else:
+        beats, dur = detect_beats(music)
+        roles = []
 
     robots = [Robot(a) for a in addrs]
     for i, r in enumerate(robots):
@@ -332,7 +499,12 @@ def run_conduct(addrs, music, opts, lead_s, play_here, dry):
         print("OK")
         o = dict(opts)
         o["phase"] = i                       # con thu 2 nhảy lệch pha
-        send_msg(r.sock, {"cmd": "prepare", "beats": beats, "opts": o})
+        msg = {"cmd": "prepare", "beats": beats, "opts": o}
+        if choreo:
+            o["role"] = roles[i]             # con dau vai A, con sau vai B
+            msg["choreo"] = choreo
+            print(f"   -> {r.name} nhan vai {o['role']}")
+        send_msg(r.sock, msg)
 
     print("\n[dan] cho tat ca dung day...")
     for r in robots:
@@ -351,16 +523,73 @@ def run_conduct(addrs, music, opts, lead_s, play_here, dry):
     print(f"\n[dan] sai so dong bo du kien: ~{worst*1000:.1f}ms "
           f"({'TOT' if worst < 0.02 else 'HOI CAO — wifi yeu?'})")
 
+    # ------------------------------------------------ CHỜ NGƯỜI BẤM ENTER
+    # Trên sân khấu không thể để đồng hồ đếm ngược quyết định: MC còn giới
+    # thiệu, dài ngắn không biết trước. Nên dừng ở đây, mọi thứ đã sẵn sàng
+    # (đồng hồ đã đồng bộ, kịch bản đã nằm sẵn trong hai con), chỉ chờ một cú
+    # Enter. Bấm xong: hai con đứng dậy, rồi nhạc + nhảy khởi động cùng lúc.
+    if wait_enter:
+        print("\n" + "=" * 60)
+        print("  SAN SANG. Hai con dang NAM CHO, chua dung day.")
+        print("  Doi MC gioi thieu xong roi bam ENTER de bat dau.")
+        print("  (Ctrl+C de huy)")
+        print("=" * 60)
+        try:
+            input("  >>> Bam ENTER de DUNG DAY + LEN NHAC: ")
+        except EOFError:
+            print("  (khong co ban phim -> chay luon)")
+
+        # Đứng dậy TRƯỚC, chờ cả hai báo xong, rồi mới tính mốc khởi diễn.
+        # Không gộp chung: đứng dậy mất ~3 giây, gộp vào thì nhạc chạy trong
+        # lúc chó còn đang chống chân — mất luôn đoạn mở bài.
+        print("\n[dan] hai con dung day...")
+        for r in robots:
+            send_msg(r.sock, {"cmd": "stand"})
+        for r in robots:
+            m = r.rd.recv(timeout=30)
+            if not m or m.get("cmd") != "stood":
+                sys.exit(f"❌ {r.name} khong dung day duoc: {m}")
+            print(f"   ✅ {r.name} da dung")
+
     t_go = time.time() + lead_s
     for r in robots:
         send_msg(r.sock, {"cmd": "go", "t_local": t_go + r.offset})
     print(f"\n>>> KHOI DIEN sau {lead_s:.1f}s <<<")
 
     proc = None
-    if play_here and not dry:
+    if nhac_jetson and not dry:
+        # Nhac phat tu JETSON cua con <ip> ra ngo mac dinh cua no — tuc LOA BT
+        # cua BTC neu da ghep. Khac han `nhac_robot`: cai kia di qua WebRTC toi
+        # loa NHO gan tren than robot.
+        # Phuong an nay dung khi LAPTOP khong noi duoc loa BTC, nhung con cho
+        # thi noi duoc.
+        time.sleep(max(0.0, t_go - time.time()))
+        proc = subprocess.Popen(
+            ["ssh", "-n", "-o", "BatchMode=yes", f"unitree@{nhac_jetson}",
+             f"export XDG_RUNTIME_DIR=/run/user/$(id -u); "
+             f"ffplay -nodisp -autoexit -loglevel quiet ~/NhanHuynh/"
+             f"{os.path.basename(music)} 2>/dev/null || "
+             f"paplay ~/NhanHuynh/{os.path.basename(music)}"],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print(f"[nhac] phat tu JETSON cho A -> loa Bluetooth ({nhac_jetson})")
+    elif nhac_robot and not dry:
+        # Nhac phat tu LOA CUA CHO A, khong phai tu may nay.
+        # Bat o DUNG cho nay — cung noi va cung thoi diem voi phat o laptop —
+        # de nhac va lenh nhay cung khoi dong tai t_go. Bat som hon (vd trong
+        # bash truoc khi goi conduct) thi nhac chay truoc luc cho dung day.
+        time.sleep(max(0.0, t_go - time.time()))
+        proc = subprocess.Popen(
+            ["ssh", "-n", "-o", "BatchMode=yes", f"unitree@{nhac_robot}",
+             "export PYTHONPATH=~/go2_webrtc_new:$PYTHONPATH; "
+             "cd ~/NhanHuynh/go2_audio && "
+             f"python3 go2_speaker.py play ~/NhanHuynh/{os.path.splitext(os.path.basename(music))[0]}"
+             f" --seconds {int(dur) + 5}"],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print(f"[nhac] phat tu LOA CHO A ({nhac_robot})")
+    elif play_here and not dry:
         time.sleep(max(0.0, t_go - time.time()))
         proc = play_local(music)
-    elif play_here:
+    elif play_here or nhac_robot or nhac_jetson:
         time.sleep(max(0.0, t_go - time.time()))
         print("[nhac] (dien tap: bo qua phat nhac)")
 
@@ -413,6 +642,37 @@ def main():
     c.add_argument("--stunts", action="store_true")
     c.add_argument("--lead", type=float, default=3.0, help="dem nguoc truoc khi dien")
     c.add_argument("--dry", action="store_true")
+    c.add_argument("--choreo", default=None,
+                   help="file kich ban cua go2_choreo.py (thay cho cong thuc N beat)")
+    c.add_argument("--travel", type=float, default=1.0,
+                   help="he so di chuyen khi dung --choreo (0 = dung yen tai cho)")
+    c.add_argument("--nhan", default=None,
+                   help="danh sach diem nhan ngan, cach nhau dau phay "
+                        "(mac dinh Hello,Heart,Pose)")
+    c.add_argument("--cat-dance", type=float, default=None,
+                   help="cho Dance1/Dance2 chay bao nhieu giay roi moi chan "
+                        "(bo doan quay dau o cuoi). Do bang do_dance.py truoc.")
+    c.add_argument("--kieu-show", action="store_true",
+                   help="chay ban sao go2_show.py tren ca hai con (dong tac bi "
+                        "CAT NGAN ngay, khong giu — muot nhat, it troi nhat)")
+    c.add_argument("--khong-bu-troi", dest="recenter", action="store_false",
+                   default=True,
+                   help="TAT hoan toan phan di ve cho cu. Giong het ban 1 con "
+                        "(go2_show.py): khong bao gio khung, doi lai cho co the "
+                        "troi/xoay dan sau moi dong tac.")
+    c.add_argument("--nhac-jetson", dest="nhac_jetson", default=None, metavar="IP",
+                   help="Phat nhac tu JETSON cua con <IP> ra ngo mac dinh cua no "
+                        "(= loa Bluetooth neu da ghep). Dung khi LAPTOP khong noi "
+                        "duoc loa BTC nhung con cho thi noi duoc.")
+    c.add_argument("--nhac-robot", dest="nhac_robot", default=None, metavar="IP",
+                   help="Phat nhac tu LOA CUA CON <IP> thay vi tu may nay. "
+                        "Nho: loa robot NHO. Dung khi khong tien noi loa hoi truong.")
+    c.add_argument("--cho-enter", dest="wait_enter", action="store_true",
+                   help="Dung cho BAM ENTER roi moi dung day + len nhac. "
+                        "Dung khi dien that: MC gioi thieu xong bao lau cung duoc, "
+                        "cho nam cho, khong dung san tren san khau.")
+    c.add_argument("--loud", action="store_true",
+                   help="KHONG tat loa robot (mac dinh tat de khoi keu 'ne vat can')")
 
     args = p.parse_args()
     if args.role == "agent":
@@ -424,10 +684,25 @@ def main():
     else:
         if not os.path.isfile(args.music):
             sys.exit(f"khong thay file nhac: {args.music}")
+        if args.choreo and not os.path.isfile(args.choreo):
+            sys.exit(f"khong thay file kich ban: {args.choreo}")
         opts = {"latency": args.latency, "special": args.special,
-                "stunts": args.stunts}
+                "stunts": args.stunts, "travel": args.travel,
+                "quiet": not args.loud,
+                # KIEU SHOW: ban sao go2_show.py chay tren ca hai con. Chi can
+                # cung `beat_times` + cung `t0` la hai con tu khop, vi moi quyet
+                # dinh trong vong lap deu tinh tu CHI SO BEAT.
+                "kieu_show": args.kieu_show,
+                "cat_dance": args.cat_dance,
+                "nhan": args.nhan,
+                # chờ Enter thì ĐỪNG đứng dậy lúc prepare
+                "stand_now": not args.wait_enter,
+                "recenter": args.recenter}
         run_conduct([x.strip() for x in args.robots.split(",") if x.strip()],
-                    args.music, opts, args.lead, args.play_here, args.dry)
+                    args.music, opts, args.lead, args.play_here, args.dry,
+                    choreo_path=args.choreo, wait_enter=args.wait_enter,
+                    nhac_robot=args.nhac_robot,
+                    nhac_jetson=args.nhac_jetson)
 
 
 if __name__ == "__main__":
