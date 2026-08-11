@@ -163,7 +163,13 @@ _RULES = [
     (["vuon vai", "duoi nguoi", "gian co"],
      lambda t: _action("stretch", "V\u01b0\u01a1n vai c\u00e1i n\u00e0o!")),
 
-    (["tha tim", "trai tim", "tim nao", "thuong"],
+    # Nguoi ta hay noi "BAN tim" chu khong chi "THA tim"; STT con nghe chech thanh
+    # "bat tim"/"ban tiem". Da THU va BO cach dua may cum nay vao knowledge.yaml cho
+    # tang FAQ lo: FAQ so khop n-gram KY TU nen cum ngan "ban tim di" hut luon MOI cau
+    # co chu "tim/tim" ("b\u1ea1n c\u00f3 tim kh\u00f4ng", "t\u00f4i t\u00ecm c\u00e1i b\u00e0n") -> nhan nham tu 1/8 len 5/8.
+    # Dat o reflex (khop chuoi con) thi chinh xac hon HAN: chi "ban tim" moi dinh
+    # "b\u1ea1n t\u00ecm ...", con lai deu an dung.
+    (["tha tim", "ban tim", "bat tim", "ban tiem", "trai tim", "tim nao", "thuong"],
      lambda t: _action("heart", "Th\u01b0\u01a1ng b\u1ea1n nhi\u1ec1u!")),
 ]
 

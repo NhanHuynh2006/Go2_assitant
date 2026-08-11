@@ -101,3 +101,6 @@ QUAY ĐẦU
 LÙI RA
 TIẾN VÀO
 QUAY VỀ
+BẮN TIM
+BẮN TIM ĐI
+THẢ TIM ĐI
