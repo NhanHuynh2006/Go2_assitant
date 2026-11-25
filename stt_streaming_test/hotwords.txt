@@ -1,0 +1,70 @@
+ĐI THẲNG
+TIẾN LÊN
+ĐI TỚI
+ĐI TỚI TRƯỚC
+BƯỚC TỚI
+LÙI LẠI
+ĐI LÙI
+SANG TRÁI
+SANG PHẢI
+QUA TRÁI
+QUA PHẢI
+XOAY TRÁI
+XOAY PHẢI
+QUAY TRÁI
+QUAY PHẢI
+RẼ TRÁI
+RẼ PHẢI
+XOAY VÒNG
+XOAY TẠI CHỖ
+QUAY TẠI CHỖ
+CHÀO
+VẪY TAY
+BẮT TAY
+NHẢY
+MÚA
+NHẢY MÚA
+ĐỔI ĐIỆU
+VƯƠN VAI
+DUỖI NGƯỜI
+THẢ TIM
+NẰM XUỐNG
+NGỒI XUỐNG
+NẰM NGHỈ
+NGHỈ
+ĐỨNG DẬY
+ĐỨNG LÊN
+DẬY ĐI
+DỪNG LẠI
+DỪNG NGAY
+NGƯNG LẠI
+ĐỨNG YÊN
+MÉT
+GIÂY
+ĐỘ
+VÒNG
+MỘT
+HAI
+BA
+BỐN
+NĂM
+SÁU
+BẢY
+TÁM
+CHÍN
+MƯỜI
+CHÍN MƯƠI ĐỘ
+BỐN MƯƠI LĂM ĐỘ
+MỘT TRĂM TÁM MƯƠI ĐỘ
+CỬA
+CỬA SỔ
+CÁI BÀN
+CÁI GHẾ
+CHỖ SẠC
+GÓC PHÒNG
+BẾP
+PHÒNG KHÁCH
+CHỖ CŨ
+RỒI
+SAU ĐÓ
+TIẾP THEO

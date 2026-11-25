@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoVoice Studio</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img src="icon.svg" alt="" class="logo">
+    <div>
+      <div class="name">GoVoice <b>Studio</b></div>
+      <div class="sub" id="modeChip">MÔ PHỎNG</div>
+    </div>
+  </div>
+  <div class="pills">
+    <span class="pill" id="pillSim"><i></i>Mô phỏng</span>
+    <span class="pill" id="pillLlm"><i></i>Bộ não LLM</span>
+    <span class="pill" id="pillAsst"><i></i>Trợ lý</span>
+    <span class="pill" id="pillLink"><i></i>Kết nối</span>
+  </div>
+  <div class="spacer"></div>
+  <div class="clock" id="clock">--:--:--</div>
+  <button class="estop" id="estop" title="Dừng khẩn cấp tất cả robot (phím Esc)">
+    <svg viewBox="0 0 24 24"><path d="M8 3h8l5 5v8l-5 5H8l-5-5V8z"/><rect x="7" y="10.5" width="10" height="3" rx="1" fill="#fff" stroke="none"/></svg>
+    E-STOP
+  </button>
+</header>
+
+<main class="layout">
+  <!-- ============ cot trai ============ -->
+  <aside class="col left">
+    <section class="card" id="startCard">
+      <div class="card-h"><h2>Khởi động</h2><button class="btn primary sm" id="runAll">▶ Chạy tất cả</button></div>
+      <div class="proc" id="procSim">
+        <div class="proc-l"><span class="dot"></span><div><b>Mô phỏng</b><small id="simInfo">đang tắt</small></div></div>
+        <div class="proc-r">
+          <select id="simWorld" title="Bản đồ mô phỏng"><option value="voice_house">Nhà nhỏ</option><option value="voice_office">Văn phòng 30×20</option></select>
+          <select id="simRobots" title="Số robot"><option value="1">1 con</option><option value="2">2 con</option></select>
+          <label class="chk" title="Mở cửa sổ Gazebo (tốn GPU)"><input type="checkbox" id="simGui">3D</label>
+          <button class="btn sm" id="simBtn">Bật</button>
+        </div>
+      </div>
+      <div class="proc" id="procLlm">
+        <div class="proc-l"><span class="dot"></span><div><b>Bộ não LLM</b><small id="llmInfo">đang tắt</small></div></div>
+        <div class="proc-r">
+          <select id="llmModel" title="Model"></select>
+          <button class="btn sm" id="llmBtn">Bật</button>
+        </div>
+      </div>
+      <div class="proc" id="procMovers">
+        <div class="proc-l"><span class="dot"></span><div><b>Người & xe đẩy</b><small id="moversInfo">đứng yên</small></div></div>
+        <div class="proc-r">
+          <select id="moversN" title="Số người đi lại"><option value="3">3 người</option><option value="6" selected>6 người</option><option value="12">12 người</option></select>
+          <button class="btn sm" id="moversBtn">Bật</button>
+        </div>
+      </div>
+      <div class="proc" id="procAsst">
+        <div class="proc-l"><span class="dot"></span><div><b>Trợ lý GoVoice</b><small id="asstInfo">chưa kết nối</small></div></div>
+        <div class="proc-r"><button class="btn sm" id="asstBtn">Kết nối</button></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>Đội robot</h2><span class="muted" id="fleetCount">0</span></div>
+      <div class="ctrlrow" title="Thuật toán né vật cản khi đi tới đích">
+        <span>Né vật cản</span>
+        <div class="seg" id="ctrlSeg">
+          <button data-c="mppi" title="MPPI (Williams 2016, như Nav2): mượt, đi ngang được">MPPI</button>
+          <button data-c="dwa" title="Dynamic Window (Fox 1997)">DWA</button>
+          <button data-c="rl" title="Policy RL (PPO) học trong 100 triệu bước">RL</button>
+          <button data-c="rl_safe" title="RL + MPPI kiểm tra an toàn (kiểu ABS)">RL+</button>
+          <button data-c="pp" title="Bản cũ: dừng-quay-đi + phanh">Cũ</button>
+        </div>
+      </div>
+      <div id="fleet" class="fleet"><div class="empty">Chưa có robot. Bấm “Chạy tất cả”.</div></div>
+    </section>
+
+    <section class="card grow">
+      <div class="tabs">
+        <button class="tab on" data-tab="places">Địa điểm</button>
+        <button class="tab" data-tab="objects">Đồ vật</button>
+      </div>
+      <input class="search" id="search" placeholder="Tìm… (vd: bàn, xanh)">
+      <div class="list" id="placeList"></div>
+      <div class="list hidden" id="objList"></div>
+    </section>
+  </aside>
+
+  <!-- ============ ban do ============ -->
+  <section class="col center">
+    <div class="mapwrap" id="mapwrap">
+      <canvas id="map"></canvas>
+      <div class="maptools">
+        <button class="tool on" data-layer="grid" title="Bản đồ robot tự vẽ">Bản đồ</button>
+        <button class="tool on" data-layer="objects" title="Đồ vật">Đồ vật</button>
+        <button class="tool on" data-layer="places" title="Địa điểm">Địa điểm</button>
+        <button class="tool on" data-layer="paths" title="Quỹ đạo">Quỹ đạo</button>
+        <button class="tool on" data-layer="people" title="Người">Người</button>
+        <span class="sep"></span>
+        <button class="tool" id="pickGoal" title="Chấm nhanh: bấm = đi tới, bấm-kéo = chọn cả hướng (phím G)">⌖ Chấm nhanh</button>
+        <button class="tool" id="follow" title="Camera bám robot đang chọn (phím F)">◎ Bám</button>
+        <button class="tool" id="fit" title="Xem toàn nhà">⤢</button>
+        <span class="sep"></span>
+        <button class="tool" id="mapSave" title="Lưu bản đồ đã quét (.pgm/.yaml, mở được bằng RViz/Nav2)">💾 Lưu</button>
+        <span class="dd">
+          <button class="tool" id="mapOpen" title="Mở bản đồ đã lưu">📂 Mở</button>
+          <div class="ddmenu hidden" id="mapMenu"></div>
+        </span>
+        <button class="tool" id="mapClear" title="Xoá bản đồ quét, quét lại từ đầu">🧹 Quét lại</button>
+      </div>
+      <div class="maphint" id="maphint"></div>
+      <div class="pop hidden" id="pop">
+        <div class="pop-h"><b id="popXY">x, y</b><span id="popState" class="st">…</span></div>
+        <button class="btn primary sm" id="popGo">▶ Đi tới đây</button>
+        <div class="pop-row">
+          <button class="btn sm" id="popRoute" title="Thêm vào lộ trình (Shift+bấm)">+ Lộ trình</button>
+          <button class="btn sm" id="popName" title="Đặt tên chỗ này để gọi bằng giọng nói">📍 Đặt tên</button>
+        </div>
+        <div class="pop-row hidden" id="popNameRow">
+          <input id="popNameIn" placeholder="vd: góc đọc sách">
+          <button class="btn sm primary" id="popNameOk">Lưu</button>
+        </div>
+      </div>
+      <div class="routebar hidden" id="routebar">
+        <span id="routeN">0 điểm</span>
+        <button class="btn sm primary" id="routeGo">▶ Đi lộ trình</button>
+        <button class="btn sm" id="routeLoop" title="Đi tuần lặp lại 3 vòng">↻ Tuần tra</button>
+        <button class="btn sm" id="routeUndo" title="Bỏ điểm cuối">↶</button>
+        <button class="btn sm ghost" id="routeClear">✕ Xoá</button>
+      </div>
+      <div class="mapfoot">
+        <span id="cursor">x —, y —</span>
+        <span class="mapname" id="mapName"></span>
+        <span class="tip">bấm: chọn điểm · bấm đúp: đi luôn · Shift+bấm: lộ trình</span>
+        <span class="scale"><i id="scaleBar"></i><b id="scaleTxt">1 m</b></span>
+      </div>
+      <div class="legend">
+        <span><i class="lg occ"></i>vật cản</span>
+        <span><i class="lg cam"></i>chỉ camera thấy</span>
+        <span><i class="lg maybe"></i>nghi có</span>
+        <span><i class="lg free"></i>trống</span>
+        <span><i class="lg ppl"></i>người</span>
+      </div>
+      <div class="splash" id="splash">
+        <img src="icon.svg" alt="">
+        <h1>GoVoice Studio</h1>
+        <p>Điều khiển Go2 bằng giọng nói tiếng Việt — mô phỏng và robot thật.</p>
+        <button class="btn primary lg" id="splashRun">▶ Chạy tất cả</button>
+        <small>Mô phỏng → bộ não LLM → trợ lý. Khoảng 40 giây.</small>
+      </div>
+    </div>
+
+    <div class="telemetry">
+      <div class="meter" data-k="cpu"><span>CPU</span><b>—</b><canvas></canvas></div>
+      <div class="meter" data-k="ram"><span>RAM</span><b>—</b><canvas></canvas></div>
+      <div class="meter" data-k="gpu"><span>GPU</span><b>—</b><canvas></canvas></div>
+      <div class="meter" data-k="vram"><span>VRAM</span><b>—</b><canvas></canvas></div>
+      <button class="btn ghost sm" id="logsBtn">Nhật ký</button>
+    </div>
+  </section>
+
+  <!-- ============ ra lenh ============ -->
+  <aside class="col right">
+    <section class="card chatcard">
+      <div class="card-h">
+        <h2>Ra lệnh</h2>
+        <div class="seg" id="target" title="Gửi lệnh cho robot nào"></div>
+      </div>
+      <div class="chat" id="chat">
+        <div class="hello">
+          <b>Gõ hoặc nói lệnh tiếng Việt.</b>
+          <span>Ví dụ: “đi tới cái bàn màu đen”, “xoay trái 90 độ rồi đi thẳng 2 mét”,
+          “con một ra cửa, còn con hai vào bếp”, “lưu chỗ này là góc đọc sách”.</span>
+          <span>🗺 Bấm lên bản đồ → “Đi tới đây”. Bấm đúp = đi luôn. Shift+bấm = thêm điểm vào lộ trình.
+          “⌖ Chấm nhanh”: bấm rồi kéo để chọn cả hướng robot quay mặt.</span>
+        </div>
+      </div>
+      <div class="quick" id="quick"></div>
+      <form class="composer" id="composer" autocomplete="off">
+        <button type="button" class="mic" id="mic" title="Bật/tắt mic (phím M)">
+          <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        </button>
+        <input id="cmd" placeholder="Nhập lệnh… (Enter để gửi, / để gõ nhanh)" disabled>
+        <button class="btn primary" id="send" disabled>Gửi</button>
+      </form>
+      <div class="voicebar">
+        <label class="chk"><input type="checkbox" id="tts" checked>Robot đọc trả lời</label>
+        <label class="wake">Từ đánh thức
+          <input id="wake" placeholder="tắt (vd: gô ơi)" title="Chỉ nghe câu có gọi tên. Phân cách bằng dấu phẩy.">
+        </label>
+      </div>
+    </section>
+  </aside>
+</main>
+
+<div class="drawer hidden" id="drawer">
+  <div class="drawer-h">
+    <div class="tabs">
+      <button class="tab on" data-log="app">Trợ lý</button>
+      <button class="tab" data-log="sim">Mô phỏng</button>
+      <button class="tab" data-log="llm">LLM</button>
+    </div>
+    <button class="btn ghost sm" id="drawerClose">Đóng</button>
+  </div>
+  <pre id="logview"></pre>
+</div>
+<div class="toast" id="toast"></div>
+<div class="banner hidden" id="banner"><span id="bannerTxt"></span><button class="btn sm primary" id="bannerBtn">Nối lại trợ lý</button></div>
+<script src="app.js"></script>
+</body>
+</html>

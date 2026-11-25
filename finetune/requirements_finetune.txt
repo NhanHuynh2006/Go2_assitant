@@ -1,0 +1,12 @@
+# Phu thuoc cho fine-tune (chay tren LAPTOP RTX 4060, KHONG can tren Jetson)
+# Cai torch theo CUDA cua ban truoc, vd:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+transformers>=4.45
+datasets
+peft>=0.13
+trl>=0.12
+bitsandbytes
+accelerate
+sentencepiece
+protobuf
+gguf

@@ -1,0 +1,428 @@
+[INFO] [launch]: All log files can be found below /home/nhanhuynh/.ros/log/2026-11-25-22-14-56-656795-Nolan-1558314
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo-1]: process started with pid [1558331]
+[INFO] [robot_state_publisher-2]: process started with pid [1558332]
+[INFO] [create-3]: process started with pid [1558333]
+[INFO] [parameter_bridge-4]: process started with pid [1558334]
+[INFO] [parameter_bridge-5]: process started with pid [1558336]
+[INFO] [quadruped_controller_node-6]: process started with pid [1558337]
+[INFO] [state_estimation_node-7]: process started with pid [1558338]
+[INFO] [ekf_node-8]: process started with pid [1558339]
+[INFO] [ekf_node-9]: process started with pid [1558351]
+[INFO] [static_transform_publisher-10]: process started with pid [1558352]
+[INFO] [static_transform_publisher-11]: process started with pid [1558353]
+[robot_state_publisher-2] [INFO] [1795619697.157395262] [robot_state_publisher]: Robot initialized
+[create-3] [INFO] [1795619697.160248387] [ros_gz_sim]: Requesting list of world names.
+[ekf_node-8] [INFO] [1795619697.160617643] [base_to_footprint_ekf]: Waiting for clock to start...
+[quadruped_controller_node-6] [INFO] [1795619697.165248184] [rclcpp]: Successfully parsed urdf file
+[state_estimation_node-7] [INFO] [1795619697.172177372] [rclcpp]: Successfully parsed urdf file
+[static_transform_publisher-10] [INFO] [1795619697.178364487] [map_to_odom_tf_node]: Spinning until stopped - publishing transform
+[static_transform_publisher-10] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-10] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-10] from 'map' to 'odom'
+[parameter_bridge-4] [INFO] [1795619697.179105373] [gazebo_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.179700219] [gazebo_bridge]: Creating GZ->ROS Bridge: [/imu/data (gz.msgs.IMU) -> /imu/data (sensor_msgs/msg/Imu)] (Lazy 0)
+[static_transform_publisher-11] [INFO] [1795619697.179551805] [base_link_to_base_footprint_tf_node]: Spinning until stopped - publishing transform
+[static_transform_publisher-11] translation: ('0.000000', '0.000000', '-0.280000')
+[static_transform_publisher-11] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-11] from 'base_link' to 'base_footprint'
+[parameter_bridge-5] [INFO] [1795619697.179557741] [ground_truth_bridge]: Creating GZ->ROS Bridge: [/model/go2/pose (gz.msgs.Pose_V) -> /model/go2/pose (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.181939501] [gazebo_bridge]: Creating ROS->GZ Bridge: [/imu/data (sensor_msgs/msg/Imu) -> /imu/data (gz.msgs.IMU)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.182970093] [gazebo_bridge]: Creating GZ->ROS Bridge: [/tf (gz.msgs.Pose_V) -> /tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.185323358] [gazebo_bridge]: Creating ROS->GZ Bridge: [/tf (tf2_msgs/msg/TFMessage) -> /tf (gz.msgs.Pose_V)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.186424002] [gazebo_bridge]: Creating GZ->ROS Bridge: [/joint_states (gz.msgs.Model) -> /joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.187075839] [gazebo_bridge]: Creating ROS->GZ Bridge: [/joint_states (sensor_msgs/msg/JointState) -> /joint_states (gz.msgs.Model)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.187728864] [gazebo_bridge]: Creating GZ->ROS Bridge: [/velodyne_points/points (gz.msgs.PointCloudPacked) -> /velodyne_points/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.188707214] [gazebo_bridge]: Creating ROS->GZ Bridge: [/velodyne_points/points (sensor_msgs/msg/PointCloud2) -> /velodyne_points/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.189471847] [gazebo_bridge]: Creating GZ->ROS Bridge: [/unitree_lidar/points (gz.msgs.PointCloudPacked) -> /unitree_lidar/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.190162866] [gazebo_bridge]: Creating ROS->GZ Bridge: [/unitree_lidar/points (sensor_msgs/msg/PointCloud2) -> /unitree_lidar/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[ekf_node-9] [INFO] [1795619697.190475131] [footprint_to_odom_ekf]: Waiting for clock to start...
+[parameter_bridge-4] [INFO] [1795619697.190741090] [gazebo_bridge]: Creating GZ->ROS Bridge: [/odom (gz.msgs.Odometry) -> /odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.192189618] [gazebo_bridge]: Creating ROS->GZ Bridge: [/odom (nav_msgs/msg/Odometry) -> /odom (gz.msgs.Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.193171530] [gazebo_bridge]: Creating GZ->ROS Bridge: [/gps/fix (gz.msgs.NavSat) -> /gps/fix (sensor_msgs/msg/NavSatFix)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.193855426] [gazebo_bridge]: Creating GZ->ROS Bridge: [/rgb_image (gz.msgs.Image) -> /rgb_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.194457396] [gazebo_bridge]: Creating ROS->GZ Bridge: [/rgb_image (sensor_msgs/msg/Image) -> /rgb_image (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.194992876] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/image (gz.msgs.Image) -> /d455/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.195489175] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/depth_image (gz.msgs.Image) -> /d455/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.195996160] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/points (gz.msgs.PointCloudPacked) -> /d455/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.196576759] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/camera_info (gz.msgs.CameraInfo) -> /d455/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.197375824] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/image (gz.msgs.Image) -> /d435i/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.197838878] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/depth_image (gz.msgs.Image) -> /d435i/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.198318554] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/points (gz.msgs.PointCloudPacked) -> /d435i/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.198924086] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/camera_info (gz.msgs.CameraInfo) -> /d435i/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.199489250] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/imu (gz.msgs.IMU) -> /d435i/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.200110217] [gazebo_bridge]: Creating ROS->GZ Bridge: [/cmd_vel (geometry_msgs/msg/Twist) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.200707438] [gazebo_bridge]: Creating ROS->GZ Bridge: [/joint_group_effort_controller/joint_trajectory (trajectory_msgs/msg/JointTrajectory) -> /joint_group_effort_controller/joint_trajectory (gz.msgs.JointTrajectory)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795619697.214124132] [gazebo_bridge]: Passing message from ROS trajectory_msgs/msg/JointTrajectory to Gazebo gz.msgs.JointTrajectory (showing msg only once per type)
+[create-3] [INFO] [1795619699.375261504] [ros_gz_sim]: Waiting messages on topic [robot_description].
+[create-3] [INFO] [1795619699.443355384] [ros_gz_sim]: Entity creation successful.
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="rgb_camera"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="d435i_rgbd_camera"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="d435i_imu"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="navsat_sensor"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="imu_sensor"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="lidar_l1"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="velodyne-VLP16"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="velodyne-VLP16"]/lidar/frame_id:<urdf-string>:L0]: XML Element[frame_id], child of element[lidar], not defined in SDF. Copying[frame_id] as children of [lidar].
+[gazebo-1] [INFO] [1795619699.578717956] [gz_ros_control]: Loading controller_manager
+[INFO] [create-3]: process has finished cleanly [pid 1558333]
+[gazebo-1] [INFO] [1795619699.592046789] [controller_manager]: Using ROS clock for triggering controller manager cycles.
+[gazebo-1] [WARN] [1795619699.592080034] [controller_manager]: The resource manager is not yet initialized, will wait for the robot description to initialize it..
+[gazebo-1] [INFO] [1795619699.597065582] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[gazebo-1] [WARN] [1795619699.597117824] [gz_ros_control]: Waiting RM to load and initialize hardware...
+[gazebo-1] [INFO] [1795619699.598597223] [controller_manager]: Received robot description from topic.
+[gazebo-1] [INFO] [1795619699.598662525] [controller_manager]: Enforcing command limits is enabled...
+[gazebo-1] [INFO] [1795619699.602025010] [gz_ros_control]: Using JointLimiter for joint 'rf_lower_leg_joint' in hardware 'rf' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602046382] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_lower_leg_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795619699.602070128] [gz_ros_control]: Using JointLimiter for joint 'rf_upper_leg_joint' in hardware 'rf' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602082001] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_upper_leg_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795619699.602093874] [gz_ros_control]: Using JointLimiter for joint 'rf_hip_joint' in hardware 'rf' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602104560] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_hip_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795619699.602117621] [gz_ros_control]: Using JointLimiter for joint 'lf_lower_leg_joint' in hardware 'lf' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602129494] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_lower_leg_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795619699.602140180] [gz_ros_control]: Using JointLimiter for joint 'lf_upper_leg_joint' in hardware 'lf' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602152053] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_upper_leg_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795619699.602162739] [gz_ros_control]: Using JointLimiter for joint 'lf_hip_joint' in hardware 'lf' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602173425] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_hip_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795619699.602185298] [gz_ros_control]: Using JointLimiter for joint 'rh_lower_leg_joint' in hardware 'rh' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602195984] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_lower_leg_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795619699.602226854] [gz_ros_control]: Using JointLimiter for joint 'rh_upper_leg_joint' in hardware 'rh' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602236352] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_upper_leg_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795619699.602245851] [gz_ros_control]: Using JointLimiter for joint 'rh_hip_joint' in hardware 'rh' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602256537] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_hip_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795619699.602268410] [gz_ros_control]: Using JointLimiter for joint 'lh_lower_leg_joint' in hardware 'lh' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602279096] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_lower_leg_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795619699.602289782] [gz_ros_control]: Using JointLimiter for joint 'lh_upper_leg_joint' in hardware 'lh' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602299280] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_upper_leg_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795619699.602311154] [gz_ros_control]: Using JointLimiter for joint 'lh_hip_joint' in hardware 'lh' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795619699.602321839] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_hip_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795619699.605324567] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795619699.605372060] [gz_ros_control]: Loading joint: rf_hip_joint
+[gazebo-1] [INFO] [1795619699.605385120] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.605396993] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.605407679] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.605417178] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.605426676] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.605440924] [gz_ros_control]: Loading joint: rf_upper_leg_joint
+[gazebo-1] [INFO] [1795619699.605449235] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.605458734] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.605469420] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.605477731] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.605486042] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.605499103] [gz_ros_control]: Loading joint: rf_lower_leg_joint
+[gazebo-1] [INFO] [1795619699.605508601] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.605516912] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.605526411] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.605534722] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.605543033] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.605716382] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795619699.605728255] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.605738941] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.605748439] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795619699.605763874] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.605780497] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.605925350] [gz_ros_control]: Initialize hardware 'rf' 
+[gazebo-1] [INFO] [1795619699.612361801] [gz_ros_control]: Successful initialization of hardware 'rf'
+[gazebo-1] [INFO] [1795619699.612480533] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795619699.612506654] [gz_ros_control]: Loading joint: lf_hip_joint
+[gazebo-1] [INFO] [1795619699.612518527] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.612529213] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.612538711] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.612549397] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.612557709] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.612573144] [gz_ros_control]: Loading joint: lf_upper_leg_joint
+[gazebo-1] [INFO] [1795619699.612581455] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.612589766] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.612599265] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.612609951] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.612620636] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.612632510] [gz_ros_control]: Loading joint: lf_lower_leg_joint
+[gazebo-1] [INFO] [1795619699.612642008] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.612650319] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.612658631] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.612668129] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.612676440] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.612689501] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795619699.612700187] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.612709685] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.612721558] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795619699.612732244] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.612741743] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.612789236] [gz_ros_control]: Initialize hardware 'lf' 
+[gazebo-1] [INFO] [1795619699.619549825] [gz_ros_control]: Successful initialization of hardware 'lf'
+[gazebo-1] [INFO] [1795619699.619641248] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795619699.619668557] [gz_ros_control]: Loading joint: rh_hip_joint
+[gazebo-1] [INFO] [1795619699.619680430] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.619689928] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.619700614] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.619711300] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.619720799] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.619737421] [gz_ros_control]: Loading joint: rh_upper_leg_joint
+[gazebo-1] [INFO] [1795619699.619748107] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.619768291] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.619777790] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.619788476] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.619797974] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.619813409] [gz_ros_control]: Loading joint: rh_lower_leg_joint
+[gazebo-1] [INFO] [1795619699.619822908] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.619832406] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.619844280] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.619853778] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.619863277] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.619876337] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795619699.619885836] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.619896522] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.619906020] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795619699.619915519] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.619926205] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.619967761] [gz_ros_control]: Initialize hardware 'rh' 
+[gazebo-1] [INFO] [1795619699.626563313] [gz_ros_control]: Successful initialization of hardware 'rh'
+[gazebo-1] [INFO] [1795619699.626655923] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795619699.626696292] [gz_ros_control]: Loading joint: lh_hip_joint
+[gazebo-1] [INFO] [1795619699.626708165] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.626718851] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.626729537] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.626737848] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.626747347] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.626771093] [gz_ros_control]: Loading joint: lh_upper_leg_joint
+[gazebo-1] [INFO] [1795619699.626781779] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.626790090] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.626798402] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.626807900] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.626816211] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.626828085] [gz_ros_control]: Loading joint: lh_lower_leg_joint
+[gazebo-1] [INFO] [1795619699.626837583] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795619699.626848269] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795619699.626856580] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795619699.626866079] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795619699.626874390] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795619699.626885076] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795619699.626895762] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.626902886] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.626913571] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795619699.626924257] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795619699.626932569] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795619699.626977687] [gz_ros_control]: Initialize hardware 'lh' 
+[gazebo-1] [INFO] [1795619699.633614795] [gz_ros_control]: Successful initialization of hardware 'lh'
+[gazebo-1] [INFO] [1795619699.633738276] [controller_manager]: Activating component 'rh'.
+[gazebo-1] [INFO] [1795619699.633790518] [resource_manager]: 'configure' hardware 'rh' 
+[gazebo-1] [INFO] [1795619699.633798829] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795619699.633810702] [resource_manager]: Successful 'configure' of hardware 'rh'
+[gazebo-1] [INFO] [1795619699.633820201] [resource_manager]: 'activate' hardware 'rh' 
+[gazebo-1] [INFO] [1795619699.633841572] [resource_manager]: Successful 'activate' of hardware 'rh'
+[gazebo-1] [INFO] [1795619699.633880754] [controller_manager]: Activating component 'lf'.
+[gazebo-1] [INFO] [1795619699.633892627] [resource_manager]: 'configure' hardware 'lf' 
+[gazebo-1] [INFO] [1795619699.633897376] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795619699.633906875] [resource_manager]: Successful 'configure' of hardware 'lf'
+[gazebo-1] [INFO] [1795619699.633911624] [resource_manager]: 'activate' hardware 'lf' 
+[gazebo-1] [INFO] [1795619699.633916373] [resource_manager]: Successful 'activate' of hardware 'lf'
+[gazebo-1] [INFO] [1795619699.633928247] [controller_manager]: Activating component 'lh'.
+[gazebo-1] [INFO] [1795619699.633936558] [resource_manager]: 'configure' hardware 'lh' 
+[gazebo-1] [INFO] [1795619699.633940120] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795619699.633949618] [resource_manager]: Successful 'configure' of hardware 'lh'
+[gazebo-1] [INFO] [1795619699.633954368] [resource_manager]: 'activate' hardware 'lh' 
+[gazebo-1] [INFO] [1795619699.633959117] [resource_manager]: Successful 'activate' of hardware 'lh'
+[gazebo-1] [INFO] [1795619699.633969803] [controller_manager]: Activating component 'rf'.
+[gazebo-1] [INFO] [1795619699.633978114] [resource_manager]: 'configure' hardware 'rf' 
+[gazebo-1] [INFO] [1795619699.633982863] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795619699.633991175] [resource_manager]: Successful 'configure' of hardware 'rf'
+[gazebo-1] [INFO] [1795619699.633994736] [resource_manager]: 'activate' hardware 'rf' 
+[gazebo-1] [INFO] [1795619699.633999486] [resource_manager]: Successful 'activate' of hardware 'rf'
+[gazebo-1] [WARN] [1795619699.634011359] [controller_manager]: Component 'rh' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795619699.634020857] [controller_manager]: Component 'lf' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795619699.634031543] [controller_manager]: Component 'lh' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795619699.634055290] [controller_manager]: Component 'rf' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [INFO] [1795619699.634065976] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[gazebo-1] [WARN] [1795619701.678149220] [gz_ros_control]:  Desired controller update period (0.004 s) is slower than the gazebo simulation period (0.001 s).
+[gazebo-1] libEGL warning: pci id for fd 92: 10de:28e0, driver (null)
+[gazebo-1] 
+[gazebo-1] pci id for fd 93: 10de:28e0, driver (null)
+[gazebo-1] pci id for fd 94: 10de:28e0, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 92: 10de:28e0, driver (null)
+[gazebo-1] 
+[gazebo-1] pci id for fd 93: 10de:28e0, driver (null)
+[gazebo-1] pci id for fd 94: 10de:28e0, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 92: 10de:28e0, driver (null)
+[gazebo-1] 
+[parameter_bridge-4] [INFO] [1795619702.499098935] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/Image to Gazebo gz.msgs.Image (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795619702.513051109] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/PointCloud2 to Gazebo gz.msgs.PointCloudPacked (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795619702.523448454] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/Imu to Gazebo gz.msgs.IMU (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795619702.533379182] [gazebo_bridge]: Passing message from ROS nav_msgs/msg/Odometry to Gazebo gz.msgs.Odometry (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795619702.534909635] [gazebo_bridge]: Passing message from ROS tf2_msgs/msg/TFMessage to Gazebo gz.msgs.Pose_V (showing msg only once per type)
+[INFO] [spawner-12]: process started with pid [1559028]
+[spawner-12] [INFO] [1795619717.587051481] [spawner_joint_states_controller]: Setting controller param "params_file" to "['/tmp/launch_params_gcb51o7c']" for joint_states_controller
+[gazebo-1] [INFO] [1795619717.588722037] [controller_manager]: Loading controller : 'joint_states_controller' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[gazebo-1] [INFO] [1795619717.588793276] [controller_manager]: Loading controller 'joint_states_controller'
+[gazebo-1] [INFO] [1795619717.591290206] [controller_manager]: Controller 'joint_states_controller' node arguments: '--ros-args --params-file /tmp/launch_params_gcb51o7c --param use_sim_time:=true'
+[spawner-12] [INFO] [1795619717.604252158] [spawner_joint_states_controller]: Loaded joint_states_controller
+[gazebo-1] [INFO] [1795619717.615206354] [controller_manager]: Configuring controller: 'joint_states_controller'
+[gazebo-1] [INFO] [1795619717.615391576] [joint_states_controller]: 'joints' or 'interfaces' parameter is empty. Will try to publish all available state interfaces of the URDF joints.
+[gazebo-1] [INFO] [1795619717.624975608] [controller_manager]: Activating controllers: [ joint_states_controller ]
+[gazebo-1] [INFO] [1795619717.627997332] [controller_manager]: Requested controller switch from non-realtime loop
+[gazebo-1] [INFO] [1795619717.628247856] [controller_manager]: Successfully switched controllers!
+[parameter_bridge-4] [INFO] [1795619717.631398998] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/JointState to Gazebo gz.msgs.Model (showing msg only once per type)
+[spawner-12] [INFO] [1795619717.632135136] [spawner_joint_states_controller]: Configured and activated joint_states_controller
+[INFO] [spawner-12]: process has finished cleanly [pid 1559028]
+[INFO] [bash-13]: process started with pid [1559077]
+[bash-13] Checking controller status:
+[bash-13] joint_states_controller joint_state_broadcaster/JointStateBroadcaster  active
+[INFO] [bash-13]: process has finished cleanly [pid 1559077]
+[INFO] [spawner-14]: process started with pid [1559170]
+[spawner-14] [INFO] [1795619727.548733283] [spawner_joint_group_effort_controller]: Setting controller param "params_file" to "['/home/nhanhuynh/ros2_ws/install/unitree_go2_sim/share/unitree_go2_sim/config/ros_control/ros_control.yaml', '/tmp/launch_params_rn1j327f']" for joint_group_effort_controller
+[gazebo-1] [INFO] [1795619727.556969709] [controller_manager]: Loading controller : 'joint_group_effort_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-1] [INFO] [1795619727.557014827] [controller_manager]: Loading controller 'joint_group_effort_controller'
+[gazebo-1] [INFO] [1795619727.561317668] [controller_manager]: Controller 'joint_group_effort_controller' node arguments: '--ros-args --params-file /home/nhanhuynh/ros2_ws/install/unitree_go2_sim/share/unitree_go2_sim/config/ros_control/ros_control.yaml --params-file /tmp/launch_params_rn1j327f --param use_sim_time:=true'
+[spawner-14] [INFO] [1795619727.577855821] [spawner_joint_group_effort_controller]: Loaded joint_group_effort_controller
+[gazebo-1] [INFO] [1795619727.578708316] [controller_manager]: Configuring controller: 'joint_group_effort_controller'
+[gazebo-1] [INFO] [1795619727.578948154] [joint_group_effort_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-1] [INFO] [1795619727.579028892] [joint_group_effort_controller]: Command interfaces are [effort] and state interfaces are [position velocity].
+[gazebo-1] [INFO] [1795619727.579062136] [joint_group_effort_controller]: Using 'splines' interpolation method.
+[gazebo-1] [INFO] [1795619727.586180108] [joint_group_effort_controller]: Goals with partial set of joints are allowed
+[gazebo-1] [INFO] [1795619727.586212166] [joint_group_effort_controller]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-1] [INFO] [1795619727.595957673] [joint_group_effort_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+[gazebo-1] [INFO] [1795619727.599221610] [controller_manager]: Activating controllers: [ joint_group_effort_controller ]
+[gazebo-1] [INFO] [1795619727.601464454] [controller_manager]: Requested controller switch from non-realtime loop
+[gazebo-1] [INFO] [1795619727.601928695] [controller_manager]: Successfully switched controllers!
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.602) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.603) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-25 22:15:27.604) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[spawner-14] [INFO] [1795619727.605622442] [spawner_joint_group_effort_controller]: Configured and activated joint_group_effort_controller
+[gazebo-1] [ERROR] [1795619727.616882967] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_upper_leg_joint', (actual: [Joint: 'lf_upper_leg_joint', position: 0.011251, velocity: -0.178010], command: [Joint: 'lf_upper_leg_joint', effort: 60.417838], limited: [Joint: 'lf_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[INFO] [spawner-14]: process has finished cleanly [pid 1559170]
+[parameter_bridge-4] [INFO] [1795619732.075888073] [gazebo_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[gazebo-1] [ERROR] [1795619733.616832221] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.243059, velocity: -4.732258], command: [Joint: 'lf_lower_leg_joint', effort: 39.938333], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619756.046649226] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_upper_leg_joint', (actual: [Joint: 'rh_upper_leg_joint', position: 0.978704, velocity: 0.264474], command: [Joint: 'rh_upper_leg_joint', effort: 24.275494], limited: [Joint: 'rh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619759.455543918] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.258350, velocity: -0.049377], command: [Joint: 'lf_lower_leg_joint', effort: 36.275015], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619764.814293916] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.256904, velocity: -0.167739], command: [Joint: 'lf_lower_leg_joint', effort: 37.737551], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619768.096493457] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.294699, velocity: 0.054601], command: [Joint: 'lf_lower_leg_joint', effort: 36.124271], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619776.400514183] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.290000, velocity: 0.887182], command: [Joint: 'rf_lower_leg_joint', effort: 36.026856], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619778.318516120] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_upper_leg_joint', (actual: [Joint: 'lh_upper_leg_joint', position: 0.919556, velocity: 0.847372], command: [Joint: 'lh_upper_leg_joint', effort: 24.944955], limited: [Joint: 'lh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619786.000996016] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.295237, velocity: 1.484770], command: [Joint: 'rf_lower_leg_joint', effort: 36.264177], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619790.846221446] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.326305, velocity: 3.189328], command: [Joint: 'lf_lower_leg_joint', effort: 35.681181], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619792.464075310] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.374902, velocity: 0.439466], command: [Joint: 'lf_lower_leg_joint', effort: 35.990734], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619794.322099874] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_upper_leg_joint', (actual: [Joint: 'rh_upper_leg_joint', position: 0.936978, velocity: 1.121646], command: [Joint: 'rh_upper_leg_joint', effort: 25.905696], limited: [Joint: 'rh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619798.847256408] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_hip_joint', (actual: [Joint: 'lh_hip_joint', position: 0.107227, velocity: 1.443420], command: [Joint: 'lh_hip_joint', effort: -24.826451], limited: [Joint: 'lh_hip_joint', effort: -23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619802.384998857] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.192438, velocity: 3.743071], command: [Joint: 'rf_lower_leg_joint', effort: 36.409220], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619807.665347868] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.248162, velocity: -2.690543], command: [Joint: 'rh_lower_leg_joint', effort: 38.556664], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619812.209050310] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_upper_leg_joint', (actual: [Joint: 'lh_upper_leg_joint', position: 0.872507, velocity: -2.115010], command: [Joint: 'lh_upper_leg_joint', effort: 24.301286], limited: [Joint: 'lh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619813.599347539] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.229294, velocity: 0.407511], command: [Joint: 'rf_lower_leg_joint', effort: 36.203333], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619815.166031556] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.278036, velocity: 1.797813], command: [Joint: 'rf_lower_leg_joint', effort: 39.164912], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619816.543217232] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.262130, velocity: 0.457439], command: [Joint: 'lf_lower_leg_joint', effort: 39.504490], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619821.585352242] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.314564, velocity: 0.183270], command: [Joint: 'rf_lower_leg_joint', effort: 38.783599], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619825.809092645] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_upper_leg_joint', (actual: [Joint: 'rf_upper_leg_joint', position: 1.191576, velocity: -1.336853], command: [Joint: 'rf_upper_leg_joint', effort: -26.509562], limited: [Joint: 'rf_upper_leg_joint', effort: -23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619830.305385476] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.285862, velocity: 0.849764], command: [Joint: 'lf_lower_leg_joint', effort: 37.001394], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619833.231562942] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_lower_leg_joint', (actual: [Joint: 'lh_lower_leg_joint', position: -2.237198, velocity: 0.113673], command: [Joint: 'lh_lower_leg_joint', effort: 35.886481], limited: [Joint: 'lh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619837.710600479] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.286478, velocity: -0.388479], command: [Joint: 'lf_lower_leg_joint', effort: 36.003800], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619853.437985552] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.268933, velocity: -2.898091], command: [Joint: 'lf_lower_leg_joint', effort: 42.879876], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619860.670896955] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.244910, velocity: -2.416864], command: [Joint: 'rh_lower_leg_joint', effort: 37.577233], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619863.838577292] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.229007, velocity: -0.815477], command: [Joint: 'rh_lower_leg_joint', effort: 37.710095], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619873.871586041] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.336654, velocity: 1.275866], command: [Joint: 'rf_lower_leg_joint', effort: 37.738660], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619878.080600139] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.301948, velocity: 0.407548], command: [Joint: 'rf_lower_leg_joint', effort: 39.286487], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795619879.409768297] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.323284, velocity: -0.647721], command: [Joint: 'lf_lower_leg_joint', effort: 41.630420], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.

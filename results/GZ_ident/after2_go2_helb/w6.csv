@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+7,lobby,0,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.181,29.0,11.58,,,0.832,9.0,{},3.4
+7,lobby,0,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.185,29.3,11.56,,,0.832,9.0,{},3.5
+7,lobby,0,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.185,29.3,11.56,,,0.832,9.0,{},3.3
+7,lobby,0,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.185,29.3,11.56,,,0.832,9.0,{},3.4
+7,lobby,0,0,mppi:ppl=32,1,ok,0.177,27.7,11.6,,,0.832,9.0,{},2.8
+7,lobby,0,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.194,28.8,11.7,,,0.832,9.0,{},2.0
+7,lobby,0,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.202,28.5,11.57,,,0.832,9.0,{},3.5
+14,clutter,4,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.155,27.7,11.58,,,0.694,0.881,{},3.9
+14,clutter,4,0,mppi~t3~nl:ppl=100;ppl_len=0.5,0,va nguoi,4.072,35.7,12.71,person,1,0.694,-0.075,"{""kind"": ""person"", ""t"": 35.7, ""robot_in"": 0.2, ""person_in"": 0.91, ""robot_v"": 0.52, ""wz"": -0.99, ""bearing"": -85, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.88, ""miss"": 0.21, ""ahead"": 0.86, ""trk"": 1, ""sp"": 0.94, ""rv"": 0.6, ""wall"": 1.61}, ""1.0"": {""d"": 1.29, ""miss"": 0.41, ""ahead"": 1.23, ""trk"": 1, ""sp"": 0.92, ""rv"": 0.46, ""wall"": 1.83}, ""1.5"": {""d"": 1.66, ""miss"": 0.62, ""ahead"": 1.54, ""trk"": 1, ""sp"": 0.92, ""rv"": 0.55, ""wall"": 1.98}, ""2.0"": {""d"": 2.05, ""miss"": 0.84, ""ahead"": 1.88, ""trk"": 1, ""sp"": 0.88, ""rv"": 0.38, ""wall"": 2.17}, ""3.0"": {""d"": 2.66, ""miss"": 0.93, ""ahead"": 2.49, ""trk"": 1, ""sp"": 0.41, ""rv"": 0.25, ""wall"": 2.25}}, ""distracted"": 1}",5.2
+14,clutter,4,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.176,30.2,12.5,,,0.694,1.085,{},4.6
+14,clutter,4,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.187,27.5,11.48,,,0.694,0.912,{},4.1
+14,clutter,4,0,mppi:ppl=32,1,ok,0.187,25.9,11.14,,,0.694,0.886,{},3.0
+14,clutter,4,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.192,28.1,11.27,,,0.694,0.877,{},3.1
+14,clutter,4,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.145,42.6,15.62,,,0.694,0.599,{},6.7

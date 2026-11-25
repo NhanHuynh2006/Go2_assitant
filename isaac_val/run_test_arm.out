@@ -1,0 +1,8 @@
+./run_test_arm.sh: line 49: 745352 Killed                     ( while true; do
+    m=$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo); if [ "$m" -lt 1024 ]; then
+        for p in $(pgrep -f "python[^ ]* (sysid_isaac|body_server)\.py");
+        do
+            kill -9 $p; echo "$(date '+%F %T') WATCHDOG ram=$m giet $p" >> $G;
+        done;
+    fi; sleep 1;
+done )

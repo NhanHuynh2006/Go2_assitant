@@ -1,0 +1,1 @@
+SUPERSEDED (2026-11-25): F6 is now produced from the stored Gazebo TEST episode logs (figures/F6_gazebo_example.*), world 100001, chosen by a fixed rule: the first world in seed order where C1 succeeded and B1 had a person contact. Illustrative only, not a statistic.

@@ -1,0 +1,3 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+crowd:sanh_8_nguoi,crowd,8,0,mppi,0,va nguoi,14.171,21.0,5.45,person,1,0.322,-0.084,"{""kind"": ""person"", ""t"": 21.0, ""robot_in"": 0.14, ""person_in"": 0.98, ""robot_v"": 0.18, ""wz"": -0.12, ""bearing"": -29, ""at_fault"": 1}",4.7
+crowd:sanh_8_nguoi,crowd,8,0,prism@ppo+sac,0,va nguoi,13.397,25.3,6.55,person,1,0.333,-0.016,"{""kind"": ""person"", ""t"": 25.3, ""robot_in"": 0.11, ""person_in"": 0.34, ""robot_v"": 0.11, ""wz"": 0.66, ""bearing"": 8, ""at_fault"": 1}",9.6

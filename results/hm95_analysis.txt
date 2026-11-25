@@ -1,0 +1,45 @@
+
+=== go2 / hm95 (THAM DO) : n the gioi = 1000, bo (EXC o moi cau hinh) = 0, EXC le = {}
+  C1      803/1000 =  80.3 %  Wilson95 [77.7; 82.6]   that bai: {'khong_va(het gio)': 22, 'person': 165, 'khong_va(ket)': 6, 'static': 3, 'khong_va(khong co d)': 1}
+  B1      768/1000 =  76.8 %  Wilson95 [74.1; 79.3]   that bai: {'person': 194, 'khong_va(ket)': 14, 'khong_va(het gio)': 19, 'static': 3, 'khong_va(khong co d)': 2}
+  PGIF*   732/1000 =  73.2 %  Wilson95 [70.4; 75.9]   that bai: {'person': 243, 'khong_va(het gio)': 15, 'static': 8, 'khong_va(ket)': 1, 'khong_va(khong co d)': 1}
+  DRA*    808/1000 =  80.8 %  Wilson95 [78.2; 83.1]   that bai: {'khong_va(ket)': 7, 'person': 165, 'khong_va(het gio)': 15, 'static': 3, 'khong_va(khong co d)': 2}
+  C1 vs B1      +3.5 diem  +117/-82  McNemar p=0.0157  Holm(3)=0.0315
+  C1 vs PGIF*   +7.1 diem  +141/-70  McNemar p=1.16e-06  Holm(3)=3.47e-06
+  C1 vs DRA*    -0.5 diem  +81/-86  McNemar p=0.757  Holm(3)=0.757
+
+=== champ2 / hm95 (THAM DO) : n the gioi = 1000, bo (EXC o moi cau hinh) = 0, EXC le = {}
+  C1      669/1000 =  66.9 %  Wilson95 [63.9; 69.7]   that bai: {'khong_va(het gio)': 22, 'person': 302, 'khong_va(ket)': 7}
+  B1      597/1000 =  59.7 %  Wilson95 [56.6; 62.7]   that bai: {'person': 373, 'khong_va(het gio)': 24, 'khong_va(ket)': 6}
+  PGIF*   607/1000 =  60.7 %  Wilson95 [57.6; 63.7]   that bai: {'person': 369, 'khong_va(het gio)': 18, 'khong_va(ket)': 6}
+  DRA*    622/1000 =  62.2 %  Wilson95 [59.2; 65.2]   that bai: {'person': 352, 'static': 1, 'khong_va(het gio)': 16, 'khong_va(ket)': 9}
+  C1 vs B1      +7.2 diem  +167/-95  McNemar p=1.02e-05  Holm(3)=3.06e-05
+  C1 vs PGIF*   +6.2 diem  +157/-95  McNemar p=0.000113  Holm(3)=0.000226
+  C1 vs DRA*    +4.7 diem  +140/-93  McNemar p=0.00251  Holm(3)=0.00251
+
+=== gop go2+champ2 hm95 (THAM DO, hoan vi dau 200k), n = 1000
+  C1 - B1     +5.35 diem KTC95 [+3.25; +7.45] p=5e-06 Holm(3)=1.5e-05
+  C1 - PGIF*  +6.65 diem KTC95 [+4.55; +8.75] p=5e-06 Holm(3)=1.5e-05
+  C1 - DRA*   +2.10 diem KTC95 [+0.15; +4.00] p=0.037 Holm(3)=0.037
+
+=== dong thuan tung the gioi (success) hm95 vs o da co
+  go2 vs helb (n=1000): C1 78.4% k=0.14 (helb 90.9%); B1 75.1% k=0.14 (helb 89.1%); PGIF* 73.9% k=0.18 (helb 89.5%); DRA* 80.1% k=0.21 (helb 90.1%)
+     chenh C1-B1    : hm95  +3.5  helb  +1.8  tuong quan tung the gioi r=-0.03
+     chenh C1-PGIF* : hm95  +7.1  helb  +1.4  tuong quan tung the gioi r=-0.09
+     chenh C1-DRA*  : hm95  -0.5  helb  +0.8  tuong quan tung the gioi r=-0.04
+  go2 vs base (n=1000): C1 80.0% k=0.24 (base 89.3%); B1 76.0% k=0.25 (base 83.2%); PGIF* 71.8% k=0.18 (base 83.2%); DRA* 79.1% k=0.22 (base 87.9%)
+     chenh C1-B1    : hm95  +3.5  base  +6.1  tuong quan tung the gioi r=0.06
+     chenh C1-PGIF* : hm95  +7.1  base  +6.1  tuong quan tung the gioi r=-0.00
+     chenh C1-DRA*  : hm95  -0.5  base  +1.4  tuong quan tung the gioi r=0.07
+  [doi chieu] go2/helb: C1-B1 +1.8 (+61/-43) p=0.095 Holm=0.285; C1-PGIF* +1.4 (+62/-48) p=0.215 Holm=0.43; C1-DRA* +0.8 (+48/-40) p=0.456 Holm=0.456
+  [doi chieu] go2/base: C1-B1 +6.1 (+112/-51) p=2.01e-06 Holm=6.02e-06; C1-PGIF* +6.1 (+115/-54) p=3.1e-06 Holm=6.21e-06; C1-DRA* +1.4 (+75/-61) p=0.265 Holm=0.265
+  champ2 vs helb (n=1000): C1 71.0% k=0.25 (helb 83.5%); B1 65.1% k=0.22 (helb 76.8%); PGIF* 65.5% k=0.21 (helb 80.8%); DRA* 65.8% k=0.20 (helb 80.0%)
+     chenh C1-B1    : hm95  +7.2  helb  +6.7  tuong quan tung the gioi r=0.04
+     chenh C1-PGIF* : hm95  +6.2  helb  +2.7  tuong quan tung the gioi r=0.03
+     chenh C1-DRA*  : hm95  +4.7  helb  +3.5  tuong quan tung the gioi r=0.06
+  champ2 vs base (n=1000): C1 72.0% k=0.29 (base 81.5%); B1 63.1% k=0.20 (base 69.2%); PGIF* 65.2% k=0.23 (base 73.5%); DRA* 67.0% k=0.25 (base 75.6%)
+     chenh C1-B1    : hm95  +7.2  base +12.3  tuong quan tung the gioi r=-0.02
+     chenh C1-PGIF* : hm95  +6.2  base  +8.0  tuong quan tung the gioi r=0.03
+     chenh C1-DRA*  : hm95  +4.7  base  +5.9  tuong quan tung the gioi r=0.04
+  [doi chieu] champ2/helb: C1-B1 +6.7 (+133/-66) p=2.34e-06 Holm=7.03e-06; C1-PGIF* +2.7 (+99/-72) p=0.0465 Holm=0.0465; C1-DRA* +3.5 (+103/-68) p=0.00912 Holm=0.0182
+  [doi chieu] champ2/base: C1-B1 +12.3 (+194/-71) p=2.25e-14 Holm=6.74e-14; C1-PGIF* +8.0 (+150/-70) p=7.28e-08 Holm=1.46e-07; C1-DRA* +5.9 (+122/-63) p=1.72e-05 Holm=1.72e-05

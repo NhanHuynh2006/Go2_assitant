@@ -1,0 +1,8 @@
+# ============================================================
+#  waypoints_real.yaml — cac cho trong NHA THAT, toa do theo /go2/odom (m, rad)
+#  Cach them: dat robot o cho do roi NOI "lưu chỗ này là <ten>" (run_real_ros.py
+#  tu ghi them dong vao cuoi file). Hoac ghi tay:  ten: [x, y, yaw]
+#  Luu y: odom troi dan theo quang duong (~1-2 %), bat robot lai thi odom ve 0 ->
+#  khoi dong robot o CUNG mot cho (vd tram sac) de cac diem van dung.
+# ============================================================
+cho sac: [0.0, 0.0, 0.0]

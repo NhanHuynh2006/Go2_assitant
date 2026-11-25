@@ -1,0 +1,45 @@
+[sha] results/frozen_C1/SHA256SUMS_TEST: 16/16 khop
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 83 s, di 27.9 m, lap lai 53 lan)
+[1/1] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 gz:lobby_100112            go2    ok=0 col=1 err=0.155 t=82.8s ctrl=PRISM3/v3/RespModel step95=15.448ms cmd50/95=0.1/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 177 s, di 60.7 m, lap lai 113 lan)
+[1/1] mppi~t3~nl:ppl=100;ppl_len=0.5 gz:lobby_100112            go2    ok=0 col=1 err=0.169 t=177.6s ctrl=MPPI/v3/RespModel step95=14.603ms cmd50/95=0.1/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.17 m, 189 s, di 63.9 m, lap lai 120 lan)
+[1/1] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 gz:corridor_100113         go2    ok=0 col=1 err=0.175 t=188.9s ctrl=PRISM3/v3/RespModel step95=15.72ms cmd50/95=0.1/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+[1/1] mppi~t3~nl:ppl=100;ppl_len=0.5 gz:corridor_100113         go2    ok=0 col=1 err=3.344 t=300.1s ctrl=MPPI/v3/RespModel step95=15.494ms cmd50/95=0.1/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.
+   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: bi dung
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 72 s, di 25.4 m, lap lai 47 lan)
+[1/1] mppi~t3~nl:ppl=100;ppl_len=0.5 gz:clutter_100114          go2    ok=1 col=0 err=0.155 t=72.5s ctrl=MPPI/v3/RespModel step95=14.48ms cmd50/95=0.1/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.18 m, 107 s, di 35.0 m, lap lai 69 lan)
+[1/1] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 gz:clutter_100114          go2    ok=1 col=0 err=0.19 t=107.1s ctrl=PRISM3/v3/RespModel step95=16.157ms cmd50/95=0.1/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.18 m, 89 s, di 28.8 m, lap lai 56 lan)
+[1/1] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 gz:office_100115           go2    ok=1 col=0 err=0.183 t=88.7s ctrl=PRISM3/v3/RespModel step95=14.83ms cmd50/95=0.1/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.10 m, 135 s, di 41.7 m, lap lai 88 lan)
+[1/1] mppi~t3~nl:ppl=100;ppl_len=0.5 gz:office_100115           go2    ok=1 col=0 err=0.106 t=135.5s ctrl=MPPI/v3/RespModel step95=14.321ms cmd50/95=0.1/0.109s rtf=1.0 sha=1
+
+| config | loai | n | thanh cong | va cham | sai so TB | SPL | thoi gian TB (s) | ho min TB (m) | ho min Go2 that (m) | khung (lan) | dung (s) | toc do TB (m/s) | lac huong |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| mppi~t3~nl:ppl=100;ppl_len=0.5 | crowd | 4 | 50 % | 50 % | 0.943 m | 0.29 | 171.4 | 0.14 | 0.09 | 1.0 | 5.1 | 0.30 | 64.5 |
+| p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | crowd | 4 | 50 % | 50 % | 0.176 m | 0.45 | 116.9 | 0.26 | 0.21 | 0.0 | 2.2 | 0.31 | 35.2 |
+
+-> results/GZ_TEST/s1/g019
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot

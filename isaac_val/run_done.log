@@ -1,0 +1,39 @@
+rc=0 gpu1
+rc=0 gpu64
+rc=0 flat_steps
+rc=0 flat_random
+rc=0 rough_steps
+rc=0 rough_random
+rc=0 flat_noise
+rc=0 rough_noise
+ALLDONE
+NAVDONE
+NAVDONE
+b1 N=1 dev=cuda:0 wall=250 s
+b2 N=2 dev=cuda:0 wall=200 s
+b2r N=2 dev=cuda:0 wall=234 s
+b4 N=4 dev=cuda:0 wall=135 s
+b8 N=8 dev=cuda:0 wall=109 s
+BENCHDONE
+fs_chk done
+FSDONE
+pilot N=8 dev=cuda:0 wall=6961 s
+PILOTDONE
+d2 N=2 dev=cuda:0 wall=334 s
+d2r N=2 dev=cuda:0 wall=308 s
+d4 N=4 dev=cuda:0 wall=162 s
+DETDONE
+nl N=8 dev=cuda:0 wall=45 s
+FSLOGDONE
+nl N=8 dev=cuda:0 wall=3996 s
+nlrep N=8 dev=cuda:0 wall=1235 s
+FSLOG2DONE
+t3 N=8 dev=cuda:0 wall=3536 s
+rc=0 combo
+FSCSDONE
+FSLOG3DONE
+nlnotilt N=8 dev=cuda:0 wall=3561 s
+FALLDONE
+REPLAYDONE
+nlcs N=8 dev=cuda:0 wall=2234 s
+SHAPERDONE

@@ -1,0 +1,59 @@
+2026-11-21 16:59:27 === pipeline bat dau / tiep tuc ===
+2026-11-21 16:59:29 [screen] chay eval 0/136 -> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 (lan thu 1)
+2026-11-21 17:03:01 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-21 17:03:01 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-21 23:32:31 === pipeline bat dau / tiep tuc ===
+2026-11-21 23:32:36 bat mo phong voice_office (headless)
+2026-11-21 23:33:14 [screen] chay eval 3/136 -> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 (lan thu 1)
+2026-11-21 23:35:37 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-21 23:35:37 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-21 23:35:44 === pipeline bat dau / tiep tuc ===
+2026-11-21 23:35:49 bat mo phong voice_office (headless)
+2026-11-21 23:36:26 [screen] chay eval 4/136 -> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 (lan thu 1)
+2026-11-22 00:03:11 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-22 00:03:11 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-22 00:03:18 === pipeline bat dau / tiep tuc ===
+2026-11-22 00:03:18 [train] ppo_r_s0
+2026-11-22 00:03:23 bat mo phong voice_office (headless)
+2026-11-22 00:04:00 [screen] chay eval 22/136 -> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 (lan thu 1)
+2026-11-22 00:06:31 [sim gvw1] bat voice_office (headless)
+2026-11-22 00:08:31 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-22 00:08:31 nhan tin hieu dung (tat may?) - dung cac tien trinh con, lan sau se tiep tuc
+2026-11-22 00:08:31 [train] ppo_r_s0 LOI (ma -15) - se thu lai lan sau
+2026-11-22 00:08:38 === pipeline bat dau / tiep tuc ===
+2026-11-22 00:08:38 [train] ppo_r_s0
+2026-11-22 00:08:43 bat mo phong voice_office (headless)
+2026-11-22 00:09:21 [screen] chay eval 23/136 -> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 (lan thu 1)
+2026-11-22 00:28:42 [train] td3_r_s0
+2026-11-22 00:48:45 [train] sac_r_s0
+2026-11-22 01:08:48 [train] ppo_r_s1
+2026-11-22 01:28:51 [train] td3_r_s1
+2026-11-22 01:48:53 [train] sac_r_s1
+2026-11-22 02:08:56 [train] ppo_r_s2
+2026-11-22 02:28:59 [train] td3_r_s2
+2026-11-22 02:49:02 [train] sac_r_s2
+2026-11-22 03:20:31 [screen] eval thoat (ma 0), 136/136 luot
+2026-11-22 03:21:57 CHO CLAUDE DANH GIA: doc results/RL_ANALYSIS.md, chon policy/ghep -> ghi 'rl' vao pipeline/decisions.json
+2026-11-22 03:46:57 da co quyet dinh 'rl': {'install': {'ppo': 'rl_nav/runs/ppo_r_s0/best.npz', 'td3': 'rl_nav/runs/td3_v2/best.npz', 'sac': 'rl_nav/runs/sac_r_s0/best.npz'}, 'value_from': 'rl_nav/runs/ppo_r_s0', 'best_algo': 'ppo', 'note': "PPO tot nhat va deu nhat (3 seed 93.5-93.8%, hon TD3/SAC p~0.001-0.003). td3_v2 (cung 20 phut, train cam bien ly tuong) do duoi cam bien thuc te 94.1% - hon ro 3 TD3 'thuc te', ngang PPO (p=0.60), loi KHAC kieu (it va nguoi) -> oracle ppo+td3_v2 96.2% la cap bu tot nhat. SAC chi +0.6 khi them -> giu de thu, khong mac dinh. Critic tu ppo_r_s0 (cung chuan hoa quan sat voi goi y PPO). Chi tiet: RESEARCH_NOTES 7.7."}
+2026-11-22 03:47:04 [sim gvw1] bat voice_office (headless)
+2026-11-22 03:47:04 [sim gvw0] bat voice_office (headless)
+2026-11-22 03:47:41 [sim gvw0] eval office 0/64 -> /home/nhanhuynh/Documents/Go2_assitant/results/select_prism_priors_w0 (lan 1)
+2026-11-22 03:47:41 [sim gvw1] eval office 0/48 -> /home/nhanhuynh/Documents/Go2_assitant/results/select_prism_priors_w1 (lan 1)
+2026-11-22 05:05:07 [sim gvw1] eval thoat (ma 0), 48/48
+2026-11-22 05:36:30 [sim gvw0] eval thoat (ma 0), 64/64
+2026-11-22 05:37:05 CHO CLAUDE DANH GIA: xem results/select_prism_priors_w*, chon PRISM cuoi + danh sach so sanh -> ghi 'final' vao pipeline/decisions.json
+2026-11-22 05:42:05 da co quyet dinh 'final': {'configs': ['prism@ppo+sac', 'prism@ppo', 'prism', 'prism@ppo+td3+sac', 'prism_noprior', 'prism_noadapt@ppo+sac', 'prism_novis@ppo+sac', 'prism_nounc@ppo+sac', 'prism_noadaptratio@ppo+sac', 'prism_novalue@ppo+sac', 'prism~t0@ppo+sac', 'mppi', 'dwa', 'log_mppi', 'pgmppi', 'apmppi', 'apmppi_multi', 'bmppi', 'rl', 'rl@td3', 'rl@sac', 'rl_ens', 'rl_safe', 'pp'], 'trials': 5, 'house_configs': ['prism@ppo+sac', 'prism', 'prism_noprior', 'mppi', 'dwa', 'log_mppi', 'pgmppi', 'apmppi_multi', 'rl', 'rl_safe', 'pp'], 'house_trials': 3, 'note': 'PRISM chinh = prism@ppo+sac (chon tren buoc select = tap kiem dinh, KHONG chon lai sau luot chinh thuc): 12/16, dam dong 4/6, 1 loi do robot. Cac bien the goi y khac + moi ablation (tren chinh ban ppo+sac) + moi baseline: khong bo gi. Chi tiet RESEARCH_NOTES 7.8.'}
+2026-11-22 05:42:10 [sim gvw1] bat voice_office (headless)
+2026-11-22 05:42:10 [sim gvw0] bat voice_office (headless)
+2026-11-22 05:42:47 [sim gvw0] eval office 0/480 -> /home/nhanhuynh/Documents/Go2_assitant/results/final_office_w0 (lan 1)
+2026-11-22 05:42:47 [sim gvw1] eval office 0/480 -> /home/nhanhuynh/Documents/Go2_assitant/results/final_office_w1 (lan 1)
+2026-11-22 17:14:48 [sim gvw0] eval thoat (ma 0), 480/480
+2026-11-22 19:09:59 [sim gvw1] eval thoat (ma 0), 480/480
+2026-11-22 19:10:13 [sim gvw1] bat voice_house (headless)
+2026-11-22 19:10:13 [sim gvw0] bat voice_house (headless)
+2026-11-22 19:10:50 [sim gvw0] eval single 0/306 -> /home/nhanhuynh/Documents/Go2_assitant/results/final_office_house_w0 (lan 1)
+2026-11-22 19:10:50 [sim gvw1] eval single 0/255 -> /home/nhanhuynh/Documents/Go2_assitant/results/final_office_house_w1 (lan 1)
+2026-11-22 21:07:51 [sim gvw1] eval thoat (ma 0), 255/255
+2026-11-22 21:35:01 [sim gvw0] eval thoat (ma 0), 306/306
+2026-11-22 21:35:20 XONG TAT CA
+2026-11-22 21:35:20 pipeline: khong con viec

@@ -1,0 +1,49 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+0,office,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.18,50.2,20.32,,,0.225,0.651,{},6.6
+0,office,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.188,59.9,21.67,,,0.181,0.383,{},8.0
+13,corridor,6,0,p3+geo-haz+gcv~ocb~nl,0,va nguoi,10.105,55.7,20.15,person,1,0.326,-0.015,"{""kind"": ""person"", ""t"": 55.7, ""robot_in"": 0.1, ""person_in"": 0.39, ""robot_v"": 0.19, ""wz"": 0.19, ""bearing"": -41, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.91, ""miss"": 0.22, ""ahead"": 0.89, ""trk"": 1, ""sp"": 0.86, ""rv"": 0.28, ""wall"": 1.03}, ""1.0"": {""d"": 1.33, ""miss"": 0.04, ""ahead"": 1.33, ""trk"": 1, ""sp"": 0.91, ""rv"": 0.2, ""wall"": 1.1}, ""1.5"": {""d"": 1.73, ""miss"": 0.04, ""ahead"": 1.73, ""trk"": 1, ""sp"": 0.75, ""rv"": 0.06, ""wall"": 1.16}, ""2.0"": {""d"": 1.98, ""miss"": 0.06, ""ahead"": 1.98, ""trk"": 1, ""sp"": 0.11, ""rv"": 0.05, ""wall"": 1.15}, ""3.0"": {""d"": 2.12, ""miss"": 1.31, ""ahead"": 1.66, ""trk"": 1, ""sp"": 0.67, ""rv"": 0.19, ""wall"": 1.11}}, ""distracted"": 0}",8.4
+13,corridor,6,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,8.428,56.8,21.52,person,1,0.329,-0.105,"{""kind"": ""person"", ""t"": 56.8, ""robot_in"": -0.03, ""person_in"": 1.05, ""robot_v"": 0.11, ""wz"": 0.43, ""bearing"": -26, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.91, ""miss"": 0.01, ""ahead"": 0.91, ""trk"": 1, ""sp"": 1.02, ""rv"": 0.05, ""wall"": 0.76}, ""1.0"": {""d"": 1.4, ""miss"": 0.31, ""ahead"": 1.37, ""trk"": 1, ""sp"": 1.0, ""rv"": 0.04, ""wall"": 0.78}, ""1.5"": {""d"": 1.87, ""miss"": 1.01, ""ahead"": 1.58, ""trk"": 1, ""sp"": 0.94, ""rv"": 0.06, ""wall"": 0.76}, ""2.0"": {""d"": 2.26, ""miss"": 2.07, ""ahead"": 0.9, ""trk"": 1, ""sp"": 1.1, ""rv"": 0.32, ""wall"": 0.69}, ""3.0"": {""d"": 3.39, ""miss"": 0.88, ""ahead"": 3.28, ""trk"": 0, ""sp"": 1.12, ""rv"": 0.44, ""wall"": 0.54}}, ""distracted"": 1}",6.0
+18,corridor,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.212,62.2,22.39,,,0.234,0.1,{},6.2
+18,corridor,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.189,66.9,23.02,,,0.084,0.069,{},6.8
+27,lobby,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.204,29.4,11.78,,,0.614,3.421,{},2.5
+27,lobby,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.201,29.4,11.77,,,0.616,3.419,{},3.4
+36,warehouse,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.19,39.2,16.54,,,0.567,0.658,{},5.3
+36,warehouse,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.184,40.0,16.5,,,0.567,0.38,{},5.3
+49,clutter,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.179,33.7,13.48,,,0.26,0.48,{},4.8
+49,clutter,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.165,45.4,14.82,,,0.315,0.063,{},6.4
+61,warehouse,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.182,33.8,14.41,,,0.431,0.562,{},4.4
+61,warehouse,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.193,34.0,14.39,,,0.513,0.542,{},4.6
+73,corridor,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.186,41.3,16.73,,,0.681,0.497,{},6.0
+73,corridor,5,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.2,40.9,15.77,,,0.681,0.059,{},6.0
+82,lobby,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.2,38.0,14.61,,,0.481,0.782,{},5.5
+82,lobby,5,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.185,37.9,14.66,,,0.371,0.779,{},5.6
+94,clutter,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.176,38.7,14.56,,,0.435,0.23,{},6.0
+94,clutter,5,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,5.729,23.9,8.5,person,1,0.256,-0.005,"{""kind"": ""person"", ""t"": 23.9, ""robot_in"": -0.08, ""person_in"": 0.23, ""robot_v"": 0.13, ""wz"": -0.31, ""bearing"": 103, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.56, ""miss"": 0.35, ""ahead"": 0.43, ""trk"": 1, ""sp"": 0.94, ""rv"": 0.41, ""wall"": 0.48}, ""1.0"": {""d"": 0.78, ""miss"": 0.33, ""ahead"": 0.7, ""trk"": 1, ""sp"": 0.92, ""rv"": 0.44, ""wall"": 0.58}, ""1.5"": {""d"": 0.99, ""miss"": 0.27, ""ahead"": 0.95, ""trk"": 1, ""sp"": 0.9, ""rv"": 0.44, ""wall"": 0.73}, ""2.0"": {""d"": 1.22, ""miss"": 0.19, ""ahead"": 1.2, ""trk"": 1, ""sp"": 0.93, ""rv"": 0.44, ""wall"": 0.9}, ""3.0"": {""d"": 1.79, ""miss"": 0.21, ""ahead"": 1.77, ""trk"": 1, ""sp"": 0.97, ""rv"": 0.42, ""wall"": 1.17}}, ""distracted"": 1}",4.1
+108,corridor,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.169,59.5,22.98,,,0.129,0.045,{},8.6
+108,corridor,6,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,9.434,14.3,4.7,person,0,0.523,-0.017,"{""kind"": ""person"", ""t"": 14.3, ""robot_in"": -0.02, ""person_in"": 0.69, ""robot_v"": 0.02, ""wz"": -0.16, ""bearing"": 33, ""at_fault"": 0, ""lead"": {""0.5"": {""d"": 0.87, ""miss"": 0.12, ""ahead"": 0.86, ""trk"": 1, ""sp"": 0.84, ""rv"": 0.21, ""wall"": 0.93}, ""1.0"": {""d"": 1.18, ""miss"": 0.89, ""ahead"": 0.77, ""trk"": 1, ""sp"": 0.95, ""rv"": 0.1, ""wall"": 0.84}, ""1.5"": {""d"": 1.45, ""miss"": 0.88, ""ahead"": 1.16, ""trk"": 1, ""sp"": 1.01, ""rv"": 0.09, ""wall"": 0.81}, ""2.0"": {""d"": 1.86, ""miss"": 0.88, ""ahead"": 1.64, ""trk"": 1, ""sp"": 0.93, ""rv"": 0.22, ""wall"": 0.8}, ""3.0"": {""d"": 2.48, ""miss"": 0.91, ""ahead"": 2.31, ""trk"": 0, ""sp"": 0.2, ""rv"": 0.42, ""wall"": 0.85}}, ""distracted"": 1}",1.5
+119,clutter,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.182,39.1,16.85,,,0.27,0.452,{},3.8
+119,clutter,5,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.192,43.5,16.49,,,0.302,0.342,{},4.2
+140,office,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.179,39.4,15.08,,,0.264,2.263,{},2.8
+140,office,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.195,41.5,15.32,,,0.266,2.262,{},3.0
+0,office,2,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.189,50.6,20.2,,,0.417,1.366,{},6.8
+0,office,2,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.184,53.8,20.29,,,0.357,1.007,{},6.4
+11,warehouse,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.163,69.7,30.33,,,0.151,0.127,{},11.1
+11,warehouse,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.158,47.2,21.1,,,0.119,0.127,{},6.2
+18,corridor,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.199,86.5,28.89,,,0.115,0.388,{},14.2
+18,corridor,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.171,71.5,25.95,,,0.118,0.095,{},10.2
+29,clutter,5,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.182,37.2,17.07,,,0.3,0.302,{},6.4
+29,clutter,5,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.187,55.6,23.98,,,0.178,0.532,{},7.7
+43,corridor,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.167,64.4,21.73,,,0.157,0.049,{},10.0
+43,corridor,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.192,70.3,25.83,,,0.203,0.646,{},7.1
+59,clutter,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.154,29.3,11.1,,,0.403,0.946,{},3.4
+59,clutter,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.184,52.5,17.22,,,0.19,0.338,{},5.7
+73,corridor,5,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.172,46.7,17.4,,,0.681,0.693,{},6.1
+73,corridor,5,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.172,46.7,17.4,,,0.681,0.693,{},4.9
+84,clutter,2,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.197,47.9,19.81,,,0.255,0.381,{},5.0
+84,clutter,2,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.189,49.1,20.22,,,0.248,0.354,{},4.5
+99,clutter,3,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.187,46.9,18.28,,,0.358,0.053,{},5.2
+99,clutter,3,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.172,36.7,16.29,,,0.398,0.491,{},3.6
+124,clutter,3,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.185,47.0,17.47,,,0.323,1.669,{},4.9
+124,clutter,3,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.179,47.1,17.51,,,0.295,1.69,{},4.3
+139,clutter,2,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.164,43.8,17.38,,,0.555,1.411,{},4.0
+139,clutter,2,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.161,43.8,17.38,,,0.555,1.411,{},3.5

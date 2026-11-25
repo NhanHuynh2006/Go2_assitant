@@ -1,0 +1,60 @@
+40 luot, 40 episode log, log: ['results/GZ_smoke/office/eval.log', 'results/GZ_smoke/gz4/g000/eval.log']
+
+| | dat? | so lieu |
+|---|---|---|
+| S1 | DAT | traceback/loi: 0 []; lop: {'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5': [('PRISM3', 'v3', 'RespModel')], 'mppi~t3~nl:ppl=100;ppl_len=0.5': [('MPPI', 'v3', 'RespModel')]}; sha_ok: ['1'] |
+| S2 | DAT | p3+geo-haz+gcv: cmd_vel p50 0.101 s p95 0.108 s (luot xau nhat p95 0.112); ctrl.step p50 7.5 p95 15.4 max 48 ms (n=16343); mppi: cmd_vel p50 0.101 s p95 0.107 s (luot xau nhat p95 0.109); ctrl.step p50 6.8 p95 13.0 max 63 ms (n=18509) |
+| S3 | DAT | RTF trung vi moi luot: min 0.999, trung vi 1.000; < 0.9: 0 []; thieu RTF: 0; theo thu muc: g000 1.000, office 1.000 |
+| S4 | TRUOT | bai co nguoi: so track xac nhan/luot TB 39.3 (min 12); vi pham: [('nguoi ma > 2 s', 'clutter:qua_khoi_so_le', 'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5', 1, {2: 2.28, 3: 2.17, 4: 4.44, 7: 4.75, 8: 3.82, 10: 6.0, 12: 7.54, 14: 24.25, 16: 2.99, 18: 4.85, 21: 6.71, 22: 12.9}), ('nguoi ma > 2 s', 'clutter:van_phong', 'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5', 1, {2: 4.64}), ('nguoi ma > 2 s', 'clutter:slalom_coc', 'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5', 1, {1: 3.2, 2: 7.33, 3: 6.5, 5: 2.16, 7: 2.17, 10: 6.09, 11: 2.79, 12: 3.2}), ('nguoi ma > 2 s', 'clutter:loi_pallet', 'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5', 1, {7: 2.17, 9: 3.21, 15: 2.78}), ('nguoi ma > 2 s', 'clutter:bep_xa', 'p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5', 1, {1: 2.58, 4: 2.48, 5: 4.24, 7: 2.17, 10: 2.8, 11: 2.59, 27: 2.37}), ('nguoi ma > 2 s', 'clutter:qua_khoi_so_le', 'mppi~t3~nl:ppl=100;ppl_len=0.5', 1, {2: 2.16, 4: 2.37, 6: 3.39, 12: 5.25, 14: 3.2})] |
+| S5 | DAT | C1 bai tinh 7/10; tong office C1 10 vs B1 9 (/16); file 4 o: C1 4/4, B1 3/4 |
+| S6 | DAT | 40/40 luot co log; cham nguoi 4, tinh D1/D2 duoc 4; nhip log trung vi 0.103 s; loi: [] |
+
+D1/D2 tung lan cham:
+   ('crowd:kho_xe_day', 'p3+geo-haz+gcv', '1', 33.91, {'D1': 1, 'D2': 1, 'robot_close': 0.115, 'person_close': 0.0, 'dt_log': 0.104, 'n': 30})
+   ('crowd:van_phong_dong', 'p3+geo-haz+gcv', '2', 27.5, {'D1': 0, 'D2': 0, 'robot_close': 0.047, 'person_close': 0.535, 'dt_log': 0.103, 'n': 30})
+   ('crowd:kho_xe_day', 'mppi', '2', 33.71, {'D1': 0, 'D2': 1, 'robot_close': 0.063, 'person_close': 0.0, 'dt_log': 0.103, 'n': 30})
+   ('gz:warehouse_1', 'mppi', '1', 14.16, {'D1': 0, 'D2': 0, 'robot_close': -0.168, 'person_close': 0.172, 'dt_log': 0.101, 'n': 30})
+
+Tung luot:
+  office   1 p3+geo-haz+gcv clutter:qua_khoi_so_le     ok=0 col=0 gap= t=121.4 step95=13.47 cmd95=0.109 rtf=1.0
+  office   1 p3+geo-haz+gcv clutter:van_phong          ok=1 col=0 gap= t=50.7 step95=10.146 cmd95=0.11 rtf=0.999
+  office   1 p3+geo-haz+gcv clutter:slalom_coc         ok=1 col=0 gap= t=35.8 step95=12.667 cmd95=0.108 rtf=1.0
+  office   1 p3+geo-haz+gcv clutter:loi_pallet         ok=1 col=0 gap= t=71.0 step95=10.35 cmd95=0.106 rtf=1.0
+  office   1 p3+geo-haz+gcv clutter:bep_xa             ok=0 col=0 gap= t=93.1 step95=14.832 cmd95=0.11 rtf=0.999
+  office   1 p3+geo-haz+gcv crowd:sanh_8_nguoi         ok=1 col=0 gap=0.184 t=77.0 step95=23.852 cmd95=0.109 rtf=0.999
+  office   1 p3+geo-haz+gcv crowd:kho_xe_day           ok=0 col=1 gap=-0.059 t=140.9 step95=15.121 cmd95=0.109 rtf=1.0
+  office   1 p3+geo-haz+gcv crowd:van_phong_dong       ok=0 col=0 gap=0.455 t=84.9 step95=19.306 cmd95=0.112 rtf=1.0
+  office   1 mppi clutter:qua_khoi_so_le     ok=1 col=0 gap= t=45.6 step95=10.21 cmd95=0.106 rtf=1.0
+  office   1 mppi clutter:van_phong          ok=1 col=0 gap= t=51.3 step95=8.668 cmd95=0.105 rtf=1.0
+  office   1 mppi clutter:slalom_coc         ok=1 col=0 gap= t=34.0 step95=8.505 cmd95=0.105 rtf=1.0
+  office   1 mppi clutter:loi_pallet         ok=0 col=0 gap= t=300.1 step95=10.361 cmd95=0.106 rtf=1.0
+  office   1 mppi clutter:bep_xa             ok=0 col=0 gap= t=85.1 step95=9.935 cmd95=0.106 rtf=1.0
+  office   1 mppi crowd:sanh_8_nguoi         ok=0 col=1 gap=0.193 t=84.9 step95=16.722 cmd95=0.108 rtf=1.0
+  office   1 mppi crowd:kho_xe_day           ok=0 col=0 gap=0.017 t=96.8 step95=10.962 cmd95=0.107 rtf=1.0
+  office   1 mppi crowd:van_phong_dong       ok=0 col=1 gap=0.862 t=81.7 step95=11.755 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv clutter:qua_khoi_so_le     ok=0 col=0 gap= t=97.1 step95=10.166 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv clutter:van_phong          ok=1 col=0 gap= t=61.9 step95=9.885 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv clutter:slalom_coc         ok=1 col=0 gap= t=50.0 step95=9.534 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv clutter:loi_pallet         ok=1 col=0 gap= t=83.0 step95=9.277 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv clutter:bep_xa             ok=1 col=0 gap= t=150.3 step95=10.902 cmd95=0.108 rtf=1.0
+  office   2 p3+geo-haz+gcv crowd:sanh_8_nguoi         ok=1 col=0 gap=0.294 t=71.3 step95=18.876 cmd95=0.108 rtf=1.0
+  office   2 p3+geo-haz+gcv crowd:kho_xe_day           ok=1 col=0 gap=0.134 t=99.3 step95=11.365 cmd95=0.106 rtf=1.0
+  office   2 p3+geo-haz+gcv crowd:van_phong_dong       ok=0 col=1 gap=-0.031 t=153.3 step95=17.974 cmd95=0.11 rtf=1.0
+  office   2 mppi clutter:qua_khoi_so_le     ok=1 col=0 gap= t=42.3 step95=10.002 cmd95=0.107 rtf=1.0
+  office   2 mppi clutter:van_phong          ok=1 col=0 gap= t=46.7 step95=8.734 cmd95=0.106 rtf=1.0
+  office   2 mppi clutter:slalom_coc         ok=1 col=0 gap= t=63.9 step95=8.756 cmd95=0.106 rtf=1.0
+  office   2 mppi clutter:loi_pallet         ok=1 col=0 gap= t=88.1 step95=8.794 cmd95=0.105 rtf=1.0
+  office   2 mppi clutter:bep_xa             ok=0 col=0 gap= t=109.1 step95=10.605 cmd95=0.109 rtf=1.0
+  office   2 mppi crowd:sanh_8_nguoi         ok=1 col=0 gap=0.811 t=113.7 step95=16.662 cmd95=0.108 rtf=1.0
+  office   2 mppi crowd:kho_xe_day           ok=0 col=1 gap=-0.011 t=141.5 step95=12.696 cmd95=0.108 rtf=1.0
+  office   2 mppi crowd:van_phong_dong       ok=1 col=0 gap=0.047 t=136.2 step95=14.017 cmd95=0.108 rtf=1.0
+  g000     1 p3+geo-haz+gcv gz:office_0                ok=1 col=0 gap=0.654 t=68.1 step95=12.774 cmd95=0.106 rtf=0.999
+  g000     1 mppi gz:office_0                ok=1 col=0 gap=0.935 t=74.3 step95=12.173 cmd95=0.105 rtf=1.0
+  g000     1 mppi gz:warehouse_1             ok=0 col=1 gap=-0.002 t=126.7 step95=14.162 cmd95=0.105 rtf=1.0
+  g000     1 p3+geo-haz+gcv gz:warehouse_1             ok=1 col=0 gap=0.312 t=69.5 step95=13.748 cmd95=0.106 rtf=0.999
+  g000     1 mppi gz:lobby_2                 ok=1 col=0 gap=0.113 t=82.3 step95=13.462 cmd95=0.105 rtf=1.0
+  g000     1 p3+geo-haz+gcv gz:lobby_2                 ok=1 col=0 gap=1.215 t=53.3 step95=12.951 cmd95=0.106 rtf=1.0
+  g000     1 mppi gz:corridor_3              ok=1 col=0 gap=0.034 t=106.7 step95=10.8 cmd95=0.107 rtf=1.0
+  g000     1 p3+geo-haz+gcv gz:corridor_3              ok=1 col=0 gap=0.165 t=66.8 step95=12.276 cmd95=0.108 rtf=1.0
+
+TONG: TRUOT

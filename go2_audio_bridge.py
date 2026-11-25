@@ -125,36 +125,21 @@ async def run(args):
                      hp_cut=args.hp_cut, gate=args.gate)
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     addr = (args.host, args.port)
-    state = {"buf": b"", "pkts": 0, "t0": None, "n_out": 0, "da_bao": False,
-             "da_canh_bao": False,
+    state = {"buf": b"", "pkts": 0,
              "rec": [] if args.record else None,
              "rec_left": int(args.record * DST_SR) if args.record else 0}
 
     async def on_audio(frame):
-        arr = frame.to_ndarray()
-        # --- SO KENH: tinh tu SO MAU, khong hoi frame.layout ---
-        # BAY DA DINH: PyAV >=12 tra frame.layout.channels la TUPLE cac AudioChannel,
-        # KHONG phai so nguyen. Nen `arr.shape[0] == ch` va `ch == 2` LUON False ->
-        # frame STEREO (packed, shape (1, 960) cho 480 mau/kenh) bi coi la mono va
-        # lay het 960 mau -> audio DAI GAP DOI, cao do tut mot quang tam.
-        # Trieu chung: ghi 25s ra file 50s, giong nghe "vang vang, chu keo dai",
-        # STT khong doc ra chu nao. frame.samples = so mau MOI KENH -> chia ra la chac.
-        n = int(getattr(frame, "samples", 0) or 0)
-        if n > 0 and arr.size % n == 0:
-            ch = max(1, arr.size // n)
-        else:                                        # frame la -> doan an toan
-            ch = arr.shape[0] if arr.ndim == 2 and arr.shape[0] <= 8 else 1
-            n = arr.size // ch
-        if arr.ndim == 2 and arr.shape[0] == ch and ch > 1:
-            mono = arr.astype(np.float32).mean(axis=0)            # planar (ch, n)
-        elif ch > 1:
-            mono = arr.reshape(-1).astype(np.float32).reshape(n, ch).mean(axis=1)  # packed
+        arr = frame.to_ndarray()                     # (channels, samples) int16
+        # So kenh THAT tu frame (KHONG doan theo so mau chan/le -> tranh bam nat mono)
+        ch = getattr(getattr(frame, "layout", None), "channels", None)
+        if ch is None:
+            ch = arr.shape[0] if arr.ndim == 2 else 1
+        if arr.ndim == 2 and arr.shape[0] == ch and ch >= 1:
+            mono = arr.astype(np.float32).mean(axis=0)        # planar (channels, samples)
         else:
-            mono = arr.reshape(-1).astype(np.float32)
-        if not state.get("da_bao"):                  # in 1 lan de biet dang doc dung gi
-            state["da_bao"] = True
-            print(f"\n[bridge] frame: {frame.sample_rate}Hz, {ch} kenh, "
-                  f"{n} mau/kenh (arr {tuple(arr.shape)})")
+            flat = arr.reshape(-1).astype(np.float32)
+            mono = flat.reshape(-1, ch).mean(axis=1) if ch == 2 else flat   # packed interleaved
         if mono.size == 0:
             return
         mono = mono / 32768.0
@@ -176,19 +161,6 @@ async def run(args):
                 print("\n[bridge] DA GHI robot_mic_test.wav — nghe: aplay robot_mic_test.wav")
                 os._exit(0)
             return
-
-        # TU KIEM TRA: so mau sinh ra phai khop dong ho. Lech >10% = doc frame sai
-        # (chinh la bug stereo o tren). Bao ngay thay vi de nguoi dung tu mo.
-        if state["t0"] is None:
-            state["t0"] = __import__("time").time()
-        state["n_out"] += len(pcm16) // 2
-        _thuc = __import__("time").time() - state["t0"]
-        if _thuc > 8 and not state["da_canh_bao"]:
-            _ty = (state["n_out"] / DST_SR) / _thuc
-            if not (0.9 < _ty < 1.1):
-                state["da_canh_bao"] = True
-                print(f"\n[bridge] \u26a0\ufe0f  SINH RA {_ty:.2f}x so voi thoi gian thuc "
-                      f"-> audio bi {'GIAN' if _ty > 1 else 'NEN'}! Doc frame dang sai.")
 
         state["buf"] += pcm16
         while len(state["buf"]) >= FRAME_BYTES:

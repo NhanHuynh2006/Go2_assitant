@@ -1,0 +1,132 @@
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 556, in worker
+    row = run_episode(W, cfg, trial, a.regime, a.oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 513, in run_episode
+    sim = Sim(W, config, trial, regime, oracle)
+  File "/home/nhanhuynh/Documents/Go2_assitant/fastsim.py", line 282, in __init__
+    self.crowd.step(self.DT)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/nhanhuynh/Documents/Go2_assitant/movers.py", line 202, in step
+    tgt = pp["path"][0]
+          ~~~~~~~~~~^^^
+IndexError: list index out of range

@@ -1,0 +1,56 @@
+2026-11-25 00:05:30 sha OK (19 tep); test_arm.py a1d785d043edf1bd test_worlds.json f8c2268d6b846e6c
+2026-11-25 00:05:38 server cuda:0 pid 745359
+2026-11-25 00:05:42 client 745598 745603 745620 745624
+2026-11-25 00:05:43 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.968 (n 4); isaac 0 luot
+2026-11-25 00:20:45 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.952 (n 4); isaac 44 luot
+2026-11-25 00:35:46 rtf Gazebo 4 luot moi nhat: med 0.999 mean 0.919 (n 4); isaac 88 luot
+2026-11-25 00:50:48 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 135 luot
+2026-11-25 01:05:49 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 191 luot
+2026-11-25 01:20:50 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 244 luot
+2026-11-25 01:35:52 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 291 luot
+2026-11-25 01:50:53 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.984 (n 4); isaac 338 luot
+2026-11-25 02:05:55 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.982 (n 4); isaac 387 luot
+2026-11-25 02:20:57 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 432 luot
+2026-11-25 02:35:59 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.987 (n 4); isaac 484 luot
+2026-11-25 02:51:00 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 535 luot
+2026-11-25 03:06:02 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 577 luot
+2026-11-25 03:21:04 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.989 (n 4); isaac 629 luot
+2026-11-25 03:36:06 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.989 (n 4); isaac 678 luot
+2026-11-25 03:51:09 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.987 (n 4); isaac 733 luot
+2026-11-25 04:06:11 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.987 (n 4); isaac 781 luot
+2026-11-25 04:21:13 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 832 luot
+2026-11-25 04:36:15 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 883 luot
+2026-11-25 04:51:18 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.990 (n 4); isaac 932 luot
+2026-11-25 05:06:20 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 980 luot
+2026-11-25 05:21:23 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.985 (n 4); isaac 1027 luot
+2026-11-25 05:36:25 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1076 luot
+2026-11-25 05:51:28 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 1124 luot
+2026-11-25 06:06:31 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 1170 luot
+2026-11-25 06:21:33 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1221 luot
+2026-11-25 06:36:37 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.976 (n 4); isaac 1263 luot
+2026-11-25 06:51:40 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.987 (n 4); isaac 1316 luot
+2026-11-25 07:06:43 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 1372 luot
+2026-11-25 07:21:46 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1429 luot
+2026-11-25 07:36:49 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1483 luot
+2026-11-25 07:51:53 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1537 luot
+2026-11-25 08:06:56 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1589 luot
+2026-11-25 08:21:59 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1641 luot
+2026-11-25 08:37:03 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 1690 luot
+2026-11-25 08:52:07 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1739 luot
+2026-11-25 09:07:10 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1792 luot
+2026-11-25 09:22:14 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 1841 luot
+2026-11-25 09:37:18 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.979 (n 4); isaac 1897 luot
+2026-11-25 09:52:22 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 1946 luot
+2026-11-25 10:07:26 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.983 (n 4); isaac 2002 luot
+2026-11-25 10:22:30 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.984 (n 4); isaac 2056 luot
+2026-11-25 10:37:34 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 2114 luot
+2026-11-25 10:52:38 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.987 (n 4); isaac 2163 luot
+2026-11-25 11:07:43 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.986 (n 4); isaac 2204 luot
+2026-11-25 11:22:47 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.988 (n 4); isaac 2258 luot
+2026-11-25 11:37:52 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.985 (n 4); isaac 2307 luot
+2026-11-25 11:52:56 rtf Gazebo 4 luot moi nhat: med 1.000 mean 0.990 (n 4); isaac 2356 luot
+2026-11-25 12:08:01 rtf Gazebo 4 luot moi nhat: med 0.999 mean 0.990 (n 4); isaac 2392 luot
+2026-11-25 12:12:31 client xong: 2400 luot
+2026-11-25 12:12:31 sha cuoi OK
+2026-11-25 12:12:31 XONG
+2026-11-25 12:17:16 lo N=4 xong truoc Gazebo: khong can chuyen

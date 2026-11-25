@@ -1,0 +1,35 @@
+EXC: {}
+            champ_base  champ2_base     go2_base  champ2_helb     go2_helb      gop
+B1                73.0         69.8         82.2         77.5         89.8     78.5
+PGIF*             80.0         70.8         84.1         82.2         89.5     81.3
+DRA*              79.4         74.9         88.3         81.6         91.1     83.0
+B0                61.6         59.4         70.8         70.2         81.9     68.8
+dwa               76.8         70.8         82.9         79.0         89.5     79.8
+log_mppi          74.3         72.1         85.7         78.7         90.2     80.2
+C1                88.6         81.9         90.2         85.4         91.7     87.6
+n the gioi/o: {'champ_base': 315, 'champ2_base': 315, 'go2_base': 315, 'champ2_helb': 315, 'go2_helb': 315}
+
+HO CHINH (Holm 3), n the gioi = 315
+C1 - B1     +9.08 diem  KTC95 [+6.98; +11.17]  p=5e-06  Holm=1.5e-05
+C1 - PGIF*  +6.22 diem  KTC95 [+4.06; +8.32]  p=5e-06  Holm=1.5e-05
+C1 - DRA*   +4.51 diem  KTC95 [+2.47; +6.54]  p=3e-05  Holm=3e-05
+
+PHU (tung o, McNemar chinh xac; Holm trong 15):
+  C1 vs B1     champ_base   +59/-10 p=1.38e-09 Holm=2.06e-08
+  C1 vs B1     champ2_base  +54/-16 p=5.85e-06 Holm=8.2e-05
+  C1 vs PGIF*  champ2_base  +55/-20 p=6.49e-05 Holm=0.000844
+  C1 vs DRA*   champ_base   +45/-16 p=0.000264 Holm=0.00317
+  C1 vs B1     go2_base     +37/-12 p=0.00047 Holm=0.00517
+  C1 vs PGIF*  champ_base   +44/-17 p=0.00073 Holm=0.0073
+  C1 vs B1     champ2_helb  +49/-24 p=0.00463 Holm=0.0416
+  C1 vs PGIF*  go2_base     +32/-13 p=0.00661 Holm=0.0529
+  C1 vs DRA*   champ2_base  +46/-24 p=0.0115 Holm=0.0807
+  C1 vs DRA*   champ2_helb  +36/-24 p=0.155 Holm=0.93
+  C1 vs PGIF*  champ2_helb  +30/-20 p=0.203 Holm=1
+  C1 vs B1     go2_helb     +16/-10 p=0.327 Holm=1
+  C1 vs PGIF*  go2_helb     +24/-17 p=0.349 Holm=1
+  C1 vs DRA*   go2_base     +19/-13 p=0.377 Holm=1
+  C1 vs DRA*   go2_helb     +18/-16 p=0.864 Holm=1
+  C1 - B0       +18.79 diem (khong kiem dinh)
+  C1 - dwa      +7.75 diem (khong kiem dinh)
+  C1 - log_mppi +7.37 diem (khong kiem dinh)

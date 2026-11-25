@@ -1,0 +1,6 @@
+champ_base   truoc 147 sau 147 dong; khac 0; EXC 0
+champ2_base  truoc 147 sau 147 dong; khac 0; EXC 0
+go2_base     truoc 147 sau 147 dong; khac 0; EXC 0
+champ2_helb  truoc 147 sau 147 dong; khac 0; EXC 0
+go2_helb     truoc 147 sau 147 dong; khac 0; EXC 0
+TONG 735 dong, khac 0 -> TRUNG TUNG DONG

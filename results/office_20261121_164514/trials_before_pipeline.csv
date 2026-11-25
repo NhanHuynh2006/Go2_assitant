@@ -1,0 +1,8 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s,stops,stop_s,mean_v,osc,at_fault,col_info
+prism,clutter:qua_khoi_so_le,clutter,go2,1,0,0.219,,0.376,9.44,25.12,87.5,0.131,0.072,,,52,6,0.51,2,6.5,0.265,26,,
+prism,clutter:van_phong,clutter,go2,1,0,0.243,,0.602,12.28,20.39,75.6,0.198,0.135,,,45,46,0.41,2,3.5,0.263,27,,
+prism,clutter:slalom_coc,clutter,go2,0,0,1.263,,0.0,8.61,11.81,44.6,0.313,0.296,,,30,0,0.62,5,10.0,0.225,14,,
+prism,clutter:loi_pallet,clutter,go2,0,0,6.333,,0.0,17.13,51.71,170.0,0.15,0.13,,,108,6,0.41,6,12.5,0.272,40,,
+prism,clutter:bep_xa,clutter,go2,0,0,9.216,,0.0,18.69,14.25,52.8,0.256,0.2,,,35,0,0.51,0,2.5,0.239,21,,
+prism,crowd:sanh_8_nguoi,crowd,go2,0,1,7.294,,0.0,14.54,13.07,61.1,0.747,0.661,,-0.212,40,152,0.41,0,3.5,0.277,14,0,"{""t"": 37.5, ""d"": -0.212, ""robot_in"": 0.02, ""person_in"": -0.23, ""robot_v"": 0.02, ""robot_wz"": -0.14, ""at_fault"": 0}"
+prism,crowd:kho_xe_day,crowd,go2,0,1,4.537,,0.0,13.79,95.77,300.0,0.196,0.174,,-0.044,187,96,0.51,6,13.0,0.289,82,1,"{""t"": 246.0, ""d"": -0.044, ""robot_in"": 0.16, ""person_in"": -0.1, ""robot_v"": 0.16, ""robot_wz"": -0.01, ""at_fault"": 1}"

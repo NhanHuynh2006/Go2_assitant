@@ -1,0 +1,2 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s
+full,nav:cửa,nav,go2,1,0,0.259,,0.693,3.61,5.21,126.6,0.394,0.388,,,670,647,0.3

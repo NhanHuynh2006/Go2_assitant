@@ -1,0 +1,3 @@
+update,steps,density,success,collision,timeout,reward,fps
+5,163840,0.88,0.028,0.972,0.0,-0.2114,81719
+10,327680,1.0,0.026,0.7,0.274,-0.2099,87396

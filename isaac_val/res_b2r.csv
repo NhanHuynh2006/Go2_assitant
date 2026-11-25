@@ -1,0 +1,10 @@
+body,tilt,world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu,foot,foot_t,succ_foot,wall
+isaac,1,303,corridor,4,0,mppi,1,ok,0.175,29.6,12.72,,,0.18,0.531,{},46.3,,,1,46.3
+body,tilt,world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu,foot,foot_t,succ_foot,wall
+isaac,1,302,lobby,6,0,mppi,1,ok,0.191,40.4,15.09,,,0.609,0.313,{},62.4,,,1,62.4
+isaac,1,304,clutter,2,0,mppi,1,ok,0.198,40.6,14.86,,,0.51,1.303,{},61.7,,,1,61.7
+isaac,1,306,warehouse,5,0,mppi,1,ok,0.192,63.7,25.51,,,0.37,1.297,{},94.4,,,1,94.4
+isaac,1,307,lobby,5,0,mppi,1,ok,0.18,39.1,17.4,,,0.349,0.616,{},59.0,,,1,59.0
+isaac,1,309,clutter,4,0,mppi,1,ok,0.144,28.1,12.46,,,0.527,0.788,{},42.7,,,1,42.7
+isaac,1,312,lobby,4,0,mppi,0,va nguoi,11.567,3.1,0.8,person,1,0.747,-0.019,"{""kind"": ""person"", ""t"": 3.1, ""robot_in"": 0.56, ""person_in"": 0.07, ""robot_v"": 0.63, ""wz"": -0.58, ""bearing"": 18, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 1.0, ""miss"": 0.44, ""ahead"": 0.9, ""trk"": 1, ""sp"": 0.5, ""rv"": 0.54, ""wall"": 1.2}, ""1.0"": {""d"": 1.51, ""miss"": 0.56, ""ahead"": 1.41, ""trk"": 1, ""sp"": 0.57, ""rv"": 0.16, ""wall"": 1.15}, ""1.5"": {""d"": 1.84, ""miss"": 0.44, ""ahead"": 1.78, ""trk"": 1, ""sp"": 0.58, ""rv"": 0.08, ""wall"": 1.09}, ""2.0"": {""d"": 2.14, ""miss"": 0.4, ""ahead"": 2.1, ""trk"": 1, ""sp"": 0.6, ""rv"": 0.04, ""wall"": 1.06}, ""3.0"": {""d"": 2.77, ""miss"": 0.18, ""ahead"": 2.77, ""trk"": 1, ""sp"": 0.64, ""rv"": 0.02, ""wall"": 1.05}}, ""distracted"": 0}",7.4,,,0,7.4
+isaac,1,311,warehouse,6,0,mppi,1,ok,0.176,36.7,14.83,,,0.31,0.266,{},48.9,,,1,48.9

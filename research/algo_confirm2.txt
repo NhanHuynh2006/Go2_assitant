@@ -1,0 +1,32 @@
+cau hinh | champ | champ2 | go2 | champ2h | go2h | gop
+p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | 286/348=82.2 [78-86] va 16.7 t63 | 284/348=81.6 [77-85] va 17.8 t68 | 312/348=89.7 [86-92] va 9.8 t48 | 293/348=84.2 [80-88] va 15.2 t73 | 318/348=91.4 [88-94] va 8.6 t49 | 1493/1740=85.8
+mppi~t3~nl:ppl=100;ppl_len=0.5 | 267/348=76.7 [72-81] va 22.7 t73 | 253/348=72.7 [68-77] va 26.4 t78 | 296/348=85.1 [81-88] va 14.7 t54 | 258/348=74.1 [69-78] va 23.3 t87 | 304/348=87.4 [83-90] va 11.5 t59 | 1378/1740=79.2
+pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 | 276/348=79.3 [75-83] va 20.4 t57 | 244/348=70.1 [65-75] va 28.2 t63 | 274/348=78.7 [74-83] va 21.0 t46 | 293/348=84.2 [80-88] va 14.9 t68 | 315/348=90.5 [87-93] va 9.2 t48 | 1402/1740=80.6
+dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 | 271/348=77.9 [73-82] va 21.3 t58 | 268/348=77.0 [72-81] va 22.4 t64 | 294/348=84.5 [80-88] va 14.9 t49 | 291/348=83.6 [79-87] va 16.1 t69 | 314/348=90.2 [87-93] va 9.2 t50 | 1438/1740=82.6
+mppi:ppl=32 | 219/348=62.9 [58-68] va 37.1 t59 | 208/348=59.8 [55-65] va 40.2 t67 | 258/348=74.1 [69-78] va 25.9 t41 | 239/348=68.7 [64-73] va 30.5 t70 | 302/348=86.8 [83-90] va 13.2 t43 | 1226/1740=70.5
+
+Ho phep so: 24; tong dong LOG (ca AUDIT): 533
+p=1.2e-12 Holm=2.9e-11 Bonf(533)=6.5e-10 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ2] n=348 +98/-22 (+21.8 diem)
+p=3.8e-11 Holm=8.7e-10 Bonf(533)=2e-08 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ] n=348 +87/-20 (+19.3 diem)
+p=1.1e-09 Holm=2.5e-08 Bonf(533)=6e-07 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [go2] n=348 +68/-14 (+15.5 diem)
+p=2.5e-07 Holm=5.3e-06 Bonf(533)=0.00013 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ2h] n=348 +82/-28 (+15.5 diem)
+p=5.9e-06 Holm=0.00012 Bonf(533)=0.0031 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [go2] n=348 +54/-16 (+10.9 diem)
+p=1e-05 Holm=0.00019 Bonf(533)=0.0053 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [GOP 348 the gioi] +15.3 diem
+p=1e-05 Holm=0.00019 Bonf(533)=0.0053 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [GOP 348 the gioi] +6.6 diem
+p=1e-05 Holm=0.00019 Bonf(533)=0.0053 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [GOP 348 the gioi] +5.2 diem
+p=3e-05 Holm=0.00047 Bonf(533)=0.016 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [champ2] n=348 +65/-25 (+11.5 diem)
+p=0.00019 Holm=0.0028 Bonf(533)=0.1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2h] n=348 +60/-25 (+10.1 diem)
+p=0.00075 Holm=0.011 Bonf(533)=0.4 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2] n=348 +56/-25 (+8.9 diem)
+p=0.0018 Holm=0.024 Bonf(533)=0.98 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [GOP 348 the gioi] +3.2 diem
+p=0.02 Holm=0.23 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [go2h] n=348 +29/-13 (+4.6 diem)
+p=0.024 Holm=0.27 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2h] n=348 +24/-10 (+4.0 diem)
+p=0.025 Holm=0.27 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [go2] n=348 +38/-20 (+5.2 diem)
+p=0.034 Holm=0.31 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ] n=348 +46/-27 (+5.5 diem)
+p=0.04 Holm=0.32 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2] n=348 +35/-19 (+4.6 diem)
+p=0.076 Holm=0.53 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [champ2] n=348 +44/-28 (+4.6 diem)
+p=0.082 Holm=0.53 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [champ] n=348 +40/-25 (+4.3 diem)
+p=0.24 Holm=1 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [champ] n=348 +34/-24 (+2.9 diem)
+p=0.64 Holm=1 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [go2h] n=348 +23/-19 (+1.1 diem)
+p=0.77 Holm=1 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [go2h] n=348 +24/-21 (+0.9 diem)
+p=0.9 Holm=1 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 [champ2h] n=348 +36/-34 (+0.6 diem)
+p=1 Holm=1 Bonf(533)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 [champ2h] n=348 +31/-31 (+0.0 diem)

@@ -1,0 +1,1 @@
+../venv/bin/python: can't open file '/home/nhanhuynh/Documents/Go2_assitant/audit/a12.py': [Errno 2] No such file or directory

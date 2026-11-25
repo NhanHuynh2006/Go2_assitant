@@ -1,0 +1,30 @@
+[sha] results/frozen_C1/SHA256SUMS_TEST: 16/16 khop
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.17 m, 82 s, di 26.0 m, lap lai 53 lan)
+[1/1] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 gz:warehouse_100376        go2    ok=1 col=0 err=0.177 t=81.8s ctrl=DRAMPPI/v3/RespModel step95=14.506ms cmd50/95=0.1/0.107s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.15 m, 53 s, di 18.2 m, lap lai 35 lan)
+[1/1] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 gz:lobby_100377            go2    ok=0 col=1 err=0.135 t=53.3s ctrl=DRAMPPI/v3/RespModel step95=13.105ms cmd50/95=0.1/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 47 s, di 15.3 m, lap lai 30 lan)
+[1/1] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 gz:corridor_100378         go2    ok=0 col=1 err=0.173 t=46.9s ctrl=DRAMPPI/v3/RespModel step95=16.751ms cmd50/95=0.1/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.18 m, 126 s, di 39.4 m, lap lai 81 lan)
+[1/1] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 gz:office_100380           go2    ok=1 col=0 err=0.188 t=126.0s ctrl=DRAMPPI/v3/RespModel step95=18.055ms cmd50/95=0.1/0.111s rtf=1.0 sha=1
+
+| config | loai | n | thanh cong | va cham | sai so TB | SPL | thoi gian TB (s) | ho min TB (m) | ho min Go2 that (m) | khung (lan) | dung (s) | toc do TB (m/s) | lac huong |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 | crowd | 4 | 50 % | 50 % | 0.168 m | 0.54 | 77.0 | 0.27 | 0.24 | 0.5 | 1.6 | 0.30 | 23.2 |
+
+-> results/GZ_TEST_DRA/s1/g069
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot

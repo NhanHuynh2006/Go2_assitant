@@ -1,0 +1,657 @@
+thoi_gian,agent,config,suite,n,success,ghi_chu
+2026-11-22,coordinator,"mppi~v1",dev1(seed 0-149),149,100,
+2026-11-22,coordinator,"mppi",dev1(seed 0-149),149,102,
+2026-11-22,coordinator,"dwa~v1",dev1(seed 0-149),149,103,
+2026-11-22,coordinator,"dwa",dev1(seed 0-149),149,96,
+2026-11-22,coordinator,"prism@ppo+sac~v1",dev1(seed 0-149),149,99,
+2026-11-22,coordinator,"prism@ppo+sac",dev1(seed 0-149),149,105,
+2026-11-22,coordinator,"p2",dev1(seed 0-149),149,107,
+2026-11-22,coordinator,"p2-evade",dev1(seed 0-149),149,101,
+2026-11-22,coordinator,"p2-rate",dev1(seed 0-149),149,108,
+2026-11-22,coordinator,"p2-cap",dev1(seed 0-149),149,101,
+2026-11-22,coordinator,"p2@ppo+sac",dev1(seed 0-149),149,102,
+2026-11-22,coordinator,"mppi",dev1_oracle(seed 0-149),93,64,
+2026-11-22,coordinator,"p2",dev1_oracle(seed 0-149),91,72,
+2026-11-22,coordinator,"p2-evade",dev1_oracle(seed 0-149),87,67,
+2026-11-22,coordinator,"dwa",dev1_oracle(seed 0-149),85,64,
+2026-11-22,coordinator,"mppi",dev2(seed 0-149),100,69,
+2026-11-22,coordinator,"p2",dev2(seed 0-149),100,70,
+2026-11-22,coordinator,"mppi",dev2o(seed 0-149),100,70,
+2026-11-22,coordinator,"p2",dev2o(seed 0-149),100,80,
+2026-11-22,coordinator,"mppi",dev3(seed 0-149),101,54,
+2026-11-22,coordinator,"p2-evade",dev3(seed 0-149),101,53,
+2026-11-22,coordinator,"p2",dev3(seed 0-149),101,59,
+2026-11-22,coordinator,"p2+turn",dev3(seed 0-149),101,66,
+2026-11-22,coordinator,"p2-evade+turn",dev3(seed 0-149),101,59,
+2026-11-22,coordinator,"p2+turn+mode",dev3(seed 0-149),101,65,
+2026-11-22,coordinator,"p2+mode",dev3(seed 0-149),101,58,
+2026-11-22,coordinator,"mppi:ppl=16",dev3(seed 0-149),101,53,
+2026-11-22,coordinator,"mppi:ppl=32",dev3(seed 0-149),101,64,
+2026-11-22,coordinator,"mppi:ppl=16;ppl_len=0.6",dev3(seed 0-149),101,63,
+2026-11-22,coordinator,"mppi:ppl=8;ppl_len=0.6",dev3(seed 0-149),101,47,
+2026-11-22,coordinator,"mppi:path=4;smooth=4;ang=1.8",dev3(seed 0-149),101,49,
+2026-11-22,coordinator,"dwa",dev3(seed 0-149),101,48,
+2026-11-22,coordinator,"dwa:ppl=16;ppl_len=0.6",dev3(seed 0-149),101,57,
+2026-11-22,coordinator,"p2+turn:w_ev=12",dev3(seed 0-149),101,62,
+2026-11-22,coordinator,"p2+turn:w_ev=24",dev3(seed 0-149),101,63,
+2026-11-22,coordinator,"p2+turn:ev_slack=0.8",dev3(seed 0-149),101,57,
+2026-11-22,coordinator,"p2+turn:sig_turn=0.9",dev3(seed 0-149),101,56,
+2026-11-22,coordinator,"p2+turn:ppl=16",dev3(seed 0-149),101,66,
+2026-11-22 23:45,ALGO,mppi~t3,algo_A(seed 0-148 crowd-only),83,45,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,mppi~t3:ppl=16;ppl_len=0.6,algo_A(seed 0-148 crowd-only),86,49,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,mppi~t3:ppl=32,algo_A(seed 0-148 crowd-only),88,57,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,mppi~t3~nl:ppl=32,algo_A(seed 0-64 crowd-only),30,18,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,mppi~t3~nl:ppl=32;lam_q=0.15;lam_c=0.3,algo_A(seed 0-50 crowd-only),27,12,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,p2+turn~t3,algo_A(seed 0-148 crowd-only),88,55,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-22 23:45,ALGO,p3~t3~nl,algo_A(seed 0-50 crowd-only),28,21,"tracker v3 ban dau (bong ma 30-55%, sau da sua) / doi chieu chua du the gioi"
+2026-11-23 02:28,ALGO,mppi~t3:ppl=32,algo_B(seed 0-148 crowd-only),101,71,tracker v3 da sua
+2026-11-23 02:28,ALGO,mppi~t3~nl:ppl=32,algo_B(seed 0-148 crowd-only),101,73,tracker v3 da sua
+2026-11-23 02:28,ALGO,mppi~t3~nl:ppl=32;T=36,algo_B(seed 0-148 crowd-only),101,69,tracker v3 da sua
+2026-11-23 02:28,ALGO,mppi~t3~nl:ppl=32;lam_q=0.15;lam_c=0.3,algo_B(seed 0-39 crowd-only),22,11,tracker v3 da sua
+2026-11-23 02:28,ALGO,p2+turn~t3,algo_B(seed 0-50 crowd-only),25,16,tracker v3 da sua
+2026-11-23 02:28,ALGO,p2+turn~t3~nl,algo_B(seed 0-148 crowd-only),101,68,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3+geo-haz~t3~nl,algo_B(seed 0-148 crowd-only),101,88,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3+geo~t3~nl,algo_B(seed 0-148 crowd-only),101,78,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3-grad~t3~nl,algo_B(seed 0-148 crowd-only),101,73,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3-haz~t3~nl,algo_B(seed 0-148 crowd-only),101,75,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3-prim~t3~nl,algo_B(seed 0-148 crowd-only),101,75,tracker v3 da sua
+2026-11-23 02:28,ALGO,p3~t3~nl,algo_B(seed 0-148 crowd-only),101,78,tracker v3 da sua
+2026-11-23 02:28,ALGO,mppi~oca:ppl=32,algo_O(seed 0-148 crowd-only),101,76,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~ocb:ppl=32,algo_O(seed 0-148 crowd-only),101,75,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~occ:ppl=32,algo_O(seed 0-148 crowd-only),101,76,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~ocd:ppl=32,algo_O(seed 0-148 crowd-only),101,72,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~oce:ppl=32,algo_O(seed 0-148 crowd-only),101,77,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~ocf:ppl=32,algo_O(seed 0-148 crowd-only),101,62,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 02:28,ALGO,mppi~ocg:ppl=32,algo_O(seed 0-148 crowd-only),101,74,"chan doan: oracle tung phan, khong phai ung vien"
+2026-11-23 03:10,coordinator,"future",ceil1 champ oracle (seed 0-149 crowd),101,86,chan doan tran
+2026-11-23 03:10,coordinator,"future:ppl=32",ceil1 champ oracle (seed 0-149 crowd),101,90,chan doan tran
+2026-11-23 03:10,coordinator,"mppi",ceil1 champ oracle (seed 0-149 crowd),101,59,chan doan tran
+2026-11-23 03:10,coordinator,"mppi:ppl=32",ceil1 champ oracle (seed 0-149 crowd),101,75,chan doan tran
+2026-11-23 03:10,coordinator,"mppi",go2_ref go2 thuong (seed 0-149 crowd),101,56,chan doan tran
+2026-11-23 03:10,coordinator,"mppi:ppl=32",go2_ref go2 thuong (seed 0-149 crowd),101,70,chan doan tran
+2026-11-23 03:10,coordinator,"dwa",go2_ref go2 thuong (seed 0-149 crowd),101,53,chan doan tran
+2026-11-23 03:10,coordinator,"mppi:ppl=32",go2_ceil go2 oracle (seed 0-149 crowd),101,90,chan doan tran
+2026-11-23 03:10,coordinator,"future:ppl=32",go2_ceil go2 oracle (seed 0-149 crowd),101,98,chan doan tran
+2026-11-23 03:22,ALGO,dwa~t3~nl:ppl=32,algo_B(seed 0-80 crowd-only),35,21,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,dwa~t3~nl:ppl=32;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,70,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,dwa~t3~nl:ppl=64;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,71,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,log_mppi~t3~nl:ppl=32,algo_B(seed 0-80 crowd-only),36,22,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,log_mppi~t3~nl:ppl=32;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,74,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,log_mppi~t3~nl:ppl=64;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,74,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,81,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;K=1200,algo_B(seed 0-80 crowd-only),36,20,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;ang=0.4;lat=0.2,algo_B(seed 0-80 crowd-only),36,25,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;lam_c=0.03,algo_B(seed 0-80 crowd-only),36,23,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,73,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;sig=1.5,algo_B(seed 0-148 crowd-only),101,73,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=32;w_pen=300,algo_B(seed 0-80 crowd-only),36,26,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=64,algo_B(seed 0-80 crowd-only),36,22,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.5,algo_B(seed 0-148 crowd-only),101,78,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.5;sig=1.5,algo_B(seed 0-148 crowd-only),101,74,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.8,algo_B(seed 0-148 crowd-only),101,75,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+commit~t3~nl,algo_B(seed 0-80 crowd-only),37,31,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+cvar~t3~nl,algo_B(seed 0-91 crowd-only),40,34,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv-grad~t3~nl,algo_B(seed 0-148 crowd-only),101,82,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv-prim~t3~nl,algo_B(seed 0-148 crowd-only),101,82,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~nl,algo_B(seed 0-148 crowd-only),101,76,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3,algo_B(seed 0-148 crowd-only),101,77,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl,algo_B(seed 0-148 crowd-only),101,83,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl:c_hit=0,algo_B(seed 0-148 crowd-only),101,83,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl:g_len=0.25,algo_B(seed 0-148 crowd-only),101,88,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl:g_tau=99,algo_B(seed 0-148 crowd-only),101,80,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl:ppl=0,algo_B(seed 0-148 crowd-only),101,70,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+gcv~t3~nl:w_geo=80,algo_B(seed 0-148 crowd-only),101,83,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz+ggs~t3~nl,algo_B(seed 0-91 crowd-only),42,32,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz-grad~t3~nl,algo_B(seed 0-91 crowd-only),40,32,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz-prim~t3~nl,algo_B(seed 0-91 crowd-only),40,30,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz~nl,algo_B(seed 0-80 crowd-only),36,28,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz~t3,algo_B(seed 0-80 crowd-only),37,33,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz~t3~nl:g_tau=2.5,algo_B(seed 0-80 crowd-only),39,35,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 03:22,ALGO,p3+geo-haz~t3~nl:w_geo=80,algo_B(seed 0-80 crowd-only),39,35,chinh baseline + ablation p3 (champ); n<101 = dung som
+2026-11-23 08:02,ALGO,mppi~t3:ppl=32,algo_Bg(seed 0-148 crowd-only),101,84,regime go2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Bg(seed 0-148 crowd-only),101,82,regime go2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=32,algo_Bg(seed 0-148 crowd-only),101,80,regime go2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.5,algo_Bg(seed 0-148 crowd-only),101,78,regime go2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~nl,algo_Bg(seed 0-148 crowd-only),101,87,regime go2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl,algo_Bg(seed 0-148 crowd-only),101,83,regime go2
+2026-11-23 08:02,ALGO,p3+geo-haz~t3~nl,algo_Bg(seed 0-148 crowd-only),101,88,regime go2
+2026-11-23 08:02,ALGO,mppi~ocb:ppl=32,algo_Og(seed 0-148 crowd-only),101,80,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,mppi~occ:ppl=32,algo_Og(seed 0-148 crowd-only),101,86,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,mppi~ocd:ppl=32,algo_Og(seed 0-148 crowd-only),101,87,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,mppi~oce:ppl=32,algo_Og(seed 0-148 crowd-only),101,85,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,mppi~ocf:ppl=32,algo_Og(seed 0-148 crowd-only),101,67,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,mppi~ocg:ppl=32,algo_Og(seed 0-148 crowd-only),101,79,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,dwa~t3~nl:ppl=100;ppl_len=0.3,algo_Cchamp(seed 150-298 crowd-only),104,78,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,log_mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,78,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=100,algo_Cchamp(seed 150-298 crowd-only),104,79,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,77,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=150;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,75,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=32,algo_Cchamp(seed 150-298 crowd-only),104,71,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,78,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl,algo_Cchamp(seed 150-298 crowd-only),104,79,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,84,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl:ppl=64;ppl_len=0.5,algo_Cchamp(seed 150-298 crowd-only),104,83,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz~t3~nl,algo_Cchamp(seed 150-298 crowd-only),104,84,regime champ; chinh baseline vong 2
+2026-11-23 08:02,ALGO,dwa~t3~nl:ppl=100;ppl_len=0.3,algo_Cgo2(seed 150-298 crowd-only),104,80,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,log_mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,82,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=100,algo_Cgo2(seed 150-298 crowd-only),104,81,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,83,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=150;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,84,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=32,algo_Cgo2(seed 150-298 crowd-only),104,74,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,mppi~t3~nl:ppl=64;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,73,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl,algo_Cgo2(seed 150-298 crowd-only),104,89,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,89,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~t3~nl:ppl=64;ppl_len=0.5,algo_Cgo2(seed 150-298 crowd-only),104,88,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz~t3~nl,algo_Cgo2(seed 150-298 crowd-only),104,83,regime go2; chinh baseline vong 2
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~ocb~nl,algo_Pchamp(seed 0-148 crowd-only),101,91,regime champ; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~ocf~nl,algo_Pchamp(seed 0-148 crowd-only),101,81,regime champ; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~ocb~nl,algo_Pgo2(seed 0-148 crowd-only),101,93,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,p3+geo-haz+gcv~ocf~nl,algo_Pgo2(seed 0-148 crowd-only),101,83,regime go2; chan doan oracle tung phan
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+sac~t3~nl,algo_Rchamp(seed 150-298 crowd-only),104,86,regime champ; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+td3+sac~t3~nl,algo_Rchamp(seed 150-298 crowd-only),104,83,regime champ; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+td3~t3~nl,algo_Rchamp(seed 150-298 crowd-only),104,80,regime champ; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo~t3~nl,algo_Rchamp(seed 150-298 crowd-only),104,84,regime champ; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz~t3~nl,algo_Rchamp(seed 150-298 crowd-only),104,84,regime champ; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+sac~t3~nl,algo_Rgo2(seed 150-298 crowd-only),104,88,regime go2; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+td3+sac~t3~nl,algo_Rgo2(seed 150-298 crowd-only),104,91,regime go2; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo+td3~t3~nl,algo_Rgo2(seed 150-298 crowd-only),104,85,regime go2; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz@ppo~t3~nl,algo_Rgo2(seed 150-298 crowd-only),104,91,regime go2; to hop goi y RL
+2026-11-23 08:02,ALGO,p3+geo-haz~t3~nl,algo_Rgo2(seed 150-298 crowd-only),104,83,regime go2; to hop goi y RL
+2026-11-23 08:15,SEV,"mppi:ppl=32 (ban chup sev/snap 22/11 23:36, champ)",fastsim seed 0-299 crowd-only (ghi quy dao),205,125,"chi de lay mau AUC buoc 1; khong phai phep thu so sanh"
+2026-11-23 08:15,SEV,"SEV V (DP, hazard Crowd seed 800-999)",AUC buoc 1 seed 0-299 crowd-only,78,,"KHONG QUA: dAUC voi dce -0.020 [-0.048;+0.007] (-2s) +0.004 [-0.019;+0.025] (-1.5s); kho -0.129/-0.074. Khong noi MPPI"
+2026-11-23 08:15,SEV,"SEV V (hazard THOR)",AUC buoc 1 seed 0-299 crowd-only,78,,"KHONG QUA: -0.012 [-0.038;+0.013] / +0.006 [-0.016;+0.026]"
+2026-11-23 08:15,SEV,"SEV V + chieu tuong tho",AUC buoc 1 seed 0-299 crowd-only,78,,"KHONG QUA (crowd/thor): -0.017 / -0.009 (-2s)"
+2026-11-23 08:15,SEV,"Vol (vong ho, lenh giu nguyen; hazard crowd/thor)",AUC buoc 1 seed 0-299 crowd-only,78,,"KHONG QUA: -0.017/-0.011 (-2s); kem co y nghia o -1.5s (-0.014/-0.016)"
+2026-11-23 08:15,SEV,"V hazard x0.5 / x2 (tham do sau khi rot)",AUC seed 0-299,78,,"khong doi ket luan"
+2026-11-23 08:15,SEV,"adv3: xau nhat |w|<=0.35 trong 3 s kieu CN-CBF (tham do)",AUC seed 0-299,78,,"-0.013 [-0.037;+0.009] (-2s) +0.002 (-1.5s); kem 0.06-0.08 o nguoi dung yen"
+2026-11-23 08:15,SEV,"V theo trang thai track (khong phai nguoi that)",AUC seed 0-299,78,,"KHONG QUA: -0.008 / -0.006"
+2026-11-23 08:30,ISAAC,sysid Isaac Lab Go2 policy flat+rough (khong phai cau hinh dieu huong),isaac steps/random,4,,"do dong hoc, khong tinh vao Holm; isaac_val/sysid_isaac.npz"
+2026-11-23 08:45,ALGO,tracker ~t4 (10 Hz),offline trkerr seeds 2..94,8,0,"chi do sai so tracker: van toc 0.137->0.127, bong ma 10->16 %: bo"
+2026-11-23 09:00,COORD,"Kiem lai REPORT_ISAAC: tinh lai gain CHAMP doc lap (results/sysid.npz, 150 doan)",sysid CHAMP,,,"bang gain cua ISAAC tai lap; phat hien champ sai dang ham"
+2026-11-23 09:00,COORD,"Khop lai CHAMP: cat lenh gait.yaml 0.3/0.25/0.5 + troi lui -0.053 m/s khi buoc (pipeline/sysid_fit2.py)",du doan vong ho 1-2 s,247/121 cua so,,"2 s: 0.062 m (champ cu 0.088, ly tuong 0.169); kiem cheo 2 nua: moi 0.038-0.041 vs cu 0.049-0.051 (1 s)"
+2026-11-23 09:00,COORD,"Them --regime champ2 vao fastsim.py; champ/go2 giu nguyen",seed 0-5 x 2 regime,,,"giong het tung dong (tru cot cpu)"
+2026-11-23 08:57,ALGO,mppi:ppl=32,algo_Dchamp(seed 0-298 crowd-only),205,125,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~dt:ppl=32,algo_Dchamp(seed 0-298 crowd-only),205,130,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=100,algo_Dchamp(seed 0-298 crowd-only),205,149,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Dchamp(seed 0-298 crowd-only),205,139,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=32,algo_Dchamp(seed 0-298 crowd-only),205,139,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Dchamp(seed 0-298 crowd-only),205,158,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Dchamp(seed 0-298 crowd-only),205,166,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_len=0.25,algo_Dchamp(seed 0-298 crowd-only),205,169,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Dchamp(seed 0-298 crowd-only),205,169,regime champ; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi:ppl=32,algo_Dgo2(seed 0-288 crowd-only),189,136,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~dt:ppl=32,algo_Dgo2(seed 0-294 crowd-only),190,139,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=100,algo_Dgo2(seed 0-294 crowd-only),191,149,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Dgo2(seed 0-294 crowd-only),191,156,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3:ppl=32,algo_Dgo2(seed 0-294 crowd-only),190,150,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Dgo2(seed 0-288 crowd-only),189,154,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),196,175,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_len=0.25,algo_Dgo2(seed 0-294 crowd-only),195,171,regime go2; vong D chinh cuoi
+2026-11-23 08:57,ALGO,p3+geo-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),197,172,regime go2; vong D chinh cuoi
+2026-11-23 09:10,COORD,"Nguoi dung dong y EULA NVIDIA Omniverse, cho chay tiep Isaac",,,,"ISAAC chay run_gpu.sh (nhieu + thu IsaacSim)"
+2026-11-23 09:15,COORD,"Nguoi dung cho phep chap nhan moi giay phep phan mem khong can hoi truoc",,,,"ghi lai giay phep da chap nhan trong REPORT tuong ung"
+2026-11-23 09:01,ALGO,mppi:ppl=32,algo_Dgo2(seed 0-298 crowd-only),205,141,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,mppi~dt:ppl=32,algo_Dgo2(seed 0-298 crowd-only),205,148,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,mppi~t3:ppl=100,algo_Dgo2(seed 0-298 crowd-only),205,162,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),205,168,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,mppi~t3:ppl=32,algo_Dgo2(seed 0-298 crowd-only),205,162,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),205,165,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),205,183,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_len=0.25,algo_Dgo2(seed 0-298 crowd-only),205,179,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:01,ALGO,p3+geo-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Dgo2(seed 0-298 crowd-only),205,180,regime go2; vong D chinh cuoi (du)
+2026-11-23 09:20,COORD,"Nguoi dung cho phep sudo va day/cong bo; chi coordinator thuc hien",,,,"mat khau khong luu o dau ca"
+2026-11-23 20:10,COORD,"Do trung thuc fastsim~Gazebo: champ vs champ2 (office, 12 cau hinh x 8 bai x 4)",office vs final_office 960,384+384,,"Spearman 12 cau hinh: champ 0.90 champ2 0.59; bootstrap theo bai: champ 0.78[0.50;0.94] champ2 0.65[0.33;0.87], hieu 0.14[-0.12;0.41] KHONG co y nghia. champ2 dung hon 1 buoc, khong khop Gazebo vong kin hon -> giu CA HAI regime"
+2026-11-23 09:10,ISAAC,"mppi; than isaac(rough,khong nhieu)",fs gen DEV seed 0-2 trial 0,3,3,thu CHUC NANG giao dien isaac_sim.py; khong ket luan; isaac_val/smoke_nav.csv
+2026-11-23 09:10,ISAAC,mppi; than fastsim champ,fs gen DEV seed 0-2 trial 0,3,1,thu CHUC NANG giao dien isaac_sim.py; khong ket luan; isaac_val/smoke_nav.csv
+2026-11-23 09:10,ISAAC,mppi; than fastsim champ2,fs gen DEV seed 0-2 trial 0,3,2,thu CHUC NANG giao dien isaac_sim.py; khong ket luan; isaac_val/smoke_nav.csv
+2026-11-23 09:10,ISAAC,mppi; than fastsim real/go2,fs gen DEV seed 0-2 trial 0,3,3,thu CHUC NANG giao dien isaac_sim.py; khong ket luan; isaac_val/smoke_nav.csv
+2026-11-23 09:01,ISAAC,sysid Isaac Go2 flat+rough co nhieu quan sat,isaac steps seed 1,2,,"dong hoc, khong tinh Holm; vung chet nho di khi bat nhieu"
+2026-11-23 20:15,MODEL,rl (ppo_r_s0/best.npz),"model2_old_s0_champ(seed 0-299 crowd-only, regime champ)",205,85,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s1/best.npz),"model_rl_old_s1_champ(seed 0-299 all, regime champ)",300,178,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s2/best.npz),"model_rl_old_s2_champ(seed 0-299 all, regime champ)",300,167,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s0/best.npz),"model_rl_dyn_s0_champ(seed 0-299 all, regime champ)",300,173,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s1/best.npz),"model_rl_dyn_s1_champ(seed 0-299 all, regime champ)",300,180,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s2/best.npz),"model_rl_dyn_s2_champ(seed 0-299 all, regime champ)",300,176,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s0/best.npz),"model2_union_s0_champ(seed 0-299 crowd-only, regime champ)",205,85,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s1/best.npz),"model2_union_s1_champ(seed 0-299 crowd-only, regime champ)",205,80,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s2/best.npz),"model2_union_s2_champ(seed 0-299 crowd-only, regime champ)",205,83,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s0/best.npz),"model2_old_s0_champ2(seed 0-299 crowd-only, regime champ2)",205,90,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s1/best.npz),"model2_old_s1_champ2(seed 0-299 crowd-only, regime champ2)",205,96,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s2/best.npz),"model2_old_s2_champ2(seed 0-299 crowd-only, regime champ2)",205,85,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s0/best.npz),"model2_dyn_s0_champ2(seed 0-299 crowd-only, regime champ2)",205,88,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s1/best.npz),"model2_dyn_s1_champ2(seed 0-299 crowd-only, regime champ2)",205,86,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s2/best.npz),"model2_dyn_s2_champ2(seed 0-299 crowd-only, regime champ2)",205,92,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s0/best.npz),"model2_union_s0_champ2(seed 0-299 crowd-only, regime champ2)",205,94,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s1/best.npz),"model2_union_s1_champ2(seed 0-299 crowd-only, regime champ2)",205,97,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s2/best.npz),"model2_union_s2_champ2(seed 0-299 crowd-only, regime champ2)",205,91,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s0/best.npz),"model2_old_s0_go2(seed 0-299 crowd-only, regime go2)",205,104,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s1/best.npz),"model2_old_s1_go2(seed 0-299 crowd-only, regime go2)",205,108,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s2/best.npz),"model2_old_s2_go2(seed 0-299 crowd-only, regime go2)",205,110,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s0/best.npz),"model2_dyn_s0_go2(seed 0-299 crowd-only, regime go2)",205,102,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s1/best.npz),"model2_dyn_s1_go2(seed 0-299 crowd-only, regime go2)",205,103,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_dyn_s2/best.npz),"model2_dyn_s2_go2(seed 0-299 crowd-only, regime go2)",205,102,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s0/best.npz),"model2_union_s0_go2(seed 0-299 crowd-only, regime go2)",205,107,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s1/best.npz),"model2_union_s1_go2(seed 0-299 crowd-only, regime go2)",205,104,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_union_s2/best.npz),"model2_union_s2_go2(seed 0-299 crowd-only, regime go2)",205,95,"PPO dong hoc: old=tuyen tinh, dyn=measured, union=CHAMP+go2_params"
+2026-11-23 20:15,MODEL,rl (ppo_r_s0),"model_rl_old_s0_real(seed 0-299, regime real cu)",300,210,regime real cu (truoc go2)
+2026-11-23 20:15,MODEL,rl (ppo_r_s1),"model_rl_old_s1_real(seed 0-299, regime real cu)",300,206,regime real cu (truoc go2)
+2026-11-23 20:15,MODEL,rl (ppo_r_s2),"model_rl_old_s2_real(seed 0-299, regime real cu)",300,215,regime real cu (truoc go2)
+2026-11-23 20:15,MODEL,rl (ppo_r_s0) --oracle,model_rl_old_s0_champ_oracle(seed 0-299),300,182,cam nhan nguoi hoan hao
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1,model_pred_dev1(crowd-only),101,83,chinh net tren DEV 0-149 champ; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;g_len=0.25,model_pred_dev1(crowd-only),101,84,chinh net tren DEV 0-149 champ; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_dev1(crowd-only),101,87,chinh net tren DEV 0-149 champ; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_champ(crowd-only),104,80,xac nhan 150-299 champ base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_champ(crowd-only),104,84,xac nhan 150-299 champ base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_champ(crowd-only),104,84,xac nhan 150-299 champ base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_champ2(crowd-only),104,81,xac nhan 150-299 champ2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_champ2(crowd-only),104,80,xac nhan 150-299 champ2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_champ2(crowd-only),104,81,xac nhan 150-299 champ2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_go2(crowd-only),104,86,xac nhan 150-299 go2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_go2(crowd-only),104,83,xac nhan 150-299 go2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_go2(crowd-only),104,90,xac nhan 150-299 go2 base; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_champ_helb(crowd-only),104,89,150-299 champ crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_champ_helb(crowd-only),104,84,150-299 champ crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_champ_helb(crowd-only),104,93,150-299 champ crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_go2_helb(crowd-only),104,94,150-299 go2 crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_go2_helb(crowd-only),104,95,150-299 go2 crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_go2_helb(crowd-only),104,95,150-299 go2 crowd helb; fs_pred.py (net=nav_pred mix_h256)
+2026-11-23 20:15,MODEL,p3+geo-haz+gcv~t3~nl:g_len=0.25,model_pred_conf_champ_mous(crowd-only),27,21,"150-299 champ crowd mous, DUNG GIUA CHUNG (28/104 the gioi); fs_pred.py (net=nav_pred mix_h256)"
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl,model_pred_conf_champ_mous(crowd-only),27,23,"150-299 champ crowd mous, DUNG GIUA CHUNG (28/104 the gioi); fs_pred.py (net=nav_pred mix_h256)"
+2026-11-23 20:15,MODEL,p3+geo-haz~t3~nl:net=1;wcv=0.3,model_pred_conf_champ_mous(crowd-only),28,25,"150-299 champ crowd mous, DUNG GIUA CHUNG (28/104 the gioi); fs_pred.py (net=nav_pred mix_h256)"
+2026-11-23 20:15,MODEL,"nav_pred open-loop: 13 mang (def_h64/128_k5/k8, mix_s0-2, mix_k5, mix_h256, 4 ablation, def_s0)",pred val 800-999,0,,"chon mix_h256 theo NLL val; baseline: CV_damp 20, Kalman 24, GeoFan 90 lan chinh tren val"
+2026-11-23 20:40,COORD,"Nhan bao cao MODEL (qua tin nhan; agent bi chan ghi REPORT_MODEL.md -> khong ghi ho, hoi nguoi dung)",,,,"RL -> ablation; nav_pred vong kin p=0.13 -> chua dung"
+2026-11-23,AUDIT,"mppi",audit/base(seed 150-292 crowd-only),100,50,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"mppi#gains",audit/base(seed 150-292 crowd-only),100,54,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"mppi#lam",audit/base(seed 150-292 crowd-only),100,47,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/base(seed 150-292 crowd-only),100,57,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"mppi:ppl=32#gains",audit/base(seed 150-292 crowd-only),100,59,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"p2+turn",audit/base(seed 150-292 crowd-only),100,57,"ban chup code 23:01 (audit/snap), chan doan"
+2026-11-23,AUDIT,"mppi",audit/real(seed 150-206 crowd-only),40,23,"regime real cu"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/real(seed 150-206 crowd-only),40,28,"regime real cu"
+2026-11-23,AUDIT,"p2+turn",audit/real(seed 150-206 crowd-only),40,24,"regime real cu"
+2026-11-23,AUDIT,"mppi",audit/cmd2(seed 150-206 crowd-only),40,15,"tre lenh 0.2 s"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/cmd2(seed 150-206 crowd-only),40,21,"tre lenh 0.2 s"
+2026-11-23,AUDIT,"p2+turn",audit/cmd2(seed 150-206 crowd-only),40,20,"tre lenh 0.2 s"
+2026-11-23,AUDIT,"mppi",audit/seen2(seed 150-206 crowd-only),40,18,"tre thay nguoi 0.2 s"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/seen2(seed 150-206 crowd-only),40,20,"tre thay nguoi 0.2 s"
+2026-11-23,AUDIT,"p2+turn",audit/seen2(seed 150-206 crowd-only),40,21,"tre thay nguoi 0.2 s"
+2026-11-23,AUDIT,"mppi",audit/dis0(seed 150-206 crowd-only),40,18,"0% mai dien thoai"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/dis0(seed 150-206 crowd-only),40,30,"0% mai dien thoai"
+2026-11-23,AUDIT,"p2+turn",audit/dis0(seed 150-206 crowd-only),40,30,"0% mai dien thoai"
+2026-11-23,AUDIT,"mppi",audit/dis6(seed 150-206 crowd-only),40,15,"60%"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/dis6(seed 150-206 crowd-only),40,21,"60%"
+2026-11-23,AUDIT,"p2+turn",audit/dis6(seed 150-206 crowd-only),40,19,"60%"
+2026-11-23,AUDIT,"mppi",audit/fast(seed 150-206 crowd-only),40,13,"toc do nguoi x1.3"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/fast(seed 150-206 crowd-only),40,13,"toc do nguoi x1.3"
+2026-11-23,AUDIT,"p2+turn",audit/fast(seed 150-206 crowd-only),40,15,"toc do nguoi x1.3"
+2026-11-23,AUDIT,"mppi",audit/slow(seed 150-206 crowd-only),40,20,"x0.7"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/slow(seed 150-206 crowd-only),40,29,"x0.7"
+2026-11-23,AUDIT,"p2+turn",audit/slow(seed 150-206 crowd-only),40,27,"x0.7"
+2026-11-23,AUDIT,"mppi",audit/dense(seed 150-206 crowd-only),40,18,"+3 nguoi"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/dense(seed 150-206 crowd-only),40,15,"+3 nguoi"
+2026-11-23,AUDIT,"p2+turn",audit/dense(seed 150-206 crowd-only),40,23,"+3 nguoi"
+2026-11-23,AUDIT,"mppi",audit/wob0(seed 150-206 crowd-only),40,14,"khong lac than"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/wob0(seed 150-206 crowd-only),40,24,"khong lac than"
+2026-11-23,AUDIT,"p2+turn",audit/wob0(seed 150-206 crowd-only),40,22,"khong lac than"
+2026-11-23,AUDIT,"mppi",audit/real_body(seed 150-206 crowd-only),40,13,"than 0.70x0.31"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/real_body(seed 150-206 crowd-only),40,25,"than 0.70x0.31"
+2026-11-23,AUDIT,"p2+turn",audit/real_body(seed 150-206 crowd-only),40,17,"than 0.70x0.31"
+2026-11-23,AUDIT,"mppi",audit/soft5(seed 150-206 crowd-only),40,26,"bo qua cham nong <5 cm"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/soft5(seed 150-206 crowd-only),40,30,"bo qua cham nong <5 cm"
+2026-11-23,AUDIT,"p2+turn",audit/soft5(seed 150-206 crowd-only),40,23,"bo qua cham nong <5 cm"
+2026-11-23,AUDIT,"mppi",audit/mous(seed 150-292 crowd-only),100,65,"nguoi Moussaid 2009"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/mous(seed 150-292 crowd-only),100,71,"nguoi Moussaid 2009"
+2026-11-23,AUDIT,"p2+turn",audit/mous(seed 150-292 crowd-only),100,71,"nguoi Moussaid 2009"
+2026-11-23,AUDIT,"mppi",audit/helb(seed 150-292 crowd-only),100,62,"nguoi Helbing A=7 B=.3"
+2026-11-23,AUDIT,"mppi:ppl=32",audit/helb(seed 150-292 crowd-only),100,66,"nguoi Helbing A=7 B=.3"
+2026-11-23,AUDIT,"p2+turn",audit/helb(seed 150-292 crowd-only),100,80,"nguoi Helbing A=7 B=.3"
+2026-11-23,AUDIT,"mppi:ppl=32#fcv",audit/future(seed 150-217 crowd-only),50,33,"chan doan muc tran, oracle"
+2026-11-23,AUDIT,"mppi:ppl=32#fplan",audit/future(seed 150-217 crowd-only),50,41,"chan doan muc tran, oracle"
+2026-11-23,AUDIT,"mppi:ppl=32#frng",audit/future(seed 150-217 crowd-only),50,42,"chan doan muc tran, oracle"
+2026-11-23,AUDIT,"mppi:ppl=32#fstat",audit/future(seed 150-217 crowd-only),50,41,"chan doan muc tran, oracle"
+2026-11-23 20:50,COORD,"Theo yeu cau nguoi dung: luu REPORT_MODEL.md (nguyen van cua MODEL) va noi 49 dong AUDIT tu audit/LOG_AUDIT_rows.csv vao LOG.csv",,,,""
+2026-11-23 21:26,ALGO,dwa~t3~nl:ppl=100;ppl_len=0.3,algo_Vchamp2_base(seed 302-797 crowd-only),356,259,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,log_mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vchamp2_base(seed 302-797 crowd-only),356,254,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,mppi:ppl=32,algo_Vchamp2_base(seed 302-797 crowd-only),356,209,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Vchamp2_base(seed 302-797 crowd-only),356,239,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vchamp2_base(seed 302-797 crowd-only),356,252,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5,algo_Vchamp2_base(seed 302-797 crowd-only),356,286,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Vchamp2_base(seed 302-797 crowd-only),356,279,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,p3+geo-haz~t3~nl,algo_Vchamp2_base(seed 302-797 crowd-only),356,282,XAC NHAN seed 300-799 (algo_Vchamp2_base)
+2026-11-23 21:26,ALGO,mppi:ppl=32,algo_Vchamp2_helb(seed 302-797 crowd-only),356,260,XAC NHAN seed 300-799 (algo_Vchamp2_helb)
+2026-11-23 21:26,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Vchamp2_helb(seed 302-797 crowd-only),356,271,XAC NHAN seed 300-799 (algo_Vchamp2_helb)
+2026-11-23 21:26,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vchamp2_helb(seed 302-797 crowd-only),356,278,XAC NHAN seed 300-799 (algo_Vchamp2_helb)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Vchamp2_helb(seed 302-797 crowd-only),356,302,XAC NHAN seed 300-799 (algo_Vchamp2_helb)
+2026-11-23 21:26,ALGO,p3+geo-haz~t3~nl,algo_Vchamp2_helb(seed 302-797 crowd-only),356,290,XAC NHAN seed 300-799 (algo_Vchamp2_helb)
+2026-11-23 21:26,ALGO,dwa~t3~nl:ppl=100;ppl_len=0.3,algo_Vchamp_base(seed 302-797 crowd-only),356,274,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,log_mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vchamp_base(seed 302-797 crowd-only),356,268,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,mppi:ppl=32,algo_Vchamp_base(seed 302-797 crowd-only),356,212,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Vchamp_base(seed 302-797 crowd-only),356,249,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vchamp_base(seed 302-797 crowd-only),356,281,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Vchamp_base(seed 302-797 crowd-only),356,297,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,p3+geo-haz~t3~nl,algo_Vchamp_base(seed 302-797 crowd-only),356,296,XAC NHAN seed 300-799 (algo_Vchamp_base)
+2026-11-23 21:26,ALGO,dwa~t3~nl:ppl=100;ppl_len=0.3,algo_Vgo2_base(seed 302-797 crowd-only),356,292,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,log_mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vgo2_base(seed 302-797 crowd-only),356,303,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,mppi:ppl=32,algo_Vgo2_base(seed 302-797 crowd-only),356,266,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Vgo2_base(seed 302-797 crowd-only),356,296,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vgo2_base(seed 302-797 crowd-only),356,306,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Vgo2_base(seed 302-797 crowd-only),356,329,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,p3+geo-haz~t3~nl,algo_Vgo2_base(seed 302-797 crowd-only),356,315,XAC NHAN seed 300-799 (algo_Vgo2_base)
+2026-11-23 21:26,ALGO,mppi:ppl=32,algo_Vgo2_helb(seed 302-797 crowd-only),356,310,XAC NHAN seed 300-799 (algo_Vgo2_helb)
+2026-11-23 21:26,ALGO,mppi~t3:ppl=100;ppl_len=0.5,algo_Vgo2_helb(seed 302-797 crowd-only),356,314,XAC NHAN seed 300-799 (algo_Vgo2_helb)
+2026-11-23 21:26,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Vgo2_helb(seed 302-797 crowd-only),356,316,XAC NHAN seed 300-799 (algo_Vgo2_helb)
+2026-11-23 21:26,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Vgo2_helb(seed 302-797 crowd-only),356,328,XAC NHAN seed 300-799 (algo_Vgo2_helb)
+2026-11-23 21:26,ALGO,p3+geo-haz~t3~nl,algo_Vgo2_helb(seed 302-797 crowd-only),356,317,XAC NHAN seed 300-799 (algo_Vgo2_helb)
+2026-11-23 22:00,COORD,"Kiem doc lap C1 vs mppi~t3~nl:ppl=100;ppl_len=0.5 (algo_V*, 356 x 5)",confirm 300-799,1780,,"+5.7 [3.6;7.9] p~5e-6; luu REPORT_ALGO.md; giao vong 2"
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=0;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,68,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=0;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=20000;T=40,algo_Dchamp(seed 0-148 crowd-only),101,60,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=20000;p_thr=0.2,algo_Dchamp(seed 0-148 crowd-only),101,70,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=20000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,68,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=20000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=2000;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,64,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=2000;p_thr=0.2,algo_Dchamp(seed 0-148 crowd-only),101,65,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=2000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,62,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=100;w_hard=2000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,77,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=20000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,66,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=20000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=2000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,70,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=300;w_hard=2000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,64,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=0;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,60,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=0;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,69,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=20000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,62,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=20000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,68,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=2000;sig_w=0.3,algo_Dchamp(seed 0-148 crowd-only),101,61,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,dra~t3~nl:w_soft=30;w_hard=2000;sig_w=0.6,algo_Dchamp(seed 0-148 crowd-only),101,69,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;T=40,algo_Dchamp(seed 0-148 crowd-only),101,66,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;hard=5000,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,70,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;sig_scale=1.0,algo_Dchamp(seed 0-148 crowd-only),101,76,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=100;sig_scale=1.4,algo_Dchamp(seed 0-148 crowd-only),101,68,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=10;hard=5000,algo_Dchamp(seed 0-148 crowd-only),101,59,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=10;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,49,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=10;sig_scale=1.0,algo_Dchamp(seed 0-148 crowd-only),101,53,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=10;sig_scale=1.4,algo_Dchamp(seed 0-148 crowd-only),101,50,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,77,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=1.0,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=1.4,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;T=40,algo_Dchamp(seed 0-148 crowd-only),101,59,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;hard=5000,algo_Dchamp(seed 0-148 crowd-only),101,68,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,74,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,63,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;sig_scale=1.0,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=30;sig_scale=1.4,algo_Dchamp(seed 0-148 crowd-only),101,65,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=3;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,43,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=3;sig_scale=1.0,algo_Dchamp(seed 0-148 crowd-only),101,44,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,pgif~t3~nl:w_h=3;sig_scale=1.4,algo_Dchamp(seed 0-148 crowd-only),101,39,vong 2: chinh PGIF/DRA (champ 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.01,algo_Dgo2(seed 0-148 crowd-only),101,85,vong 2: occ (go2 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03,algo_Dgo2(seed 0-148 crowd-only),101,91,vong 2: occ (go2 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03;occ_jump=1.5,algo_Dgo2(seed 0-148 crowd-only),101,90,vong 2: occ (go2 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03;occ_n=2,algo_Dgo2(seed 0-148 crowd-only),101,90,vong 2: occ (go2 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03;occ_reach=2.5,algo_Dgo2(seed 0-148 crowd-only),101,89,vong 2: occ (go2 0-149)
+2026-11-24 01:27,ALGO,p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.1,algo_Dgo2(seed 0-148 crowd-only),101,88,vong 2: occ (go2 0-149)
+2026-11-24 01:40,ISAAC,"mppi | than isaac rough+noise, tia nghieng, N=8","DEV 302-439 co nguoi (100), trial 0, base",100,64,pilot kiem cheo; isaac_val/res_pilot.csv
+2026-11-24 01:40,ISAAC,"mppi:ppl=32 | than isaac rough+noise, tia nghieng, N=8","DEV 302-439 co nguoi (100), trial 0, base",100,72,pilot kiem cheo; isaac_val/res_pilot.csv
+2026-11-24 01:40,ISAAC,"dwa | than isaac rough+noise, tia nghieng, N=8","DEV 302-439 co nguoi (100), trial 0, base",100,63,pilot kiem cheo; isaac_val/res_pilot.csv
+2026-11-24 01:40,ISAAC,"mppi~t3~nl:ppl=100;ppl_len=0.5 | than isaac rough+noise, tia nghieng, N=8","DEV 302-439 co nguoi (100), trial 0, base",100,75,pilot kiem cheo; isaac_val/res_pilot.csv
+2026-11-24 01:40,ISAAC,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | than isaac rough+noise, tia nghieng, N=8","DEV 302-439 co nguoi (100), trial 0, base",100,83,pilot kiem cheo; isaac_val/res_pilot.csv
+2026-11-24 01:40,ISAAC,mppi | fastsim champ,"DEV 302-439 co nguoi (100), trial 0, base",100,47,ghep cap pilot Isaac; results/isaac_fs_champ
+2026-11-24 01:40,ISAAC,mppi:ppl=32 | fastsim champ,"DEV 302-439 co nguoi (100), trial 0, base",100,62,ghep cap pilot Isaac; results/isaac_fs_champ
+2026-11-24 01:40,ISAAC,dwa | fastsim champ,"DEV 302-439 co nguoi (100), trial 0, base",100,42,ghep cap pilot Isaac; results/isaac_fs_champ
+2026-11-24 01:40,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | fastsim champ,"DEV 302-439 co nguoi (100), trial 0, base",100,80,ghep cap pilot Isaac; results/isaac_fs_champ
+2026-11-24 01:40,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | fastsim champ,"DEV 302-439 co nguoi (100), trial 0, base",100,83,ghep cap pilot Isaac; results/isaac_fs_champ
+2026-11-24 01:40,ISAAC,mppi | fastsim go2,"DEV 302-439 co nguoi (100), trial 0, base",100,74,ghep cap pilot Isaac; results/isaac_fs_go2
+2026-11-24 01:40,ISAAC,dwa | fastsim go2,"DEV 302-439 co nguoi (100), trial 0, base",100,64,ghep cap pilot Isaac; results/isaac_fs_go2
+2026-11-24 01:40,ISAAC,mppi | fastsim champ2,"DEV 302-439 co nguoi (100), trial 0, base",100,48,ghep cap pilot Isaac; results/isaac_fs_champ2
+2026-11-24 01:40,ISAAC,dwa | fastsim champ2,"DEV 302-439 co nguoi (100), trial 0, base",100,43,ghep cap pilot Isaac; results/isaac_fs_champ2
+2026-11-24 01:40,ISAAC,mppi:ppl=32 + p3+geo-haz+gcv | fastsim go2 (kiem dung lai so ALGO),DEV 300-330 co nguoi,44,,44/44 giong het algo_Vgo2_base
+2026-11-24 01:40,ISAAC,"mppi | isaac benchmark N=1,2,2(lap),4,8",DEV 8 the gioi tu 302,40,,toc do + tat dinh; khong ket luan thuat toan
+2026-11-24 01:50,COORD,"Kiem res_pilot.csv Isaac; giao dieu tra nga o ~t3~nl",isaac pilot,500,,"khop bao cao; nga 11/200 o ~nl vs 2/300"
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=1000;w_hard=0;sig_w=0.6;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,81,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=1000;w_hard=0;sig_w=0.9;r_extra=0.1,algo_Dchamp(seed 0-148 crowd-only),101,78,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=1000;w_hard=0;sig_w=0.9;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,82,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=1000;w_hard=0;sig_w=1.2;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,77,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=3000;w_hard=0;sig_w=0.6;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,76,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6;T=32,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,75,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6;r_extra=0.1,algo_Dchamp(seed 0-148 crowd-only),101,81,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6;sig0=0.15,algo_Dchamp(seed 0-148 crowd-only),101,80,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.6;sig0=0.3,algo_Dchamp(seed 0-148 crowd-only),101,79,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=0.9;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,80,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Dchamp(seed 0-148 crowd-only),101,83,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,dra~t3~nl:w_soft=300;w_hard=2000;sig_w=0.9;p_thr=0.3,algo_Dchamp(seed 0-148 crowd-only),101,72,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=1000;sig_scale=0.35,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=1000;sig_scale=0.5,algo_Dchamp(seed 0-148 crowd-only),101,73,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=1000;sig_scale=0.5;hard=5000,algo_Dchamp(seed 0-148 crowd-only),101,74,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=1000;sig_scale=0.7,algo_Dchamp(seed 0-148 crowd-only),101,77,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=100;sig_scale=1.0;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,70,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=200;sig_scale=0.85,algo_Dchamp(seed 0-148 crowd-only),101,70,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=3000;sig_scale=0.5,algo_Dchamp(seed 0-148 crowd-only),101,76,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.5,algo_Dchamp(seed 0-148 crowd-only),101,67,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;T=32,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Dchamp(seed 0-148 crowd-only),101,78,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;lam_q=0.15;lam_c=0.3,algo_Dchamp(seed 0-148 crowd-only),101,78,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;ppl=16,algo_Dchamp(seed 0-148 crowd-only),101,77,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,pgif~t3~nl:w_h=600;sig_scale=0.6,algo_Dchamp(seed 0-148 crowd-only),101,71,vong 2: chinh PGIF/DRA dot 2 (champ 0-149)
+2026-11-24 02:04,ALGO,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,algo_Pgo2(seed 0-148 crowd-only),101,94,vong 2: oracle C1 (go2 0-149) chan doan che khuat
+2026-11-24 02:04,ALGO,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,algo_Pgo2(seed 0-148 crowd-only),101,98,vong 2: oracle C1 (go2 0-149) chan doan che khuat
+2026-11-24 02:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Dgo2(seed 0-148 crowd-only),98,82,vong 2: tie-break PGIF/DRA go2 0-149 (mot phan)
+2026-11-24 02:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Dgo2(seed 0-148 crowd-only),100,80,vong 2: tie-break PGIF/DRA go2 0-149 (mot phan)
+2026-11-24 02:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;lam_q=0.15;lam_c=0.3,algo_Dgo2(seed 0-148 crowd-only),99,79,vong 2: tie-break PGIF/DRA go2 0-149 (mot phan)
+2026-11-24 06:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,268,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,mppi:ppl=32,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,208,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,253,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,270,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-prim~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,267,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,263,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,280,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,284,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_tau=99,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,276,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,p3-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,275,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Wchamp2_base(seed 1000-1499 crowd-only),348,244,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_base)
+2026-11-24 06:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Wchamp2_helb(seed 1000-1499 crowd-only),348,291,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_helb)
+2026-11-24 06:27,ALGO,mppi:ppl=32,algo_Wchamp2_helb(seed 1000-1499 crowd-only),348,239,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_helb)
+2026-11-24 06:27,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Wchamp2_helb(seed 1000-1499 crowd-only),348,258,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_helb)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp2_helb(seed 1000-1499 crowd-only),348,293,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_helb)
+2026-11-24 06:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Wchamp2_helb(seed 1000-1499 crowd-only),348,293,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp2_helb)
+2026-11-24 06:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Wchamp_base(seed 1000-1499 crowd-only),348,271,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,mppi:ppl=32,algo_Wchamp_base(seed 1000-1499 crowd-only),348,219,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,267,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,287,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-prim~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,277,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~nl:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,267,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,287,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,286,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_tau=99,algo_Wchamp_base(seed 1000-1499 crowd-only),348,288,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,p3-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Wchamp_base(seed 1000-1499 crowd-only),348,288,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Wchamp_base(seed 1000-1499 crowd-only),348,276,XAC NHAN vong 2 seed 1000-1499 (algo_Wchamp_base)
+2026-11-24 06:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Wgo2_base(seed 1000-1499 crowd-only),348,294,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,mppi:ppl=32,algo_Wgo2_base(seed 1000-1499 crowd-only),348,258,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,296,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,314,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv-prim~t3~nl:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,294,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~nl:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,291,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,311,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,312,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_tau=99,algo_Wgo2_base(seed 1000-1499 crowd-only),348,311,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,p3-haz~t3~nl:ppl=32;ppl_len=0.5,algo_Wgo2_base(seed 1000-1499 crowd-only),348,296,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Wgo2_base(seed 1000-1499 crowd-only),348,274,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_base)
+2026-11-24 06:27,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Wgo2_helb(seed 1000-1499 crowd-only),348,314,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_helb)
+2026-11-24 06:27,ALGO,mppi:ppl=32,algo_Wgo2_helb(seed 1000-1499 crowd-only),348,302,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_helb)
+2026-11-24 06:27,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Wgo2_helb(seed 1000-1499 crowd-only),348,304,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_helb)
+2026-11-24 06:27,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Wgo2_helb(seed 1000-1499 crowd-only),348,318,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_helb)
+2026-11-24 06:27,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Wgo2_helb(seed 1000-1499 crowd-only),348,315,XAC NHAN vong 2 seed 1000-1499 (algo_Wgo2_helb)
+2026-11-24 07:00,COORD,"Kiem doc lap vong 2 (algo_W*)",confirm 1000-1499,1740,,"C1-B1 +6.6, C1-PGIF +5.2, C1-DRA +3.2 (p .002); giao vong 3"
+2026-11-24 06:45,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | nl v3 isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,73,dieu tra nga; nga 3
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | nl v3 isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,87,dieu tra nga; nga 3
+2026-11-24 06:45,ISAAC,mppi~t3:ppl=100;ppl_len=0.5 | t3 (bo ~nl) isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,82,dieu tra nga; nga 4
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5 | t3 (bo ~nl) isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,86,dieu tra nga; nga 5
+2026-11-24 06:45,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | notilt isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,85,dieu tra nga; nga 3
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | notilt isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,86,dieu tra nga; nga 4
+2026-11-24 06:45,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | +cmd_shaper (~cs de xuat) isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,73,dieu tra nga; nga 0
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | +cmd_shaper (~cs de xuat) isaac,"DEV 302-439 co nguoi (100), trial 0, base",100,92,dieu tra nga; nga 0
+2026-11-24 06:45,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | fastsim go2 (ghi lenh),"DEV 302-439 co nguoi (100), trial 0, base",100,87,dieu tra nga; 
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | fastsim go2 (ghi lenh),"DEV 302-439 co nguoi (100), trial 0, base",100,93,dieu tra nga; 
+2026-11-24 06:45,ISAAC,mppi~t3:ppl=100;ppl_len=0.5 | fastsim go2 (ghi lenh),"DEV 302-439 co nguoi (100), trial 0, base",100,82,dieu tra nga; 
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5 | fastsim go2 (ghi lenh),"DEV 302-439 co nguoi (100), trial 0, base",100,92,dieu tra nga; 
+2026-11-24 06:45,ISAAC,mppi~t3~nl:ppl=100;ppl_len=0.5 | fastsim go2 +cmd_shaper,"DEV 302-439 co nguoi (100), trial 0, base",100,79,dieu tra nga; gia -8 (p=0.13)
+2026-11-24 06:45,ISAAC,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | fastsim go2 +cmd_shaper,"DEV 302-439 co nguoi (100), trial 0, base",100,88,dieu tra nga; gia -5 (p=0.18)
+2026-11-24 06:45,ISAAC,"lap lai / phat lai v3 (nlrep 64, nlfall 58)",DEV tien to,122,,"tat dinh: 64/64, 58/58, 6/6 lan nga lap lai; pilot cu khong tat dinh (8/44)"
+2026-11-24 06:45,ISAAC,"sysid combo (60 to hop lenh, policy rough, PhysX CPU)",isaac,480,,"1 nga khi giu lenh, 4 khi tha ve 0"
+2026-11-24 07:15,COORD,"Kiem REPORT_ISAAC §11 (res_nl/t3/nlnotilt/nlcs)",isaac 100 the gioi,800,,"khop; nga khong do ~nl; ~cs = lop an toan trien khai"
+2026-11-24 07:34,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,108,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=16;ppl_len=0.3,algo_Xchamp2_base(seed 801-999 crowd-only),138,101,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,98,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Xchamp2_base(seed 801-999 crowd-only),138,107,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=100;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,83,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=16;ppl_len=0.3,algo_Xchamp2_base(seed 801-999 crowd-only),138,89,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.3,algo_Xchamp2_base(seed 801-999 crowd-only),138,88,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,95,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,95,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,96,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,92,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=64;ppl_len=0.5,algo_Xchamp2_base(seed 801-999 crowd-only),138,101,vong 3 DEV seed 800-999 (algo_Xchamp2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,112,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=16;ppl_len=0.3,algo_Xchamp2_helb(seed 801-999 crowd-only),138,113,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,112,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Xchamp2_helb(seed 801-999 crowd-only),138,121,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=100;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,111,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=16;ppl_len=0.3,algo_Xchamp2_helb(seed 801-999 crowd-only),138,98,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.3,algo_Xchamp2_helb(seed 801-999 crowd-only),138,109,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,100,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,102,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,111,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,108,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=64;ppl_len=0.5,algo_Xchamp2_helb(seed 801-999 crowd-only),138,109,vong 3 DEV seed 800-999 (algo_Xchamp2_helb)
+2026-11-24 07:34,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,121,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=16;ppl_len=0.3,algo_Xgo2_base(seed 801-999 crowd-only),138,114,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,120,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Xgo2_base(seed 801-999 crowd-only),138,122,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=100;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,115,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=16;ppl_len=0.3,algo_Xgo2_base(seed 801-999 crowd-only),138,104,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.3,algo_Xgo2_base(seed 801-999 crowd-only),138,105,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=32;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,104,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,119,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,120,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=32;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,108,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 07:34,ALGO,p3-haz-grad~t3~nl:ppl=64;ppl_len=0.5,algo_Xgo2_base(seed 801-999 crowd-only),138,112,vong 3 DEV seed 800-999 (algo_Xgo2_base)
+2026-11-24 10:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,271,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,261,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,283,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,279,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,257,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,250,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Ychamp2_base(seed 1500-1999 crowd-only),357,264,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_base)
+2026-11-24 10:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,288,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,274,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,294,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,298,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,266,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,278,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Ychamp2_helb(seed 1500-1999 crowd-only),357,271,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp2_helb)
+2026-11-24 10:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Ychamp_base(seed 1500-1999 crowd-only),357,276,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp_base(seed 1500-1999 crowd-only),357,270,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Ychamp_base(seed 1500-1999 crowd-only),357,302,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Ychamp_base(seed 1500-1999 crowd-only),357,296,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Ychamp_base(seed 1500-1999 crowd-only),357,275,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Ychamp_base(seed 1500-1999 crowd-only),357,281,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Ychamp_base(seed 1500-1999 crowd-only),357,277,XAC NHAN vong 3 seed 1500-1999 (algo_Ychamp_base)
+2026-11-24 10:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Ygo2_base(seed 1500-1999 crowd-only),357,314,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Ygo2_base(seed 1500-1999 crowd-only),357,284,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Ygo2_base(seed 1500-1999 crowd-only),357,322,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Ygo2_base(seed 1500-1999 crowd-only),357,311,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Ygo2_base(seed 1500-1999 crowd-only),357,308,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Ygo2_base(seed 1500-1999 crowd-only),357,300,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Ygo2_base(seed 1500-1999 crowd-only),357,292,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_base)
+2026-11-24 10:08,ALGO,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,326,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,mppi~t3~nl:ppl=100;ppl_len=0.5,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,308,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,324,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,326,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3:ppl=64;ppl_len=0.5,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,318,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,315,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:08,ALGO,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,algo_Ygo2_helb(seed 1500-1999 crowd-only),357,313,XAC NHAN vong 3 seed 1500-1999 (algo_Ygo2_helb)
+2026-11-24 10:15,COORD,"Dong bang C1 (research/FROZEN.md, sha256) + dang ky truoc VAL; bat dau VAL seed 2000-2399",VAL,,,"7 cau hinh x 5 o"
+2026-11-24,AUDIT,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 (co/khong fast.so)",scratch champ2(seed 0-6 crowd-only),12,10,"kiem fast.so: trung tung dong; khong phai phep so"
+2026-11-24,AUDIT,"PREREG_TEST",audit/PREREG_TEST.md,,,"sha256 631ee1654a978e4a...; suc manh tu algo_W*/algo_Y*"
+2026-11-24 10:50,COORD,"Duyet AUDIT: VAL chap nhan; TEST can sua ha tang -> them quy tac EXC VAL, SHA256SUMS_TEST",,,,"chua xem ket qua VAL"
+2026-11-24 12:10,COORD,"VAL theo dang ky truoc (research/VAL_results.txt)",VAL 2000-2399,315x5x7,,"C1-B1 +9.1 [7.0;11.2], C1-PGIF +6.2 [4.1;8.3], C1-DRA +4.5 [2.5;6.5], Holm<=3e-5; sha OK; 0 EXC"
+2026-11-24 12:40,COORD,"Chuan bi TEST fastsim: ban chup chi-doc results/frozen_C1/snap (SHA256SUMS_SNAP 150 file), kiem trung tung dong voi ma song (go2-helb seed 0-12 x 7 cau hinh = 70/70); SEEDS=100000-101386 (1000 the gioi co nguoi)",,,,"cho kiem khoi Gazebo xong roi moi chay de khong anh huong RTF"
+2026-11-24 12:08,GAZEBO,"7 cau hinh FROZEN (kiem bit-identical, khong phai phep so)",fastsim gen seed 0-20 x 5 o (GZ_ident before vs after),735,,"eval_sim sua ha tang PREREG §0.4: trung tung dong 735/735 (bo cpu); fastsim khong import eval_sim"
+2026-11-24 12:20,GAZEBO,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",Gazebo smoke lan 1 (office DEV 5 bai + gz:office_0),6,3,"HUY: loi tich hop cua GAZEBO (dang ky gz-transport /stats trong tien trinh -> tranh GIL voi Crowd.request); ket qua khong dung, luu results/GZ_smoke_try1_statsdeadlock"
+2026-11-24 12:25,GAZEBO,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",Gazebo thu sua (office crowd:sanh_8_nguoi DEV),1,1,"kiem sua RTF qua tien trinh con; khong phai phep so"
+2026-11-24 12:34,GAZEBO,"7 cau hinh FROZEN (kiem bit-identical, khong phai phep so)",fastsim gen seed 0-20 x 5 o (before vs after2),735,,"sau sua RTF: trung tung dong 735/735; eval_sim sha 9041a677..."
+2026-11-24 13:32,COORD,"BAT DAU TEST fastsim (audit/PREREG_TEST.md §1) tu ban chup chi-doc",TEST 100000-101386,1000x5x7,,"kiem sha truoc moi o"
+2026-11-24 13:29,GAZEBO,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",Gazebo smoke DEV office 8 bai x 2 lan (results/GZ_smoke/office),16,10,"kiem khoi PREREG §4, khong phai phep so; tinh 7/10"
+2026-11-24 13:29,GAZEBO,"mppi~t3~nl:ppl=100;ppl_len=0.5",Gazebo smoke DEV office 8 bai x 2 lan (results/GZ_smoke/office),16,9,"kiem khoi PREREG §4, khong phai phep so; tinh 7/10"
+2026-11-24 12:48,GAZEBO,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",Gazebo smoke DEV audit/out/gztest_dev/group_000 (seed 0-3),4,4,"kiem khoi PREREG §4, khong phai phep so"
+2026-11-24 12:48,GAZEBO,"mppi~t3~nl:ppl=100;ppl_len=0.5",Gazebo smoke DEV audit/out/gztest_dev/group_000 (seed 0-3),4,3,"kiem khoi PREREG §4, khong phai phep so"
+2026-11-24 13:35,GAZEBO,"ket qua kiem khoi S1-S6",results/GZ_smoke/smoke_check.txt,40,,"S1 S2 S3 S5 S6 DAT; S4 TRUOT: tracker v3 xac nhan vat tinh thanh nguoi > 2 s o 10/10 (C1) va 9/10 (B1) luot bai tinh; khong sua (can dung robot_ros/nav_local) -> cho coordinator"
+2026-11-24 13:55,COORD,"Luu REPORT_GAZEBO.md; chap nhan sua eval_sim (sha 9041a677) + bam run_gz_groups.sh vao SHA256SUMS_TEST; S4 truot -> giao chan doan (tich hop hay vat ly) truoc khi quyet",,,,"Gazebo TEST cho"
+2026-11-24 13:40,GAZEBO,"do lech thoi gian quet/pose (khong bo dieu khien; robot di lenh co dinh)",Gazebo DEV voice_office 1 sim (research/gz/scan_probe.py rec1+rec2),2,,"chan doan S4, khong phai phep so; RTF ~0.35 vi fastsim TEST chay"
+2026-11-24 13:44,GAZEBO,"p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",Gazebo DEV office clutter:qua_khoi_so_le qua research/gz/eval_probe.py (results/GZ_ident/scanprobe/ev1),1,0,"chan doan S4 (chi ghi log); lech stamp trung vi 0 ms p95 20 max 40; phat lai pose noi suy tai stamp KHONG het ma -> nguyen nhan lac than, de xuat (a)"
+2026-11-24 14:40,COORD,"Quyet S4: chay Gazebo TEST nhu dang ky (Lech #1 PREREG_TEST)",,,,"nguyen nhan than lac CHAMP, khong phai tich hop"
+2026-11-24 16:45,COORD,"Dang ky truoc nhanh VAT TINH (PREREG_TEST bo sung #2)",TEST static-only 100000-101386,,,"chay sau TEST chinh"
+2026-11-24 19:05,COORD,"TEST fastsim theo dang ky (research/TEST_fastsim_results.txt)",TEST 100000-101386,1000x5x7,,"C1-B1 +7.0 [5.7;8.3], C1-PGIF +5.0 [3.8;6.2], C1-DRA +2.7 [1.5;3.8], Holm 1.5e-5; 0 EXC; sha OK"
+2026-11-24 19:08,COORD,"BAT DAU nhanh VAT TINH (bo sung #2): 387 the gioi khong nguoi x 3 o x 7 cau hinh",TESTSTATIC 100000-101386,,,"meta.json ghi crowd_only=true nhung bo loc bi dao trong tien trinh cha (research/coord_test_static.py)"
+2026-11-24 19:45,COORD,"Nhanh VAT TINH (research/TEST_static_results.txt)",TESTSTATIC,387x3x7,,"C1 96.9 vs B1 97.8: -0.95 [-1.55;-0.34] khong-kem dat; 0 va vat; that bai = ket"
+2026-11-24 19:55,COORD,"BAT DAU TEST Gazebo (PREREG_TEST §2): 680 the gioi (170 nhom 4 o), C1 vs B1, 2 sim",GZ TEST 100000-101999,1360,,"sha kiem truoc moi nhom"
+2026-11-24 19:41,COORD,"Gazebo TEST dung o buoc kiem sha truoc nhom dau (chua chay luot nao): audit/PREREG_TEST.md doi do coordinator them Lech #1 va Bo sung #2 (truoc khi chay). Bam lai rieng file nay; moi file ma khop. Chay lai.",,,,""
+2026-11-24 20:55,PAPER,"Dung goi bai bao results/paper_package (make_all.py, T1-T10, F1-F5, DRAFT_results/limitations, NOVELTY, REPRODUCE)","TEST/TESTSTATIC/VAL/algo_V,W,Y/isaac_val (chi doc, khong chay thi nghiem moi)",,,"khong phai phep thu; 97 kiem tra tai lap, 0 lech; output byte-identical 2 lan chay; 1 nhan; sha SHA256SUMS_TEST van khop"
+2026-11-24 20:55,PAPER,Kiem tai lap so cua coordinator,"research/TEST_fastsim_results.txt, VAL_results.txt, TEST_static_results.txt, algo_ablation2.txt, algo_noninf3.txt",,,khop het. Static: script coordinator khong luu; KTC khop voi 1 dong rng(20261124) 20000 lan (B0 can tren MC +-0.1)
+2026-11-24 20:55,PAPER,Lech phat hien: fidelity champ-champ2 (RESEARCH_NOTES 7.12),results/coord_fid_* vs final_office_merged,12,,'chenh 0.14 [-0.12;0.41]' la TRUNG BINH bootstrap; uoc luong diem rho 0.90-0.59=+0.31 [-0.13;+0.42]; ket luan khong doi (khong y nghia)
+2026-11-24 20:55,PAPER,F6 quy dao TEST bo qua,results/TEST_*,,,CSV TEST khong luu quy dao; chay lai seed TEST chi coordinator duoc phep
+2026-11-24 21:00,COORD,"Nhan goi bai bao (results/paper_package); dinh chinh chenh Spearman fidelity: +0.31 [-0.13;0.42] (truoc ghi nham 0.14)",,,,""
+2026-11-25 00:10,COORD,"Lech #3: nhanh Isaac chay song song Gazebo, 4 robot, nice 19, nhan 10-15",,,,"theo yeu cau nguoi dung"
+2026-11-25 00:12,COORD,"Bam lai audit/PREREG_TEST.md trong SHA256SUMS_TEST sau khi them Lech #3 (chi file tai lieu nay doi)",,,,""
+2026-11-25 00:30,COORD,"Bo sung Lech #3: Isaac len 8 robot sau khi Gazebo TEST xong; bam lai PREREG",,,,""
+2026-11-25 00:55,PAPER,"Kiem toan van cac muc VERIFY (NOVELTY.md §5): C2U-MPPI, Biased-MPPI, PGIF, DRA-MPPI, CN-CBF (HTML arXiv); Malone T-RO 2017, Gonon RA-L 2021, MPPIPS-HWP (chi tom tat); Contingency-MPPI (PMLR)",web (arXiv/Crossref/OpenAlex),,,"khong phai phep thu; sua: PGIF 1 tac gia; T-RO 2017 tac gia dau Malone; C2U Sigma day du (khong dang huong); prim = ung dung Biased-MPPI; khong in so 95/92/82 cua CN-CBF; nguong homicidal chauffeur CHUA kiem (DTIC/UCSB khong mo duoc; lenh curl -k bi tu choi, khong lach)"
+2026-11-25 00:55,PAPER,"Ban thao MANUSCRIPT.md v0.1 + refs.bib (41 muc, DOI/arXiv kiem qua Crossref/arXiv API; bibtex doc duoc) + F0 so do kien truc (make_method_figure.py)",results/paper_package,,,"so lieu chi tu make_all.py (97/97 khop, output byte-identical); placeholder Gazebo/Isaac TEST/cho that; 1 nhan nice 19; sha SHA256SUMS_TEST van khop"
+2026-11-25 12:20,ISAAC,"Isaac TEST arm C1,B1,PGIF*,DRA* (rough+noise, v3, N=4 toan bo)","TEST 600 the gioi co nguoi tu 100000, trial 0, base",2400,"C1 531,B1 477,PGIF* 470,DRA* 523","nga C1 8 B1 30 PGIF* 19 DRA* 14; C1-B1 +9.0 Holm 2.2e-6; C1-PGIF* +10.2 Holm 5.6e-8; C1-DRA* +1.3 Holm 0.46; 0 EXC; 0 tam dung Gazebo; sha OK"
+2026-11-25 00:35,COORD,PREREG_TEST Lech #4,Isaac TEST,,,vo test_arm.py da doc; bam SHA256SUMS_ISAAC_TEST; sua uoc tinh thoi gian ~13-14 h
+2026-11-25 01:30,REALPREP,"phat lai nhan thuc dong bang (RealRobotTools._on_cloud + BlobTracker v3, chung C1/B1) tren ban ghi that",lab2_175037 merged,982,,"nhip co MA 29.2% (toan vong; nua truoc 4 m 7.4% chat / 16.0% +khong ro); 1 nguoi that = nguoi dieu khien phia sau; tre xac nhan 0.42 s; CPU 5.0/10.2 ms (Py3.8 6.8/13.9); perception trung bit Py3.8/np1.24 vs Py3.14/np2.5"
+2026-11-25 01:30,REALPREP,"phat lai nhan thuc dong bang",yard_104758 merged,844,,"MA 24.3% (nua truoc 10.4% / 16.7%); nhip tinh co vet 25%; 1 nguoi phia sau; tre 0.41 s; CPU 3.9/8.1 ms"
+2026-11-25 01:30,REALPREP,"phat lai nhan thuc dong bang",lab_160656_slim chi L1 10 Hz,693,,"MA 0.0% (+khong ro 3.6%); L1: 54% diem la than, r95 3.6 m, mu phia sau -> dang ky cloud merged; CPU 1.1/2.3 ms"
+2026-11-25 01:40,REALPREP,"do gio ctrl.step C1 / B1 / C1~cs (fastsim go2, chi do thoi gian, khong dung ket qua de chon)",DEV seed 0-10 co nguoi (8 the gioi),24,,"C1 p95 20.0 ms Python, 14.5 fast.so (cung so buoc = trung bit), Py3.8 15.5; B1 17.9/14.4/13.7"
+2026-11-25 02:30,REALPREP,"kiem khoi deploy/real_trial.py voi cho gia (localhost, domain 93, khong robot)","C1~cs, B1~cs, S1",3,2,"2 toi dich; 1 gianh remote gia bat dung; tim va sua 2 loi runner (thu muc bags; tracker v2->v3 KeyError moi lan quet)"
+2026-11-25 03:30,REALPREP,"so hoc Py3.8+numpy1.24 vs Py3.14+numpy2.5 (fastsim go2, C1 va B1, chi kiem moi truong)",DEV seed 0-149 crowd-only (DUNG GIUA CHUNG),43,,"quy dao khong trung bit (0/43 cung thoi gian); ghep 43: C1 21 vs 20 (2/1, p 1.0), B1 19 vs 15 (6/2, p 0.29); dung theo PID, chay tiep duoc (fastsim tu bo qua dong da co)"
+2026-11-25 03:30,REALPREP,"dang ky truoc thi nghiem cho that audit/REAL_PREREG.md + lich audit/REAL_SCHEDULE.csv (seed 20261125, 20 cap x 5 kich ban, can bang)",REAL (chua chay),200,,"sha256 lich cea711d1; chinh: McNemar chinh xac S2-S4 60 cap; luc 0.13 (go2_base) - 0.49 (Isaac v3); ~cs bat ca hai; kep 0.30/0.25/0.50"
+2026-11-25 00:42,COORD,REALPREP xong,real prep,,,"luu REPORT_REALPREP; kiem goi 6bf5b5ac OK; quyet ~cs BAT ca C1,B1 tren cho that; luc thap -> phan cho that la kiem chung kha thi"
+2026-11-25 02:40,COORD,kiem nguong homicidal chauffeur,paper,,,nguoi dung cho tai; Bopardikar CDC2007 Eq.2 khop; dien vao MANUSCRIPT Related Work + refs.bib; l/R vuot nguong 3.0-6.4x
+2026-11-25 12:25,COORD,kiem doc lap Isaac TEST,Isaac TEST,2400,,"khop REPORT_ISAAC §12: C1 88.5 B1 79.5 PGIF 78.3 DRA 87.2; Holm C1>B1,PGIF co y nghia; C1 vs DRA n.s."
+2026-11-25 13:25,COORD,script phan tich Gazebo TEST viet truoc khi xem ket qua,Gazebo TEST,,,research/coord_gz_test_analyze.py bam vao results/frozen_C1/SHA256SUMS_GZ_ANALYSIS; chua chay tren du lieu
+2026-11-25 13:50,COORD,Gazebo TEST chinh: C1 vs B1,Gazebo TEST 680 the gioi,1360,C1 549/680 (80.7%); B1 447/680 (65.7%),+15.0 diem; McNemar chinh xac 149/47 p=1.5e-13 -> DAT; sha OK 1360/1360; rtf_mean trung vi 0.985 min 0.841; khong bo the gioi nao
+2026-11-25 13:50,COORD,"Gazebo DRA* (co cong, tham do)",Gazebo TEST 340 the gioi dau (nhom 0-84),340,,cong MO vi C1 vs B1 dat; dang chay 2 sim gzs0/gzs1 cung nhom chan/le nhu C1; ket qua sau
+2026-11-25 14:25,PAPER,Dien Gazebo TEST (T11) + Isaac TEST (T11b) + F6 quy dao Gazebo vao paper_package; make_all.py tai lap tu file tho,"results/GZ_TEST (680), results/ISAAC_TEST/res.csv (600x4)",,,"khong phai phep thu; 119 kiem tra, 0 lech (chay script GZ da bam, sha khop; so tung dong voi ISAAC_TEST/stats.txt); output byte-identical; DRA* Gazebo dang chay -> de cho, tu dien khi >=340 the gioi; 1 nhan nice 19"
+2026-11-25 14:25,PAPER,"MANUSCRIPT v0.2: Abstract, §6.10, §6.11, Discussion, Limitations, Conclusion + ghi chu doi sang bai HOI THAO 2027 (IROS 2027 hop lich; ban 6-8 trang giu gi; ban tap chi sau phai mo rong va trich ban hoi thao)",results/paper_package,,,noi thang: C1 khong hon DRA* o Isaac (p 0.46) va fastsim chi 1/5 o; Gazebo co vet nguoi ma S4 (Lech #1); Isaac chi doc lap o dong hoc than
+2026-11-25 14:50,COORD,phan tich sau (tham do): vet ma va chenh Gazebo>fastsim,Gazebo TEST,1360,,"ma nhu nhau C1/B1 (7.4/7.7%); chenh khong doi theo tercile ma (+14.5/+16.7/+13.7); gz-fs chenh: champ +6.6[1.5,11.8], champ2 +2.8[-2.6,8.2]; du B1 o va vat tinh+ket"
+2026-11-25 14:25,COORD,kiem toan ven: KeyError tracker luc khoi dong,Gazebo TEST,1360,,75 luot dinh (~4 s dau); khong kem hon; bo cac the gioi dinh: N605 C1 79.7 B1 65.1 p 8.5e-12
+2026-11-25 16:20,COORD,Py3.8 vs Py3.14 (DEV 101 the gioi go2),DEV,404,C1 92 vs 94; B1 83 vs 82,"khong khac (p 0.77, 1.0); quy dao khac bit (hon loan so hoc)"
+2026-11-25 18:25,COORD,"Gazebo DRA* (co cong, tham do) xong",Gazebo TEST 340 the gioi dau,340,C1 282/340 82.9%; DRA* 238/340 70.0%,McNemar 66/22 p 2.9e-6; bo KeyError+4 luot RTF<0.8 (loi ha tang chua chay lai): N296 81.4 vs 70.3 p 1.8e-4; fastsim cung the gioi chi +2.1/+5.0
+2026-11-25 18:25,COORD,kiem troi thoi gian: chay lai C1 tren nhom 0-19 (80 the gioi),"Gazebo TEST (sau, tham do)",80,,"DRA* chay sau C1/B1 ~5 gio, rieng le; kiem xem dieu kien chay co troi khong"
+2026-11-25 14:18,HM95,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,"DEV_hm95_smoke_go2(seed 0-19 crowd-only, nguoi hm95)",14,9,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,mppi~t3~nl:ppl=100;ppl_len=0.5,"DEV_hm95_smoke_go2(seed 0-19 crowd-only, nguoi hm95)",14,9,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,"DEV_hm95_smoke_go2(seed 0-19 crowd-only, nguoi hm95)",14,7,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,"DEV_hm95_smoke_go2(seed 0-19 crowd-only, nguoi hm95)",14,8,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,"DEV_hm95_smoke_champ2(seed 0-19 crowd-only, nguoi hm95)",14,5,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,mppi~t3~nl:ppl=100;ppl_len=0.5,"DEV_hm95_smoke_champ2(seed 0-19 crowd-only, nguoi hm95)",14,8,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,"DEV_hm95_smoke_champ2(seed 0-19 crowd-only, nguoi hm95)",14,5,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 14:18,HM95,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,"DEV_hm95_smoke_champ2(seed 0-19 crowd-only, nguoi hm95)",14,8,"THAM DO: smoke test truoc TEST, 0 EXC; khong dung de chon gi"
+2026-11-25 18:50,HM95,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,"TEST_hm95_go2(seed 100000-101386 crowd-only, nguoi hm95)",1000,803,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,mppi~t3~nl:ppl=100;ppl_len=0.5,"TEST_hm95_go2(seed 100000-101386 crowd-only, nguoi hm95)",1000,768,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,"TEST_hm95_go2(seed 100000-101386 crowd-only, nguoi hm95)",1000,732,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,"TEST_hm95_go2(seed 100000-101386 crowd-only, nguoi hm95)",1000,808,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,"TEST_hm95_champ2(seed 100000-101386 crowd-only, nguoi hm95)",1000,669,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,mppi~t3~nl:ppl=100;ppl_len=0.5,"TEST_hm95_champ2(seed 100000-101386 crowd-only, nguoi hm95)",1000,597,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,"TEST_hm95_champ2(seed 100000-101386 crowd-only, nguoi hm95)",1000,607,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,"TEST_hm95_champ2(seed 100000-101386 crowd-only, nguoi hm95)",1000,622,"THAM DO hau kiem (nhanh ben vung, khong thay ket qua dang ky); 0 EXC; sha ban chup OK truoc+sau; research/REPORT_HM95.md"
+2026-11-25 18:50,HM95,"kiem tra hop ly crowd_hm95 (grad, doi dau, lan nguoc chieu)",hm95_sanity,0,,"khong phai phep thu dieu huong; HM95 trung thanh (dt=2 s) KHONG tao lan trong tai hien cua minh (phi ~ null), dt=0/helb co lan"
+2026-11-25 19:20,HM95,"lane hm95b (a) e_b/v_b mong muon, dt=2s, tuan hoan","hm95b_lanes seed 1,2",2,0,THAM DO kiem tra hop ly: Phi-null = +0.071/+0.042 (<0.2) -> khong lane
+2026-11-25 19:20,HM95,lane hm95b (b) nhu a + vao lai 2 dau (hanh lang mo),"hm95b_lanes seed 1,2",2,0,THAM DO: Phi-null = +0.053/+0.063 (<0.2) -> khong lane
+2026-11-25 19:20,HM95,lane hm95b (c) nhu a + nhieu 0.15,"hm95b_lanes seed 1,2",2,0,THAM DO: Phi-null = +0.048/+0.045 (<0.2) -> khong lane
+2026-11-25 19:20,HM95,"lane doi chung duong (Delta t=0, cung script)","hm95b_lanes seed 1,2",2,2,doi chung thuoc do: Phi-null = +0.461/+0.370; khong phai ung vien
+2026-11-25 19:20,HM95,hm95b TEST,-,0,,KHONG CHAY theo quy tac coordinator: khong bien the a/b/c nao dat Phi-null>=0.2 o ca 2 seed
+2026-11-25 19:30,COORD,kiem troi: chay lai C1 nhom 0-19,Gazebo TEST (tham do),80,C1 60/80 vs goc 58/80,"khong troi (p 0.86); DRA* RTF thap hon chut (0.933 vs 0.967, do tai HM95), tercile RTF cao DRA* 74.6% van < C1"
+2026-11-25 22:10,COORD,THAM DO suite office (voice_office) C1/B1/DRA* x3,"office (DEV, khong phai TEST)",,,phat hien khi chuan bi demo: C1 ket 3/3 bai office (B1 2/3); chay 8 bai x 3 cau hinh x 3 lan de do

@@ -1,0 +1,11 @@
+variant,config,champ_pct,champ2_pct,go2_pct,pooled_pct,diff_vs_C1_pts,ci_lo,ci_hi,p_perm,p_holm24_or_test
+C1 (full),p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,82.18,81.61,89.66,84.48,,,,,
+− grad (temperature fix),p3+geo-haz+gcv-grad~t3~nl:ppl=32;ppl_len=0.5,82.47,77.59,90.23,83.43,-1.054,-3.257,1.149,0.4005259947400526,1
+− prim (evasive primitive samples),p3+geo-haz+gcv-prim~t3~nl:ppl=32;ppl_len=0.5,79.6,76.72,84.48,80.27,-4.215,-6.705,-1.724,0.0012399876001239988,0.028519714802851974
+− time discount (τ = ∞),p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5;g_tau=99,82.76,79.31,89.37,83.81,-0.67,-2.969,1.628,0.6244537554624454,1
+− tracker v3 (use v2),p3+geo-haz+gcv~nl:ppl=32;ppl_len=0.5,76.72,75.57,83.62,78.64,-5.843,-8.716,-2.969,5.999940000599994e-05,0.0014399856001439987
+− RespModel (~nl),p3+geo-haz+gcv~t3:ppl=32;ppl_len=0.5,82.47,80.46,89.37,84.1,-0.383,-2.778,1.916,0.8136818631813681,1
+geo risk → plain people cost,p3-haz~t3~nl:ppl=32;ppl_len=0.5,82.76,79.02,85.06,82.28,-2.203,-4.598,0.096,0.07779922200777992,1
+"C4: MPPI + prim, no RespModel",p3-haz-grad~t3:ppl=64;ppl_len=0.5,,,,79.78,-5.658,-7.787,-3.585,,noninf_margin_-2:no
+C4': MPPI + prim + RespModel,p3-haz-grad~t3~nl:ppl=100;ppl_len=0.5,,,,79.78,-5.658,-7.619,-3.697,,noninf_margin_-2:no
+C5: C1 − grad − discount − RespModel,p3+geo-haz-grad+gcv~t3:ppl=32;ppl_len=0.5;g_tau=99,,,,84.59,-0.84,-2.689,0.952,,noninf_margin_-2:no

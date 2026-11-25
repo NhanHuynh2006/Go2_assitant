@@ -1,0 +1,25 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+clutter:qua_khoi_so_le,clutter,0,2,mppi~v1,1,ok,0.158,43.0,14.73,,,0.197,9.0,{},12.2
+clutter:qua_khoi_so_le,clutter,0,2,dwa~v1,1,ok,0.198,37.1,13.31,,,0.173,9.0,{},8.8
+clutter:qua_khoi_so_le,clutter,0,2,log_mppi~v1,1,ok,0.191,125.5,42.78,,,0.215,9.0,{},34.7
+clutter:qua_khoi_so_le,clutter,0,2,apmppi_multi~v1,1,ok,0.186,37.7,13.71,,,0.186,9.0,{},18.4
+clutter:qua_khoi_so_le,clutter,0,2,prism@ppo+sac~v1,1,ok,0.189,50.4,18.46,,,0.137,9.0,{},26.6
+clutter:qua_khoi_so_le,clutter,0,2,prism_nounc@ppo+sac~v1,1,ok,0.2,37.7,13.93,,,0.188,9.0,{},19.0
+clutter:qua_khoi_so_le,clutter,0,2,prism_noprior~v1,0,ket,2.423,49.0,15.83,,,0.312,9.0,{},13.8
+clutter:qua_khoi_so_le,clutter,0,2,rl~v1,1,ok,0.159,46.6,19.14,,,0.093,9.0,{},3.2
+clutter:qua_khoi_so_le,clutter,0,2,rl@td3~v1,0,va vat,1.545,24.1,10.05,static,1,-0.005,9.0,"{""kind"": ""static"", ""t"": 24.1, ""robot_v"": 0.41, ""wz"": -0.76, ""at_fault"": 1}",1.6
+clutter:qua_khoi_so_le,clutter,0,2,rl@sac~v1,1,ok,0.165,38.8,13.82,,,0.026,9.0,{},2.3
+clutter:qua_khoi_so_le,clutter,0,2,rl_safe~v1,1,ok,0.174,74.0,29.87,,,0.074,9.0,{},17.8
+clutter:qua_khoi_so_le,clutter,0,2,pp~v1,1,ok,0.199,145.5,41.09,,,0.12,9.0,{},16.6
+clutter:van_phong,clutter,0,0,mppi~v1,1,ok,0.171,51.5,17.48,,,0.313,9.0,{},13.4
+clutter:van_phong,clutter,0,0,dwa~v1,1,ok,0.186,48.5,17.25,,,0.202,9.0,{},11.8
+clutter:van_phong,clutter,0,0,log_mppi~v1,1,ok,0.203,55.8,18.88,,,0.363,9.0,{},14.6
+clutter:van_phong,clutter,0,0,apmppi_multi~v1,1,ok,0.196,46.6,17.51,,,0.163,9.0,{},23.6
+clutter:van_phong,clutter,0,0,prism@ppo+sac~v1,1,ok,0.163,42.5,16.27,,,0.255,9.0,{},20.4
+clutter:van_phong,clutter,0,0,prism_nounc@ppo+sac~v1,1,ok,0.154,48.0,17.78,,,0.251,9.0,{},23.7
+clutter:van_phong,clutter,0,0,prism_noprior~v1,1,ok,0.195,50.5,18.55,,,0.304,9.0,{},14.6
+clutter:van_phong,clutter,0,0,rl~v1,1,ok,0.174,38.0,16.0,,,0.063,9.0,{},2.8
+clutter:van_phong,clutter,0,0,rl@td3~v1,1,ok,0.14,43.4,17.35,,,0.042,9.0,{},3.2
+clutter:van_phong,clutter,0,0,rl@sac~v1,1,ok,0.192,48.5,17.92,,,0.096,9.0,{},3.5
+clutter:van_phong,clutter,0,0,rl_safe~v1,1,ok,0.198,41.9,16.89,,,0.156,9.0,{},10.2
+clutter:van_phong,clutter,0,0,pp~v1,1,ok,0.196,71.3,21.63,,,0.247,9.0,{},8.4

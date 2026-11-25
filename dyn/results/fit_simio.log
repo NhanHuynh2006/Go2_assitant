@@ -1,0 +1,22 @@
+M0 v=lenh              cv 2.481 | v test RMSE (x y w) [0.1217, 0.0617, 0.1608] | du doan ho test 1/2/3 s: [0.0869, 0.1082, 0.1097] m, yaw [0.0927, 0.1206, 0.1363] rad
+M1 he so               cv 1.824 | v test RMSE (x y w) [0.1017, 0.0549, 0.1419] | du doan ho test 1/2/3 s: [0.0726, 0.0912, 0.0967] m, yaw [0.077, 0.0964, 0.1042] rad
+M3 +tre                cv 0.753 | v test RMSE (x y w) [0.0508, 0.0424, 0.0738] | du doan ho test 1/2/3 s: [0.0346, 0.0517, 0.0659] m, yaw [0.0357, 0.0547, 0.069] rad
+M5 +gia toc            cv 0.741 | v test RMSE (x y w) [0.0495, 0.0415, 0.0736] | du doan ho test 1/2/3 s: [0.0334, 0.0495, 0.0616] m, yaw [0.0353, 0.0539, 0.0677] rad
+CHON: M5 +gia toc
+  gx    0.968  [0.914, 1.023]
+  gy    0.944  [0.862, 1.015]
+  gw    0.897  [0.853, 0.924]
+  taux  0.248  [0.238, 0.260]
+  tauy  0.198  [0.182, 0.223]
+  tauw  0.155  [0.147, 0.168]
+  d     0.106  [0.097, 0.112]
+  back  0.896  [0.832, 0.982]
+  cx    1.459  [1.252, 1.821]
+  cxb   1.593  [1.306, 2.213]
+  cy    2.511  [1.540, 2.923]
+  cw    0.313  [0.000, 0.630]
+  xoff  0.040  [0.031, 0.048]
+  ax    4.215  [4.215, 4.215]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    3.751  [3.589, 5.259]
+du tho (gom lac than) std vx vy wz: [0.064 0.056 0.099]

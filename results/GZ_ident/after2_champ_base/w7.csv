@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+8,corridor,6,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.181,84.6,31.91,,,0.138,0.699,{},13.3
+8,corridor,6,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.194,196.4,74.98,,,0.107,0.317,{},30.5
+8,corridor,6,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,0,va nguoi,10.717,44.7,16.46,person,1,0.319,-0.012,"{""kind"": ""person"", ""t"": 44.7, ""robot_in"": 0.17, ""person_in"": 0.49, ""robot_v"": 0.2, ""wz"": -0.15, ""bearing"": -21, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 1.05, ""miss"": 0.27, ""ahead"": 1.01, ""trk"": 1, ""sp"": 0.88, ""rv"": 0.29, ""wall"": 1.82}, ""1.0"": {""d"": 1.41, ""miss"": 0.21, ""ahead"": 1.39, ""trk"": 1, ""sp"": 0.83, ""rv"": 0.35, ""wall"": 1.7}, ""1.5"": {""d"": 1.71, ""miss"": 0.17, ""ahead"": 1.7, ""trk"": 1, ""sp"": 0.52, ""rv"": 0.22, ""wall"": 1.65}, ""2.0"": {""d"": 1.89, ""miss"": 0.31, ""ahead"": 1.86, ""trk"": 1, ""sp"": 0.27, ""rv"": 0.27, ""wall"": 1.6}, ""3.0"": {""d"": 2.13, ""miss"": 2.09, ""ahead"": 0.43, ""trk"": 1, ""sp"": 0.49, ""rv"": 0.29, ""wall"": 1.73}}, ""distracted"": 0}",7.8
+8,corridor,6,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.212,120.8,46.55,,,0.094,0.221,{},13.8
+8,corridor,6,0,mppi:ppl=32,0,va nguoi,10.412,9.3,3.27,person,1,0.765,-0.012,"{""kind"": ""person"", ""t"": 9.3, ""robot_in"": -0.05, ""person_in"": 0.09, ""robot_v"": 0.18, ""wz"": -0.58, ""bearing"": 21, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.69, ""miss"": 0.32, ""ahead"": 0.61, ""trk"": 1, ""sp"": 0.5, ""rv"": 0.2, ""wall"": 1.51}, ""1.0"": {""d"": 1.1, ""miss"": 0.3, ""ahead"": 1.06, ""trk"": 1, ""sp"": 0.47, ""rv"": 0.39, ""wall"": 1.64}, ""1.5"": {""d"": 1.36, ""miss"": 9.0, ""ahead"": 0.0, ""trk"": 0, ""sp"": 0.0, ""rv"": 0.39, ""wall"": 1.81}, ""2.0"": {""d"": 1.5, ""miss"": 9.0, ""ahead"": 0.0, ""trk"": 0, ""sp"": 0.0, ""rv"": 0.36, ""wall"": 1.98}, ""3.0"": {""d"": 1.71, ""miss"": 9.0, ""ahead"": 0.0, ""trk"": 1, ""sp"": 0.0, ""rv"": 0.34, ""wall"": 2.28}}, ""distracted"": 0}",0.9
+8,corridor,6,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.177,115.0,44.01,,,0.112,0.134,{},8.9
+8,corridor,6,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,0,khong co duong,11.828,160.2,60.43,,,0.244,0.81,{},17.6
+15,office,0,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.155,54.3,20.78,,,0.283,9.0,{},3.7
+15,office,0,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.153,50.9,20.44,,,0.259,9.0,{},3.7
+15,office,0,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.17,49.2,19.71,,,0.217,9.0,{},3.5
+15,office,0,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.195,47.2,19.07,,,0.244,9.0,{},3.0
+15,office,0,0,mppi:ppl=32,1,ok,0.168,56.6,20.63,,,0.307,9.0,{},3.1
+15,office,0,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.143,47.0,19.22,,,0.149,9.0,{},1.9
+15,office,0,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.179,49.2,19.71,,,0.312,9.0,{},3.3

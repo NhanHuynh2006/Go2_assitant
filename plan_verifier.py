@@ -31,6 +31,20 @@ ACTION_TRIGGERS = {
 }
 
 
+# Tu dem khi goi ten do vat / quan he khong gian: nguoi noi hay bo hoac them
+# ("cai tu lanh vang" <-> "tu lanh mau vang", "canh ke" <-> "ben canh ke").
+# Bo qua chung khi so khop; MOI tu con lai cua dia diem van phai co trong cau
+# -> van chan duoc LLM bia dia diem khong ai nhac toi.
+_FILLER = {"cai", "chiec", "con", "mau", "co", "ben", "phia", "o", "mat", "cua",
+           "cho", "the", "nay", "do", "kia", "chu", "nhe", "nha"}
+
+
+def _words_in(loc: str, t: str) -> bool:
+    need = [w for w in loc.split() if w not in _FILLER]
+    have = set(t.split())
+    return bool(need) and all(w in have for w in need)
+
+
 def verify_plan(user_text: str, actions: list):
     """Loc danh sach action theo cau noi goc.
     Tra ve (actions_sach, ghi_chu_da_bo: list[str])."""
@@ -53,7 +67,7 @@ def verify_plan(user_text: str, actions: list):
 
         elif tool == "go_to":
             loc = norm(str(args.get("location", "")))
-            if loc and loc in t:
+            if loc and (loc in t or _words_in(loc, t)):
                 kept.append(a)
             else:
                 dropped.append(f"go_to '{args.get('location')}' (dia diem khong co trong cau)")

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoVoice — Định hướng phát triển (Future Work)</title>
+<style>
+  :root{--bg0:#0b1020;--ink:#eaf2ff;--muted:#9fb3d1;--accent:#22d3ee;--accent2:#fb923c;
+    --good:#34d399;--bad:#f87171;--purple:#a78bfa;--card:#16213f;--line:#243456}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'Segoe UI',system-ui,'Noto Sans',Arial,sans-serif;background:var(--bg0);color:var(--ink);overflow:hidden}
+  .deck{height:100vh;width:100vw;position:relative}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;padding:4.2vh 5.2vw 6vh;opacity:0;
+    transition:opacity .3s;background:radial-gradient(1200px 700px at 82% -12%,#1b2a52 0%,var(--bg0) 55%)}
+  .slide.active{display:flex;opacity:1}
+  h2{font-size:2.1vw;line-height:1.14;margin-bottom:1.3vh;letter-spacing:-.3px}
+  h3{font-size:1.3vw;color:var(--accent);margin-bottom:.6vh}
+  p,li,td,th{font-size:1.26vw;line-height:1.42}
+  .sm{font-size:1.04vw !important}
+  .muted{color:var(--muted)}.accent{color:var(--accent)}.accent2{color:var(--accent2)}
+  .good{color:var(--good)}.bad{color:var(--bad)}.purple{color:var(--purple)}
+  ul{margin-left:1.2em}li{margin:.5vh 0}
+  .kicker{font-size:1.0vw;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:1.0vh;font-weight:700}
+  .grid{display:grid;gap:1.3vw;margin-top:1.0vh}
+  .g2{grid-template-columns:1fr 1fr}.g21{grid-template-columns:1.15fr .85fr}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.15vw 1.3vw}
+  .card.rec{border-color:var(--good);box-shadow:0 0 0 1px var(--good) inset}
+  .card.fut{border-color:var(--purple)}
+  .why{background:#1c1530;border:1px solid var(--accent2);border-radius:12px;padding:1.0vw 1.25vw;margin-top:1.0vh}
+  .why b{color:var(--accent2)}
+  .pill{display:inline-block;background:#0e1b38;border:1px solid var(--line);color:var(--accent);
+    border-radius:999px;padding:.3vw .9vw;font-size:.95vw;margin:.3vw .3vw 0 0;font-weight:600}
+  table{border-collapse:collapse;width:100%;margin-top:1.0vh}
+  th,td{border:1px solid var(--line);padding:.7vh 1.0vw;text-align:left;font-size:1.08vw;vertical-align:top}
+  th{background:#0e1b38;color:var(--accent);font-weight:700}
+  td.yes{color:var(--good);font-weight:700}td.no{color:var(--bad);font-weight:700}
+  code{font-family:'Cascadia Code',Consolas,monospace;background:#0e1b38;padding:.05vw .4vw;border-radius:5px;color:var(--purple);font-size:1.0vw}
+  .footer{position:absolute;bottom:2.0vh;left:5.2vw;right:5.2vw;display:flex;justify-content:space-between;color:var(--muted);font-size:.9vw}
+  .bar{position:absolute;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--purple));transition:width .3s}
+  .nav-hint{position:absolute;bottom:1.8vh;left:50%;transform:translateX(-50%);color:#4b5e82;font-size:.85vw}
+  .badge{display:inline-block;padding:.2vw .8vw;border-radius:8px;font-size:.95vw;font-weight:800}
+  .b-rec{background:#13301f;color:var(--good)}.b-fut{background:#211a35;color:var(--purple)}
+  /* roadmap */
+  .road{display:flex;gap:1vw;margin-top:1.6vh}
+  .stage{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1vw 1.2vw;position:relative}
+  .stage .ph{font-size:.95vw;color:var(--muted);font-weight:700;letter-spacing:1px}
+  .stage h3{font-size:1.25vw;margin:.3vh 0 .6vh}
+  .stage.s1{border-color:var(--accent)} .stage.s2{border-color:var(--good)} .stage.s3{border-color:var(--purple)}
+  @media print{body{overflow:visible}
+    .slide{display:flex !important;opacity:1 !important;position:relative;height:100vh;page-break-after:always;inset:auto}
+    .nav-hint{display:none}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 OVERVIEW + VERDICT -->
+<section class="slide">
+  <div class="kicker">Định hướng phát triển · Tăng tốc STT</div>
+  <h2>Hai con đường gỡ nút thắt STT (1.8s)</h2>
+  <table>
+    <tr><th style="width:22%">Tiêu chí</th><th style="width:39%">① Streaming RNN-T / FastConformer</th><th style="width:39%">② Audio-LLM (nghe thẳng)</th></tr>
+    <tr><td>Nguyên lý</td><td>Vẫn STT→chữ, nhưng <b>phiên âm ngay trong lúc nói</b></td><td><b>Bỏ STT</b> — model nghe thẳng âm thanh</td></tr>
+    <tr><td>Độ trễ cảm nhận</td><td class="yes">~0.3–0.5 s</td><td class="yes">~0.2–0.5 s</td></tr>
+    <tr><td>Nặng / Jetson</td><td class="yes">Nhẹ (0.1–0.6B) — chạy tốt on-board</td><td class="no">Nặng (~7B) — khó nhét Jetson 8GB</td></tr>
+    <tr><td>Giữ kiến trúc<br>(3 tầng + GBNF + safety)</td><td class="yes">✅ Giữ nguyên — chỉ thay engine STT</td><td class="no">❌ Thay gần hết — mất GBNF / an toàn</td></tr>
+    <tr><td>Tiếng Việt</td><td>Train trên data Việt (có tiền lệ 🇹🇭 Thái)</td><td>Chưa có bản nhỏ tiếng Việt cho edge</td></tr>
+    <tr><td>Rủi ro</td><td class="yes">Thấp–vừa</td><td class="no">Cao</td></tr>
+  </table>
+  <div class="why"><b>Kết luận:</b> <span class="badge b-rec">CHỌN ① cho dự án bây giờ</span> — gỡ đúng nút thắt STT mà <b>vẫn giữ trọn đóng góp neuro-symbolic</b> + chạy on-board. <span class="badge b-fut">② là tầm nhìn xa</span> để đón đầu, nhưng nặng & mất kiểm soát an toàn.</div>
+</section>
+
+<!-- 2 PATH 1 (RECOMMENDED) -->
+<section class="slide">
+  <div class="kicker">① Con đường khuyến nghị</div>
+  <h2>Streaming <span class="accent">RNN-T / FastConformer</span> cho tiếng Việt</h2>
+  <div class="g21 grid">
+    <div>
+      <h3>Ý tưởng</h3>
+      <ul class="sm">
+        <li>Thay Whisper (xử lý cả cửa sổ 30s) bằng <b>Transducer streaming</b>: <b>sinh chữ ngay từng đoạn 0.1–0.3s</b> trong lúc người nói.</li>
+        <li>Khi nói xong thì gần như đã phiên âm xong → độ trễ STT từ 1.8s <b>xuống ~0.3s cảm nhận</b>.</li>
+        <li><b>Giữ nguyên</b> phần lõi: chữ ra → 3 tầng Reflex/Combo/LLM → GBNF → safety.</li>
+      </ul>
+      <h3 style="margin-top:1vh">Cách triển khai</h3>
+      <ul class="sm">
+        <li>Dùng <b>NVIDIA NeMo FastConformer-Transducer</b> (cache-aware streaming) hoặc <b>RNN-T</b>.</li>
+        <li><b>Fine-tune trên data tiếng Việt</b>: VIVOS, Common Voice VI, VLSP, hoặc tự thu lệnh robot.</li>
+        <li>Xuất chạy GPU Jetson (TensorRT / NeMo).</li>
+      </ul>
+    </div>
+    <div class="card rec">
+      <h3 class="good">🇹🇭 Tiền lệ vàng</h3>
+      <p class="sm muted"><b>Typhoon ASR Real-time</b> (2026): Thái Lan tự train một <b>FastConformer-Transducer streaming cho tiếng Thái</b> thay vì dùng Whisper.</p>
+      <p class="sm" style="margin-top:.6vh">→ Tiếng Việt làm tương tự được. Đây là <b>cách industry chuẩn</b> (Google, Apple, NVIDIA on-device đều dùng Transducer).</p>
+      <p class="sm good" style="margin-top:.8vh">Kỳ vọng: STT ~0.3s · model 0.1–0.6B · chạy on-board.</p>
+    </div>
+  </div>
+  <div class="why"><b>Vì sao hợp GoVoice nhất:</b> rủi ro thấp (chỉ thay "lỗ tai"), <span class="accent2">đóng góp khoa học rõ ràng</span> (streaming command-ASR tiếng Việt cho robot — chưa ai làm), và giữ được toàn bộ ưu thế an toàn + grammar JSON.</div>
+</section>
+
+<!-- 3 PATH 2 (HORIZON) -->
+<section class="slide">
+  <div class="kicker">② Tầm nhìn xa</div>
+  <h2>Audio-LLM: model <span class="purple">nghe thẳng</span>, bỏ STT</h2>
+  <div class="g2 grid">
+    <div class="card fut"><h3 class="purple">Là gì?</h3>
+      <p class="sm muted">Âm thanh → <b>token âm thanh</b> → vào thẳng LLM (không phiên âm trung gian). Model "hiểu" âm như hiểu chữ.</p>
+      <p class="sm" style="margin-top:.6vh">Ví dụ: <b>GPT-4o</b>, <b>Gemini</b>, <b>Qwen2.5-Omni</b> (mã nguồn mở, cùng họ Qwen), <b>Moshi</b> (full-duplex, ~200ms).</p></div>
+    <div class="card fut"><h3 class="purple">Lợi thế</h3>
+      <ul class="sm"><li>Bỏ hẳn vòng STT → độ trễ thấp nhất.</li>
+      <li>Vừa nghe vừa đáp, ngắt lời được.</li>
+      <li>Hiểu cả ngữ điệu / cảm xúc, không bị "ép" thành chữ trơ.</li></ul></div>
+  </div>
+  <div class="why"><b>Vì sao CHƯA dùng ngay cho robot:</b> model <span class="bad">~7B rất nặng</span> (khó chạy Jetson 8GB / CUDA 11.4); <span class="bad">khó ép JSON bằng GBNF + khó gắn lớp an toàn</span> như hiện tại; chưa có bản nhỏ tiếng Việt cho edge. → để dành khi phần cứng mạnh hơn / có model Việt nhẹ.</div>
+  <div style="margin-top:.8vh"><span class="pill">Qwen2.5-Omni (Thinker-Talker)</span><span class="pill">Moshi (Mimi codec)</span><span class="pill">GPT-4o Realtime</span></div>
+</section>
+
+<!-- 4 ROADMAP -->
+<section class="slide">
+  <div class="kicker">Lộ trình đề xuất</div>
+  <h2>3 giai đoạn — từ "ăn liền" tới "đón đầu"</h2>
+  <div class="road">
+    <div class="stage s1"><div class="ph">NGẮN HẠN · vài tuần</div>
+      <h3 class="accent">Tối ưu Whisper hiện có</h3>
+      <ul class="sm"><li>Giảm padding 30s → ~5–8s.</li>
+      <li>Streaming chunk (whisper_streaming).</li>
+      <li>int8 / chưng cất PhoWhisper.</li></ul>
+      <p class="sm good">→ STT 1.8s ⟶ ~0.5–0.8s</p></div>
+    <div class="stage s2"><div class="ph">TRUNG HẠN · cốt lõi đồ án</div>
+      <h3 class="good">① RNN-T / FastConformer</h3>
+      <ul class="sm"><li>Train Transducer streaming trên data Việt.</li>
+      <li>Giữ nguyên 3 tầng + GBNF + safety.</li>
+      <li>Tiền lệ: Typhoon ASR (Thái).</li></ul>
+      <p class="sm good">→ STT cảm nhận ~0.3s · on-board</p></div>
+    <div class="stage s3"><div class="ph">DÀI HẠN · đón đầu</div>
+      <h3 class="purple">② Audio-LLM</h3>
+      <ul class="sm"><li>Thử Qwen2.5-Omni khi có phần cứng mạnh hơn.</li>
+      <li>Gộp nghe + hiểu vào 1 model.</li>
+      <li>Cần giải bài toán an toàn + on-board.</li></ul>
+      <p class="sm purple">→ kiến trúc thế hệ mới</p></div>
+  </div>
+  <div class="why"><b>Thông điệp:</b> bám sát mục tiêu realtime + on-board + an toàn → ưu tiên <span class="good">①</span>; <span class="purple">②</span> là hướng nghiên cứu tiếp khi điều kiện cho phép.</div>
+</section>
+
+</div>
+
+<div class="bar" id="bar"></div>
+<div class="footer"><span>GoVoice · HCMUTE · Future Work — Tăng tốc STT</span><span id="pageno">1 / 4</span></div>
+<div class="nav-hint">← → chuyển slide · F fullscreen · Ctrl+P xuất PDF</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];let i=0;
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    document.getElementById('pageno').textContent=(i+1)+' / '+slides.length;
+    document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';}
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')show(i+1);
+    else if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+    else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}});
+  document.addEventListener('click',e=>{if(e.clientX>window.innerWidth*0.5)show(i+1);else show(i-1);});
+  show(0);
+</script>
+</body>
+</html>

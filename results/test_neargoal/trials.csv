@@ -1,0 +1,4 @@
+trial,config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s,stops,stop_s,mean_v,osc,at_fault,col_info
+1,prism,clutter:slalom_coc,clutter,go2,0,0,1.289,,0.0,8.69,11.47,44.7,0.315,0.297,,,30,0,0.51,3,7.5,0.217,15,,
+1,mppi,clutter:slalom_coc,clutter,go2,1,0,0.178,,0.787,8.69,11.05,42.5,0.303,0.303,,,28,6,0.51,3,8.0,0.22,10,,
+1,pgmppi,clutter:slalom_coc,clutter,go2,1,0,0.2,,0.814,8.69,10.68,35.6,0.277,0.243,,,23,9,0.51,1,4.0,0.283,8,,

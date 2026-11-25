@@ -1,0 +1,2 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,replans,brakes,react_s
+full,detour:thung_carton,detour,go2,1,0,0.318,,0.756,3.69,4.89,19.1,0.503,0.42,,15,0,0.4

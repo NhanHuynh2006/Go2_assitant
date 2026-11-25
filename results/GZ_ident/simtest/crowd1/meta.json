@@ -1,0 +1,45 @@
+{
+ "argv": [
+  "eval_sim.py",
+  "--suite",
+  "office",
+  "--only",
+  "crowd:sanh",
+  "--configs",
+  "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",
+  "--out",
+  "results/GZ_ident/simtest/crowd1"
+ ],
+ "start": "2026-11-24 12:22:13",
+ "world": "voice_office",
+ "suite": "office",
+ "configs": [
+  "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5"
+ ],
+ "trials": 1,
+ "tasks": [
+  "crowd:sanh_8_nguoi"
+ ],
+ "sha_file": "/home/nhanhuynh/Documents/Go2_assitant/results/frozen_C1/SHA256SUMS",
+ "sha": {
+  "fastsim.py": true,
+  "nav_local.py": true,
+  "nav_prism2.py": true,
+  "robot_ros.py": true,
+  "movers.py": true,
+  "crowd_models.py": true,
+  "oracle_ctrl.py": true,
+  "dyn/go2_params.py": true,
+  "dyn/go2_params.yaml": true,
+  "isaac_val/cmd_shaper.py": true,
+  "research/algo_fast/fast.c": true
+ },
+ "sha_eval_sim": "9041a6773b53d8c35b6fa8f97994d97dfa037badb889270e7510275c6fb71d3f",
+ "env": {
+  "GZ_PARTITION": "gzs0",
+  "ROS_DOMAIN_ID": "41",
+  "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+  "OPENBLAS_NUM_THREADS": "1",
+  "GOVOICE_FAST_SO": "/home/nhanhuynh/Documents/Go2_assitant/research/algo_fast/fast.so"
+ }
+}

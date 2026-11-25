@@ -1,0 +1,8 @@
+{"variant": "b", "seed": 2, "phi": 0.418, "null": 0.354, "diff": 0.063, "overlap_pairs": 7.3, "v_dir": 1.2}
+{"variant": "b", "seed": 1, "phi": 0.405, "null": 0.352, "diff": 0.053, "overlap_pairs": 6.2, "v_dir": 1.2}
+{"variant": "a", "seed": 1, "phi": 0.374, "null": 0.303, "diff": 0.071, "overlap_pairs": 4.8, "v_dir": 1.24}
+{"variant": "a", "seed": 2, "phi": 0.342, "null": 0.3, "diff": 0.042, "overlap_pairs": 4.8, "v_dir": 1.24}
+{"variant": "c", "seed": 2, "phi": 0.349, "null": 0.304, "diff": 0.045, "overlap_pairs": 7.7, "v_dir": 1.23}
+{"variant": "c", "seed": 1, "phi": 0.35, "null": 0.302, "diff": 0.048, "overlap_pairs": 6.6, "v_dir": 1.22}
+{"variant": "ctrl", "seed": 2, "phi": 0.662, "null": 0.292, "diff": 0.37, "overlap_pairs": 2.9, "v_dir": 1.23}
+{"variant": "ctrl", "seed": 1, "phi": 0.749, "null": 0.288, "diff": 0.461, "overlap_pairs": 2.0, "v_dir": 1.26}

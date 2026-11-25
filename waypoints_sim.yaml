@@ -1,0 +1,21 @@
+# ============================================================
+#  waypoints_sim.yaml — cac diem trong NHA MO PHONG (voice_house.sdf)
+#  Toa do frame "map" = frame cua Gazebo world (m, rad).
+#    ten: [x, y, yaw]                                cho dung, mat huong yaw
+#    ten: {pose: [x, y, yaw], via: [[x, y], ...]}    di qua diem trung gian truoc
+#         obj: [x, y], size: [rong, sau]             vi tri/kich thuoc DO VAT (cho
+#                                                    "bên trái cái bàn", "sau ghế"...)
+#  Ten co dau hay khong dau deu duoc (so khop sau khi bo dau).
+#  Robot spawn: 1 con o (0, 0); 2 con o (0, 0) va (0, 1.5), mat huong +x.
+#  "bàn ăn"/"ghế gỗ" (khong phai "bàn"/"ghế"): trong nha co 2 cai ban va 3 cai ghe,
+#  noi "cái bàn" thi robot hoi lai mau nao (objects.py), noi "bàn ăn" thi toi day.
+# ============================================================
+
+cửa:         {pose: [0.0, -3.0, -1.57], obj: [0.0, -4.0], size: [1.2, 0.15]}    # cua chinh, tuong nam
+cửa sổ:      {pose: [2.25, 3.0, 1.57], obj: [2.25, 4.0], size: [1.5, 0.15]}     # cua so, tuong bac
+bàn ăn:      {pose: [-2.0, 2.2, 1.57], obj: [-2.0, 3.25], size: [1.4, 0.8]}     # ban an, sat tuong bac
+ghế gỗ:      {pose: [-0.6, 2.5, 1.57], obj: [-0.6, 3.35], size: [0.5, 0.5]}     # ghe go canh ban an
+bếp:         {pose: [3.5, 2.2, 0.0], obj: [4.6, 2.2], size: [2.4, 0.7]}         # quay bep, tuong dong
+chỗ sạc:     {pose: [-4.0, 0.0, 3.14], obj: [-4.6, 0.0], size: [0.8, 0.6]}      # tram sac xanh la, tuong tay
+góc phòng:   [-4.2, -3.2, -2.36]                                                # goc tay-nam
+phòng khách: {pose: [2.5, -2.0, -1.57], obj: [2.5, -3.5], size: [2.0, 0.8]}     # giua tham, nhin ra sofa

@@ -1,0 +1,2 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s
+full,dyn:nguoi_doi_dau,dynamic,go2,0,0,2.487,,0.0,4.05,1.67,11.1,0.678,0.675,,0.336,0,0,0.3

@@ -1,0 +1,241 @@
+==  0 {'gain': [0.985, 1.002, 0.941], 'vsat': 0.805, 'back': 1.012, 'tau': [0.183, 0.199, 0.246], 'delay': 0.04, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 1.395 | v test RMSE (x y w) [0.0798, 0.0459, 0.1451] | du doan ho test 1/2/3 s: [0.0489, 0.0567, 0.0559] m, yaw [0.0743, 0.0953, 0.0995] rad
+M1 he so               cv 1.214 | v test RMSE (x y w) [0.0738, 0.045, 0.1318] | du doan ho test 1/2/3 s: [0.0455, 0.0536, 0.0546] m, yaw [0.0654, 0.086, 0.0917] rad
+M3 +tre                cv 0.396 | v test RMSE (x y w) [0.0297, 0.0324, 0.0704] | du doan ho test 1/2/3 s: [0.0144, 0.0187, 0.0225] m, yaw [0.0229, 0.0237, 0.0252] rad
+M5 +gia toc            cv 0.390 | v test RMSE (x y w) [0.0289, 0.0324, 0.0704] | du doan ho test 1/2/3 s: [0.0138, 0.0152, 0.0154] m, yaw [0.0229, 0.0237, 0.0252] rad
+CHON: M5 +gia toc
+  gx    0.995  [0.980, 1.007]
+  gy    1.008  [0.994, 1.021]
+  gw    0.942  [0.931, 0.950]
+  taux  0.171  [0.165, 0.177]
+  tauy  0.191  [0.182, 0.198]
+  tauw  0.238  [0.231, 0.245]
+  d     0.038  [0.033, 0.042]
+  back  1.005  [0.987, 1.024]
+  cx    1.296  [1.151, 1.371]
+  cxb   0.127  [0.000, 1.101]
+  cy    0.457  [0.043, 0.886]
+  cw    0.001  [0.000, 3.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  xoff  0.001  [-0.002, 0.003]
+  ax    7.201  [7.201, 7.201]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    10.000  [10.000, 10.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.119 0.12  0.295]
+==  1 {'gain': [1.026, 0.708, 0.856], 'vsat': 1.787, 'back': 0.83, 'tau': [0.186, 0.296, 0.102], 'delay': 0.16, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.353 | v test RMSE (x y w) [0.1174, 0.0636, 0.1622] | du doan ho test 1/2/3 s: [0.0805, 0.099, 0.1036] m, yaw [0.0757, 0.102, 0.1108] rad
+M1 he so               cv 1.782 | v test RMSE (x y w) [0.1063, 0.0477, 0.1448] | du doan ho test 1/2/3 s: [0.0693, 0.0866, 0.0917] m, yaw [0.0601, 0.0767, 0.0779] rad
+M3 +tre                cv 0.408 | v test RMSE (x y w) [0.0318, 0.0303, 0.0766] | du doan ho test 1/2/3 s: [0.019, 0.028, 0.0373] m, yaw [0.0194, 0.0191, 0.0198] rad
+M5 +gia toc            cv 0.394 | v test RMSE (x y w) [0.029, 0.0303, 0.0765] | du doan ho test 1/2/3 s: [0.015, 0.0158, 0.0157] m, yaw [0.0192, 0.0189, 0.0195] rad
+CHON: M5 +gia toc
+  gx    1.030  [1.020, 1.040]
+  gy    0.706  [0.689, 0.717]
+  gw    0.861  [0.851, 0.871]
+  taux  0.186  [0.179, 0.193]
+  tauy  0.301  [0.290, 0.313]
+  tauw  0.104  [0.095, 0.111]
+  d     0.148  [0.142, 0.154]
+  back  0.834  [0.820, 0.849]
+  cx    0.597  [0.417, 0.771]
+  cxb   0.355  [0.034, 0.725]
+  cy    0.117  [0.000, 4.624]  <- CI rong
+  cw    0.211  [0.065, 0.447]
+  xoff  -0.001  [-0.003, 0.001]
+  ax    6.021  [6.021, 6.021]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    8.653  [0.800, 10.337]
+du tho (gom lac than) std vx vy wz: [0.117 0.122 0.299]
+==  2 {'gain': [0.921, 0.879, 1.024], 'vsat': 1.084, 'back': 0.935, 'tau': [0.303, 0.172, 0.106], 'delay': 0.16, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.587 | v test RMSE (x y w) [0.1273, 0.0539, 0.1707] | du doan ho test 1/2/3 s: [0.0898, 0.1095, 0.1065] m, yaw [0.0725, 0.0904, 0.0926] rad
+M1 he so               cv 2.045 | v test RMSE (x y w) [0.1037, 0.0486, 0.1684] | du doan ho test 1/2/3 s: [0.074, 0.0917, 0.0924] m, yaw [0.0722, 0.0917, 0.0954] rad
+M3 +tre                cv 0.392 | v test RMSE (x y w) [0.0281, 0.028, 0.0811] | du doan ho test 1/2/3 s: [0.0136, 0.0154, 0.0168] m, yaw [0.0207, 0.0211, 0.0216] rad
+M5 +gia toc            cv 0.391 | v test RMSE (x y w) [0.0279, 0.028, 0.0811] | du doan ho test 1/2/3 s: [0.0132, 0.0141, 0.0147] m, yaw [0.0206, 0.0211, 0.0215] rad
+CHON: M5 +gia toc
+  gx    0.935  [0.921, 0.949]
+  gy    0.887  [0.876, 0.900]
+  gw    1.023  [1.009, 1.029]
+  taux  0.299  [0.291, 0.305]
+  tauy  0.164  [0.154, 0.174]
+  tauw  0.105  [0.100, 0.111]
+  d     0.151  [0.146, 0.156]
+  back  0.922  [0.904, 0.941]
+  cx    1.036  [0.942, 1.160]
+  cxb   0.142  [0.000, 0.914]
+  cy    0.476  [0.027, 1.035]
+  cw    0.000  [0.000, 3.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  xoff  0.000  [-0.001, 0.002]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    13.441  [0.800, 14.196]
+du tho (gom lac than) std vx vy wz: [0.121 0.119 0.298]
+==  3 {'gain': [0.834, 0.828, 0.948], 'vsat': 1.491, 'back': 1.101, 'tau': [0.359, 0.215, 0.211], 'delay': 0.12, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.568 | v test RMSE (x y w) [0.1259, 0.0541, 0.1691] | du doan ho test 1/2/3 s: [0.0895, 0.1113, 0.1088] m, yaw [0.0834, 0.1082, 0.1137] rad
+M1 he so               cv 1.872 | v test RMSE (x y w) [0.0986, 0.0462, 0.156] | du doan ho test 1/2/3 s: [0.0695, 0.0879, 0.0879] m, yaw [0.0758, 0.101, 0.1079] rad
+M3 +tre                cv 0.403 | v test RMSE (x y w) [0.0318, 0.0302, 0.0751] | du doan ho test 1/2/3 s: [0.0171, 0.0214, 0.0271] m, yaw [0.0253, 0.0259, 0.0268] rad
+M5 +gia toc            cv 0.396 | v test RMSE (x y w) [0.0308, 0.0302, 0.0751] | du doan ho test 1/2/3 s: [0.0159, 0.0165, 0.0181] m, yaw [0.0253, 0.0259, 0.0268] rad
+CHON: M5 +gia toc
+  gx    0.845  [0.830, 0.864]
+  gy    0.829  [0.812, 0.843]
+  gw    0.946  [0.936, 0.953]
+  taux  0.351  [0.343, 0.359]
+  tauy  0.220  [0.207, 0.234]
+  tauw  0.209  [0.200, 0.218]
+  d     0.115  [0.110, 0.121]
+  back  1.086  [1.061, 1.106]
+  cx    0.785  [0.607, 1.109]
+  cxb   0.000  [0.000, 5.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  cy    0.323  [0.000, 1.285]
+  cw    0.000  [0.000, 3.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  xoff  0.001  [-0.001, 0.003]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    10.000  [10.000, 10.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.119 0.12  0.302]
+==  4 {'gain': [0.75, 0.765, 0.842], 'vsat': 1.071, 'back': 1.048, 'tau': [0.396, 0.155, 0.203], 'delay': 0.08, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.427 | v test RMSE (x y w) [0.1224, 0.0479, 0.1538] | du doan ho test 1/2/3 s: [0.0896, 0.1153, 0.1154] m, yaw [0.0809, 0.1093, 0.1211] rad
+M1 he so               cv 1.340 | v test RMSE (x y w) [0.0817, 0.039, 0.1285] | du doan ho test 1/2/3 s: [0.057, 0.0732, 0.0724] m, yaw [0.0603, 0.0796, 0.0864] rad
+M3 +tre                cv 0.404 | v test RMSE (x y w) [0.03, 0.029, 0.0734] | du doan ho test 1/2/3 s: [0.0145, 0.0177, 0.0197] m, yaw [0.0217, 0.0214, 0.0209] rad
+M5 +gia toc            cv 0.407 | v test RMSE (x y w) [0.0297, 0.029, 0.0734] | du doan ho test 1/2/3 s: [0.0143, 0.0162, 0.0163] m, yaw [0.0218, 0.0217, 0.0213] rad
+CHON: M5 +gia toc
+  gx    0.760  [0.745, 0.780]
+  gy    0.768  [0.755, 0.773]
+  gw    0.849  [0.838, 0.861]
+  taux  0.389  [0.376, 0.398]
+  tauy  0.147  [0.133, 0.160]
+  tauw  0.194  [0.183, 0.203]
+  d     0.076  [0.069, 0.084]
+  back  1.033  [1.001, 1.058]
+  cx    1.088  [0.871, 1.461]
+  cxb   0.165  [0.000, 1.250]
+  cy    0.000  [0.000, 6.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  cw    0.297  [0.161, 0.507]
+  xoff  -0.000  [-0.003, 0.003]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    10.000  [10.000, 10.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.118 0.121 0.298]
+==  5 {'gain': [0.787, 1.165, 0.886], 'vsat': 1.458, 'back': 1.134, 'tau': [0.442, 0.165, 0.189], 'delay': 0.16, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 3.143 | v test RMSE (x y w) [0.1384, 0.0607, 0.1794] | du doan ho test 1/2/3 s: [0.1054, 0.1347, 0.1325] m, yaw [0.0937, 0.1246, 0.1316] rad
+M1 he so               cv 2.123 | v test RMSE (x y w) [0.0992, 0.0618, 0.1577] | du doan ho test 1/2/3 s: [0.0789, 0.1021, 0.1042] m, yaw [0.0794, 0.1072, 0.1119] rad
+M3 +tre                cv 0.396 | v test RMSE (x y w) [0.0301, 0.0305, 0.0757] | du doan ho test 1/2/3 s: [0.0192, 0.0249, 0.0324] m, yaw [0.0256, 0.0221, 0.024] rad
+M5 +gia toc            cv 0.386 | v test RMSE (x y w) [0.0288, 0.0305, 0.0757] | du doan ho test 1/2/3 s: [0.0172, 0.0177, 0.0192] m, yaw [0.0257, 0.0221, 0.0241] rad
+CHON: M5 +gia toc
+  gx    0.799  [0.784, 0.823]
+  gy    1.171  [1.157, 1.185]
+  gw    0.890  [0.881, 0.899]
+  taux  0.429  [0.421, 0.437]
+  tauy  0.161  [0.151, 0.171]
+  tauw  0.189  [0.180, 0.197]
+  d     0.159  [0.154, 0.166]
+  back  1.111  [1.076, 1.132]
+  cx    0.930  [0.692, 1.407]
+  cxb   0.001  [0.000, 5.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  cy    0.379  [0.000, 0.634]
+  cw    0.159  [0.004, 0.298]
+  xoff  0.000  [-0.002, 0.003]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    10.000  [10.000, 10.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.122 0.121 0.303]
+==  6 {'gain': [0.902, 1.0, 0.889], 'vsat': 0.856, 'back': 1.12, 'tau': [0.231, 0.234, 0.158], 'delay': 0.2, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.891 | v test RMSE (x y w) [0.1307, 0.0631, 0.1914] | du doan ho test 1/2/3 s: [0.0897, 0.1073, 0.1036] m, yaw [0.0944, 0.1226, 0.1288] rad
+M1 he so               cv 2.356 | v test RMSE (x y w) [0.1146, 0.0598, 0.172] | du doan ho test 1/2/3 s: [0.0804, 0.0984, 0.0983] m, yaw [0.0809, 0.1053, 0.1087] rad
+M3 +tre                cv 0.410 | v test RMSE (x y w) [0.0315, 0.0308, 0.0785] | du doan ho test 1/2/3 s: [0.0171, 0.0265, 0.0355] m, yaw [0.0226, 0.0235, 0.024] rad
+M5 +gia toc            cv 0.384 | v test RMSE (x y w) [0.0287, 0.0308, 0.0785] | du doan ho test 1/2/3 s: [0.0138, 0.0156, 0.0157] m, yaw [0.0226, 0.0235, 0.0241] rad
+CHON: M5 +gia toc
+  gx    0.909  [0.899, 0.920]
+  gy    1.005  [0.992, 1.015]
+  gw    0.901  [0.892, 0.911]
+  taux  0.226  [0.215, 0.234]
+  tauy  0.226  [0.215, 0.233]
+  tauw  0.150  [0.142, 0.156]
+  d     0.195  [0.190, 0.202]
+  back  1.111  [1.094, 1.128]
+  cx    1.207  [1.134, 1.335]
+  cxb   0.145  [0.000, 0.904]
+  cy    0.466  [0.065, 0.840]
+  cw    0.255  [0.136, 0.389]
+  xoff  -0.001  [-0.004, 0.002]
+  ax    6.882  [6.882, 6.882]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    10.000  [10.000, 10.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.123 0.122 0.305]
+==  7 {'gain': [0.782, 1.108, 0.993], 'vsat': 0.795, 'back': 1.036, 'tau': [0.415, 0.246, 0.123], 'delay': 0.08, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.261 | v test RMSE (x y w) [0.1223, 0.0552, 0.135] | du doan ho test 1/2/3 s: [0.0918, 0.1178, 0.1172] m, yaw [0.0549, 0.0689, 0.0684] rad
+M1 he so               cv 1.469 | v test RMSE (x y w) [0.0832, 0.0553, 0.1318] | du doan ho test 1/2/3 s: [0.0641, 0.0814, 0.0826] m, yaw [0.0538, 0.0693, 0.071] rad
+M3 +tre                cv 0.384 | v test RMSE (x y w) [0.0282, 0.0326, 0.0778] | du doan ho test 1/2/3 s: [0.0168, 0.0198, 0.022] m, yaw [0.0217, 0.0222, 0.0222] rad
+M5 +gia toc            cv 0.386 | v test RMSE (x y w) [0.0277, 0.0326, 0.0779] | du doan ho test 1/2/3 s: [0.0165, 0.0178, 0.0176] m, yaw [0.0217, 0.0222, 0.0222] rad
+CHON: M5 +gia toc
+  gx    0.796  [0.781, 0.820]
+  gy    1.108  [1.093, 1.118]
+  gw    0.989  [0.975, 1.000]
+  taux  0.408  [0.398, 0.416]
+  tauy  0.245  [0.236, 0.257]
+  tauw  0.120  [0.110, 0.129]
+  d     0.073  [0.067, 0.080]
+  back  1.016  [0.986, 1.037]
+  cx    1.404  [1.279, 1.646]
+  cxb   0.187  [0.000, 1.258]
+  cy    0.002  [0.000, 6.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  cw    0.001  [0.000, 3.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  xoff  0.001  [-0.001, 0.003]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    13.558  [13.558, 13.558]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.122 0.12  0.304]
+==  8 {'gain': [0.825, 1.107, 0.865], 'vsat': 1.976, 'back': 1.193, 'tau': [0.399, 0.232, 0.085], 'delay': 0.2, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 3.200 | v test RMSE (x y w) [0.144, 0.066, 0.1742] | du doan ho test 1/2/3 s: [0.1094, 0.1368, 0.134] m, yaw [0.0832, 0.1076, 0.1155] rad
+M1 he so               cv 2.377 | v test RMSE (x y w) [0.1122, 0.0657, 0.1564] | du doan ho test 1/2/3 s: [0.0893, 0.1141, 0.1158] m, yaw [0.0688, 0.0859, 0.0881] rad
+M3 +tre                cv 0.402 | v test RMSE (x y w) [0.0305, 0.0299, 0.0801] | du doan ho test 1/2/3 s: [0.0182, 0.0258, 0.0358] m, yaw [0.0181, 0.0182, 0.0178] rad
+M5 +gia toc            cv 0.384 | v test RMSE (x y w) [0.0276, 0.0298, 0.0801] | du doan ho test 1/2/3 s: [0.0168, 0.0175, 0.018] m, yaw [0.0182, 0.0182, 0.0178] rad
+CHON: M5 +gia toc
+  gx    0.848  [0.832, 0.868]
+  gy    1.109  [1.099, 1.124]
+  gw    0.865  [0.855, 0.875]
+  taux  0.397  [0.386, 0.408]
+  tauy  0.232  [0.220, 0.243]
+  tauw  0.081  [0.071, 0.090]
+  d     0.191  [0.183, 0.199]
+  back  1.158  [1.132, 1.181]
+  cx    0.862  [0.682, 1.145]
+  cxb   0.096  [0.000, 0.886]
+  cy    0.013  [0.000, 6.000]  <- CI rong
+  cw    0.080  [0.000, 0.609]
+  xoff  -0.002  [-0.005, 0.001]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    17.379  [17.379, 17.379]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.118 0.123 0.3  ]
+==  9 {'gain': [0.775, 0.863, 0.815], 'vsat': 0.922, 'back': 1.13, 'tau': [0.321, 0.277, 0.19], 'delay': 0.08, 'wob': [0.006, 0.006, 0.015]}
+M0 v=lenh              cv 2.206 | v test RMSE (x y w) [0.1135, 0.052, 0.1522] | du doan ho test 1/2/3 s: [0.0816, 0.1024, 0.1028] m, yaw [0.0804, 0.1128, 0.1268] rad
+M1 he so               cv 1.381 | v test RMSE (x y w) [0.0839, 0.0451, 0.1258] | du doan ho test 1/2/3 s: [0.0593, 0.0742, 0.0748] m, yaw [0.0557, 0.0735, 0.0772] rad
+M3 +tre                cv 0.416 | v test RMSE (x y w) [0.0312, 0.0299, 0.0739] | du doan ho test 1/2/3 s: [0.0183, 0.025, 0.0318] m, yaw [0.0233, 0.0239, 0.0249] rad
+M5 +gia toc            cv 0.400 | v test RMSE (x y w) [0.0294, 0.0299, 0.0738] | du doan ho test 1/2/3 s: [0.0166, 0.0178, 0.018] m, yaw [0.0232, 0.0238, 0.0248] rad
+CHON: M5 +gia toc
+  gx    0.777  [0.763, 0.792]
+  gy    0.859  [0.843, 0.867]
+  gw    0.815  [0.800, 0.831]
+  taux  0.309  [0.300, 0.318]
+  tauy  0.268  [0.260, 0.278]
+  tauw  0.184  [0.173, 0.193]
+  d     0.078  [0.072, 0.084]
+  back  1.126  [1.099, 1.148]
+  cx    1.120  [0.927, 1.333]
+  cxb   0.118  [0.000, 0.999]
+  cy    0.000  [0.000, 6.000]  <- CHAM BIEN, khong nhan dang duoc  <- CI rong
+  cw    0.093  [0.000, 0.886]
+  xoff  0.002  [-0.001, 0.005]
+  ax    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  ay    4.000  [4.000, 4.000]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+  aw    17.500  [17.500, 17.500]  <- du lieu khong cham toi (dao ham 0), khong nhan dang duoc
+du tho (gom lac than) std vx vy wz: [0.122 0.119 0.298]
+
+THAM SO  n  sai so tuyet doi: trung vi  p90 | sai so tuong doi trung vi | CI95 phu
+gx    10  0.0102  0.0152 | 1.3 % | 9/10
+gy    10  0.0034  0.0063 | 0.4 % | 10/10
+gw    10  0.0033  0.0081 | 0.3 % | 9/10
+taux  10  0.0048  0.0097 | 1.3 % | 7/10
+tauy  10  0.0057  0.0070 | 2.5 % | 10/10
+tauw  10  0.0026  0.0063 | 1.9 % | 10/10
+d     10  0.0028  0.0044 | 2.4 % | 9/10
+back  10  0.0139  0.0241 | 1.4 % | 8/10
+cx    10  0.1143  0.2553 | 12.0 % | 6/10

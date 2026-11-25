@@ -1,0 +1,43 @@
+the gioi Isaac: 100; luot Isaac 500; loi 0
+
+| than | mppi | mppi:ppl=32 | dwa | mppi~t3~nl:ppl=100;ppl_len=0.5 | p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 |
+|---|---|---|---|---|---|
+| isaac | 64/100 64% [54-73] | 72/100 72% [63-80] | 63/100 63% [53-72] | 75/100 75% [66-82] | 83/100 83% [74-89] |
+| go2 | 74/100 74% [65-82] | 79/100 79% [70-86] | 64/100 64% [54-73] | 87/100 87% [79-92] | 93/100 93% [86-97] |
+| champ2 | 48/100 48% [38-58] | 58/100 58% [48-67] | 43/100 43% [34-53] | 74/100 74% [65-82] | 73/100 73% [64-81] |
+| champ | 47/100 47% [38-57] | 62/100 62% [52-71] | 42/100 42% [33-52] | 80/100 80% [71-87] | 83/100 83% [74-89] |
+
+Ghep cap voi baseline chinh mppi~t3~nl:ppl=100;ppl_len=0.5 (McNemar 2 phia; Holm trong moi than, 4 so sanh)
+  isaac   dwa                                        +12/-24 (n=100) p=0.0652 Holm=0.261
+  isaac   mppi                                       +11/-22 (n=100) p=0.0801 Holm=0.24
+  isaac   p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5    +20/-12 (n=100) p=0.215 Holm=0.431
+  isaac   mppi:ppl=32                                +13/-16 (n=100) p=0.711 Holm=0.711
+  go2     dwa                                        +6/-29 (n=100) p=0.000117 Holm=0.000467
+  go2     mppi                                       +9/-22 (n=100) p=0.0294 Holm=0.0883
+  go2     mppi:ppl=32                                +7/-15 (n=100) p=0.134 Holm=0.268
+  go2     p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5    +12/-6 (n=100) p=0.238 Holm=0.238
+  champ2  dwa                                        +8/-39 (n=100) p=5.54e-06 Holm=2.22e-05
+  champ2  mppi                                       +6/-32 (n=100) p=2.43e-05 Holm=7.3e-05
+  champ2  mppi:ppl=32                                +9/-25 (n=100) p=0.00904 Holm=0.0181
+  champ2  p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5    +11/-12 (n=100) p=1 Holm=1
+  champ   dwa                                        +5/-43 (n=100) p=1.37e-08 Holm=5.47e-08
+  champ   mppi                                       +5/-38 (n=100) p=2.5e-07 Holm=7.5e-07
+  champ   mppi:ppl=32                                +10/-28 (n=100) p=0.0051 Holm=0.0102
+  champ   p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5    +16/-13 (n=100) p=0.711 Holm=0.711
+
+Kendall tau thu hang 5 cau hinh (ti le thanh cong):
+  isaac vs go2: +1.00
+  isaac vs champ2: +0.80
+  isaac vs champ: +1.00
+
+Dong y tung luot isaac vs fastsim (cung the gioi, cung cau hinh): ty le ket qua giong nhau
+  go2: 364/500 = 73%
+  champ2: 319/500 = 64%
+  champ: 315/500 = 63%
+
+Va bang chan vs khung 2D (Isaac):
+  mppi                                       va khung 35, cham chan 7 (chi chan, khung khong va 2), nga 1; thanh cong 2D 64 -> tinh ca chan 62
+  mppi:ppl=32                                va khung 28, cham chan 8 (chi chan, khung khong va 1), nga 0; thanh cong 2D 72 -> tinh ca chan 71
+  dwa                                        va khung 36, cham chan 8 (chi chan, khung khong va 4), nga 1; thanh cong 2D 63 -> tinh ca chan 59
+  mppi~t3~nl:ppl=100;ppl_len=0.5             va khung 20, cham chan 2 (chi chan, khung khong va 0), nga 5; thanh cong 2D 75 -> tinh ca chan 75
+  p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5    va khung 10, cham chan 0 (chi chan, khung khong va 0), nga 6; thanh cong 2D 83 -> tinh ca chan 83

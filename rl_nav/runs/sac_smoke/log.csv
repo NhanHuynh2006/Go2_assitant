@@ -1,0 +1,2 @@
+iter,steps,density,success,collision,timeout,col_static,col_ped,alpha,fps,wall_s
+200,51200,1.0,0.815,0.185,0.0,0.133,0.052,0.0951,2266,22

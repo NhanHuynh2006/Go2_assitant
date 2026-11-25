@@ -1,0 +1,2 @@
+trial,config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s,stops,stop_s,mean_v,osc,at_fault,col_info
+1,prism,clutter:slalom_coc,clutter,go2,0,0,0.376,,0.0,8.69,13.87,52.8,0.303,0.236,,,35,0,0.51,2,4.0,0.264,11,,

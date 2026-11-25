@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+1,warehouse,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.162,52.2,20.97,,,0.34,0.417,{},7.4
+1,warehouse,5,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.198,60.0,24.49,,,0.371,0.981,{},8.7
+1,warehouse,5,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.164,60.5,25.2,,,0.34,0.429,{},9.6
+1,warehouse,5,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.187,56.5,23.3,,,0.334,0.412,{},8.0
+1,warehouse,5,0,mppi:ppl=32,1,ok,0.192,57.7,22.06,,,0.365,0.652,{},6.8
+1,warehouse,5,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.188,62.0,25.79,,,0.431,0.225,{},6.3
+1,warehouse,5,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.13,58.2,24.13,,,0.354,0.941,{},8.4
+20,office,2,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.163,49.4,19.23,,,0.31,0.607,{},5.6
+20,office,2,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.177,66.2,26.43,,,0.343,0.668,{},5.8
+20,office,2,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.167,49.4,19.65,,,0.041,0.108,{},4.4
+20,office,2,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.198,64.6,25.1,,,0.302,0.687,{},5.8
+20,office,2,0,mppi:ppl=32,1,ok,0.177,56.4,21.41,,,0.387,0.604,{},4.1
+20,office,2,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.171,76.7,30.51,,,0.198,0.026,{},4.6
+20,office,2,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.182,69.9,27.49,,,0.376,0.64,{},6.4

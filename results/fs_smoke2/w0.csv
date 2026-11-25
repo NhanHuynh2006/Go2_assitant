@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+clutter:slalom_coc,clutter,0,0,mppi~v1,1,ok,0.192,36.6,8.71,,,0.243,9.0,{},4.5
+clutter:slalom_coc,clutter,0,0,dwa~v1,1,ok,0.188,28.8,8.55,,,0.221,9.0,{},3.1
+clutter:slalom_coc,clutter,0,0,apmppi_multi~v1,1,ok,0.196,40.7,8.88,,,0.318,9.0,{},9.0
+clutter:slalom_coc,clutter,0,0,prism@ppo+sac~v1,1,ok,0.191,31.0,8.64,,,0.318,9.0,{},7.7
+clutter:slalom_coc,clutter,0,0,rl@td3~v1,1,ok,0.161,25.1,8.6,,,0.155,9.0,{},0.7
+clutter:slalom_coc,clutter,0,0,rl_safe~v1,1,ok,0.174,24.2,8.64,,,0.261,9.0,{},3.3
+clutter:slalom_coc,clutter,0,0,pp~v1,1,ok,0.2,52.7,8.52,,,0.267,9.0,{},1.8
+clutter:slalom_coc,clutter,0,0,mppi,1,ok,0.199,34.8,8.71,,,0.201,9.0,{},4.2
+clutter:slalom_coc,clutter,0,0,dwa,1,ok,0.186,27.8,8.45,,,0.214,9.0,{},3.0
+clutter:slalom_coc,clutter,0,0,apmppi_multi,1,ok,0.199,39.2,8.99,,,0.318,9.0,{},8.8
+clutter:slalom_coc,clutter,0,0,prism@ppo+sac,1,ok,0.185,29.7,8.62,,,0.305,9.0,{},7.2
+clutter:slalom_coc,clutter,0,0,p2,1,ok,0.194,35.4,8.71,,,0.255,9.0,{},4.4
+clutter:slalom_coc,clutter,0,0,p2@ppo+sac,1,ok,0.186,31.3,8.79,,,0.291,9.0,{},7.5
+clutter:slalom_coc,clutter,0,0,p2-evade,1,ok,0.196,35.5,8.71,,,0.206,9.0,{},3.8

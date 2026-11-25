@@ -42,22 +42,12 @@ class AsyncExecutor:
     # ---------- API cong khai ----------
     def enqueue(self, actions):
         """Day 1 chuoi action vao hang doi (khong chan vong chinh)."""
-        if actions:
-            self.robot.abort.clear()      # lenh moi cua nguoi dung -> bo trang thai huy
         for a in actions or []:
             self.q.put(a)
 
     def emergency_stop(self):
-        """Uu tien tuyet doi: huy lenh DANG CHAY + xoa hang doi + dung robot ngay.
-
-        Thu tu quan trong:
-          1) bat co abort TRUOC -> vong move() dang gui van toc tu thoat trong ~0.1s
-             (truoc day chi StopMove 1 lan roi bi vong move de len -> robot di het lenh)
-          2) StopMove gui tu LUONG RIENG -> khong xep hang sau loi goi dang ket
-             (vd Dance1 chan toi khi nhay xong)
-        """
+        """Uu tien tuyet doi: xoa hang doi + dung robot ngay."""
         with self.lock:
-            self.robot.abort.set()
             # vet sach hang doi (KHONG goi task_done — tranh dem 2 lan voi worker)
             try:
                 while True:
@@ -65,19 +55,13 @@ class AsyncExecutor:
             except queue.Empty:
                 pass
             self.guard.trigger_emergency()
-            threading.Thread(target=self._force_stop, daemon=True).start()
+            try:
+                self.robot.stop()
+            except Exception:
+                pass
             self.on_event("\U0001F6D1 EMERGENCY STOP — da xoa hang doi va dung robot")
-            if self._busy:
-                self.on_event("   ⏳ neu dang NHAY (dong tac dong goi) robot se ket thuc"
-                              " dong tac roi moi dung han — firmware khong cho cat giua chung")
             # cho phep lenh moi sau khi da dung
             self.guard.clear_emergency()
-
-    def _force_stop(self):
-        try:
-            self.robot.stop()
-        except Exception:
-            pass
 
     def is_busy(self):
         return self._busy or not self.q.empty()

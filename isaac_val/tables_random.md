@@ -1,0 +1,42 @@
+
+### flat_random so doan 1135
+| vx 0.05-0.2 | gain, CI95, n: (0.38, 0.31, 0.44, 127) |
+| vx .2-.4 | gain, CI95, n: (0.76, 0.72, 0.79, 174) |
+| vx .4-.6 | gain, CI95, n: (0.97, 0.95, 0.97, 185) |
+| vx lui | gain, CI95, n: (0.4, 0.31, 0.5, 104) |
+| vy |.05-.15| | gain, CI95, n: (0.41, 0.33, 0.5, 145) |
+| vy |.15-.3| | gain, CI95, n: (0.69, 0.64, 0.74, 262) |
+| wz tai cho | gain, CI95, n: (0.04, 0.03, 0.06, 136) |
+| wz khi |v|>.25 | gain, CI95, n: (0.79, 0.73, 0.85, 176) |
+| du doan ly tuong (v=lenh) | 1 s: [0.057, 0.125, 0.122, 400] | 2 s: [0.111, 0.233, 0.224, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ (giua) | 1 s: [0.076, 0.179, 0.114, 400] | 2 s: [0.14, 0.321, 0.201, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim go2/DYN (giua) | 1 s: [0.064, 0.142, 0.122, 400] | 2 s: [0.123, 0.248, 0.214, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ2 (giua) | 1 s: [0.085, 0.194, 0.106, 400] | 2 s: [0.162, 0.362, 0.19, 400] |  (tb m, p90 m, yaw rad, n)
+
+### rough_random so doan 1134
+| vx 0.05-0.2 | gain, CI95, n: (0.58, 0.5, 0.66, 127) |
+| vx .2-.4 | gain, CI95, n: (0.83, 0.78, 0.87, 174) |
+| vx .4-.6 | gain, CI95, n: (0.99, 0.97, 1.0, 185) |
+| vx lui | gain, CI95, n: (0.69, 0.63, 0.74, 104) |
+| vy |.05-.15| | gain, CI95, n: (0.47, 0.38, 0.58, 145) |
+| vy |.15-.3| | gain, CI95, n: (0.72, 0.68, 0.76, 262) |
+| wz tai cho | gain, CI95, n: (0.71, 0.66, 0.75, 136) |
+| wz khi |v|>.25 | gain, CI95, n: (0.94, 0.9, 0.97, 176) |
+| du doan ly tuong (v=lenh) | 1 s: [0.065, 0.136, 0.069, 400] | 2 s: [0.116, 0.227, 0.118, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ (giua) | 1 s: [0.081, 0.187, 0.085, 400] | 2 s: [0.153, 0.322, 0.144, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim go2/DYN (giua) | 1 s: [0.061, 0.118, 0.084, 400] | 2 s: [0.109, 0.198, 0.14, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ2 (giua) | 1 s: [0.096, 0.203, 0.084, 400] | 2 s: [0.184, 0.374, 0.141, 400] |  (tb m, p90 m, yaw rad, n)
+
+### CHAMP Gazebo so doan 150
+| vx 0.05-0.2 | gain, CI95, n: (0.61, 0.41, 0.76, 15) |
+| vx .2-.4 | gain, CI95, n: (0.8, 0.76, 0.85, 21) |
+| vx .4-.6 | gain, CI95, n: (0.52, 0.49, 0.55, 27) |
+| vx lui | gain, CI95, n: (1.1, 0.88, 1.32, 12) |
+| vy |.05-.15| | gain, CI95, n: (1.09, 0.92, 1.29, 20) |
+| vy |.15-.3| | gain, CI95, n: (1.0, 0.93, 1.05, 37) |
+| wz tai cho | gain, CI95, n: (0.73, 0.63, 0.86, 10) |
+| wz khi |v|>.25 | gain, CI95, n: (0.81, 0.71, 0.97, 21) |
+| du doan ly tuong (v=lenh) | 1 s: [0.091, 0.232, 0.117, 400] | 2 s: [0.176, 0.407, 0.183, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ (giua) | 1 s: [0.052, 0.094, 0.129, 400] | 2 s: [0.097, 0.166, 0.184, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim go2/DYN (giua) | 1 s: [0.08, 0.175, 0.121, 400] | 2 s: [0.159, 0.351, 0.179, 400] |  (tb m, p90 m, yaw rad, n)
+| du doan fastsim champ2 (giua) | 1 s: [0.04, 0.074, 0.088, 400] | 2 s: [0.064, 0.119, 0.122, 400] |  (tb m, p90 m, yaw rad, n)

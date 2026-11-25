@@ -1,0 +1,15 @@
+setting,planner,implementation,mean_ms,median_ms,p99_or_p95_ms,max_ms,source
+"fastsim (dev laptop, seed 93)",C1,numpy,8.6,,10.9,14.6,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",B1,numpy,8.7,,12.1,12.8,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",PGIF*,numpy,9.1,,11.1,11.9,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",DRA*,numpy,9.2,,12.7,204.5,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",B0,numpy,9.2,,11.2,11.4,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)","C3 (C1 + occlusion, rejected)",numpy,10.7,,14.1,14.6,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",C1,C,7.5,,9.6,13.2,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",B1,C,7.4,,9.5,10.3,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",PGIF*,C,8.5,,10.7,11.2,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",DRA*,C,6.9,,8.6,215.5,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)",B0,C,6.4,,7.8,7.9,research/algo_timing.txt
+"fastsim (dev laptop, seed 93)","C3 (C1 + occlusion, rejected)",C,7.0,,9.8,10.9,research/algo_timing.txt
+"Gazebo smoke test (DEV worlds, 40 episodes)",C1,C (fast.so),,7.5,15.4 (p95),48,"results/GZ_smoke/smoke_check.txt; n=16343 steps; cmd_vel period p50 0.101 s, p95 0.108 s"
+"Gazebo smoke test (DEV worlds, 40 episodes)",B1,C (fast.so),,6.8,13.0 (p95),63,"results/GZ_smoke/smoke_check.txt; n=18509 steps; cmd_vel period p50 0.101 s, p95 0.107 s"

@@ -1,0 +1,259 @@
+audit/PREREG_TEST.md: FAILED
+sha256sum: WARNING: 1 computed checksum did NOT match
+19:39:27 g1 SHA LECH -> dung
+19:41:02 g1 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 597745 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+19:51:07 g1 eval ma 0, 8/8 luot, 641 s
+19:51:43 g3 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 603484 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+20:06:48 g3 eval ma 0, 8/8 luot, 941 s
+20:07:24 g5 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 611555 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+20:22:01 g5 eval ma 0, 8/8 luot, 913 s
+20:22:36 g7 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 619589 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+20:36:39 g7 eval ma 0, 8/8 luot, 878 s
+20:37:14 g9 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 628162 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+20:46:16 g9 eval ma 0, 8/8 luot, 577 s
+20:46:51 g11 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 634355 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+21:00:55 g11 eval ma 0, 8/8 luot, 879 s
+21:01:30 g13 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 642521 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+21:15:34 g13 eval ma 0, 8/8 luot, 879 s
+21:16:10 g15 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 650995 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+21:27:53 g15 eval ma 0, 8/8 luot, 739 s
+21:28:29 g17 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 657816 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+21:38:25 g17 eval ma 0, 8/8 luot, 631 s
+21:39:00 g19 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 663709 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+21:59:28 g19 eval ma 0, 8/8 luot, 1263 s
+22:00:03 g21 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 674698 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+22:17:04 g21 eval ma 0, 8/8 luot, 1056 s
+22:17:39 g23 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 683845 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+22:33:19 g23 eval ma 0, 8/8 luot, 975 s
+22:33:55 g25 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 692882 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+22:57:44 g25 eval ma 0, 8/8 luot, 1465 s
+22:58:19 g27 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 705896 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+23:09:25 g27 eval ma 0, 8/8 luot, 701 s
+23:10:00 g29 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 712320 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+23:22:01 g29 eval ma 0, 8/8 luot, 756 s
+23:22:36 g31 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 719338 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+23:36:05 g31 eval ma 0, 8/8 luot, 844 s
+23:36:40 g33 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 727326 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+23:46:14 g33 eval ma 0, 8/8 luot, 609 s
+23:46:49 g35 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 732911 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+00:02:14 g35 eval ma 0, 8/8 luot, 960 s
+00:02:49 g37 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 742937 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+00:16:10 g37 eval ma 0, 8/8 luot, 836 s
+00:16:46 g39 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 753402 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+00:25:29 g39 eval ma 0, 8/8 luot, 559 s
+00:26:04 g41 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 761035 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+00:39:04 g41 eval ma 0, 8/8 luot, 815 s
+00:39:39 g43 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 770383 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+00:51:24 g43 eval ma 0, 8/8 luot, 740 s
+00:51:59 g45 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 778296 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+01:01:11 g45 eval ma 0, 8/8 luot, 587 s
+01:01:46 g47 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 784775 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+01:13:42 g47 eval ma 0, 8/8 luot, 751 s
+01:14:17 g49 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 792448 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+01:28:44 g49 eval ma 0, 8/8 luot, 902 s
+01:29:19 g51 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 802565 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+01:39:57 g51 eval ma 0, 8/8 luot, 673 s
+01:40:32 g53 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 810030 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+01:52:29 g53 eval ma 0, 8/8 luot, 752 s
+01:53:04 g55 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 818173 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+02:02:42 g55 eval ma 0, 8/8 luot, 613 s
+02:03:17 g57 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 825105 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+02:15:45 g57 eval ma 0, 8/8 luot, 783 s
+02:16:20 g59 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 833661 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+02:26:33 g59 eval ma 0, 8/8 luot, 648 s
+02:27:08 g61 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 840954 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+02:38:54 g61 eval ma 0, 8/8 luot, 741 s
+02:39:29 g63 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 849116 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+02:51:35 g63 eval ma 0, 8/8 luot, 761 s
+02:52:10 g65 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 857546 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+03:00:57 g65 eval ma 0, 8/8 luot, 562 s
+03:01:32 g67 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 864062 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+03:12:42 g67 eval ma 0, 8/8 luot, 705 s
+03:13:17 g69 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 871929 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+03:24:23 g69 eval ma 0, 8/8 luot, 701 s
+03:24:58 g71 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 879715 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+03:36:53 g71 eval ma 0, 8/8 luot, 750 s
+03:37:28 g73 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 887880 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+03:48:17 g73 eval ma 0, 8/8 luot, 684 s
+03:48:52 g75 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 895499 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+04:02:16 g75 eval ma 0, 8/8 luot, 839 s
+04:02:51 g77 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 904418 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+04:15:58 g77 eval ma 0, 8/8 luot, 822 s
+04:16:33 g79 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 913214 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+04:30:18 g79 eval ma 0, 8/8 luot, 860 s
+04:30:53 g81 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 922802 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+04:41:37 g81 eval ma 0, 8/8 luot, 679 s
+04:42:13 g83 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 930421 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+04:56:03 g83 eval ma 0, 8/8 luot, 866 s
+04:56:38 g85 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 939681 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+05:08:35 g85 eval ma 0, 8/8 luot, 752 s
+05:09:11 g87 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 947342 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+05:18:41 g87 eval ma 0, 8/8 luot, 606 s
+05:19:16 g89 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 954010 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+05:28:49 g89 eval ma 0, 8/8 luot, 608 s
+05:29:24 g91 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 960829 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+05:38:38 g91 eval ma 0, 8/8 luot, 589 s
+05:39:13 g93 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 967027 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+05:52:26 g93 eval ma 0, 8/8 luot, 828 s
+05:53:01 g95 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 976067 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+06:02:49 g95 eval ma 0, 8/8 luot, 623 s
+06:03:24 g97 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 982938 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+06:17:47 g97 eval ma 0, 8/8 luot, 898 s
+06:18:22 g99 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 992409 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+06:39:30 g99 eval ma 0, 8/8 luot, 1303 s
+06:40:05 g101 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1032786 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+06:50:31 g101 eval ma 0, 8/8 luot, 661 s
+06:51:06 g103 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1040015 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+07:01:21 g103 eval ma 0, 8/8 luot, 650 s
+07:01:56 g105 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1047227 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+07:12:41 g105 eval ma 0, 8/8 luot, 680 s
+07:13:16 g107 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1054814 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+07:24:58 g107 eval ma 0, 8/8 luot, 737 s
+07:25:33 g109 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1062842 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+07:35:17 g109 eval ma 0, 8/8 luot, 619 s
+07:35:52 g111 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1069901 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+07:47:06 g111 eval ma 0, 8/8 luot, 709 s
+07:47:41 g113 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1077763 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:01:03 g113 eval ma 0, 8/8 luot, 837 s
+08:01:38 g115 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1086717 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:11:48 g115 eval ma 0, 8/8 luot, 645 s
+08:12:23 g117 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1093845 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:22:59 g117 eval ma 0, 8/8 luot, 671 s
+08:23:35 g119 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1101270 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:32:41 g119 eval ma 0, 8/8 luot, 582 s
+08:33:16 g121 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1107491 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:43:36 g121 eval ma 0, 8/8 luot, 655 s
+08:44:12 g123 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1115103 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+08:54:28 g123 eval ma 0, 8/8 luot, 652 s
+08:55:03 g125 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1122035 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+09:05:58 g125 eval ma 0, 8/8 luot, 690 s
+09:06:34 g127 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1130021 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+09:16:58 g127 eval ma 0, 8/8 luot, 660 s
+09:17:33 g129 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1137475 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+09:30:19 g129 eval ma 0, 8/8 luot, 801 s
+09:30:54 g131 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1146521 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+09:42:07 g131 eval ma 0, 8/8 luot, 708 s
+09:42:42 g133 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1154973 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+09:54:08 g133 eval ma 0, 8/8 luot, 721 s
+09:54:43 g135 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1162965 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+10:05:24 g135 eval ma 0, 8/8 luot, 676 s
+10:06:00 g137 sim len sau 36 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1170328 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+10:17:02 g137 eval ma 0, 8/8 luot, 698 s
+10:17:37 g139 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1178087 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+10:30:27 g139 eval ma 0, 8/8 luot, 805 s
+10:31:02 g141 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1186917 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+10:41:18 g141 eval ma 0, 8/8 luot, 651 s
+10:41:53 g143 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1194113 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+10:51:37 g143 eval ma 0, 8/8 luot, 619 s
+10:52:12 g145 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1200950 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+11:06:48 g145 eval ma 0, 8/8 luot, 911 s
+11:07:23 g147 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1210591 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+11:16:58 g147 eval ma 0, 8/8 luot, 610 s
+11:17:33 g149 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1217366 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+11:29:11 g149 eval ma 0, 8/8 luot, 733 s
+11:29:47 g151 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1224939 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+11:43:14 g151 eval ma 0, 8/8 luot, 842 s
+11:43:49 g153 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1234366 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+11:53:55 g153 eval ma 0, 8/8 luot, 641 s
+11:54:30 g155 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1241185 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:08:41 g155 eval ma 0, 8/8 luot, 886 s
+12:09:16 g157 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1251125 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:21:51 g157 eval ma 0, 8/8 luot, 790 s
+12:22:26 g159 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1258317 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:34:33 g159 eval ma 0, 8/8 luot, 762 s
+12:35:08 g161 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1265556 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:46:04 g161 eval ma 0, 8/8 luot, 691 s
+12:46:39 g163 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1272141 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:58:38 g163 eval ma 0, 8/8 luot, 754 s
+12:59:13 g165 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1278782 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+13:10:54 g165 eval ma 0, 8/8 luot, 736 s
+13:11:29 g167 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1285351 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+13:29:00 g167 eval ma 0, 8/8 luot, 1086 s
+13:29:35 g169 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 1293933 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+13:44:16 g169 eval ma 0, 8/8 luot, 916 s
+GROUPSDONE gzs1

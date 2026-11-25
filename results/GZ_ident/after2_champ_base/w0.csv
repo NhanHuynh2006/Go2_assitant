@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+0,office,2,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.184,70.9,27.24,,,0.203,1.196,{},8.9
+0,office,2,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.204,70.6,26.87,,,0.145,1.024,{},9.2
+0,office,2,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.159,68.4,25.88,,,0.176,0.528,{},9.8
+0,office,2,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.169,68.5,26.01,,,0.279,0.66,{},8.6
+0,office,2,0,mppi:ppl=32,1,ok,0.205,71.1,24.95,,,0.296,0.666,{},7.7
+0,office,2,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.181,66.6,25.28,,,0.15,0.426,{},6.0
+0,office,2,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.172,69.8,26.86,,,0.139,1.006,{},9.0
+2,lobby,4,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.187,56.9,22.51,,,0.234,0.778,{},6.2
+2,lobby,4,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.172,87.5,35.85,,,0.187,0.711,{},7.9
+2,lobby,4,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.185,54.6,21.99,,,0.33,0.499,{},5.2
+2,lobby,4,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.213,55.6,22.71,,,0.353,0.835,{},5.0
+2,lobby,4,0,mppi:ppl=32,0,va nguoi,5.695,36.2,14.11,person,0,0.44,-0.078,"{""kind"": ""person"", ""t"": 36.2, ""robot_in"": 0.02, ""person_in"": 0.88, ""robot_v"": 0.05, ""wz"": -0.26, ""bearing"": -19, ""at_fault"": 0, ""lead"": {""0.5"": {""d"": 1.01, ""miss"": 0.2, ""ahead"": 1.0, ""trk"": 1, ""sp"": 0.91, ""rv"": 0.33, ""wall"": 1.04}, ""1.0"": {""d"": 1.47, ""miss"": 0.44, ""ahead"": 1.4, ""trk"": 1, ""sp"": 0.9, ""rv"": 0.19, ""wall"": 1.12}, ""1.5"": {""d"": 1.83, ""miss"": 0.12, ""ahead"": 1.82, ""trk"": 1, ""sp"": 0.89, ""rv"": 0.25, ""wall"": 1.12}, ""2.0"": {""d"": 2.13, ""miss"": 0.04, ""ahead"": 2.13, ""trk"": 1, ""sp"": 0.92, ""rv"": 0.34, ""wall"": 0.93}, ""3.0"": {""d"": 3.09, ""miss"": 0.23, ""ahead"": 3.08, ""trk"": 1, ""sp"": 0.82, ""rv"": 0.34, ""wall"": 0.92}}, ""distracted"": 1}",2.9
+2,lobby,4,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.207,48.6,20.43,,,0.139,0.109,{},3.2
+2,lobby,4,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.163,70.8,29.03,,,0.152,0.559,{},6.5

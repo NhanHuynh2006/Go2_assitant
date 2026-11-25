@@ -1,0 +1,5 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+0,office,2,0,mppi,1,ok,0.178,53.4,22.24,,,0.229,0.131,{},9.3
+1,warehouse,5,0,mppi,1,ok,0.192,37.5,16.23,,,0.553,0.363,{},6.6
+2,lobby,4,0,mppi,1,ok,0.187,40.2,17.92,,,0.498,0.447,{},6.8
+3,corridor,2,0,mppi,0,va nguoi,10.144,16.4,6.36,person,1,0.304,-0.01,"{""kind"": ""person"", ""t"": 16.4, ""robot_in"": 0.54, ""person_in"": 0.68, ""robot_v"": 0.6, ""wz"": 0.96, ""bearing"": 45, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 1.19, ""miss"": 0.36, ""ahead"": 1.13, ""trk"": 1, ""sp"": 1.04, ""rv"": 0.55, ""wall"": 0.53}, ""1.0"": {""d"": 1.87, ""miss"": 0.33, ""ahead"": 1.84, ""trk"": 1, ""sp"": 1.03, ""rv"": 0.46, ""wall"": 0.56}, ""1.5"": {""d"": 2.57, ""miss"": 0.64, ""ahead"": 2.49, ""trk"": 1, ""sp"": 1.05, ""rv"": 0.44, ""wall"": 0.55}, ""2.0"": {""d"": 3.28, ""miss"": 0.98, ""ahead"": 3.13, ""trk"": 1, ""sp"": 1.01, ""rv"": 0.5, ""wall"": 0.59}, ""3.0"": {""d"": 4.61, ""miss"": 0.82, ""ahead"": 4.54, ""trk"": 0, ""sp"": 1.01, ""rv"": 0.2, ""wall"": 0.74}}, ""distracted"": 1}",2.7

@@ -1,0 +1,62 @@
+{
+ "argv": [
+  "eval_sim.py",
+  "--suite",
+  "gztest",
+  "--tasks",
+  "results/gztest/tasks.json",
+  "--group",
+  "10",
+  "--trials",
+  "1",
+  "--configs",
+  "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",
+  "mppi~t3~nl:ppl=100;ppl_len=0.5",
+  "--out",
+  "results/GZ_TEST/s0/g010",
+  "--sha-file",
+  "results/frozen_C1/SHA256SUMS_TEST",
+  "--allow-test"
+ ],
+ "start": "2026-11-24 20:49:39",
+ "world": "voice_office",
+ "suite": "gztest",
+ "configs": [
+  "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",
+  "mppi~t3~nl:ppl=100;ppl_len=0.5"
+ ],
+ "trials": 1,
+ "tasks": [
+  "gz:clutter_100059",
+  "gz:office_100060",
+  "gz:corridor_100063",
+  "gz:clutter_100064"
+ ],
+ "sha_file": "results/frozen_C1/SHA256SUMS_TEST",
+ "sha": {
+  "fastsim.py": true,
+  "nav_local.py": true,
+  "nav_prism2.py": true,
+  "robot_ros.py": true,
+  "movers.py": true,
+  "crowd_models.py": true,
+  "oracle_ctrl.py": true,
+  "dyn/go2_params.py": true,
+  "dyn/go2_params.yaml": true,
+  "isaac_val/cmd_shaper.py": true,
+  "research/algo_fast/fast.c": true,
+  "research/algo_fast/fast.so": true,
+  "eval_sim.py": true,
+  "audit/gen_gazebo_test.py": true,
+  "audit/PREREG_TEST.md": true,
+  "research/gz/run_gz_groups.sh": true
+ },
+ "sha_eval_sim": "9041a6773b53d8c35b6fa8f97994d97dfa037badb889270e7510275c6fb71d3f",
+ "env": {
+  "GZ_PARTITION": "gzs0",
+  "ROS_DOMAIN_ID": "41",
+  "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+  "OPENBLAS_NUM_THREADS": "1",
+  "GOVOICE_FAST_SO": "/home/nhanhuynh/Documents/Go2_assitant/research/algo_fast/fast.so"
+ }
+}

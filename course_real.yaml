@@ -1,0 +1,22 @@
+# Duong chay so sanh tren Go2 THAT (eval_real.py). Dich TUONG DOI tu vach xuat phat
+# (x toi, y trai, m). Dung bang thung carton ~0.5 x 0.5 x 0.5 m.
+- name: thang_trong          # khong vat: kiem tra bam duong, toc do
+  goal: [5.0, 0.0]
+- name: 1_thung_giua         # 1 thung giua duong o x = 2.5 m
+  goal: [5.0, 0.0]
+- name: so_le_4_thung        # 4 thung zic-zac o x = 1.5, 2.5, 3.5, 4.5 (y = +-0.45), khe ~0.9 m
+  goal: [6.0, 0.0]
+- name: hanh_lang_hep        # 2 hang thung tao hanh lang rong 0.9 m, dai 3 m
+  goal: [5.0, 0.0]
+- name: nguoi_cat_ngang      # 1 nguoi di cat ngang o x ~ 3 m khi cho toi gan
+  goal: [6.0, 0.0]
+  people: true
+- name: nguoi_doi_dau        # 1 nguoi di nguoc chieu tren cung duong
+  goal: [6.0, 0.0]
+  people: true
+# --- them cho bai B (PRISM): vung mu cua LiDAR L1 (< 0.5 m) va camera chi nhin phia truoc
+- name: vat_thap_12cm        # thanh go/bac cao 12 cm ngang duong o x = 2.5 m
+  goal: [5.0, 0.0]
+- name: nguoi_tu_hong        # nguoi di cheo tu phia sau-ben hong, vuot qua cho luc no dang di
+  goal: [6.0, 0.0]
+  people: true

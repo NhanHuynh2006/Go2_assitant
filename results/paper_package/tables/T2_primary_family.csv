@@ -1,0 +1,7 @@
+baseline,n_worlds,C1_pct,base_pct,diff_pts,ci_lo,ci_hi,p_perm,p_holm,conclusion,family
+B1,1000,85.26,78.3,6.96,5.68,8.26,4.9999750001249995e-06,1.4999925000374999e-05,C1 better,primary (Holm 3)
+PGIF*,1000,85.26,80.28,4.98,3.76,6.24,4.9999750001249995e-06,1.4999925000374999e-05,C1 better,primary (Holm 3)
+DRA*,1000,85.26,82.6,2.66,1.52,3.8,4.9999750001249995e-06,1.4999925000374999e-05,C1 better,primary (Holm 3)
+B0,1000,85.26,68.9,16.36,14.92,17.8,,,descriptive only (not pre-registered for inference),secondary
+DWA,1000,85.26,79.06,6.2,4.9195,7.5,,,descriptive only (not pre-registered for inference),secondary
+log-MPPI,1000,85.26,77.86,7.4,6.1,8.68,,,descriptive only (not pre-registered for inference),secondary

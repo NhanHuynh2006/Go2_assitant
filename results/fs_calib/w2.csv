@@ -1,0 +1,37 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+clutter:qua_khoi_so_le,clutter,0,0,mppi~v1,0,ket,2.232,49.0,15.11,,,0.355,9.0,{},14.0
+clutter:qua_khoi_so_le,clutter,0,0,dwa~v1,1,ok,0.204,84.5,29.48,,,0.102,9.0,{},20.6
+clutter:qua_khoi_so_le,clutter,0,0,log_mppi~v1,1,ok,0.187,37.2,12.67,,,0.159,9.0,{},9.6
+clutter:qua_khoi_so_le,clutter,0,0,apmppi_multi~v1,1,ok,0.185,40.6,14.2,,,0.183,9.0,{},19.4
+clutter:qua_khoi_so_le,clutter,0,0,prism@ppo+sac~v1,1,ok,0.167,40.4,13.94,,,0.203,9.0,{},18.5
+clutter:qua_khoi_so_le,clutter,0,0,prism_nounc@ppo+sac~v1,1,ok,0.17,33.4,12.29,,,0.19,9.0,{},15.9
+clutter:qua_khoi_so_le,clutter,0,0,prism_noprior~v1,0,ket,2.399,44.9,14.5,,,0.291,9.0,{},12.8
+clutter:qua_khoi_so_le,clutter,0,0,rl~v1,1,ok,0.159,31.8,13.2,,,0.057,9.0,{},2.4
+clutter:qua_khoi_so_le,clutter,0,0,rl@td3~v1,0,va vat,3.121,40.6,14.68,static,1,-0.024,9.0,"{""kind"": ""static"", ""t"": 40.6, ""robot_v"": 0.34, ""wz"": -0.1, ""at_fault"": 1}",2.7
+clutter:qua_khoi_so_le,clutter,0,0,rl@sac~v1,1,ok,0.164,39.4,13.59,,,0.087,9.0,{},2.7
+clutter:qua_khoi_so_le,clutter,0,0,rl_safe~v1,1,ok,0.183,35.1,14.18,,,0.118,9.0,{},8.7
+clutter:qua_khoi_so_le,clutter,0,0,pp~v1,1,ok,0.188,123.9,35.44,,,0.157,9.0,{},14.8
+clutter:bep_xa,clutter,0,2,mppi~v1,1,ok,0.171,77.5,27.26,,,0.212,9.0,{},18.9
+clutter:bep_xa,clutter,0,2,dwa~v1,1,ok,0.188,64.7,23.79,,,0.187,9.0,{},15.0
+clutter:bep_xa,clutter,0,2,log_mppi~v1,1,ok,0.201,73.3,25.48,,,0.19,9.0,{},20.4
+clutter:bep_xa,clutter,0,2,apmppi_multi~v1,1,ok,0.179,73.7,27.98,,,0.201,9.0,{},37.0
+clutter:bep_xa,clutter,0,2,prism@ppo+sac~v1,1,ok,0.157,84.6,32.01,,,0.192,9.0,{},43.1
+clutter:bep_xa,clutter,0,2,prism_nounc@ppo+sac~v1,1,ok,0.179,62.7,24.15,,,0.16,9.0,{},31.4
+clutter:bep_xa,clutter,0,2,prism_noprior~v1,1,ok,0.157,76.0,27.77,,,0.25,9.0,{},21.8
+clutter:bep_xa,clutter,0,2,rl~v1,1,ok,0.177,59.4,25.31,,,0.002,9.0,{},3.9
+clutter:bep_xa,clutter,0,2,rl@td3~v1,0,va vat,10.889,22.0,9.06,static,1,-0.003,9.0,"{""kind"": ""static"", ""t"": 22.0, ""robot_v"": 0.28, ""wz"": -0.55, ""at_fault"": 1}",1.7
+clutter:bep_xa,clutter,0,2,rl@sac~v1,1,ok,0.162,63.4,24.17,,,0.027,9.0,{},3.6
+clutter:bep_xa,clutter,0,2,rl_safe~v1,1,ok,0.159,66.5,27.32,,,0.174,9.0,{},12.5
+clutter:bep_xa,clutter,0,2,pp~v1,0,het gio,10.874,300.0,87.55,,,0.032,9.0,{},21.5
+crowd:sanh_8_nguoi,crowd,8,3,mppi~v1,0,va nguoi,11.92,8.8,3.3,person,1,0.756,-0.043,"{""kind"": ""person"", ""t"": 8.8, ""robot_in"": -0.1, ""person_in"": 0.4, ""robot_v"": 0.11, ""wz"": 0.76, ""bearing"": -19, ""at_fault"": 1}",2.1
+crowd:sanh_8_nguoi,crowd,8,3,dwa~v1,0,va nguoi,11.936,8.8,3.46,person,0,0.756,-0.001,"{""kind"": ""person"", ""t"": 8.8, ""robot_in"": 0.07, ""person_in"": 0.46, ""robot_v"": 0.08, ""wz"": 0.09, ""bearing"": -30, ""at_fault"": 0}",2.0
+crowd:sanh_8_nguoi,crowd,8,3,log_mppi~v1,0,va nguoi,12.055,8.9,3.38,person,1,0.756,-0.057,"{""kind"": ""person"", ""t"": 8.9, ""robot_in"": -0.05, ""person_in"": 0.47, ""robot_v"": 0.33, ""wz"": 0.85, ""bearing"": -26, ""at_fault"": 1}",2.1
+crowd:sanh_8_nguoi,crowd,8,3,apmppi_multi~v1,0,va nguoi,9.434,27.0,10.13,person,1,0.756,-0.093,"{""kind"": ""person"", ""t"": 27.0, ""robot_in"": 0.16, ""person_in"": 0.91, ""robot_v"": 0.21, ""wz"": -0.21, ""bearing"": -44, ""at_fault"": 1}",9.3
+crowd:sanh_8_nguoi,crowd,8,3,prism@ppo+sac~v1,0,va nguoi,7.29,33.8,12.71,person,1,0.756,-0.007,"{""kind"": ""person"", ""t"": 33.8, ""robot_in"": 0.2, ""person_in"": -0.33, ""robot_v"": 0.29, ""wz"": 0.37, ""bearing"": 39, ""at_fault"": 1}",12.3
+crowd:sanh_8_nguoi,crowd,8,3,prism_nounc@ppo+sac~v1,0,va nguoi,11.549,8.4,3.43,person,1,0.756,-0.036,"{""kind"": ""person"", ""t"": 8.4, ""robot_in"": 0.13, ""person_in"": 0.37, ""robot_v"": 0.13, ""wz"": -0.79, ""bearing"": -15, ""at_fault"": 1}",3.1
+crowd:sanh_8_nguoi,crowd,8,3,prism_noprior~v1,0,va nguoi,12.007,8.8,3.27,person,1,0.756,-0.001,"{""kind"": ""person"", ""t"": 8.8, ""robot_in"": 0.11, ""person_in"": 0.59, ""robot_v"": 0.12, ""wz"": 0.11, ""bearing"": -33, ""at_fault"": 1}",2.1
+crowd:sanh_8_nguoi,crowd,8,3,rl~v1,0,va nguoi,11.774,11.1,4.96,person,1,0.756,-0.022,"{""kind"": ""person"", ""t"": 11.1, ""robot_in"": -0.37, ""person_in"": 0.88, ""robot_v"": 0.42, ""wz"": 0.54, ""bearing"": -163, ""at_fault"": 1}",1.0
+crowd:sanh_8_nguoi,crowd,8,3,rl@td3~v1,0,va nguoi,11.58,8.4,3.72,person,1,0.73,-0.021,"{""kind"": ""person"", ""t"": 8.4, ""robot_in"": 0.05, ""person_in"": 0.34, ""robot_v"": 0.1, ""wz"": 0.41, ""bearing"": -4, ""at_fault"": 1}",0.8
+crowd:sanh_8_nguoi,crowd,8,3,rl@sac~v1,0,va nguoi,11.919,8.7,3.71,person,0,0.756,-0.001,"{""kind"": ""person"", ""t"": 8.7, ""robot_in"": -0.0, ""person_in"": 0.53, ""robot_v"": 0.04, ""wz"": 0.26, ""bearing"": 32, ""at_fault"": 0}",0.8
+crowd:sanh_8_nguoi,crowd,8,3,rl_safe~v1,0,va nguoi,10.645,18.0,7.5,person,0,0.446,-0.061,"{""kind"": ""person"", ""t"": 18.0, ""robot_in"": 0.01, ""person_in"": 0.94, ""robot_v"": 0.29, ""wz"": 0.1, ""bearing"": -104, ""at_fault"": 0}",4.0
+crowd:sanh_8_nguoi,crowd,8,3,pp~v1,0,va nguoi,11.681,21.7,5.97,person,0,0.496,-0.029,"{""kind"": ""person"", ""t"": 21.7, ""robot_in"": -0.0, ""person_in"": 0.22, ""robot_v"": 0.0, ""wz"": -0.0, ""bearing"": 148, ""at_fault"": 0}",2.7

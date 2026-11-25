@@ -1,0 +1,12 @@
+p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 numpy TB 8.6 ms, p99 10.9 ms, max 14.6
+mppi~t3~nl:ppl=100;ppl_len=0.5 numpy TB 8.7 ms, p99 12.1 ms, max 12.8
+pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 numpy TB 9.1 ms, p99 11.1 ms, max 11.9
+dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 numpy TB 9.2 ms, p99 12.7 ms, max 204.5
+mppi:ppl=32 numpy TB 9.2 ms, p99 11.2 ms, max 11.4
+p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03 numpy TB 10.7 ms, p99 14.1 ms, max 14.6
+p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 C TB 7.5 ms, p99 9.6 ms, max 13.2
+mppi~t3~nl:ppl=100;ppl_len=0.5 C TB 7.4 ms, p99 9.5 ms, max 10.3
+pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000 C TB 8.5 ms, p99 10.7 ms, max 11.2
+dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 C TB 6.9 ms, p99 8.6 ms, max 215.5
+mppi:ppl=32 C TB 6.4 ms, p99 7.8 ms, max 7.9
+p3+geo-haz+gcv+occ~t3~nl:ppl=32;ppl_len=0.5;w_occ=0.03 C TB 7.0 ms, p99 9.8 ms, max 10.9

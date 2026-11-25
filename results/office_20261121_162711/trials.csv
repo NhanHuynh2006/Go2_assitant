@@ -1,0 +1,2 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s,stops,stop_s,mean_v,osc,at_fault,col_info
+apmppi,clutter:qua_khoi_so_le,clutter,go2,1,0,0.102,,0.577,9.39,16.26,73.5,0.105,0.11,,,42,3,0.75,0,0.0,0.22,14,,

@@ -1,0 +1,45 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+6,warehouse,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.153,29.0,11.95,,,0.086,0.194,{},4.5
+6,warehouse,5,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.134,37.4,12.46,,,0.286,0.246,{},5.7
+14,clutter,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.144,29.3,12.04,,,0.694,0.69,{},4.4
+14,clutter,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.164,29.3,11.52,,,0.55,0.454,{},4.3
+25,office,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.185,55.7,20.38,,,0.293,0.301,{},9.0
+25,office,6,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.184,51.2,19.1,,,0.086,0.189,{},8.1
+35,office,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.146,60.9,23.71,,,0.133,0.179,{},9.5
+35,office,6,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,9.783,18.5,6.32,person,0,0.165,-0.012,"{""kind"": ""person"", ""t"": 18.5, ""robot_in"": -0.01, ""person_in"": 0.63, ""robot_v"": 0.03, ""wz"": 0.04, ""bearing"": 112, ""at_fault"": 0, ""lead"": {""0.5"": {""d"": 0.65, ""miss"": 0.32, ""ahead"": 0.56, ""trk"": 1, ""sp"": 0.76, ""rv"": 0.19, ""wall"": 0.46}, ""1.0"": {""d"": 0.91, ""miss"": 0.29, ""ahead"": 0.87, ""trk"": 1, ""sp"": 0.79, ""rv"": 0.31, ""wall"": 0.54}, ""1.5"": {""d"": 1.11, ""miss"": 0.32, ""ahead"": 1.06, ""trk"": 1, ""sp"": 0.76, ""rv"": 0.44, ""wall"": 0.67}, ""2.0"": {""d"": 1.29, ""miss"": 0.35, ""ahead"": 1.24, ""trk"": 1, ""sp"": 0.61, ""rv"": 0.38, ""wall"": 0.69}, ""3.0"": {""d"": 1.16, ""miss"": 9.0, ""ahead"": 0.0, ""trk"": 1, ""sp"": 0.0, ""rv"": 0.5, ""wall"": 0.71}}, ""distracted"": 1}",2.8
+48,corridor,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.171,32.3,13.64,,,0.52,0.358,{},4.2
+48,corridor,2,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,7.203,14.8,6.21,person,0,0.529,-0.01,"{""kind"": ""person"", ""t"": 14.8, ""robot_in"": -0.13, ""person_in"": 0.44, ""robot_v"": 0.17, ""wz"": -0.24, ""bearing"": 78, ""at_fault"": 0, ""lead"": {""0.5"": {""d"": 0.58, ""miss"": 0.26, ""ahead"": 0.52, ""trk"": 1, ""sp"": 0.83, ""rv"": 0.25, ""wall"": 2.17}, ""1.0"": {""d"": 0.84, ""miss"": 0.25, ""ahead"": 0.81, ""trk"": 1, ""sp"": 0.8, ""rv"": 0.24, ""wall"": 2.25}, ""1.5"": {""d"": 1.11, ""miss"": 0.24, ""ahead"": 1.09, ""trk"": 1, ""sp"": 0.8, ""rv"": 0.22, ""wall"": 2.32}, ""2.0"": {""d"": 1.41, ""miss"": 0.33, ""ahead"": 1.37, ""trk"": 1, ""sp"": 0.75, ""rv"": 0.19, ""wall"": 2.35}, ""3.0"": {""d"": 2.1, ""miss"": 0.65, ""ahead"": 2.0, ""trk"": 1, ""sp"": 0.44, ""rv"": 0.43, ""wall"": 2.15}}, ""distracted"": 1}",2.0
+71,warehouse,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.191,30.7,13.37,,,0.341,0.461,{},4.3
+71,warehouse,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.181,34.6,14.14,,,0.341,0.494,{},4.9
+81,warehouse,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.169,46.0,18.3,,,0.6,0.434,{},6.3
+81,warehouse,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.204,48.0,18.11,,,0.597,0.118,{},6.6
+93,corridor,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.191,30.3,12.72,,,0.321,0.628,{},4.3
+93,corridor,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.195,29.5,12.58,,,0.274,0.681,{},4.4
+107,lobby,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.182,27.4,11.76,,,0.566,1.697,{},3.4
+107,lobby,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.18,27.4,11.76,,,0.571,1.687,{},3.4
+118,corridor,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.17,51.4,18.68,,,0.191,0.301,{},6.5
+118,corridor,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.182,45.4,16.32,,,0.252,0.104,{},4.3
+129,clutter,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.186,47.8,18.13,,,0.378,0.491,{},5.0
+129,clutter,6,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.197,51.8,18.16,,,0.379,0.431,{},5.3
+148,corridor,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.181,59.6,22.14,,,0.306,0.375,{},6.0
+148,corridor,3,0,p3+geo-haz+gcv~ocf~nl,0,va nguoi,4.426,48.8,15.56,person,1,0.265,-0.006,"{""kind"": ""person"", ""t"": 48.8, ""robot_in"": -0.15, ""person_in"": 0.6, ""robot_v"": 0.23, ""wz"": 0.84, ""bearing"": -4, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.8, ""miss"": 0.28, ""ahead"": 0.75, ""trk"": 1, ""sp"": 0.71, ""rv"": 0.06, ""wall"": 0.61}, ""1.0"": {""d"": 1.14, ""miss"": 0.11, ""ahead"": 1.14, ""trk"": 1, ""sp"": 0.73, ""rv"": 0.12, ""wall"": 0.61}, ""1.5"": {""d"": 1.55, ""miss"": 0.17, ""ahead"": 1.54, ""trk"": 1, ""sp"": 0.72, ""rv"": 0.48, ""wall"": 0.62}, ""2.0"": {""d"": 1.99, ""miss"": 0.37, ""ahead"": 1.95, ""trk"": 1, ""sp"": 0.6, ""rv"": 0.45, ""wall"": 0.63}, ""3.0"": {""d"": 2.35, ""miss"": 9.0, ""ahead"": 0.0, ""trk"": 1, ""sp"": 0.0, ""rv"": 0.49, ""wall"": 0.73}}, ""distracted"": 1}",4.7
+12,lobby,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.182,37.6,14.36,,,0.232,0.577,{},6.0
+12,lobby,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.143,44.6,16.92,,,0.358,0.58,{},6.2
+25,office,6,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.195,110.3,35.78,,,0.143,0.236,{},19.7
+25,office,6,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,0,va vat,4.175,79.6,22.44,static,1,-0.003,0.359,"{""kind"": ""static"", ""t"": 79.6, ""robot_v"": 0.17, ""wz"": -0.9, ""at_fault"": 1}",9.9
+38,corridor,4,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.205,37.8,14.05,,,0.374,1.263,{},5.0
+38,corridor,4,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.199,38.5,14.23,,,0.355,1.121,{},4.6
+51,warehouse,5,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.167,111.1,37.46,,,0.176,0.152,{},15.0
+51,warehouse,5,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.191,36.4,14.45,,,0.35,0.493,{},3.9
+68,corridor,3,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.167,53.4,21.0,,,0.245,0.25,{},6.1
+68,corridor,3,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.181,48.9,18.34,,,0.186,0.647,{},5.7
+81,warehouse,3,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.2,49.0,20.92,,,0.393,0.806,{},7.3
+81,warehouse,3,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.2,53.7,19.62,,,0.296,0.731,{},7.1
+95,office,6,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.197,45.1,17.74,,,0.205,0.397,{},8.5
+95,office,6,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.2,62.7,19.97,,,0.189,0.254,{},9.4
+107,lobby,2,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.187,27.4,11.77,,,0.592,1.823,{},3.5
+107,lobby,2,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.185,27.4,11.78,,,0.588,1.824,{},2.6
+135,office,3,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.181,197.6,70.62,,,0.141,0.418,{},21.3
+135,office,3,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.178,81.8,32.58,,,0.179,0.585,{},6.4
+145,office,6,0,p3+geo-haz+gcv~oca~nl:ppl=32;ppl_len=0.5,1,ok,0.17,47.3,19.43,,,0.167,0.252,{},5.6
+145,office,6,0,p3+geo-haz+gcv~ocb~nl:ppl=32;ppl_len=0.5,1,ok,0.17,47.2,19.25,,,0.083,0.221,{},4.2

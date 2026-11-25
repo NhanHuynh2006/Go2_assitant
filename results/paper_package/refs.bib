@@ -1,0 +1,260 @@
+% refs.bib -- GoVoice manuscript. Every DOI below was resolved through the Crossref API and every arXiv ID through the
+% arXiv API on 2026-11-25 (agent PAPER); titles/authors/pages copied from those records. "readlevel" is a private field:
+% full = method+experiments read; abstract = abstract/metadata only. Remove the field before submission if the style complains.
+
+% ---------------------------------------------------------------- MPPI and sampling-based MPC
+@article{williams2018itmpc,
+  author  = {Williams, Grady and Drews, Paul and Goldfain, Brian and Rehg, James M. and Theodorou, Evangelos A.},
+  title   = {Information-Theoretic Model Predictive Control: Theory and Applications to Autonomous Driving},
+  journal = {IEEE Transactions on Robotics}, year = {2018}, volume = {34}, number = {6}, pages = {1603--1622},
+  doi     = {10.1109/TRO.2018.2865891}, readlevel = {metadata}
+}
+@article{mohamed2022logmppi,
+  author  = {Mohamed, Ihab S. and Yin, Kai and Liu, Lantao},
+  title   = {Autonomous Navigation of {AGVs} in Unknown Cluttered Environments: Log-{MPPI} Control Strategy},
+  journal = {IEEE Robotics and Automation Letters}, year = {2022}, volume = {7}, number = {4}, pages = {10240--10247},
+  doi     = {10.1109/LRA.2022.3192772}, eprint = {2203.16599}, archivePrefix = {arXiv}, readlevel = {abstract}
+}
+@article{trevisan2024biased,
+  author  = {Trevisan, Elia and Alonso-Mora, Javier},
+  title   = {Biased-{MPPI}: Informing Sampling-Based Model Predictive Control by Fusing Ancillary Controllers},
+  journal = {IEEE Robotics and Automation Letters}, year = {2024}, volume = {9}, number = {6}, pages = {5871--5878},
+  doi     = {10.1109/LRA.2024.3397083}, eprint = {2401.09241}, archivePrefix = {arXiv}, readlevel = {full}
+}
+@article{macenski2023desks,
+  author  = {Macenski, Steve and Moore, Tom and Lu, David V. and Merzlyakov, Alexey and Ferguson, Michael},
+  title   = {From the Desks of {ROS} Maintainers: A Survey of Modern \& Capable Mobile Robotics Algorithms in the Robot Operating System 2},
+  journal = {Robotics and Autonomous Systems}, year = {2023}, volume = {168}, pages = {104493},
+  doi     = {10.1016/j.robot.2023.104493}, eprint = {2307.15236}, archivePrefix = {arXiv}, readlevel = {code}
+}
+@inproceedings{jung2025contingency,
+  author    = {Jung, Leonard and Estornell, Alexander and Everett, Michael},
+  title     = {Contingency Constrained Planning with {MPPI} within {MPPI}},
+  booktitle = {Proceedings of the 7th Annual Learning for Dynamics \& Control Conference},
+  series    = {Proceedings of Machine Learning Research}, volume = {283}, pages = {869--880}, year = {2025},
+  eprint    = {2412.09777}, archivePrefix = {arXiv}, readlevel = {full-method}
+}
+@misc{srirangam2026scrampi,
+  author = {Srirangam, Raj Harshit and Jung, Leonard and Poola, Rohith and Everett, Michael},
+  title  = {{SCRAMPPI}: Contingency-Constrained Planning using {Hamilton-Jacobi} Reachability},
+  year   = {2026}, eprint = {2603.26995}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {full}
+}
+@article{borquez2025dualguard,
+  author  = {Borquez, Javier and Raus, Luke and Ciftci, Yusuf Umut and Bansal, Somil},
+  title   = {{DualGuard MPPI}: Safe and Performant Optimal Control by Combining Sampling-Based {MPC} and {Hamilton-Jacobi} Reachability},
+  journal = {IEEE Robotics and Automation Letters}, year = {2025}, volume = {10}, number = {7}, pages = {6944--6951},
+  doi     = {10.1109/LRA.2025.3568686}, eprint = {2502.01924}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+
+% ---------------------------------------------------------------- MPPI / MPC among pedestrians
+@misc{mundane2026pgif,
+  author = {Mundane, Chinmay},
+  title  = {{MPPI} Planning with {Gaussian}-Based Human Cost Function for Social Navigation},
+  year   = {2026}, eprint = {2608.08323}, archivePrefix = {arXiv},
+  note   = {Preprint; to appear in Springer Proceedings in Advanced Robotics (HFR 2026)}, readlevel = {full}
+}
+@inproceedings{trevisan2025dramppi,
+  author    = {Trevisan, Elia and Mustafa, Khaled A. and Notten, Godert and Wang, Xinwei and Alonso-Mora, Javier},
+  title     = {Dynamic Risk-Aware {MPPI} for Mobile Robots in Crowds via Efficient {Monte Carlo} Approximations},
+  booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, year = {2025}, pages = {313--320},
+  doi       = {10.1109/IROS60139.2025.11246822}, eprint = {2506.21205}, archivePrefix = {arXiv}, readlevel = {full}
+}
+@article{mohamed2025c2u,
+  author  = {Mohamed, Ihab S. and Ali, Mahmoud and Liu, Lantao},
+  title   = {Chance-Constrained Sampling-Based {MPC} for Collision Avoidance in Uncertain Dynamic Environments},
+  journal = {IEEE Robotics and Automation Letters}, year = {2025}, volume = {10}, number = {7}, pages = {7492--7499},
+  doi     = {10.1109/LRA.2025.3576071}, eprint = {2501.08520}, archivePrefix = {arXiv}, readlevel = {full}
+}
+@misc{parwana2024riskmppi,
+  author = {Parwana, Hardik and Black, Mitchell and Hoxha, Bardh and Okamoto, Hideki and Fainekos, Georgios and Prokhorov, Danil and Panagou, Dimitra},
+  title  = {Risk-aware {MPPI} for Stochastic Hybrid Systems},
+  year   = {2024}, eprint = {2411.09198}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {full-to-simulation}
+}
+@inproceedings{long2025mppips,
+  author    = {Long, Juncen and Bardaro, Gianluca and Matteucci, Matteo},
+  title     = {An {MPPI}-based Navigation Algorithm Using Trajectory Prediction and Pedestrian States with Hybrid Warning Policy},
+  booktitle = {2025 IEEE International Conference on Robotics and Biomimetics (ROBIO)}, year = {2025}, pages = {1030--1037},
+  doi       = {10.1109/ROBIO66223.2025.11376335}, readlevel = {abstract}
+}
+@misc{guo2026coconav,
+  author = {Guo, Cheng and Ni, Mingzhe and Liang, Zheng and Ling, Yihu and Hu, Yuan and Caprio, Michele and Pucci, Daniele and Pan, Wei},
+  title  = {{CoCoNav}: Conformal Control for Safe Robot Navigation in Crowds},
+  year   = {2026}, eprint = {2608.07751}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {partial}
+}
+
+% ---------------------------------------------------------------- safety filters, reachability, pursuit-evasion
+@misc{derajic2026cncbf,
+  author = {Deraji{\'c}, Bojan and Bernhard, Sebastian and H{\"o}nig, Wolfgang},
+  title  = {{CN-CBF}: Composite Neural Control Barrier Function for Robot Navigation in Dynamic Environments},
+  year   = {2026}, eprint = {2603.06921}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {full}
+}
+@misc{derajic2026thesis,
+  author = {Deraji{\'c}, Bojan},
+  title  = {Learning Reachability-Based Safety Representations for Real-Time Robot Navigation in Unknown and Dynamic Environments},
+  year   = {2026}, eprint = {2610.16522}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+@misc{kim2026plcbf,
+  author = {Kim, Taekyung and Okamoto, Hideki and Hoxha, Bardh and Fainekos, Georgios and Panagou, Dimitra},
+  title  = {Policy Library {CBF}: Finite-Horizon Safety at Runtime via Parallel Rollouts},
+  year   = {2026}, eprint = {2605.16588}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {partial}
+}
+@article{malone2017hybrid,
+  author  = {Malone, Nick and Chiang, Hao-Tien and Lesser, Kendra and Oishi, Meeko and Tapia, Lydia},
+  title   = {Hybrid Dynamic Moving Obstacle Avoidance Using a Stochastic Reachable Set-Based Potential Field},
+  journal = {IEEE Transactions on Robotics}, year = {2017}, volume = {33}, number = {5}, pages = {1124--1138},
+  doi     = {10.1109/TRO.2017.2705034}, readlevel = {abstract}
+}
+@book{isaacs1965differential,
+  author    = {Isaacs, Rufus},
+  title     = {Differential Games: A Mathematical Theory with Applications to Warfare and Pursuit, Control and Optimization},
+  publisher = {John Wiley \& Sons}, address = {New York}, year = {1965}, readlevel = {not read (cited for the game definition only)}
+}
+@article{pachter2019classical,
+  author  = {Pachter, Meir and Coates, Sean},
+  title   = {The Classical Homicidal Chauffeur Game},
+  journal = {Dynamic Games and Applications}, year = {2019}, volume = {9}, number = {3}, pages = {800--850},
+  doi     = {10.1007/s13235-018-0264-8}, readlevel = {metadata only; NOT read}
+}
+@inproceedings{bopardikar2007cooperative,
+  author    = {Bopardikar, Shaunak D. and Bullo, Francesco and Hespanha, Jo{\~a}o P.},
+  title     = {A Cooperative Homicidal Chauffeur Game},
+  booktitle = {Proc. 46th IEEE Conference on Decision and Control (CDC)}, year = {2007}, pages = {4857--4862},
+  doi       = {10.1109/CDC.2007.4434251},
+  readlevel = {full text read 25/11/2026 (author PDF, web.ece.ucsb.edu/~hespanha/published/2007e_MultiChauffeurs.pdf); Eq. (2) restates Isaacs' single-pursuer evasion condition 1/rho = sqrt(1-g^2)+g*arcsin(g)-1 with capture radius c=1}
+}
+
+% ---------------------------------------------------------------- body shape, legged robots, dynamics
+@article{gonon2021reactive,
+  author  = {Gonon, David J. and Paez-Granados, Diego and Billard, Aude},
+  title   = {Reactive Navigation in Crowds for Non-Holonomic Robots With Convex Bounding Shape},
+  journal = {IEEE Robotics and Automation Letters}, year = {2021}, volume = {6}, number = {3}, pages = {4728--4735},
+  doi     = {10.1109/LRA.2021.3068660}, readlevel = {abstract}
+}
+@inproceedings{zhang2024anisotropy,
+  author    = {Zhang, Wentao and Xu, Shaohang and Cai, Peiyuan and Zhu, Lijun},
+  title     = {Agile and Safe Trajectory Planning for Quadruped Navigation with Motion Anisotropy Awareness},
+  booktitle = {2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, year = {2024}, pages = {8839--8846},
+  doi       = {10.1109/IROS58592.2024.10803105}, eprint = {2403.10101}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+@inproceedings{he2024abs,
+  author    = {He, Tairan and Zhang, Chong and Xiao, Wenli and He, Guanqi and Liu, Changliu and Shi, Guanya},
+  title     = {Agile But Safe: Learning Collision-Free High-Speed Legged Locomotion},
+  booktitle = {Robotics: Science and Systems (RSS)}, year = {2024}, eprint = {2401.17583}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+@inproceedings{yun2025safe,
+  author    = {Yun, Kai S. and Chen, Rui and Dunaway, Chase and Dolan, John M. and Liu, Changliu},
+  title     = {Safe Control of Quadruped in Varying Dynamics via Safety Index Adaptation},
+  booktitle = {2025 IEEE International Conference on Robotics and Automation (ICRA)}, year = {2025},
+  doi       = {10.1109/ICRA55743.2025.11127362}, eprint = {2409.09882}, archivePrefix = {arXiv}, readlevel = {relevant table (via DYN)}
+}
+@misc{mei2024pwc,
+  author = {Mei, Zhiting and Dixit, Anushri and Booker, Meghan and Zhou, Emily and Storey-Matsutani, Mariko and Ren, Allen Z. and Shorinwa, Ola and Majumdar, Anirudha},
+  title  = {Perceive With Confidence: Statistical Safety Assurances for Navigation with Learning-Based Perception},
+  year   = {2024}, eprint = {2403.08185}, archivePrefix = {arXiv}, readlevel = {appendix (via DYN)}
+}
+
+% ---------------------------------------------------------------- crowd navigation (learning) and evaluation
+@inproceedings{trautman2010unfreezing,
+  author    = {Trautman, Peter and Krause, Andreas},
+  title     = {Unfreezing the Robot: Navigation in Dense, Interacting Crowds},
+  booktitle = {2010 IEEE/RSJ International Conference on Intelligent Robots and Systems}, year = {2010}, pages = {797--803},
+  doi       = {10.1109/IROS.2010.5654369}, readlevel = {metadata}
+}
+@inproceedings{chen2019crowd,
+  author    = {Chen, Changan and Liu, Yuejiang and Kreiss, Sven and Alahi, Alexandre},
+  title     = {Crowd-Robot Interaction: Crowd-Aware Robot Navigation With Attention-Based Deep Reinforcement Learning},
+  booktitle = {2019 International Conference on Robotics and Automation (ICRA)}, year = {2019}, pages = {6015--6022},
+  doi       = {10.1109/ICRA.2019.8794134}, readlevel = {code}
+}
+@article{xie2023drlvo,
+  author  = {Xie, Zhanteng and Dames, Philip},
+  title   = {{DRL-VO}: Learning to Navigate Through Crowded Dynamic Scenes Using Velocity Obstacles},
+  journal = {IEEE Transactions on Robotics}, year = {2023}, volume = {39}, number = {4}, pages = {2700--2719},
+  doi     = {10.1109/TRO.2023.3257549}, readlevel = {partial (Sec. IV-C4)}
+}
+@article{liu2026height,
+  author  = {Liu, Shuijing and Xia, Haochen and Cheraghi Pouria, Fatemeh and Hong, Kaiwen and Chakraborty, Neeloy and Hu, Zichao and Biswas, Joydeep and Driggs-Campbell, Katherine},
+  title   = {{HEIGHT}: Heterogeneous Interaction Graph Transformer for Robot Navigation in Crowded and Constrained Environments},
+  journal = {IEEE Transactions on Automation Science and Engineering}, year = {2026}, volume = {23}, pages = {1211--1230},
+  doi     = {10.1109/TASE.2025.3646588}, eprint = {2411.12150}, archivePrefix = {arXiv}, readlevel = {partial (Sec. V-C4)}
+}
+@misc{wang2026video,
+  author = {Wang, Jiaming and Nguyen, Duc Thang and Chen, Jizhuo and Shcherbyna, Volodymyr and Liu, Diwen and Shen, Zhengcheng and Soh, Harold},
+  title  = {Learning Social Navigation from Internet Videos in the Policy State Space},
+  year   = {2026}, eprint = {2609.37476}, archivePrefix = {arXiv}, note = {Preprint}, readlevel = {partial}
+}
+@article{francis2025principles,
+  author  = {Francis, Anthony and P{\'e}rez-D'Arpino, Claudia and Li, Chengshu and Xia, Fei and Alahi, Alexandre and Alami, Rachid and Bera, Aniket and Biswas, Abhijat and others},
+  title   = {Principles and Guidelines for Evaluating Social Robot Navigation Algorithms},
+  journal = {ACM Transactions on Human-Robot Interaction}, year = {2025}, volume = {14}, number = {2}, pages = {1--65},
+  doi     = {10.1145/3700599}, eprint = {2306.16740}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+@misc{poddar2023crowd,
+  author = {Poddar, Sriyash and Mavrogiannis, Christoforos and Srinivasa, Siddhartha S.},
+  title  = {From Crowd Motion Prediction to Robot Navigation in Crowds},
+  year   = {2023}, eprint = {2303.01424}, archivePrefix = {arXiv}, readlevel = {partial}
+}
+
+% ---------------------------------------------------------------- pedestrian models, data, prediction
+@article{helbing1995social,
+  author  = {Helbing, Dirk and Moln{\'a}r, P{\'e}ter},
+  title   = {Social Force Model for Pedestrian Dynamics},
+  journal = {Physical Review E}, year = {1995}, volume = {51}, number = {5}, pages = {4282--4286},
+  doi     = {10.1103/PhysRevE.51.4282}, readlevel = {metadata (model form NOT yet checked against our helb implementation)}
+}
+@article{rudenko2020thor,
+  author  = {Rudenko, Andrey and Kucner, Tomasz P. and Swaminathan, Chittaranjan S. and Chadalavada, Ravi T. and Arras, Kai O. and Lilienthal, Achim J.},
+  title   = {{TH{\"O}R}: Human-Robot Navigation Data Collection and Accurate Motion Trajectories Dataset},
+  journal = {IEEE Robotics and Automation Letters}, year = {2020}, volume = {5}, number = {2}, pages = {676--682},
+  doi     = {10.1109/LRA.2020.2965416}, readlevel = {dataset used (Zenodo 3382145, CC BY 4.0)}
+}
+@article{scholler2020cvm,
+  author  = {Sch{\"o}ller, Christoph and Aravantinos, Vincent and Lay, Florian and Knoll, Alois},
+  title   = {What the Constant Velocity Model Can Teach Us About Pedestrian Motion Prediction},
+  journal = {IEEE Robotics and Automation Letters}, year = {2020}, volume = {5}, number = {2}, pages = {1696--1703},
+  doi     = {10.1109/LRA.2020.2969925}, readlevel = {code}
+}
+@article{kalman1960,
+  author  = {Kalman, R. E.},
+  title   = {A New Approach to Linear Filtering and Prediction Problems},
+  journal = {Journal of Basic Engineering}, year = {1960}, volume = {82}, number = {1}, pages = {35--45},
+  doi     = {10.1115/1.3662552}
+}
+
+% ---------------------------------------------------------------- simulators
+@article{mittal2023orbit,
+  author  = {Mittal, Mayank and Yu, Calvin and Yu, Qinxi and Liu, Jingzhou and Rudin, Nikita and Hoeller, David and Yuan, Jia Lin and Singh, Ritvik and others},
+  title   = {Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments},
+  journal = {IEEE Robotics and Automation Letters}, year = {2023}, volume = {8}, number = {6}, pages = {3740--3747},
+  doi     = {10.1109/LRA.2023.3270034}
+}
+@misc{nvidia2025isaaclab,
+  author = {{NVIDIA} and Mittal, Mayank and Roth, Pascal and Tigue, James and Richard, Antoine and Zhang, Octi and Du, Peter and Serrano-Mu{\~n}oz, Antonio and Yao, Xinjie and others},
+  title  = {Isaac Lab: A {GPU}-Accelerated Simulation Framework for Multi-Modal Robot Learning},
+  year   = {2025}, eprint = {2511.04831}, archivePrefix = {arXiv}
+}
+@misc{champ,
+  author = {{CHAMP contributors}},
+  title  = {{CHAMP}: Quadruped Controller ({ROS} package)},
+  howpublished = {\url{https://github.com/chvmp/champ}}, note = {Software. Used as a vendored copy with local modifications (champ\_base) inside the authors' simulation workspace, commit fa59abf (25/11/2026); the upstream commit it was forked from is not recorded in that copy}
+}
+
+% ---------------------------------------------------------------- statistics
+@article{wilson1927,
+  author  = {Wilson, Edwin B.},
+  title   = {Probable Inference, the Law of Succession, and Statistical Inference},
+  journal = {Journal of the American Statistical Association}, year = {1927}, volume = {22}, number = {158}, pages = {209--212},
+  doi     = {10.1080/01621459.1927.10502953}
+}
+@article{mcnemar1947,
+  author  = {McNemar, Quinn},
+  title   = {Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages},
+  journal = {Psychometrika}, year = {1947}, volume = {12}, number = {2}, pages = {153--157},
+  doi     = {10.1007/BF02295996}
+}
+@article{holm1979,
+  author  = {Holm, Sture},
+  title   = {A Simple Sequentially Rejective Multiple Test Procedure},
+  journal = {Scandinavian Journal of Statistics}, year = {1979}, volume = {6}, number = {2}, pages = {65--70},
+  note    = {No DOI; JSTOR 4615733 (not re-checked online)}
+}

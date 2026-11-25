@@ -1,0 +1,2 @@
+12:14:09 sim gzs0 san sang
+research/gz/run_smoke.sh: line 25: 439181 Killed                     env GZ_PARTITION=$1 ROS_DOMAIN_ID=$2 setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$3" > "$ROOT/$OUT/simlog/sim_$1.log" 2>&1

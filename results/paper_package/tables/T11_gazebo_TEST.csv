@@ -1,0 +1,8 @@
+config,success,n,pct,wilson_lo,wilson_hi,person_coll,static_coll,stuck_other,timeout,at_fault,mean_time_success_s
+C1,549,680,80.74,77.6,83.52,122,1,7,1,54,64.09
+B1,447,680,65.74,62.09,69.21,199,12,16,6,89,74.78
+DRA*,238,340,70.0,64.93,74.63,,,,,,
+
+primary,C1_only,149,B1_only,47,p_mcnemar,1.487323182382367e-13
+fastsim_same_worlds,champ_base,C1-B1_fastsim,8.38,agree_C1,76.5,agree_B1,65.4
+fastsim_same_worlds,champ2_base,C1-B1_fastsim,12.21,agree_C1,76.5,agree_B1,65.7

@@ -1,0 +1,88 @@
+# go2_params.yaml - dong hoc van toc Go2 THAT o lop lenh SportClient.Move(vx, vy, wz).  2026-11-22, agent DYN
+# co:  do_that   = do tu ban ghi cua chinh con cho nay (dyn/analyze_bags.py, LiDAR OS1 lam moc)
+#      gian_tiep = suy tu ghi chu/so do cu, KHONG kiem lai duoc
+#      tai_lieu  = nguoi khac do / nha san xuat noi (Go2 khac, Go1, firmware khac)
+#      gia_dinh  = chua ai do tren con nay
+# CANH BAO: khong ban ghi nao co LENH -> gain, bao hoa, tre, tau, gia toc theo lenh CHUA NHAN DANG DUOC.
+#           Chay HUONG_DAN_DO.md de thay cac dong gia_dinh/tai_lieu. Moi so deu co sai so; khong co so "tuyet doi dung".
+
+odom:                                   # rt/utlidar/robot_odom, /go2/odom
+  scale_true_over_raw: {c: 1.215, lo: 1.19, hi: 1.24, flag: do_that, src: "lab2 1.2148 [1.213,1.218] (n=208 cua so thang, odom tho); yard 1.19 x 1.0276 [1.023,1.034] = 1.223 [1.217,1.230] (n=160) (CI bootstrap 95 % tung ban ghi; hai ban ghi lech 0.7 %)"}
+  scale_by_true_speed: {"0.3": 1.17, "0.5": 1.205, "0.7": 1.21, "0.9": 1.22, "1.15": 1.225, flag: do_that, src: "hai ban ghi gop, cua so 1.5 s; +-0.05 o 0.3 m/s (n=26)"}
+  residual_scale_after_x1.19: {c: 1.025, lo: 0.98, hi: 1.04, flag: do_that, src: "bridge --odom-scale 1.19 con thieu ~2-3 %; o ~0.3 m/s thi ~1.0"}
+  yaw_scale_lidar_over_odom: {c: 1.002, lo: 0.99, hi: 1.015, flag: do_that, src: "cua so quay >0.4 rad, n=11+12"}
+  twist_frame: {v: "than (body)", flag: do_that, src: "twist ~ 0.97-1.02 x vi phan vi tri trong he than; tuong quan voi he odom ~0"}
+  rate_hz: {c: 45, flag: do_that, src: "sau bridge: 43-46 Hz, khe p99 47-56 ms, max 92-115 ms; tho 150 Hz"}
+  lag_vs_imu_s: {c: 0.0, lo: -0.01, hi: 0.005, flag: do_that}
+  glitch: {v: "~1-2 % cua so 1.5 s lech >15 % (hau het khi quay gat)", flag: do_that}
+lidar_os1:
+  lag_vs_imu_s: {c: 0.045, lo: 0.03, hi: 0.06, flag: do_that, src: "tuong quan cheo toc do quay; chua gom truyen/nhan o may khac"}
+  stamp_jitter_s: {c: 0.05, hi: 0.15, flag: do_that, src: "khoang cach 2 moc lien tiep 0.02-0.3 s trong khi OS1 quet 10 Hz: moc la luc NHAN, nen lay gio cam bien"}
+  frame_loss: {c: 0.055, lo: 0.05, hi: 0.13, flag: do_that}
+  mount_yaw_residual_deg: {c: 2.3, lo: 2.0, hi: 2.6, flag: do_that, src: "huong di do bang LiDAR lech +2.3 do so voi odom (ca 2 ban ghi). Hoac gan OS1 sai ~2 do, hoac cho di hoi cheo: CHUA tach duoc"}
+
+command_response:                       # quan trong nhat, gan nhu CHUA do
+  gain_x:   {c: 0.95, lo: 0.75, hi: 1.20, flag: gian_tiep, src: "12/9: lenh 0.45-0.55 -> 0.43 m/s odom THO -> ~0.52 that (gain 0.94-1.15); neu 0.43 do bang LiDAR thi 0.78-0.96. Go1 Vicon 0.93 (PwC)"}
+  gain_y:   {c: 0.95, lo: 0.70, hi: 1.20, flag: tai_lieu, src: "Go1 Vicon 1.17 (PwC, arXiv 2403.08185 phu luc)"}
+  gain_w:   {c: 0.90, lo: 0.65, hi: 1.10, flag: tai_lieu, src: "Go2 OptiTrack 0.71/0.69/0.66 voi 0/3.5/5.9 kg, kich thich hinh sin 1.75 rad/s nen GOM suy giam do tre (arXiv 2409.09882 Table I)"}
+  back_x:   {c: 1.0, lo: 0.8, hi: 1.2, flag: gia_dinh}
+  sat_x:    {c: 3.0, lo: 1.5, hi: 3.8, flag: tai_lieu, src: "khong thay bao hoa toi 1.4 m/s (dieu khien tay, do_that). Nha san xuat EDU 3.7; Move [-2.5,3.8]. Khac CHAMP (0.29)"}
+  sat_y:    {c: 1.0, lo: 0.5, hi: 1.0, flag: tai_lieu, src: "Move vy [-1,1]; ban ghi chi co |vy| p99 ~0.1 m/s"}
+  sat_w:    {c: 3.0, lo: 1.5, hi: 4.0, flag: tai_lieu, src: "Move vyaw [-4,4]; ban ghi dat 1.9 rad/s"}
+  deadband_x: {c: 0.0, lo: 0.0, hi: 0.08, flag: gia_dinh}
+  delay_s:  {c: 0.10, lo: 0.04, hi: 0.20, flag: gia_dinh, src: "chua co so do; bo dam gui 50 Hz + DDS ~ms + chu ky buoc ~0.2-0.3 s"}
+  tau_x_stop: {c: 0.28, lo: 0.20, hi: 0.32, flag: do_that, src: "CAN TREN: 7 lan nha can remote, v0 0.32-1.13 m/s, v=v0 exp(-t/tau): trung vi 0.30, 6/7 trong 0.20-0.32 (1 lan 0.78 = nguoi nha cham). Gom ca nguoi + loc remote; khong cho biet tre"}
+  stop_distance_over_v0_s: {c: 0.28, lo: 0.24, hi: 0.35, flag: do_that, src: "quang duong tu luc BAT DAU giam / v0 (6/7 lan); cong them v0*delay"}
+  tau_x:    {c: 0.28, lo: 0.15, hi: 0.45, flag: tai_lieu, src: "chan tren do_that o tren; Go1 Vicon 0.40; Go2 OptiTrack (tu suy dt/A) 0.41/0.30/0.28; ca hai KHONG tach tre -> tau+delay ~0.3-0.4"}
+  tau_y:    {c: 0.22, lo: 0.12, hi: 0.35, flag: tai_lieu, src: "Go1 0.25; Go2 (suy) 0.28/0.25/0.33, gom tre"}
+  tau_w:    {c: 0.15, lo: 0.06, hi: 0.30, flag: gia_dinh}
+  tau_plus_delay_x: {c: 0.38, lo: 0.25, hi: 0.50, flag: tai_lieu, src: "dung so nay de tinh quang duong phan ung: 0.35 m/s -> 0.13 m (0.09-0.18), 0.6 m/s -> 0.23 m (0.15-0.30) neu bac 1"}
+  acc_x:    {c: 2.0, lo: 1.2, hi: 3.5, flag: do_that, src: "CAN DUOI: |ax| p99 1.3-1.6 (loc 1 Hz), tb 0.6 s lon nhat 1.6 m/s2; nguoi lai nen khong biet tran"}
+  acc_y:    {c: 1.5, lo: 0.8, hi: 3.0, flag: gia_dinh}
+  acc_w:    {c: 5.0, lo: 2.5, hi: 8.0, flag: do_that, src: "CAN DUOI: p99 1.6-2.0, max 3.0-3.3 rad/s2 (loc 1 Hz)"}
+  cross_xoff_m: {c: 0.0, lo: -0.06, hi: 0.06, flag: gia_dinh, src: "ghep wz->vy do tam quay lech"}
+  payload:  {v: "OS1+Orin+nguon ~? kg lam doi gain/tau; arXiv 2409.09882: 0->5.9 kg doi he so gia toc +48 %", flag: tai_lieu}
+
+body_wobble:                            # >0.8 Hz, khi di thang >0.3 m/s; 2 ban ghi
+  pos_x_m: {c: 0.011, lo: 0.005, hi: 0.013, flag: do_that, src: "tich phan twist; co the lan rung moc thoi gian"}
+  pos_y_m: {c: 0.0045, lo: 0.003, hi: 0.007, flag: do_that, src: "odom 4.4 mm; LiDAR 10 Hz 6.9 mm (gom ~2 mm nhieu ICP + lay mau thua)"}
+  pos_z_m: {c: 0.003, flag: do_that}
+  yaw_rad: {c: 0.008, lo: 0.005, hi: 0.012, flag: do_that, src: "0.0073/0.0087 thang; 0.5-0.9 m/s 0.0095-0.014; khi quay 0.03 (gom chuyen dong that)"}
+  roll_pitch_rad: {c: [0.010, 0.011], flag: do_that}
+  gyro_xyz_rads: {c: [0.34, 0.26, 0.112], flag: do_that, src: "OS1 IMU 100 Hz; dinh pho gyro x 6.6-6.8, y 4.5-4.7, z 1-2 Hz"}
+  vel_y_ms: {c: 0.10, lo: 0.08, hi: 0.12, flag: do_that}
+  vel_x_ms: {c: 0.20, lo: 0.13, hi: 0.37, flag: do_that, src: "twist odom, gom nhieu uoc luong"}
+  fastsim_wob: {v: [0.011, 0.005, 0.009], src: "cho OU rho=exp(-h/0.15) cua fastsim: cho wz_std ~0.13, vy_std ~0.08 nhu do"}
+
+observed_envelope:                      # nguoi lai bang remote, KHONG phai gioi han robot
+  vx: {p50: "0.86 / 1.06", p95: "1.19 / 1.32", max: "1.27 / 1.64", unit: m/s, flag: do_that}
+  vy_abs_p99: {v: "0.09-0.12 m/s -> gan nhu KHONG co du lieu di ngang", flag: do_that}
+  wz: {p99: "~1.0-1.2", max: "1.78 / 1.90", unit: rad/s, flag: do_that}
+
+vendor:                                 # KHONG phai so do
+  sport_move: {vx: [-2.5, 3.8], vy: [-1.0, 1.0], vyaw: [-4.0, 4.0], hold_s: 1.0, filtered: false, flag: tai_lieu, conf: "thap-vua", src: "https://damodev.csdn.net/69782b327c1d88441d8fdca1.html (trang thu cap, chep interface V2.0; trang goc support.unitree.com render JS khong doc duoc)"}
+  speed_edu_ms: {c: 3.7, lab_max: 5.0, flag: tai_lieu, src: "https://www.unitree.com/go2"}
+  mass_kg: {c: 15, flag: tai_lieu, src: "unitree.com/go2 (ca pin, khong payload)"}
+  body_m: {standing: [0.70, 0.31, 0.40], src: "unitree.com/go2"}
+  urdf: {base_mass: 6.921, base_inertia: [0.02448, 0.098077, 0.107], hip: 0.678, thigh: 1.152, calf: 0.154, foot: "khong kiem", effort_hip_thigh: 23.7, effort_calf: 45.43, vel_hip_thigh: 30.1, vel_calf: 15.70, src: "https://raw.githubusercontent.com/unitreerobotics/unitree_ros/master/robots/go2_description/urdf/go2_description.urdf"}
+  rl_pd: {unitree_rl_gym: {kp: 20, kd: 0.5, action_scale: 0.25}, isaaclab: {kp: 25, kd: 0.5, effort: [23.7, 23.7, 45.43]}, note: "khong phai bo dieu khien SportClient -> chi de so"}
+  contradictions:
+    - "URDF tong 6.921 + 4*(0.678+1.152+0.154) = 14.9 kg ~ 15 kg trang chu (khop); IsaacLab/rl_gym dung kp 25/20 khac nhau"
+    - "vx toi da: Move 3.8 vs trang chu 3.7 (EDU) vs 2.5 (Air) vs 5.0 phong lab"
+    - "Tau+tre truc x ~0.3-0.4 s (Go1 Vicon, Go2 OptiTrack; dung that do duoc <=0.30 khong ke tre) so voi fastsim regime go2 cu 0.17-0.25 s: fastsim co the qua NHANH"
+    - "gain 80 % trong ghi chu cu do bang odom tho thieu ~18 % -> gan 100 % (gian tiep)"
+
+domain_randomization:                   # de xuat, uniform; chon rong hon CI tai lieu vi chua do
+  gain: {x: [0.75, 1.20], y: [0.70, 1.20], w: [0.65, 1.10]}
+  back: [0.85, 1.15]
+  vsat: [1.5, 3.5]
+  tau: {x: [0.15, 0.45], y: [0.12, 0.35], w: [0.06, 0.30]}
+  delay: [0.04, 0.20]
+  acc: {x: [1.2, 3.5], y: [0.8, 3.0], w: [2.5, 8.0]}
+  xoff: [-0.06, 0.06]
+  deadband_x: [0.0, 0.08]
+  wob_scale: [0.6, 1.6]                 # nhan voi body_wobble.fastsim_wob
+  odom_scale_error: [0.97, 1.06]        # ap vao odom da x1.19 (true/odom)
+  odom_yaw_scale: [0.99, 1.015]
+  lidar_delay: [0.03, 0.12]
+  lidar_stamp_jitter: 0.05

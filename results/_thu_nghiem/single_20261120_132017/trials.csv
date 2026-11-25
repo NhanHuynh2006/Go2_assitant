@@ -1,0 +1,6 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,replans,brakes,react_s
+full,safety:tuong,safety,go2,1,0,,,,,0.26,120.3,0.944,0.883,,729,729,
+full,safety:thung,safety,go2,1,0,,,,,0.09,80.3,0.533,0.503,,488,488,
+full,detour:thung_carton,detour,go2,0,0,3.004,,0.0,3.69,0.26,160.2,0.75,0.74,,970,970,
+full,detour:ban_tra,detour,go2,0,0,2.008,,0.0,3.67,0.13,120.3,0.434,0.34,,729,729,
+full,detour:vat_thap_12cm,detour,go2,0,0,2.003,,0.0,4.87,0.11,101.0,0.293,0.298,,613,612,

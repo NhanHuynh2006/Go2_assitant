@@ -1,0 +1,62 @@
+cau hinh | champ | champ2 | go2 | champ2h | go2h | gop
+p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | 297/356=83.4 [79-87] va 15.2 t65 | 279/356=78.4 [74-82] va 21.1 t69 | 329/356=92.4 [89-95] va 7.3 t48 | 302/356=84.8 [81-88] va 13.5 t68 | 328/356=92.1 [89-95] va 7.0 t48 | 1535/1780=86.2
+p3+geo-haz~t3~nl | 296/356=83.1 [79-87] va 15.7 t58 | 282/356=79.2 [75-83] va 19.7 t60 | 315/356=88.5 [85-91] va 11.5 t44 | 290/356=81.5 [77-85] va 16.6 t62 | 317/356=89.0 [85-92] va 10.4 t45 | 1500/1780=84.3
+mppi~t3~nl:ppl=100;ppl_len=0.5 | 281/356=78.9 [74-83] va 20.5 t74 | 252/356=70.8 [66-75] va 28.1 t83 | 306/356=86.0 [82-89] va 13.8 t58 | 278/356=78.1 [74-82] va 20.5 t88 | 316/356=88.8 [85-92] va 10.1 t58 | 1433/1780=80.5
+mppi~t3:ppl=100;ppl_len=0.5 | 249/356=69.9 [65-74] va 29.2 t88 | 239/356=67.1 [62-72] va 30.3 t101 | 296/356=83.1 [79-87] va 16.6 t57 | 271/356=76.1 [71-80] va 21.6 t101 | 314/356=88.2 [84-91] va 11.2 t59 | 1369/1780=76.9
+mppi:ppl=32 | 212/356=59.6 [54-65] va 40.4 t60 | 209/356=58.7 [54-64] va 40.4 t67 | 266/356=74.7 [70-79] va 25.3 t41 | 260/356=73.0 [68-77] va 26.4 t70 | 310/356=87.1 [83-90] va 12.6 t42 | 1257/1780=70.6
+dwa~t3~nl:ppl=100;ppl_len=0.3 | 274/356=77.0 [72-81] va 22.8 t56 | 259/356=72.8 [68-77] va 27.0 t63 | 292/356=82.0 [78-86] va 18.0 t44 | - | - | 825/1068=77.2
+log_mppi~t3~nl:ppl=100;ppl_len=0.5 | 268/356=75.3 [71-79] va 23.9 t74 | 254/356=71.3 [66-76] va 27.0 t83 | 303/356=85.1 [81-88] va 13.8 t55 | - | - | 825/1068=77.2
+
+Ho phep so: 52; tong dong LOG (ca AUDIT): 391
+p=4.1e-15 Holm=2.1e-13 Bonf(391)=1.6e-12 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ] n=356 +105/-20 (+23.9 diem)
+p=3.8e-14 Holm=1.9e-12 Bonf(391)=1.5e-11 p3+geo-haz~t3~nl vs mppi:ppl=32 [champ] n=356 +107/-23 (+23.6 diem)
+p=1.1e-12 Holm=5.6e-11 Bonf(391)=4.4e-10 p3+geo-haz~t3~nl vs mppi:ppl=32 [champ2] n=356 +92/-19 (+20.5 diem)
+p=5.1e-12 Holm=2.5e-10 Bonf(391)=2e-09 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ2] n=356 +89/-19 (+19.7 diem)
+p=1e-11 Holm=5e-10 Bonf(391)=4.1e-09 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [go2] n=356 +77/-14 (+17.7 diem)
+p=2.3e-08 Holm=1.1e-06 Bonf(391)=9e-06 p3+geo-haz~t3~nl vs mppi:ppl=32 [go2] n=356 +64/-15 (+13.8 diem)
+p=7.3e-07 Holm=3.3e-05 Bonf(391)=0.00028 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [champ] n=356 +71/-23 (+13.5 diem)
+p=2.5e-06 Holm=0.00011 Bonf(391)=0.00097 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [champ] n=356 +73/-26 (+13.2 diem)
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dwa~t3~nl:ppl=100;ppl_len=0.3 [GOP 356 the gioi] +7.5 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +7.5 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [GOP 356 the gioi] +15.6 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +9.3 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +5.7 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz~t3~nl vs mppi:ppl=32 [GOP 356 the gioi] +13.7 diem
+p=1e-05 Holm=0.00044 Bonf(391)=0.0039 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +7.4 diem
+p=1.1e-05 Holm=0.00044 Bonf(391)=0.0043 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [champ2h] n=356 +66/-24 (+11.8 diem)
+p=1.7e-05 Holm=0.00061 Bonf(391)=0.0066 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dwa~t3~nl:ppl=100;ppl_len=0.3 [go2] n=356 +55/-18 (+10.4 diem)
+p=3.3e-05 Holm=0.0011 Bonf(391)=0.013 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [champ2] n=356 +74/-31 (+12.1 diem)
+p=5.1e-05 Holm=0.0017 Bonf(391)=0.02 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [go2] n=356 +49/-16 (+9.3 diem)
+p=7.9e-05 Holm=0.0026 Bonf(391)=0.031 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [champ2] n=356 +70/-30 (+11.2 diem)
+p=8e-05 Holm=0.0026 Bonf(391)=0.031 p3+geo-haz~t3~nl vs dwa~t3~nl:ppl=100;ppl_len=0.3 [GOP 356 the gioi] +6.4 diem
+p=0.00023 Holm=0.0071 Bonf(391)=0.09 p3+geo-haz~t3~nl vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +6.4 diem
+p=0.00069 Holm=0.021 Bonf(391)=0.27 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [go2] n=356 +41/-15 (+7.3 diem)
+p=0.0015 Holm=0.044 Bonf(391)=0.59 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [champ2h] n=356 +61/-30 (+8.7 diem)
+p=0.0019 Holm=0.054 Bonf(391)=0.76 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [champ] n=356 +56/-27 (+8.1 diem)
+p=0.003 Holm=0.082 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [GOP 356 the gioi] +3.8 diem
+p=0.0032 Holm=0.083 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi:ppl=32 [champ2h] n=356 +64/-34 (+8.4 diem)
+p=0.0032 Holm=0.083 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2] n=356 +64/-34 (+8.4 diem)
+p=0.0034 Holm=0.083 Bonf(391)=1 p3+geo-haz~t3~nl vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [champ] n=356 +57/-29 (+7.9 diem)
+p=0.004 Holm=0.093 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2] n=356 +55/-28 (+7.6 diem)
+p=0.0052 Holm=0.11 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2] n=356 +43/-20 (+6.5 diem)
+p=0.0056 Holm=0.12 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2h] n=356 +47/-23 (+6.7 diem)
+p=0.0059 Holm=0.12 Bonf(391)=1 p3+geo-haz~t3~nl vs dwa~t3~nl:ppl=100;ppl_len=0.3 [go2] n=356 +44/-21 (+6.5 diem)
+p=0.0078 Holm=0.15 Bonf(391)=1 p3+geo-haz~t3~nl vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2] n=356 +66/-38 (+7.9 diem)
+p=0.011 Holm=0.19 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dwa~t3~nl:ppl=100;ppl_len=0.3 [champ] n=356 +49/-26 (+6.5 diem)
+p=0.018 Holm=0.3 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi:ppl=32 [go2h] n=356 +35/-17 (+5.1 diem)
+p=0.018 Holm=0.3 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2] n=356 +64/-39 (+7.0 diem)
+p=0.018 Holm=0.3 Bonf(391)=1 p3+geo-haz~t3~nl vs dwa~t3~nl:ppl=100;ppl_len=0.3 [champ2] n=356 +55/-32 (+6.5 diem)
+p=0.023 Holm=0.32 Bonf(391)=1 p3+geo-haz~t3~nl vs dwa~t3~nl:ppl=100;ppl_len=0.3 [champ] n=356 +54/-32 (+6.2 diem)
+p=0.029 Holm=0.38 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [go2] n=356 +44/-25 (+5.3 diem)
+p=0.054 Holm=0.65 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs dwa~t3~nl:ppl=100;ppl_len=0.3 [champ2] n=356 +59/-39 (+5.6 diem)
+p=0.059 Holm=0.65 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [champ2h] n=356 +55/-36 (+5.3 diem)
+p=0.07 Holm=0.7 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3:ppl=100;ppl_len=0.5 [go2h] n=356 +33/-19 (+3.9 diem)
+p=0.089 Holm=0.8 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ] n=356 +47/-31 (+4.5 diem)
+p=0.13 Holm=1 Bonf(391)=1 p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2h] n=356 +32/-20 (+3.4 diem)
+p=0.13 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ] n=356 +51/-36 (+4.2 diem)
+p=0.17 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs log_mppi~t3~nl:ppl=100;ppl_len=0.5 [go2] n=356 +38/-26 (+3.4 diem)
+p=0.22 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [champ2h] n=356 +46/-34 (+3.4 diem)
+p=0.29 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2] n=356 +33/-24 (+2.5 diem)
+p=0.42 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi:ppl=32 [go2h] n=356 +31/-24 (+2.0 diem)
+p=0.79 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3:ppl=100;ppl_len=0.5 [go2h] n=356 +31/-28 (+0.8 diem)
+p=1 Holm=1 Bonf(391)=1 p3+geo-haz~t3~nl vs mppi~t3~nl:ppl=100;ppl_len=0.5 [go2h] n=356 +31/-30 (+0.3 diem)

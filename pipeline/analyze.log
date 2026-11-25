@@ -1,0 +1,3 @@
+
+===== 2026-11-22 03:46:57 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python rl_nav/export_value.py rl_nav/runs/ppo_r_s0 rl_nav/value_nav.npz
+critic [torch.Size([256, 93]), torch.Size([256, 256]), torch.Size([1, 256])] -> rl_nav/value_nav.npz

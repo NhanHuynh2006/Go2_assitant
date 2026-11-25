@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoVoice — Kiến trúc, Model & Giải pháp Realtime</title>
+<style>
+  :root{--bg0:#0b1020;--ink:#eaf2ff;--muted:#9fb3d1;--accent:#22d3ee;--accent2:#fb923c;
+    --good:#34d399;--bad:#f87171;--purple:#a78bfa;--card:#16213f;--line:#243456}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'Segoe UI',system-ui,'Noto Sans',Arial,sans-serif;background:var(--bg0);color:var(--ink);overflow:hidden}
+  .deck{height:100vh;width:100vw;position:relative}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;padding:4.2vh 5.2vw 6vh;opacity:0;
+    transition:opacity .3s;background:radial-gradient(1200px 700px at 82% -12%,#1b2a52 0%,var(--bg0) 55%)}
+  .slide.active{display:flex;opacity:1}
+  h1{font-size:3.1vw;line-height:1.12;letter-spacing:-.5px}
+  h2{font-size:2.1vw;line-height:1.14;margin-bottom:1.3vh;letter-spacing:-.3px}
+  h3{font-size:1.32vw;color:var(--accent);margin-bottom:.6vh}
+  p,li,td,th{font-size:1.27vw;line-height:1.42}
+  .sm{font-size:1.04vw !important}
+  .muted{color:var(--muted)}.accent{color:var(--accent)}.accent2{color:var(--accent2)}
+  .good{color:var(--good)}.bad{color:var(--bad)}.purple{color:var(--purple)}
+  ul{margin-left:1.2em}li{margin:.5vh 0}
+  .kicker{font-size:1.0vw;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:1.0vh;font-weight:700}
+  .grid{display:grid;gap:1.3vw;margin-top:1.0vh}
+  .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g21{grid-template-columns:1.25fr .75fr}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.15vw 1.3vw}
+  .why{background:#1c1530;border:1px solid var(--accent2);border-radius:12px;padding:1.0vw 1.25vw;margin-top:1.0vh}
+  .why b{color:var(--accent2)}
+  .formula{font-family:'Cascadia Code',Consolas,monospace;background:#0e1b38;border:1px solid var(--line);
+    border-radius:10px;padding:.85vh 1.05vw;margin:.85vh 0;font-size:1.15vw;color:var(--accent)}
+  .pill{display:inline-block;background:#0e1b38;border:1px solid var(--line);color:var(--accent);
+    border-radius:999px;padding:.3vw .9vw;font-size:.95vw;margin:.3vw .3vw 0 0;font-weight:600}
+  table{border-collapse:collapse;width:100%;margin-top:1.0vh}
+  th,td{border:1px solid var(--line);padding:.7vh 1.0vw;text-align:left;font-size:1.12vw}
+  th{background:#0e1b38;color:var(--accent);font-weight:700}
+  tr.hl td{background:#13301f;color:var(--good);font-weight:800}
+  tr.hl2 td{background:#2a1a10;color:var(--accent2);font-weight:800}
+  code{font-family:'Cascadia Code',Consolas,monospace;background:#0e1b38;padding:.05vw .4vw;border-radius:5px;color:var(--purple);font-size:1.02vw}
+  .big{font-size:4.0vw;font-weight:800;letter-spacing:-2px}
+  .flow{display:flex;align-items:stretch;gap:.5vw;flex-wrap:wrap;margin-top:1.0vh}
+  .node{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.75vh .7vw;font-size:.96vw;
+    flex:1;min-width:6vw;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .node.t1{border-color:var(--good)}.node.t15{border-color:var(--accent)}.node.t2{border-color:var(--accent2)}.node.em{border-color:var(--accent)}
+  .arrow{display:flex;align-items:center;color:var(--muted);font-size:1.3vw}
+  .footer{position:absolute;bottom:2.0vh;left:5.2vw;right:5.2vw;display:flex;justify-content:space-between;color:var(--muted);font-size:.9vw}
+  .bar{position:absolute;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .3s}
+  .center{display:flex;flex-direction:column;justify-content:center;height:100%}
+  .title-wrap{justify-content:center}.logo{font-size:5vw}
+  .sub{font-size:1.55vw;color:var(--muted);margin-top:1.5vh}
+  .nav-hint{position:absolute;bottom:1.8vh;left:50%;transform:translateX(-50%);color:#4b5e82;font-size:.85vw}
+  /* timeline */
+  .track{display:flex;width:100%;height:9vh;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin-top:1.5vh}
+  .seg{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#06121f;font-weight:800;font-size:.95vw;text-align:center;min-width:0}
+  .seg small{font-weight:600;opacity:.8;font-size:.8vw}
+  @media print{body{overflow:visible}
+    .slide{display:flex !important;opacity:1 !important;position:relative;height:100vh;page-break-after:always;inset:auto}
+    .nav-hint{display:none}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 TITLE -->
+<section class="slide title-wrap center">
+  <div class="logo">🐕🎙️</div>
+  <div class="kicker">Kiến trúc · Model · Giải pháp Realtime · HCMUTE</div>
+  <h1>GoVoice — Trợ lý giọng nói <span class="accent">tiếng Việt</span> cho Unitree Go2<br>
+    <span class="accent2">Hệ thống chạy 100% on-board & độ trễ thời gian thực</span></h1>
+  <p class="sub">Dùng những model nào? Ghép lại ra sao? Làm cách nào để robot phản hồi gần như tức thì?</p>
+  <p class="muted" style="margin-top:3vh;font-size:1.2vw">Nolan (Huỳnh Lê Thành Nhân) · Trường ĐH Sư phạm Kỹ thuật TP.HCM</p>
+</section>
+
+<!-- 2 PROBLEM -->
+<section class="slide">
+  <div class="kicker">Bài toán</div>
+  <h2>Hai mục tiêu <span class="accent">xung đột</span>: vừa ĐÚNG vừa NHANH</h2>
+  <div class="grid g2">
+    <div class="card"><h3 class="good">✓ ĐÚNG tuyệt đối</h3><p class="muted sm">Robot vật lý — hiểu sai hướng/khoảng cách là đâm vào người/vật.</p></div>
+    <div class="card"><h3 class="accent">✓ NHANH realtime</h3><p class="muted sm">Đợi vài giây mỗi câu là vô dụng. Phải phản hồi tức thì.</p></div>
+  </div>
+  <div class="why"><b>Mâu thuẫn:</b> LLM thì thông minh nhưng <span class="bad">chậm + hay đoán sai số</span>; luật cứng thì <span class="good">nhanh + đúng</span> nhưng không hiểu câu phức. <span class="accent2">→ GoVoice phối hợp cả hai + tối ưu từng mili-giây.</span></div>
+  <div style="margin-top:1.1vh"><span class="pill">100% on-board (Jetson)</span><span class="pill">Không internet</span><span class="pill">3 model nhỏ</span></div>
+</section>
+
+<!-- 3 INSIGHT -->
+<section class="slide">
+  <div class="kicker">Hướng giải quyết</div>
+  <h2>Phân loại câu → chỉ "động não" khi <span class="accent2">thật sự cần</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3 class="good">⚡ ~80% câu = lệnh đơn/đếm được</h3><p class="muted sm">"đi thẳng", "xoay phải 2 vòng", "đi A rồi B". → giải bằng <b>LUẬT</b>, ~0ms, không cần model não.</p></div>
+    <div class="card"><h3 class="accent2">🧠 ~18% câu khó</h3><p class="muted sm">Mơ hồ, trò chuyện, tổ hợp lạ. → mới dùng <b>LLM</b>.</p></div>
+  </div>
+  <div class="why"><b>Đây là chìa khoá realtime:</b> không cho mọi câu chạy qua LLM (mỗi lần ~0.8s). Né được LLM cho 82% câu = né được phần lớn độ trễ. <span class="accent2">Phần não AI chỉ gánh số ít câu khó nhất.</span></div>
+</section>
+
+<!-- 4 MODELS -->
+<section class="slide">
+  <div class="kicker">★ Các model sử dụng</div>
+  <h2>3 model nhỏ, mỗi model một việc — đều chạy <span class="accent">offline</span></h2>
+  <table>
+    <tr><th>Việc</th><th>Model</th><th>Chi tiết</th><th>Chạy bằng</th></tr>
+    <tr><td>🎤 <b>Nghe</b> (STT)</td><td class="accent">PhoWhisper-small</td><td class="sm">ASR tiếng Việt (VinAI, ~244M, nền Whisper)</td><td class="sm">faster-whisper + CTranslate2 (fp16, GPU)</td></tr>
+    <tr><td>🧠 <b>Nghĩ</b> (LLM)</td><td class="accent">Qwen2.5-1.5B</td><td class="sm">Đã <b>fine-tune QLoRA</b> → GGUF Q4_K_M</td><td class="sm">llama.cpp (llama-server)</td></tr>
+    <tr><td>🔊 <b>Nói</b> (TTS)</td><td class="accent">Piper · vi_VN-vais1000</td><td class="sm">Tổng hợp giọng tiếng Việt</td><td class="sm">Piper (streaming)</td></tr>
+    <tr><td class="muted">✂️ Cắt câu</td><td class="muted">webrtcvad</td><td class="sm muted">Thuật toán (KHÔNG phải AI)</td><td class="sm muted">—</td></tr>
+  </table>
+  <div class="why"><b>Điểm nhấn:</b> <span class="accent2">82% câu KHÔNG đụng tới model não (Qwen)</span> — giải bằng luật. Qwen chỉ nhảy vào ~18% câu khó. Đây chính là "neuro-symbolic": lai luật + học máy.</div>
+</section>
+
+<!-- 5 ARCHITECTURE / DATA FLOW -->
+<section class="slide">
+  <div class="kicker">★ Kiến trúc & luồng dữ liệu</div>
+  <h2>Một câu nói chảy qua hệ thống thế nào</h2>
+  <div class="flow">
+    <div class="node">🎤 Mic<br><span class="muted sm">webrtcvad cắt câu</span></div><div class="arrow">→</div>
+    <div class="node t15">📝 STT<br><span class="muted sm">PhoWhisper · GPU</span></div><div class="arrow">→</div>
+    <div class="node">🔤 Chuẩn hóa<br><span class="muted sm">bỏ dấu</span></div><div class="arrow">→</div>
+    <div class="node em">🚨 Emergency<br><span class="muted sm">"dừng lại"</span></div>
+  </div>
+  <p class="muted sm" style="margin-top:.8vh;text-align:center">↓ định tuyến — dừng ở tầng đầu tiên giải được ↓</p>
+  <div class="flow">
+    <div class="node t1">⚡ Luật: Reflex + Combo<br><span class="muted sm">82% câu · ~0.07ms · KHÔNG model</span></div>
+    <div class="node t2">🧠 LLM Qwen2.5-1.5B<br><span class="muted sm">18% câu · ~0.8s · GBNF ép JSON</span></div>
+  </div>
+  <div class="flow">
+    <div class="node">🧹 Verifier → 🛡️ Safety<br><span class="muted sm">lọc bịa + kẹp an toàn</span></div><div class="arrow">→</div>
+    <div class="node">⚙️ Async Executor<br><span class="muted sm">vừa làm vừa nghe</span></div><div class="arrow">→</div>
+    <div class="node t1">🦿 Robot (SportClient)</div><div class="arrow">+</div>
+    <div class="node t2">🔊 Piper → loa</div>
+  </div>
+  <p class="sm muted" style="margin-top:.9vh">Tất cả khối chạy trên <b>Jetson trong robot</b>; mic/loa robot ra-vào qua cầu WebRTC. Không có bước nào gọi ra internet.</p>
+</section>
+
+<!-- 6 STT -->
+<section class="slide">
+  <div class="kicker">Tầng nghe · STT (nút thắt thời gian)</div>
+  <h2>PhoWhisper trên GPU: <span class="accent">2–4s → 1.8s</span></h2>
+  <div class="g21 grid">
+    <div>
+      <ul class="sm">
+        <li><b>PhoWhisper-small</b> — ASR tiếng Việt chuyên dụng (VinAI).</li>
+        <li>Tăng tốc bằng <b>CTranslate2</b> (lượng tử fp16) + <b>faster-whisper</b>, chạy <b>GPU Jetson</b> (CUDA 11.4).</li>
+        <li>2 lá chắn: mớm từ vựng lệnh + lọc "ảo giác" (<code>no_speech&gt;0.6</code>, <code>logprob&lt;−1.0</code>).</li>
+      </ul>
+      <div class="why"><b>Vì sao đây là chỗ tốn thời gian nhất?</b> Encoder Whisper xử lý cả cửa sổ 30s âm thanh. <span class="accent2">~1.8s/câu</span> — chiếm <b>~80% tổng độ trễ</b>. Đưa lên GPU là cải tiến realtime lớn nhất.</div>
+    </div>
+    <div class="card center" style="text-align:center">
+      <p class="muted sm">Độ trễ STT / câu</p>
+      <p class="bad" style="font-size:1.6vw;text-decoration:line-through">CPU 2–4 s</p>
+      <p class="big good">1.8 s</p>
+      <p class="muted sm">GPU Jetson · PhoWhisper-small fp16</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 PARSE (GỌN) -->
+<section class="slide">
+  <div class="kicker">Nhận & phân tích lệnh (tóm tắt)</div>
+  <h2>Nhận chữ → chia câu → khớp từng vế → ghép lệnh</h2>
+  <div class="g21 grid">
+    <div>
+      <ul class="sm">
+        <li><b>① Nhận</b> câu chữ đã bỏ dấu từ STT.</li>
+        <li><b>② Chia câu</b> tại các từ nối: <code>rồi / sau đó / tiếp theo / xong</code>.</li>
+        <li><b>③ Phân tích từng vế</b>: tìm động từ (đi/xoay/...), con số + đơn vị (<code>mét/giây/độ/vòng</code>), hướng (trái/phải).</li>
+        <li><b>④ Ghép</b> thành chuỗi hành động đúng thứ tự.</li>
+      </ul>
+      <p class="sm muted">Nếu một vế không khớp luật → giao cả câu cho LLM (an toàn).</p>
+    </div>
+    <div class="card"><h3>Ví dụ</h3>
+      <p class="sm">"đi thẳng 3 mét <span class="accent">rồi</span> xoay phải"</p>
+      <p class="sm muted">↓ chia 2 vế ↓</p>
+      <p class="sm"><code>đi thẳng 3 mét</code> → move (3 ÷ 0.35 = 8.6s)</p>
+      <p class="sm"><code>xoay phải</code> → spin 90°</p>
+      <p class="good sm" style="margin-top:.5vh">⏱ ~0.07 ms · không cần LLM</p>
+    </div>
+  </div>
+  <p class="sm muted" style="margin-top:.6vh">(Chi tiết các quy tắc tinh tế — bỏ dấu, chẻ lệnh, từ chối — em sẽ nói thêm khi trình bày.)</p>
+</section>
+
+<!-- 8 LLM -->
+<section class="slide">
+  <div class="kicker">Tầng não · LLM</div>
+  <h2>Qwen2.5-1.5B fine-tune + <span class="accent">ép JSON</span> cho 18% câu khó</h2>
+  <div class="grid g3">
+    <div class="card"><h3>🧠 Model nhỏ chuyên việc</h3><p class="muted sm">Qwen2.5-1.5B, fine-tune QLoRA 4-bit. Đủ nhỏ on-board, đủ giỏi vì chỉ làm 1 việc: sinh JSON lệnh.</p></div>
+    <div class="card"><h3>📐 GBNF Grammar</h3><p class="muted sm">Ép chỉ sinh JSON đúng schema → không lỗi parse, không lệnh rác, <b>ít token → nhanh hơn</b>.</p></div>
+    <div class="card"><h3>🗄️ cache_prompt</h3><p class="muted sm">Giữ KV-cache system prompt → mỗi câu chỉ xử lý phần mới.</p></div>
+  </div>
+  <div class="why"><b>Vì sao 1.5B mà đủ?</b> Việc rất hẹp (câu Việt → JSON lệnh) + fine-tune đúng phân phối → không cần model lớn tổng quát. <span class="accent2">→ chạy lọt Jetson, ~780ms/câu, và chỉ 18% câu phải dùng.</span></div>
+</section>
+
+<!-- 9 TTS -->
+<section class="slide">
+  <div class="kicker">Tầng nói · TTS</div>
+  <h2>Piper <span class="accent">streaming</span>: phát tiếng sau ~100ms</h2>
+  <div class="g21 grid">
+    <div>
+      <ul class="sm">
+        <li><b>Piper</b> giọng <code>vi_VN-vais1000-medium</code> — tổng hợp tiếng Việt, nhẹ.</li>
+        <li><b>Vừa sinh vừa phát</b> từng đoạn: ra tiếng sau ~100ms, KHÔNG đợi sinh hết câu.</li>
+        <li>Câu dài cỡ nào, tiếng vẫn bật ra gần như ngay lập tức.</li>
+        <li>Tiếng đi ra <b>loa robot</b> qua cầu WebRTC.</li>
+      </ul>
+    </div>
+    <div class="card center" style="text-align:center">
+      <p class="muted sm">Time-to-first-sound</p>
+      <p class="big accent">~100<span style="font-size:1.6vw">ms</span></p>
+      <p class="muted sm">phát ngay, không đợi cả câu</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 REALTIME STRATEGY -->
+<section class="slide">
+  <div class="kicker">★ Chiến lược REALTIME</div>
+  <h2>6 đòn cắt độ trễ</h2>
+  <div class="grid g3">
+    <div class="card"><h3 class="good">1 · STT lên GPU</h3><p class="muted sm">PhoWhisper qua CTranslate2 trên GPU: 2–4s → <b>1.8s</b>. Cắt nút thắt lớn nhất.</p></div>
+    <div class="card"><h3 class="good">2 · Né LLM 82% câu</h3><p class="muted sm">Luật giải ~0.07ms thay vì ~780ms. Tiết kiệm phần lớn độ trễ.</p></div>
+    <div class="card"><h3 class="good">3 · GBNF ít token</h3><p class="muted sm">Output JSON ngắn → LLM sinh ít token → nhanh hơn khi buộc dùng.</p></div>
+    <div class="card"><h3 class="good">4 · cache_prompt</h3><p class="muted sm">Bỏ chi phí lặp lại system prompt dài mỗi câu.</p></div>
+    <div class="card"><h3 class="good">5 · TTS streaming</h3><p class="muted sm">Phát tiếng sau 100ms, không đợi sinh hết câu.</p></div>
+    <div class="card"><h3 class="good">6 · Async execution</h3><p class="muted sm">Robot làm <b>song song</b> lúc nghe câu kế → giảm ~30% chuỗi lệnh.</p></div>
+  </div>
+  <div class="why"><b>Triết lý chung:</b> mỗi tầng đều hỏi "có cách nào không phải đợi không?" — GPU thay CPU, luật thay LLM, streaming thay batch, song song thay tuần tự.</div>
+</section>
+
+<!-- 11 LATENCY TABLE (KEY) -->
+<section class="slide">
+  <div class="kicker">★★★ Số liệu độ trễ — từng tầng</div>
+  <h2>Từ lúc nói xong → Gô bắt đầu đáp</h2>
+  <table>
+    <tr><th>Giai đoạn</th><th>Bộ phận</th><th>Thời gian</th></tr>
+    <tr><td>1. Cắt câu (đợi im lặng)</td><td class="muted">webrtcvad</td><td>~270 ms</td></tr>
+    <tr><td>2. Nhận dạng giọng nói</td><td class="muted">PhoWhisper-small (GPU)</td><td class="bad"><b>~1800 ms</b> ⟵ nút thắt</td></tr>
+    <tr><td>3a. Lập kế hoạch — <b>luật</b> (82% câu)</td><td class="muted">Reflex + Combo</td><td class="good">~0.07 ms</td></tr>
+    <tr><td>3b. Lập kế hoạch — <b>LLM</b> (18% câu)</td><td class="muted">Qwen2.5-1.5B</td><td>~780 ms</td></tr>
+    <tr><td>4. Phát tiếng đầu</td><td class="muted">Piper (streaming)</td><td>~100 ms</td></tr>
+    <tr class="hl"><td colspan="2"><b>TỔNG — câu thường (82%, không LLM)</b></td><td>≈ 2.2 giây</td></tr>
+    <tr class="hl2"><td colspan="2"><b>TỔNG — câu khó (18%, có LLM)</b></td><td>≈ 3.0 giây</td></tr>
+  </table>
+  <p class="sm muted" style="margin-top:.9vh">🦿 Robot <b>bắt đầu cử động song song</b> với lúc Gô nói (nhờ async) — không cộng dồn thêm thời gian.</p>
+</section>
+
+<!-- 12 TIMELINE -->
+<section class="slide">
+  <div class="kicker">★★ Timeline end-to-end</div>
+  <h2>STT chiếm phần lớn — phần còn lại gần như "miễn phí"</h2>
+  <p class="sm muted">Câu thường (không LLM) — tổng ≈ 2.2 giây:</p>
+  <div class="track">
+    <div class="seg" style="flex:270;background:#475569">VAD<br><small>270ms</small></div>
+    <div class="seg" style="flex:1800;background:#22d3ee">STT — PhoWhisper GPU<br><small>~1800ms (nút thắt)</small></div>
+    <div class="seg" style="flex:60;background:#34d399">Luật<br><small>~0ms</small></div>
+    <div class="seg" style="flex:100;background:#fb923c">TTS<br><small>100ms</small></div>
+  </div>
+  <p class="sm muted" style="margin-top:1.6vh">Câu khó (có LLM Qwen) — tổng ≈ 3.0 giây:</p>
+  <div class="track">
+    <div class="seg" style="flex:270;background:#475569">VAD<br><small>270ms</small></div>
+    <div class="seg" style="flex:1800;background:#22d3ee">STT<br><small>~1800ms</small></div>
+    <div class="seg" style="flex:780;background:#a78bfa">LLM Qwen<br><small>~780ms</small></div>
+    <div class="seg" style="flex:100;background:#fb923c">TTS<br><small>100ms</small></div>
+  </div>
+  <div class="why"><b>Kết luận realtime:</b> muốn nhanh hơn nữa thì phải tấn công <span class="accent2">STT</span> (model nhỏ hơn / tinh chỉnh cửa sổ), vì 3 phần kia đã gần như tối ưu hết mức.</div>
+</section>
+
+<!-- 13 ASYNC + SAFETY -->
+<section class="slide">
+  <div class="kicker">Thực thi realtime + An toàn</div>
+  <h2>Vừa làm vừa nghe, và luôn <span class="good">an toàn</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3 class="accent">⚙️ Async Executor (SmolVLA)</h3>
+      <ul class="sm"><li>Hành động chạy <b>thread riêng + hàng đợi</b>.</li>
+      <li>Vòng chính vẫn nghe + STT câu kế → robot không "điếc" lúc đang làm.</li>
+      <li>Giảm ~30% tổng thời gian chuỗi lệnh; phanh khẩn cấp chèn ngang được.</li></ul></div>
+    <div class="card"><h3 class="good">🛡️ Safety Guard</h3>
+      <ul class="sm"><li>Kẹp vận tốc/thời gian (vx≤0.6, dur≤6s).</li>
+      <li>Chặn động tác nguy hiểm (lộn/trồng chuối).</li>
+      <li>Tự đứng dậy trước khi đi; "dừng lại" ưu tiên tuyệt đối.</li></ul></div>
+  </div>
+  <div class="why"><b>Vì sao tách thực thi ra thread riêng?</b> Để bước "nghe + nghĩ" (tốn ~2s STT) KHÔNG bị khoá trong lúc robot đang cử động → cảm giác mượt, realtime.</div>
+</section>
+
+<!-- 14 FINETUNE + DATASET -->
+<section class="slide">
+  <div class="kicker">Huấn luyện model não</div>
+  <h2>Fine-tune Qwen trên dataset <span class="accent">tự sinh, tái lập</span></h2>
+  <div class="grid g2">
+    <div class="card"><h3>🔧 QLoRA 4-bit</h3>
+      <p class="muted sm">Train adapter nhỏ trên 1 GPU RTX 4060 (~70 phút). Merge → GGUF Q4_K_M chạy Jetson.</p>
+      <p class="sm" style="margin-top:.5vh"><span class="bad">Qwen gốc: 5.7%</span> → <span class="good">fine-tune: 61.7%</span></p></div>
+    <div class="card"><h3>📦 Dataset (~4.700 mẫu)</h3>
+      <p class="muted sm">Sinh bằng luật, seed cố định (tái lập 100%). Nhãn vàng dùng <b>đúng quy ước tốc độ + cùng prompt</b> như lúc chạy. Augment "mất dấu" mô phỏng lỗi STT.</p></div>
+  </div>
+  <div class="why"><b>Mấu chốt:</b> model học đúng "luật chơi" mà hệ thống thực thi (vx=0.35, schema JSON, chẻ lệnh) → không lệch giữa train và chạy.</div>
+</section>
+
+<!-- 15 RESULTS -->
+<section class="slide">
+  <div class="kicker">Kết quả</div>
+  <h2>Độ chính xác & phân bổ tải</h2>
+  <div class="g2 grid">
+    <div>
+      <table>
+        <tr><th>Cấu hình</th><th>Đúng</th></tr>
+        <tr><td>Qwen gốc + few-shot</td><td class="bad">5.7%</td></tr>
+        <tr><td>+ Fine-tune (LLM thuần)</td><td class="accent2">61.7%</td></tr>
+        <tr class="hl"><td><b>Full system</b> (Luật + LLM + Verifier)</td><td>91.0%</td></tr>
+      </table>
+      <p class="sm muted" style="margin-top:.8vh">Fine-tune +56đ · kiến trúc neuro-symbolic +29.3đ (gần ngang nhau).</p>
+    </div>
+    <div class="card center">
+      <p class="big accent" style="text-align:center">82%</p>
+      <p class="muted sm" style="text-align:center">câu giải bằng LUẬT (~0.07ms, không LLM)</p>
+      <hr style="border-color:var(--line);margin:1vh 0">
+      <p class="sm">📊 Định tuyến 300 câu: Combo 222 · Reflex 23 · LLM 55</p>
+      <p class="sm">⏱ LLM tb 780ms · p95 1197ms · STT 1.8s · TTS 100ms</p>
+    </div>
+  </div>
+</section>
+
+<!-- 16 CONCLUSION -->
+<section class="slide">
+  <div class="kicker">Kết luận</div>
+  <h2><span class="good">Đúng</span> bằng luật · <span class="accent">Nhanh</span> bằng định tuyến + GPU · <span class="accent2">Linh hoạt</span> bằng LLM</h2>
+  <div class="grid g2">
+    <div class="card"><h3 class="good">✓ Đạt được</h3>
+      <ul class="sm"><li>3 model nhỏ (PhoWhisper · Qwen2.5-1.5B · Piper) chạy 100% on-board.</li>
+      <li>Phản hồi ≈ 2.2s (câu thường) / 3.0s (câu khó).</li>
+      <li>91% chính xác · 82% câu không cần LLM.</li></ul></div>
+    <div class="card"><h3 class="accent2">→ Hướng tăng tốc tiếp</h3>
+      <ul class="sm"><li>Tấn công STT (nút thắt 1.8s): model nhỏ hơn / cắt cửa sổ.</li>
+      <li>Thử Qwen 0.5B → LLM nhanh ~2×.</li>
+      <li>Đo WER mic robot vs mic ngoài; triển khai không dây.</li></ul></div>
+  </div>
+</section>
+
+<!-- 17 THANKS -->
+<section class="slide title-wrap center">
+  <div class="logo">🐕💬</div>
+  <h1>Cảm ơn đã lắng nghe!</h1>
+  <p class="sub">GoVoice — 3 model on-board · luật + LLM · phản hồi ~2.2 giây</p>
+  <p class="muted" style="margin-top:2.5vh;font-size:1.2vw">PhoWhisper · Qwen2.5-1.5B · Piper — 91% · 100% local · Hỏi đáp & Thảo luận</p>
+</section>
+
+</div>
+
+<div class="bar" id="bar"></div>
+<div class="footer"><span>GoVoice · HCMUTE · Kiến trúc & Realtime</span><span id="pageno">1 / 17</span></div>
+<div class="nav-hint">← → chuyển slide · F fullscreen · Ctrl+P xuất PDF</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];let i=0;
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    document.getElementById('pageno').textContent=(i+1)+' / '+slides.length;
+    document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';}
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')show(i+1);
+    else if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+    else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}});
+  document.addEventListener('click',e=>{if(e.clientX>window.innerWidth*0.5)show(i+1);else show(i-1);});
+  show(0);
+</script>
+</body>
+</html>

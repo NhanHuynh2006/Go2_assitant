@@ -1,0 +1,53 @@
+GATE OK ram=7225 08:09:02
+GATE OK ram=7065 08:09:35
+GATE OK ram=7263 08:10:08
+GATE OK ram=7012 08:12:17
+GATE OK ram=7090 08:15:03
+GATE OK ram=6927 08:17:43
+gate cho: ram=6310 cuda=1 train=0 08:20:48
+gate cho: ram=6577 cuda=1 train=0 08:21:48
+gate cho: ram=6159 cuda=1 train=0 08:22:48
+gate cho: ram=5138 cuda=2 train=0 08:23:48
+gate cho: ram=5090 cuda=0 train=0 08:24:13
+gate cho: ram=5228 cuda=2 train=0 08:24:48
+gate cho: ram=5257 cuda=1 train=0 08:25:48
+gate cho: ram=5322 cuda=0 train=0 08:26:13
+gate cho: ram=5671 cuda=1 train=0 08:26:48
+gate cho: ram=5379 cuda=1 train=0 08:27:48
+gate cho: ram=5420 cuda=0 train=0 08:28:13
+gate cho: ram=5605 cuda=1 train=0 08:28:48
+gate cho: ram=5453 cuda=0 train=0 08:30:13
+gate cho: ram=5476 cuda=0 train=0 08:32:13
+gate cho: ram=5152 cuda=0 train=0 08:34:13
+gate cho: ram=5671 cuda=0 train=0 08:36:14
+gate cho: ram=5330 cuda=0 train=0 08:38:14
+gate cho: ram=5526 cuda=0 train=0 08:40:14
+GATE OK ram=6010 08:58:30
+GATE OK ram=7157 08:59:50
+GATE OK ram=8696 09:01:02
+GATE OK ram=7886 09:03:48
+GATE OK ram=10011 20:14:16
+gate cho: ram=8513 cuda=1 train=0 20:14:49
+GATE OK ram=10066 20:16:45
+gate cho: ram=8862 cuda=1 train=0 20:21:08
+gate cho: ram=8686 cuda=1 train=0 20:23:08
+gate cho: ram=8646 cuda=1 train=0 20:25:08
+GATE OK ram=10085 20:27:08
+gate cho: ram=8524 cuda=1 train=0 20:30:41
+gate cho: ram=8540 cuda=1 train=0 20:32:41
+GATE OK ram=9981 20:34:41
+GATE OK ram=9933 20:38:51
+GATE OK ram=10129 20:41:22
+GATE OK ram=10332 20:43:44
+GATE OK ram=9812 01:31:09
+GATE OK ram=9413 01:43:30
+GATE OK ram=9399 01:49:22
+GATE OK ram=9878 01:54:48
+GATE OK ram=10496 01:58:18
+GATE OK ram=10560 02:04:10
+GATE OK ram=9758 02:05:17
+GATE OK ram=9433 03:12:11
+GATE OK ram=9268 03:33:04
+GATE OK ram=9967 04:32:18
+GATE OK ram=10840 05:32:21
+GATE OK ram=10863 05:55:16

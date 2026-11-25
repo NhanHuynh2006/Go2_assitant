@@ -1,0 +1,5 @@
+run,variant,C1_success,B1_success,n,C1_falls,B1_falls,C1_only,B1_only,p_mcnemar
+res_nl,"~t3~nl (as frozen), tilted rays",87,73,100,3,3,20,6,0.009355306625366211
+res_t3,without ~nl,86,82,100,5,4,13,9,0.5234670639038086
+res_nlnotilt,"~t3~nl, flat rays",86,85,100,4,3,12,11,1.0
+res_nlcs,"~t3~nl + command shaper ~cs (deployment option, not part of C1)",92,73,100,0,0,24,5,0.0005461126565933228

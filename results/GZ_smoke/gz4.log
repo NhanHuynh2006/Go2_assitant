@@ -1,0 +1,4 @@
+12:36:06 g0 sim len sau 35 s (lan 0)
+research/gz/run_gz_groups.sh: line 28: 450351 Killed                     env GZ_PARTITION=$PART ROS_DOMAIN_ID=$DOM setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:="$1" >> "$ROOT/$OUTBASE/simlog/sim_$PART.log" 2>&1
+12:48:08 g0 eval ma 0, 8/8 luot, 757 s
+GROUPSDONE gzs1

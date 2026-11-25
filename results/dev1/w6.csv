@@ -1,0 +1,122 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+2,lobby,4,0,mppi~v1,1,ok,0.178,53.1,20.32,,,0.376,0.049,{},15.0
+2,lobby,4,0,mppi,1,ok,0.153,54.6,20.79,,,0.406,0.101,{},15.0
+2,lobby,4,0,dwa~v1,0,va nguoi,1.381,52.8,20.33,person,0,0.26,-0.041,"{""kind"": ""person"", ""t"": 52.8, ""robot_in"": -0.11, ""person_in"": 0.71, ""robot_v"": 0.28, ""wz"": 0.01, ""bearing"": 105, ""at_fault"": 0}",13.4
+2,lobby,4,0,dwa,0,va nguoi,3.482,47.3,18.12,person,0,0.499,-0.013,"{""kind"": ""person"", ""t"": 47.3, ""robot_in"": 0.0, ""person_in"": -0.0, ""robot_v"": 0.0, ""wz"": 0.28, ""bearing"": -26, ""at_fault"": 0}",12.0
+2,lobby,4,0,prism@ppo+sac~v1,1,ok,0.196,52.6,20.86,,,0.348,0.156,{},23.9
+2,lobby,4,0,prism@ppo+sac,1,ok,0.18,54.1,21.19,,,0.21,0.372,{},25.7
+2,lobby,4,0,p2,1,ok,0.155,50.3,20.37,,,0.438,0.186,{},14.3
+2,lobby,4,0,p2-evade,1,ok,0.142,55.4,22.26,,,0.382,0.1,{},15.9
+2,lobby,4,0,p2-rate,0,va nguoi,6.458,29.5,11.48,person,1,0.505,-0.051,"{""kind"": ""person"", ""t"": 29.5, ""robot_in"": 0.02, ""person_in"": 0.84, ""robot_v"": 0.05, ""wz"": -0.33, ""bearing"": -24, ""at_fault"": 1}",9.7
+2,lobby,4,0,p2-cap,1,ok,0.138,57.0,22.81,,,0.505,0.027,{},16.4
+2,lobby,4,0,p2@ppo+sac,1,ok,0.199,59.3,23.2,,,0.252,0.167,{},32.2
+32,lobby,2,0,mppi~v1,1,ok,0.156,41.5,16.15,,,0.396,0.583,{},9.9
+32,lobby,2,0,mppi,1,ok,0.17,45.8,17.47,,,0.217,0.361,{},11.2
+32,lobby,2,0,dwa~v1,1,ok,0.176,41.5,16.1,,,0.401,0.445,{},9.0
+32,lobby,2,0,dwa,1,ok,0.198,40.3,15.58,,,0.453,0.571,{},8.2
+32,lobby,2,0,prism@ppo+sac~v1,1,ok,0.18,41.6,16.72,,,0.431,0.52,{},19.3
+32,lobby,2,0,prism@ppo+sac,1,ok,0.207,41.6,16.84,,,0.381,0.12,{},20.4
+32,lobby,2,0,p2,1,ok,0.165,36.3,15.09,,,0.362,0.148,{},9.5
+32,lobby,2,0,p2-evade,1,ok,0.17,40.0,16.6,,,0.366,0.059,{},10.7
+32,lobby,2,0,p2-rate,1,ok,0.183,36.9,15.38,,,0.373,0.307,{},9.6
+32,lobby,2,0,p2-cap,1,ok,0.152,39.5,16.19,,,0.392,0.004,{},10.0
+32,lobby,2,0,p2@ppo+sac,1,ok,0.189,34.9,14.6,,,0.375,0.572,{},17.9
+45,office,4,0,mppi~v1,0,va nguoi,8.842,13.5,4.86,person,1,1.003,-0.044,"{""kind"": ""person"", ""t"": 13.5, ""robot_in"": 0.12, ""person_in"": 0.79, ""robot_v"": 0.14, ""wz"": -0.48, ""bearing"": 23, ""at_fault"": 1}",4.0
+45,office,4,0,mppi,0,va nguoi,7.195,17.2,6.32,person,0,0.903,-0.091,"{""kind"": ""person"", ""t"": 17.2, ""robot_in"": 0.08, ""person_in"": 0.63, ""robot_v"": 0.08, ""wz"": 0.1, ""bearing"": -22, ""at_fault"": 0}",5.0
+45,office,4,0,dwa~v1,1,ok,0.188,44.2,16.99,,,0.149,0.187,{},10.6
+45,office,4,0,dwa,0,va nguoi,8.495,12.6,5.17,person,1,0.859,-0.074,"{""kind"": ""person"", ""t"": 12.6, ""robot_in"": 0.07, ""person_in"": 0.77, ""robot_v"": 0.07, ""wz"": -0.39, ""bearing"": 21, ""at_fault"": 1}",3.2
+45,office,4,0,prism@ppo+sac~v1,1,ok,0.149,47.9,18.38,,,0.209,0.193,{},24.6
+45,office,4,0,prism@ppo+sac,1,ok,0.187,44.4,17.65,,,0.152,0.099,{},22.7
+45,office,4,0,p2,0,va nguoi,8.594,13.2,5.06,person,1,0.848,-0.022,"{""kind"": ""person"", ""t"": 13.2, ""robot_in"": 0.14, ""person_in"": 0.78, ""robot_v"": 0.14, ""wz"": 0.39, ""bearing"": -9, ""at_fault"": 1}",4.0
+45,office,4,0,p2-evade,0,va nguoi,4.346,24.6,10.16,person,1,0.25,-0.033,"{""kind"": ""person"", ""t"": 24.6, ""robot_in"": 0.14, ""person_in"": 0.66, ""robot_v"": 0.14, ""wz"": -0.26, ""bearing"": -27, ""at_fault"": 1}",7.3
+45,office,4,0,p2-rate,0,va nguoi,8.557,16.2,6.08,person,0,0.721,-0.014,"{""kind"": ""person"", ""t"": 16.2, ""robot_in"": 0.07, ""person_in"": 0.0, ""robot_v"": 0.07, ""wz"": -0.1, ""bearing"": -33, ""at_fault"": 0}",4.8
+45,office,4,0,p2-cap,0,va nguoi,1.932,45.4,17.39,person,1,0.235,-0.037,"{""kind"": ""person"", ""t"": 45.4, ""robot_in"": 0.16, ""person_in"": 0.01, ""robot_v"": 0.16, ""wz"": -0.21, ""bearing"": -23, ""at_fault"": 1}",13.4
+45,office,4,0,p2@ppo+sac,1,ok,0.192,41.3,16.41,,,0.23,0.067,{},22.4
+58,corridor,3,0,mppi~v1,0,va nguoi,10.006,20.5,7.2,person,0,0.333,-0.009,"{""kind"": ""person"", ""t"": 20.5, ""robot_in"": 0.0, ""person_in"": -0.15, ""robot_v"": 0.0, ""wz"": 0.24, ""bearing"": -19, ""at_fault"": 0}",6.7
+58,corridor,3,0,mppi,1,ok,0.206,48.9,18.58,,,0.322,0.084,{},13.5
+58,corridor,3,0,dwa~v1,1,ok,0.192,50.7,19.29,,,0.294,0.119,{},12.7
+58,corridor,3,0,dwa,1,ok,0.179,48.6,18.88,,,0.305,0.079,{},12.7
+58,corridor,3,0,prism@ppo+sac~v1,1,ok,0.144,48.4,19.13,,,0.252,0.31,{},25.1
+58,corridor,3,0,prism@ppo+sac,1,ok,0.178,44.3,18.13,,,0.19,0.13,{},22.3
+58,corridor,3,0,p2,0,va nguoi,9.108,18.8,7.2,person,0,0.205,-0.009,"{""kind"": ""person"", ""t"": 18.8, ""robot_in"": 0.0, ""person_in"": 0.07, ""robot_v"": 0.0, ""wz"": -0.17, ""bearing"": -28, ""at_fault"": 0}",6.3
+58,corridor,3,0,p2-evade,1,ok,0.172,50.1,19.73,,,0.321,0.134,{},15.2
+58,corridor,3,0,p2-rate,1,ok,0.205,47.3,18.81,,,0.199,0.03,{},12.9
+58,corridor,3,0,p2-cap,0,va nguoi,10.127,20.8,7.59,person,0,0.205,-0.028,"{""kind"": ""person"", ""t"": 20.8, ""robot_in"": 0.05, ""person_in"": -0.0, ""robot_v"": 0.05, ""wz"": 0.25, ""bearing"": 31, ""at_fault"": 0}",6.6
+58,corridor,3,0,p2@ppo+sac,1,ok,0.205,44.6,18.03,,,0.279,0.076,{},25.5
+70,office,0,0,mppi~v1,1,ok,0.161,55.0,20.11,,,0.423,9.0,{},13.6
+70,office,0,0,mppi,1,ok,0.176,55.0,19.97,,,0.403,9.0,{},14.3
+70,office,0,0,dwa~v1,1,ok,0.162,55.0,20.27,,,0.397,9.0,{},13.0
+70,office,0,0,dwa,1,ok,0.185,54.6,20.06,,,0.402,9.0,{},12.9
+70,office,0,0,prism@ppo+sac~v1,1,ok,0.182,47.5,19.14,,,0.302,9.0,{},23.2
+70,office,0,0,prism@ppo+sac,1,ok,0.158,45.0,18.71,,,0.256,9.0,{},21.5
+70,office,0,0,p2,1,ok,0.183,46.3,18.96,,,0.335,9.0,{},11.5
+70,office,0,0,p2-evade,1,ok,0.183,45.9,18.95,,,0.334,9.0,{},11.1
+70,office,0,0,p2-rate,1,ok,0.191,46.3,18.91,,,0.34,9.0,{},11.5
+70,office,0,0,p2-cap,1,ok,0.195,46.4,18.99,,,0.336,9.0,{},11.6
+70,office,0,0,p2@ppo+sac,1,ok,0.16,44.7,18.88,,,0.307,9.0,{},23.0
+83,corridor,4,0,mppi~v1,1,ok,0.176,80.6,28.39,,,0.171,0.019,{},23.8
+83,corridor,4,0,mppi,0,va nguoi,8.903,32.7,12.71,person,1,0.198,-0.015,"{""kind"": ""person"", ""t"": 32.7, ""robot_in"": 0.12, ""person_in"": 0.71, ""robot_v"": 0.12, ""wz"": 0.5, ""bearing"": 26, ""at_fault"": 1}",11.8
+83,corridor,4,0,dwa~v1,1,ok,0.176,75.3,27.03,,,0.247,0.014,{},20.6
+83,corridor,4,0,dwa,0,va nguoi,8.674,31.6,12.78,person,1,0.251,-0.014,"{""kind"": ""person"", ""t"": 31.6, ""robot_in"": 0.39, ""person_in"": 0.58, ""robot_v"": 0.4, ""wz"": -0.26, ""bearing"": 56, ""at_fault"": 1}",10.7
+83,corridor,4,0,prism@ppo+sac~v1,0,va nguoi,11.921,15.1,6.22,person,0,0.62,-0.01,"{""kind"": ""person"", ""t"": 15.1, ""robot_in"": -0.35, ""person_in"": 0.49, ""robot_v"": 0.39, ""wz"": -0.19, ""bearing"": -111, ""at_fault"": 0}",8.7
+83,corridor,4,0,prism@ppo+sac,0,va nguoi,10.51,14.2,5.75,person,1,0.615,-0.093,"{""kind"": ""person"", ""t"": 14.2, ""robot_in"": 0.13, ""person_in"": 0.63, ""robot_v"": 0.17, ""wz"": 0.23, ""bearing"": 12, ""at_fault"": 1}",9.1
+83,corridor,4,0,p2,0,va nguoi,10.22,31.9,12.83,person,1,0.463,-0.042,"{""kind"": ""person"", ""t"": 31.9, ""robot_in"": 0.08, ""person_in"": 0.71, ""robot_v"": 0.08, ""wz"": -0.79, ""bearing"": -29, ""at_fault"": 1}",12.4
+83,corridor,4,0,p2-evade,0,va nguoi,11.61,8.5,3.3,person,1,0.619,-0.04,"{""kind"": ""person"", ""t"": 8.5, ""robot_in"": 0.01, ""person_in"": 0.98, ""robot_v"": 0.1, ""wz"": 0.62, ""bearing"": -45, ""at_fault"": 1}",3.0
+83,corridor,4,0,p2-rate,0,va nguoi,8.893,32.9,13.03,person,1,0.21,-0.085,"{""kind"": ""person"", ""t"": 32.9, ""robot_in"": -0.0, ""person_in"": 0.54, ""robot_v"": 0.02, ""wz"": 0.52, ""bearing"": 33, ""at_fault"": 1}",12.0
+83,corridor,4,0,p2-cap,0,va nguoi,11.22,8.1,3.14,person,1,0.619,-0.016,"{""kind"": ""person"", ""t"": 8.1, ""robot_in"": 0.22, ""person_in"": 0.94, ""robot_v"": 0.29, ""wz"": -0.21, ""bearing"": -28, ""at_fault"": 1}",2.9
+83,corridor,4,0,p2@ppo+sac,0,va nguoi,11.374,8.5,3.4,person,1,0.615,-0.01,"{""kind"": ""person"", ""t"": 8.5, ""robot_in"": -0.04, ""person_in"": 0.95, ""robot_v"": 0.28, ""wz"": 0.83, ""bearing"": -66, ""at_fault"": 1}",5.3
+96,warehouse,3,0,mppi~v1,0,va nguoi,9.873,7.5,2.47,person,1,0.768,-0.06,"{""kind"": ""person"", ""t"": 7.5, ""robot_in"": 0.19, ""person_in"": 0.66, ""robot_v"": 0.31, ""wz"": 0.16, ""bearing"": -82, ""at_fault"": 1}",2.2
+96,warehouse,3,0,mppi,0,va nguoi,9.811,7.4,2.48,person,1,0.768,-0.013,"{""kind"": ""person"", ""t"": 7.4, ""robot_in"": -0.27, ""person_in"": 0.71, ""robot_v"": 0.27, ""wz"": 0.68, ""bearing"": -111, ""at_fault"": 1}",2.3
+96,warehouse,3,0,dwa~v1,0,va nguoi,9.474,7.0,2.74,person,0,0.768,-0.013,"{""kind"": ""person"", ""t"": 7.0, ""robot_in"": -0.35, ""person_in"": 0.74, ""robot_v"": 0.41, ""wz"": -0.25, ""bearing"": -101, ""at_fault"": 0}",2.0
+96,warehouse,3,0,dwa,0,va nguoi,9.705,6.1,2.27,person,1,0.768,-0.035,"{""kind"": ""person"", ""t"": 6.1, ""robot_in"": 0.02, ""person_in"": 0.62, ""robot_v"": 0.04, ""wz"": -0.44, ""bearing"": -29, ""at_fault"": 1}",1.7
+96,warehouse,3,0,prism@ppo+sac~v1,0,va nguoi,9.921,7.6,2.49,person,1,0.768,-0.052,"{""kind"": ""person"", ""t"": 7.6, ""robot_in"": 0.26, ""person_in"": 0.6, ""robot_v"": 0.36, ""wz"": 0.67, ""bearing"": -86, ""at_fault"": 1}",4.3
+96,warehouse,3,0,prism@ppo+sac,0,va nguoi,9.992,8.1,2.68,person,1,0.768,-0.03,"{""kind"": ""person"", ""t"": 8.1, ""robot_in"": -0.03, ""person_in"": 0.32, ""robot_v"": 0.27, ""wz"": 0.56, ""bearing"": -97, ""at_fault"": 1}",4.3
+96,warehouse,3,0,p2,0,va nguoi,9.75,6.6,2.25,person,0,0.768,-0.033,"{""kind"": ""person"", ""t"": 6.6, ""robot_in"": -0.01, ""person_in"": 0.63, ""robot_v"": 0.06, ""wz"": 0.07, ""bearing"": -43, ""at_fault"": 0}",1.8
+96,warehouse,3,0,p2-evade,0,va nguoi,9.5,7.5,2.82,person,0,0.768,-0.003,"{""kind"": ""person"", ""t"": 7.5, ""robot_in"": -0.36, ""person_in"": 0.66, ""robot_v"": 0.36, ""wz"": 0.25, ""bearing"": -134, ""at_fault"": 0}",2.2
+96,warehouse,3,0,p2-rate,0,va nguoi,9.601,7.3,2.6,person,0,0.768,-0.051,"{""kind"": ""person"", ""t"": 7.3, ""robot_in"": -0.06, ""person_in"": 0.65, ""robot_v"": 0.13, ""wz"": 0.26, ""bearing"": -118, ""at_fault"": 0}",2.3
+96,warehouse,3,0,p2-cap,0,va nguoi,9.908,6.5,2.22,person,0,0.768,-0.007,"{""kind"": ""person"", ""t"": 6.5, ""robot_in"": -0.12, ""person_in"": 0.51, ""robot_v"": 0.31, ""wz"": -0.25, ""bearing"": -8, ""at_fault"": 0}",1.9
+96,warehouse,3,0,p2@ppo+sac,0,va nguoi,9.685,6.9,2.39,person,1,0.768,-0.046,"{""kind"": ""person"", ""t"": 6.9, ""robot_in"": -0.09, ""person_in"": 0.7, ""robot_v"": 0.09, ""wz"": 0.43, ""bearing"": -100, ""at_fault"": 1}",4.0
+103,corridor,0,0,mppi~v1,1,ok,0.21,39.0,14.73,,,0.537,9.0,{},9.0
+103,corridor,0,0,mppi,1,ok,0.185,39.3,14.83,,,0.538,9.0,{},9.4
+103,corridor,0,0,dwa~v1,1,ok,0.163,39.5,14.83,,,0.508,9.0,{},8.2
+103,corridor,0,0,dwa,1,ok,0.192,39.3,14.84,,,0.506,9.0,{},8.2
+103,corridor,0,0,prism@ppo+sac~v1,1,ok,0.181,33.6,13.73,,,0.403,9.0,{},14.1
+103,corridor,0,0,prism@ppo+sac,1,ok,0.186,32.5,13.4,,,0.307,9.0,{},14.3
+103,corridor,0,0,p2,1,ok,0.182,31.1,13.23,,,0.409,9.0,{},7.3
+103,corridor,0,0,p2-evade,1,ok,0.192,31.8,13.32,,,0.425,9.0,{},7.5
+103,corridor,0,0,p2-rate,1,ok,0.18,31.1,13.25,,,0.401,9.0,{},7.0
+103,corridor,0,0,p2-cap,1,ok,0.168,31.7,13.32,,,0.405,9.0,{},7.4
+103,corridor,0,0,p2@ppo+sac,1,ok,0.2,31.0,13.22,,,0.424,9.0,{},15.0
+116,warehouse,2,0,mppi~v1,1,ok,0.163,52.3,18.94,,,0.407,0.808,{},14.0
+116,warehouse,2,0,mppi,1,ok,0.19,53.3,19.26,,,0.458,0.445,{},13.0
+116,warehouse,2,0,dwa~v1,1,ok,0.202,53.6,19.34,,,0.454,0.308,{},12.7
+116,warehouse,2,0,dwa,1,ok,0.201,53.5,19.27,,,0.452,0.334,{},12.8
+116,warehouse,2,0,prism@ppo+sac~v1,1,ok,0.163,44.7,17.71,,,0.388,0.305,{},21.2
+116,warehouse,2,0,prism@ppo+sac,1,ok,0.19,43.4,17.52,,,0.333,0.76,{},19.6
+116,warehouse,2,0,p2,1,ok,0.176,44.3,17.65,,,0.422,0.982,{},11.8
+116,warehouse,2,0,p2-evade,1,ok,0.197,43.6,17.57,,,0.405,0.874,{},11.6
+116,warehouse,2,0,p2-rate,1,ok,0.158,44.8,17.74,,,0.383,0.382,{},11.5
+116,warehouse,2,0,p2-cap,1,ok,0.163,44.3,17.66,,,0.373,0.393,{},11.3
+116,warehouse,2,0,p2@ppo+sac,1,ok,0.184,44.3,17.73,,,0.395,0.78,{},23.8
+129,clutter,6,0,mppi~v1,1,ok,0.203,78.4,27.5,,,0.387,0.062,{},25.0
+129,clutter,6,0,mppi,1,ok,0.186,67.7,23.49,,,0.351,0.467,{},35.4
+129,clutter,6,0,dwa~v1,1,ok,0.179,64.3,22.41,,,0.31,0.235,{},30.0
+129,clutter,6,0,dwa,1,ok,0.212,63.6,22.32,,,0.34,0.287,{},29.8
+129,clutter,6,0,prism@ppo+sac~v1,0,va nguoi,11.196,22.6,7.86,person,1,0.424,-0.024,"{""kind"": ""person"", ""t"": 22.6, ""robot_in"": 0.01, ""person_in"": 0.01, ""robot_v"": 0.01, ""wz"": 0.33, ""bearing"": 22, ""at_fault"": 1}",29.1
+129,clutter,6,0,prism@ppo+sac,1,ok,0.18,55.5,21.29,,,0.289,0.472,{},56.9
+129,clutter,6,0,p2,1,ok,0.202,56.7,21.9,,,0.335,0.318,{},34.4
+129,clutter,6,0,p2-evade,1,ok,0.126,53.5,21.11,,,0.323,0.317,{},23.6
+129,clutter,6,0,p2-rate,1,ok,0.184,55.6,21.66,,,0.295,0.392,{},30.6
+129,clutter,6,0,p2-cap,0,va nguoi,10.91,22.7,8.58,person,1,0.413,-0.056,"{""kind"": ""person"", ""t"": 22.7, ""robot_in"": 0.1, ""person_in"": 0.54, ""robot_v"": 0.33, ""wz"": 0.56, ""bearing"": 125, ""at_fault"": 1}",13.2
+129,clutter,6,0,p2@ppo+sac,0,va nguoi,5.693,39.7,15.07,person,1,0.305,-0.02,"{""kind"": ""person"", ""t"": 39.7, ""robot_in"": 0.23, ""person_in"": -0.0, ""robot_v"": 0.36, ""wz"": 0.03, ""bearing"": 93, ""at_fault"": 1}",44.7
+141,warehouse,5,0,mppi~v1,1,ok,0.185,56.3,20.09,,,0.44,0.171,{},29.8
+141,warehouse,5,0,mppi,0,va nguoi,3.974,39.5,14.66,person,1,0.422,-0.02,"{""kind"": ""person"", ""t"": 39.5, ""robot_in"": 0.14, ""person_in"": 0.7, ""robot_v"": 0.15, ""wz"": -0.11, ""bearing"": -6, ""at_fault"": 1}",17.8
+141,warehouse,5,0,dwa~v1,1,ok,0.146,54.5,20.21,,,0.455,0.049,{},22.2
+141,warehouse,5,0,dwa,1,ok,0.2,51.6,19.51,,,0.453,0.044,{},23.2
+141,warehouse,5,0,prism@ppo+sac~v1,1,ok,0.161,46.2,18.31,,,0.418,0.513,{},37.0
+141,warehouse,5,0,prism@ppo+sac,1,ok,0.129,46.3,18.27,,,0.34,0.134,{},36.4
+141,warehouse,5,0,p2,0,va nguoi,7.023,25.5,10.26,person,1,0.42,-0.013,"{""kind"": ""person"", ""t"": 25.5, ""robot_in"": 0.21, ""person_in"": 0.18, ""robot_v"": 0.25, ""wz"": -0.51, ""bearing"": -79, ""at_fault"": 1}",13.1
+141,warehouse,5,0,p2-evade,0,va nguoi,0.912,43.0,17.24,person,1,0.405,-0.004,"{""kind"": ""person"", ""t"": 43.0, ""robot_in"": 0.17, ""person_in"": 0.07, ""robot_v"": 0.17, ""wz"": -0.09, ""bearing"": 41, ""at_fault"": 1}",20.4
+141,warehouse,5,0,p2-rate,1,ok,0.177,61.4,23.31,,,0.353,0.038,{},25.6
+141,warehouse,5,0,p2-cap,0,va nguoi,5.689,30.1,11.98,person,1,0.419,-0.022,"{""kind"": ""person"", ""t"": 30.1, ""robot_in"": 0.15, ""person_in"": 0.88, ""robot_v"": 0.16, ""wz"": 0.8, ""bearing"": 15, ""at_fault"": 1}",10.9
+141,warehouse,5,0,p2@ppo+sac,1,ok,0.171,49.9,19.53,,,0.392,0.022,{},14.6

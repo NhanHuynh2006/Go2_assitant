@@ -1,0 +1,2 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+165,office,4,0,mppi:ppl=32,1,ok,0.199,57.3,22.39,,,0.375,0.447,{},23.3

@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+1,warehouse,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.196,60.0,21.33,,,0.314,0.628,{},8.4
+1,warehouse,5,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.196,82.3,31.59,,,0.064,0.335,{},11.1
+1,warehouse,5,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.188,48.2,19.61,,,0.522,0.464,{},5.5
+1,warehouse,5,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.185,45.1,18.84,,,0.523,0.519,{},4.5
+1,warehouse,5,0,mppi:ppl=32,1,ok,0.184,45.6,18.41,,,0.298,0.481,{},4.0
+1,warehouse,5,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.195,40.2,16.56,,,0.301,0.236,{},3.1
+1,warehouse,5,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.133,63.2,27.02,,,0.465,0.571,{},7.2
+20,office,2,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.184,64.7,25.45,,,0.337,0.521,{},5.7
+20,office,2,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.185,53.5,23.24,,,0.21,0.957,{},4.2
+20,office,2,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.192,38.9,18.0,,,0.422,0.902,{},3.4
+20,office,2,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.178,43.0,18.53,,,0.383,0.881,{},3.6
+20,office,2,0,mppi:ppl=32,0,va nguoi,3.061,42.9,16.63,person,1,0.448,-0.008,"{""kind"": ""person"", ""t"": 42.9, ""robot_in"": 0.05, ""person_in"": 0.04, ""robot_v"": 0.08, ""wz"": -0.68, ""bearing"": -29, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.76, ""miss"": 0.41, ""ahead"": 0.64, ""trk"": 1, ""sp"": 0.52, ""rv"": 0.48, ""wall"": 0.85}, ""1.0"": {""d"": 1.07, ""miss"": 0.32, ""ahead"": 1.02, ""trk"": 1, ""sp"": 0.64, ""rv"": 0.33, ""wall"": 0.99}, ""1.5"": {""d"": 1.36, ""miss"": 0.19, ""ahead"": 1.35, ""trk"": 1, ""sp"": 0.64, ""rv"": 0.21, ""wall"": 1.1}, ""2.0"": {""d"": 1.5, ""miss"": 0.24, ""ahead"": 1.48, ""trk"": 1, ""sp"": 0.64, ""rv"": 0.37, ""wall"": 1.03}, ""3.0"": {""d"": 1.8, ""miss"": 0.91, ""ahead"": 1.56, ""trk"": 1, ""sp"": 0.62, ""rv"": 0.2, ""wall"": 0.95}}, ""distracted"": 0}",2.8
+20,office,2,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.183,46.2,20.71,,,0.119,0.186,{},2.5
+20,office,2,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.191,79.9,30.27,,,0.138,1.019,{},6.4

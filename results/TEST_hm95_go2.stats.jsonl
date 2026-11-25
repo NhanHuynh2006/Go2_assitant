@@ -1,0 +1,4 @@
+{"steps": 1080247, "pp_pairs": 15888217, "pp_overlap": 65647, "wall_checks": 3769451, "wall_pen": 16, "centre_inside": 0, "nonfinite": 0}
+{"steps": 1103135, "pp_pairs": 16916638, "pp_overlap": 70762, "wall_checks": 3958511, "wall_pen": 4, "centre_inside": 0, "nonfinite": 0}
+{"steps": 1103925, "pp_pairs": 17330654, "pp_overlap": 61968, "wall_checks": 3964772, "wall_pen": 22, "centre_inside": 0, "nonfinite": 0}
+{"steps": 1152709, "pp_pairs": 17304940, "pp_overlap": 58567, "wall_checks": 4088865, "wall_pen": 26, "centre_inside": 0, "nonfinite": 0}

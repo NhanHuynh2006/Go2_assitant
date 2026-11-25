@@ -1,0 +1,25 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+clutter:slalom_coc,clutter,0,1,mppi~v1,1,ok,0.201,34.2,12.05,,,0.296,9.0,{},9.0
+clutter:slalom_coc,clutter,0,1,dwa~v1,1,ok,0.165,31.5,11.54,,,0.228,9.0,{},7.1
+clutter:slalom_coc,clutter,0,1,log_mppi~v1,1,ok,0.185,34.4,11.96,,,0.298,9.0,{},8.9
+clutter:slalom_coc,clutter,0,1,apmppi_multi~v1,1,ok,0.176,35.7,12.86,,,0.251,9.0,{},16.6
+clutter:slalom_coc,clutter,0,1,prism@ppo+sac~v1,1,ok,0.194,30.3,11.5,,,0.303,9.0,{},13.9
+clutter:slalom_coc,clutter,0,1,prism_nounc@ppo+sac~v1,1,ok,0.193,33.8,12.25,,,0.303,9.0,{},14.3
+clutter:slalom_coc,clutter,0,1,prism_noprior~v1,1,ok,0.191,34.5,12.24,,,0.303,9.0,{},8.8
+clutter:slalom_coc,clutter,0,1,rl~v1,1,ok,0.148,27.1,11.75,,,0.161,9.0,{},1.8
+clutter:slalom_coc,clutter,0,1,rl@td3~v1,1,ok,0.155,29.5,12.14,,,0.13,9.0,{},1.7
+clutter:slalom_coc,clutter,0,1,rl@sac~v1,1,ok,0.193,28.5,11.31,,,0.125,9.0,{},1.9
+clutter:slalom_coc,clutter,0,1,rl_safe~v1,1,ok,0.167,27.3,11.8,,,0.249,9.0,{},7.1
+clutter:slalom_coc,clutter,0,1,pp~v1,1,ok,0.171,38.8,12.54,,,0.23,9.0,{},2.6
+clutter:loi_pallet,clutter,0,3,mppi~v1,1,ok,0.152,82.2,29.46,,,0.157,9.0,{},22.3
+clutter:loi_pallet,clutter,0,3,dwa~v1,1,ok,0.173,113.4,43.83,,,0.175,9.0,{},28.1
+clutter:loi_pallet,clutter,0,3,log_mppi~v1,1,ok,0.169,74.1,26.88,,,0.177,9.0,{},18.6
+clutter:loi_pallet,clutter,0,3,apmppi_multi~v1,1,ok,0.203,98.3,37.28,,,0.157,9.0,{},51.4
+clutter:loi_pallet,clutter,0,3,prism@ppo+sac~v1,1,ok,0.204,208.9,78.94,,,0.139,9.0,{},109.8
+clutter:loi_pallet,clutter,0,3,prism_nounc@ppo+sac~v1,1,ok,0.183,72.1,28.15,,,0.318,9.0,{},28.5
+clutter:loi_pallet,clutter,0,3,prism_noprior~v1,1,ok,0.174,152.3,56.72,,,0.228,9.0,{},28.0
+clutter:loi_pallet,clutter,0,3,rl~v1,0,va vat,4.674,145.9,64.06,static,1,-0.003,9.0,"{""kind"": ""static"", ""t"": 145.9, ""robot_v"": 0.42, ""wz"": -0.06, ""at_fault"": 1}",6.4
+clutter:loi_pallet,clutter,0,3,rl@td3~v1,0,va vat,9.917,18.4,7.9,static,1,-0.005,9.0,"{""kind"": ""static"", ""t"": 18.4, ""robot_v"": 0.41, ""wz"": -0.32, ""at_fault"": 1}",0.9
+clutter:loi_pallet,clutter,0,3,rl@sac~v1,0,va vat,10.056,18.7,7.62,static,1,-0.001,9.0,"{""kind"": ""static"", ""t"": 18.7, ""robot_v"": 0.39, ""wz"": -0.73, ""at_fault"": 1}",0.9
+clutter:loi_pallet,clutter,0,3,rl_safe~v1,1,ok,0.141,284.8,121.65,,,0.091,9.0,{},51.1
+clutter:loi_pallet,clutter,0,3,pp~v1,1,ok,0.197,90.7,29.25,,,0.311,9.0,{},6.5

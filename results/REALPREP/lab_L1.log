@@ -1,0 +1,47 @@
+persistence map: 5179 o, 5 s
+{
+ "bag": "/home/nhanhuynh/go2_maps/lab_20260911_160656_slim/lab_20260911_160656_slim_0.db3",
+ "cloud": "/utlidar/cloud",
+ "odom": "/utlidar/robot_odom",
+ "odom_scale": 1.19,
+ "controller": "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5",
+ "segments": 4,
+ "segment_s": 60.0,
+ "ticks": 693,
+ "duration_s": 179.8,
+ "tick_any_person_pct": 5.6,
+ "tick_ghost_pct": 0.0,
+ "tick_ghost_or_unsure_pct": 3.6,
+ "n_unsure": 9,
+ "tick_real_pct": 2.0,
+ "static_ticks": 657,
+ "tick_any_person_on_static_pct": 3.5,
+ "front4m_any_pct": 3.3,
+ "front4m_ghost_pct": 0.0,
+ "front4m_ghost_or_unsure_pct": 3.3,
+ "front4m_real_pct": 0.0,
+ "n_confirmed": 10,
+ "n_ghost": 0,
+ "n_real": 1,
+ "ghost_per_min": 0.0,
+ "confirmed_per_min": 3.34,
+ "ghost_dur_med": null,
+ "ghost_dur_max": null,
+ "ghost_gt2s": 0,
+ "real_latency_med": 0.78,
+ "real_dconf_med": 0.76,
+ "cpu_scan_ms": {
+  "mean": 1.07,
+  "p50": 0.81,
+  "p95": 2.32,
+  "max": 4.89,
+  "n": 1386
+ },
+ "cpu_tracker_scan_ms": {
+  "mean": 1.76,
+  "p95": 2.67,
+  "n": 693
+ },
+ "python": "3.14.4",
+ "numpy": "2.5.2"
+}

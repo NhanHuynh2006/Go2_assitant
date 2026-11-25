@@ -1,0 +1,418 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/nhanhuynh/isaac/IsaacLab/apps/isaaclab.python.headless.kit
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-11-25_00-05-35.log[0m
+[36m======================================================================================[0m
+
+[33m00:05:35 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[33m00:05:36 [terrain_importer.py] WARNING: Visual material specified for ground plane but no diffuse color found. Using default color: (0.0, 0.0, 0.0)[0m
+[INFO]: Time taken for scene creation : 1.523052 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 4
+	Environment spacing   : 3.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.827725 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+
+[INFO] Event Manager:  <EventManager> contains 2 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
++----------+---------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++---------+---------------------------+
+|  Index  | Name                      |
++---------+---------------------------+
+|    0    | reset_base                |
+|    1    | reset_robot_joints        |
++---------+---------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++------------------------------------+
+|  Active Action Terms (shape: 12)   |
++--------+-------------+-------------+
+| Index  | Name        |   Dimension |
++--------+-------------+-------------+
+|   0    | joint_pos   |          12 |
++--------+-------------+-------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++----------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (235,)) |
++-----------+--------------------------------+-------------+
+|   Index   | Name                           |    Shape    |
++-----------+--------------------------------+-------------+
+|     0     | base_lin_vel                   |     (3,)    |
+|     1     | base_ang_vel                   |     (3,)    |
+|     2     | projected_gravity              |     (3,)    |
+|     3     | velocity_commands              |     (3,)    |
+|     4     | joint_pos                      |    (12,)    |
+|     5     | joint_vel                      |    (12,)    |
+|     6     | actions                        |    (12,)    |
+|     7     | height_scan                    |    (187,)   |
++-----------+--------------------------------+-------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | base_contact |  False   |
++-------+--------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[SRV] san sang /tmp/isaac_body_TEST_745341.sock
+[SRV] du 4 client, bat dau
+[SRV] 5000 buoc, RTF 0.7
+[SRV] 10000 buoc, RTF 0.7
+[SRV] 15000 buoc, RTF 0.7
+[SRV] 20000 buoc, RTF 0.7
+[SRV] 25000 buoc, RTF 0.6
+[SRV] 30000 buoc, RTF 0.6
+[SRV] 35000 buoc, RTF 0.6
+[SRV] 40000 buoc, RTF 0.6
+[SRV] 45000 buoc, RTF 0.6
+[SRV] 50000 buoc, RTF 0.6
+[SRV] 55000 buoc, RTF 0.6
+[SRV] 60000 buoc, RTF 0.6
+[SRV] 65000 buoc, RTF 0.6
+[SRV] 70000 buoc, RTF 0.6
+[SRV] 75000 buoc, RTF 0.6
+[SRV] 80000 buoc, RTF 0.6
+[SRV] 85000 buoc, RTF 0.6
+[SRV] 90000 buoc, RTF 0.6
+[SRV] 95000 buoc, RTF 0.6
+[SRV] 100000 buoc, RTF 0.6
+[SRV] 105000 buoc, RTF 0.7
+[SRV] 110000 buoc, RTF 0.7
+[SRV] 115000 buoc, RTF 0.7
+[SRV] 120000 buoc, RTF 0.7
+[SRV] 125000 buoc, RTF 0.7
+[SRV] 130000 buoc, RTF 0.7
+[SRV] 135000 buoc, RTF 0.7
+[SRV] 140000 buoc, RTF 0.7
+[SRV] 145000 buoc, RTF 0.7
+[SRV] 150000 buoc, RTF 0.7
+[SRV] 155000 buoc, RTF 0.7
+[SRV] 160000 buoc, RTF 0.7
+[SRV] 165000 buoc, RTF 0.7
+[SRV] 170000 buoc, RTF 0.7
+[SRV] 175000 buoc, RTF 0.7
+[SRV] 180000 buoc, RTF 0.7
+[SRV] 185000 buoc, RTF 0.7
+[SRV] 190000 buoc, RTF 0.7
+[SRV] 195000 buoc, RTF 0.7
+[SRV] 200000 buoc, RTF 0.7
+[SRV] 205000 buoc, RTF 0.7
+[SRV] 210000 buoc, RTF 0.7
+[SRV] 215000 buoc, RTF 0.7
+[SRV] 220000 buoc, RTF 0.7
+[SRV] 225000 buoc, RTF 0.7
+[SRV] 230000 buoc, RTF 0.7
+[SRV] 235000 buoc, RTF 0.7
+[SRV] 240000 buoc, RTF 0.7
+[SRV] 245000 buoc, RTF 0.7
+[SRV] 250000 buoc, RTF 0.7
+[SRV] 255000 buoc, RTF 0.7
+[SRV] 260000 buoc, RTF 0.7
+[SRV] 265000 buoc, RTF 0.7
+[SRV] 270000 buoc, RTF 0.7
+[SRV] 275000 buoc, RTF 0.7
+[SRV] 280000 buoc, RTF 0.7
+[SRV] 285000 buoc, RTF 0.7
+[SRV] 290000 buoc, RTF 0.7
+[SRV] 295000 buoc, RTF 0.7
+[SRV] 300000 buoc, RTF 0.7
+[SRV] 305000 buoc, RTF 0.7
+[SRV] 310000 buoc, RTF 0.7
+[SRV] 315000 buoc, RTF 0.7
+[SRV] 320000 buoc, RTF 0.7
+[SRV] 325000 buoc, RTF 0.7
+[SRV] 330000 buoc, RTF 0.7
+[SRV] 335000 buoc, RTF 0.7
+[SRV] 340000 buoc, RTF 0.7
+[SRV] 345000 buoc, RTF 0.7
+[SRV] 350000 buoc, RTF 0.7
+[SRV] 355000 buoc, RTF 0.7
+[SRV] 360000 buoc, RTF 0.7
+[SRV] 365000 buoc, RTF 0.7
+[SRV] 370000 buoc, RTF 0.7
+[SRV] 375000 buoc, RTF 0.7
+[SRV] 380000 buoc, RTF 0.7
+[SRV] 385000 buoc, RTF 0.7
+[SRV] 390000 buoc, RTF 0.7
+[SRV] 395000 buoc, RTF 0.7
+[SRV] 400000 buoc, RTF 0.7
+[SRV] 405000 buoc, RTF 0.7
+[SRV] 410000 buoc, RTF 0.7
+[SRV] 415000 buoc, RTF 0.7
+[SRV] 420000 buoc, RTF 0.7
+[SRV] 425000 buoc, RTF 0.7
+[SRV] 430000 buoc, RTF 0.7
+[SRV] 435000 buoc, RTF 0.7
+[SRV] 440000 buoc, RTF 0.7
+[SRV] 445000 buoc, RTF 0.7
+[SRV] 450000 buoc, RTF 0.7
+[SRV] 455000 buoc, RTF 0.7
+[SRV] 460000 buoc, RTF 0.7
+[SRV] 465000 buoc, RTF 0.7
+[SRV] 470000 buoc, RTF 0.7
+[SRV] 475000 buoc, RTF 0.7
+[SRV] 480000 buoc, RTF 0.7
+[SRV] 485000 buoc, RTF 0.7
+[SRV] 490000 buoc, RTF 0.7
+[SRV] 495000 buoc, RTF 0.7
+[SRV] 500000 buoc, RTF 0.7
+[SRV] 505000 buoc, RTF 0.7
+[SRV] 510000 buoc, RTF 0.7
+[SRV] 515000 buoc, RTF 0.7
+[SRV] 520000 buoc, RTF 0.7
+[SRV] 525000 buoc, RTF 0.7
+[SRV] 530000 buoc, RTF 0.7
+[SRV] 535000 buoc, RTF 0.7
+[SRV] 540000 buoc, RTF 0.7
+[SRV] 545000 buoc, RTF 0.7
+[SRV] 550000 buoc, RTF 0.7
+[SRV] 555000 buoc, RTF 0.7
+[SRV] 560000 buoc, RTF 0.7
+[SRV] 565000 buoc, RTF 0.7
+[SRV] 570000 buoc, RTF 0.7
+[SRV] 575000 buoc, RTF 0.7
+[SRV] 580000 buoc, RTF 0.7
+[SRV] 585000 buoc, RTF 0.7
+[SRV] 590000 buoc, RTF 0.7
+[SRV] 595000 buoc, RTF 0.7
+[SRV] 600000 buoc, RTF 0.7
+[SRV] 605000 buoc, RTF 0.7
+[SRV] 610000 buoc, RTF 0.7
+[SRV] 615000 buoc, RTF 0.7
+[SRV] 620000 buoc, RTF 0.7
+[SRV] 625000 buoc, RTF 0.7
+[SRV] 630000 buoc, RTF 0.7
+[SRV] 635000 buoc, RTF 0.7
+[SRV] 640000 buoc, RTF 0.7
+[SRV] 645000 buoc, RTF 0.7
+[SRV] 650000 buoc, RTF 0.7
+[SRV] 655000 buoc, RTF 0.7
+[SRV] 660000 buoc, RTF 0.7
+[SRV] 665000 buoc, RTF 0.7
+[SRV] 670000 buoc, RTF 0.7
+[SRV] 675000 buoc, RTF 0.7
+[SRV] 680000 buoc, RTF 0.7
+[SRV] 685000 buoc, RTF 0.7
+[SRV] 690000 buoc, RTF 0.7
+[SRV] 695000 buoc, RTF 0.7
+[SRV] 700000 buoc, RTF 0.7
+[SRV] 705000 buoc, RTF 0.7
+[SRV] 710000 buoc, RTF 0.7
+[SRV] 715000 buoc, RTF 0.7
+[SRV] 720000 buoc, RTF 0.7
+[SRV] 725000 buoc, RTF 0.7
+[SRV] 730000 buoc, RTF 0.7
+[SRV] 735000 buoc, RTF 0.7
+[SRV] 740000 buoc, RTF 0.7
+[SRV] 745000 buoc, RTF 0.7
+[SRV] 750000 buoc, RTF 0.7
+[SRV] 755000 buoc, RTF 0.7
+[SRV] 760000 buoc, RTF 0.7
+[SRV] 765000 buoc, RTF 0.7
+[SRV] 770000 buoc, RTF 0.7
+[SRV] 775000 buoc, RTF 0.7
+[SRV] 780000 buoc, RTF 0.7
+[SRV] 785000 buoc, RTF 0.7
+[SRV] 790000 buoc, RTF 0.7
+[SRV] 795000 buoc, RTF 0.7
+[SRV] 800000 buoc, RTF 0.7
+[SRV] 805000 buoc, RTF 0.7
+[SRV] 810000 buoc, RTF 0.7
+[SRV] 815000 buoc, RTF 0.7
+[SRV] 820000 buoc, RTF 0.7
+[SRV] 825000 buoc, RTF 0.7
+[SRV] 830000 buoc, RTF 0.7
+[SRV] 835000 buoc, RTF 0.7
+[SRV] 840000 buoc, RTF 0.7
+[SRV] 845000 buoc, RTF 0.7
+[SRV] 850000 buoc, RTF 0.7
+[SRV] 855000 buoc, RTF 0.7
+[SRV] 860000 buoc, RTF 0.7
+[SRV] 865000 buoc, RTF 0.7
+[SRV] 870000 buoc, RTF 0.7
+[SRV] 875000 buoc, RTF 0.7
+[SRV] 880000 buoc, RTF 0.7
+[SRV] 885000 buoc, RTF 0.7
+[SRV] 890000 buoc, RTF 0.7
+[SRV] 895000 buoc, RTF 0.7
+[SRV] 900000 buoc, RTF 0.7
+[SRV] 905000 buoc, RTF 0.7
+[SRV] 910000 buoc, RTF 0.7
+[SRV] 915000 buoc, RTF 0.7
+[SRV] 920000 buoc, RTF 0.7
+[SRV] 925000 buoc, RTF 0.7
+[SRV] 930000 buoc, RTF 0.7
+[SRV] 935000 buoc, RTF 0.7
+[SRV] 940000 buoc, RTF 0.7
+[SRV] 945000 buoc, RTF 0.7
+[SRV] 950000 buoc, RTF 0.7
+[SRV] 955000 buoc, RTF 0.7
+[SRV] 960000 buoc, RTF 0.7
+[SRV] 965000 buoc, RTF 0.7
+[SRV] 970000 buoc, RTF 0.7
+[SRV] 975000 buoc, RTF 0.7
+[SRV] 980000 buoc, RTF 0.7
+[SRV] 985000 buoc, RTF 0.7
+[SRV] 990000 buoc, RTF 0.7
+[SRV] 995000 buoc, RTF 0.7
+[SRV] 1000000 buoc, RTF 0.7
+[SRV] 1005000 buoc, RTF 0.7
+[SRV] 1010000 buoc, RTF 0.7
+[SRV] 1015000 buoc, RTF 0.7
+[SRV] 1020000 buoc, RTF 0.7
+[SRV] 1025000 buoc, RTF 0.7
+[SRV] 1030000 buoc, RTF 0.7
+[SRV] 1035000 buoc, RTF 0.7
+[SRV] 1040000 buoc, RTF 0.7
+[SRV] 1045000 buoc, RTF 0.7
+[SRV] 1050000 buoc, RTF 0.7
+[SRV] 1055000 buoc, RTF 0.7
+[SRV] 1060000 buoc, RTF 0.7
+[SRV] 1065000 buoc, RTF 0.7
+[SRV] 1070000 buoc, RTF 0.7
+[SRV] 1075000 buoc, RTF 0.7
+[SRV] 1080000 buoc, RTF 0.7
+[SRV] 1085000 buoc, RTF 0.7
+[SRV] 1090000 buoc, RTF 0.7
+[SRV] 1095000 buoc, RTF 0.7
+[SRV] 1100000 buoc, RTF 0.7
+[SRV] 1105000 buoc, RTF 0.7
+[SRV] 1110000 buoc, RTF 0.7
+[SRV] 1115000 buoc, RTF 0.7
+[SRV] 1120000 buoc, RTF 0.7
+[SRV] 1125000 buoc, RTF 0.7
+[SRV] 1130000 buoc, RTF 0.7
+[SRV] 1135000 buoc, RTF 0.7
+[SRV] 1140000 buoc, RTF 0.7
+[SRV] 1145000 buoc, RTF 0.7
+[SRV] 1150000 buoc, RTF 0.7
+[SRV] 1155000 buoc, RTF 0.7
+[SRV] 1160000 buoc, RTF 0.7
+[SRV] 1165000 buoc, RTF 0.7
+[SRV] 1170000 buoc, RTF 0.7
+[SRV] 1175000 buoc, RTF 0.7
+[SRV] 1180000 buoc, RTF 0.7
+[SRV] 1185000 buoc, RTF 0.7
+[SRV] 1190000 buoc, RTF 0.7
+[SRV] 1195000 buoc, RTF 0.7
+[SRV] 1200000 buoc, RTF 0.7
+[SRV] 1205000 buoc, RTF 0.7
+[SRV] 1210000 buoc, RTF 0.7
+[SRV] 1215000 buoc, RTF 0.7
+[SRV] 1220000 buoc, RTF 0.7
+[SRV] 1225000 buoc, RTF 0.7
+[SRV] 1230000 buoc, RTF 0.7
+[SRV] 1235000 buoc, RTF 0.7
+[SRV] 1240000 buoc, RTF 0.7
+[SRV] 1245000 buoc, RTF 0.7
+[SRV] 1250000 buoc, RTF 0.7
+[SRV] 1255000 buoc, RTF 0.7
+[SRV] 1260000 buoc, RTF 0.7
+[SRV] 1265000 buoc, RTF 0.7
+[SRV] 1270000 buoc, RTF 0.7
+[SRV] 1275000 buoc, RTF 0.7
+[SRV] 1280000 buoc, RTF 0.7
+[SRV] 1285000 buoc, RTF 0.7
+[SRV] 1290000 buoc, RTF 0.7
+[SRV] 1295000 buoc, RTF 0.7
+[SRV] 1300000 buoc, RTF 0.7
+[SRV] 1305000 buoc, RTF 0.7
+[SRV] 1310000 buoc, RTF 0.7
+[SRV] 1315000 buoc, RTF 0.7
+[SRV] 1320000 buoc, RTF 0.7
+[SRV] 1325000 buoc, RTF 0.7
+[SRV] 1330000 buoc, RTF 0.7
+[SRV] 1335000 buoc, RTF 0.7
+[SRV] 1340000 buoc, RTF 0.7
+[SRV] 1345000 buoc, RTF 0.7
+[SRV] 1350000 buoc, RTF 0.7
+[SRV] 1355000 buoc, RTF 0.7
+[SRV] 1360000 buoc, RTF 0.7
+[SRV] 1365000 buoc, RTF 0.7
+[SRV] 1370000 buoc, RTF 0.7
+[SRV] 1375000 buoc, RTF 0.7
+[SRV] 1380000 buoc, RTF 0.7
+[SRV] 1385000 buoc, RTF 0.7
+[SRV] 1390000 buoc, RTF 0.7
+[SRV] 1395000 buoc, RTF 0.7
+[SRV] 1400000 buoc, RTF 0.7
+[SRV] 1405000 buoc, RTF 0.7
+[SRV] 1410000 buoc, RTF 0.7
+[SRV] 1415000 buoc, RTF 0.7
+[SRV] 1420000 buoc, RTF 0.7
+[SRV] 1425000 buoc, RTF 0.7
+[SRV] 1430000 buoc, RTF 0.7
+[SRV] 1435000 buoc, RTF 0.7
+[SRV] 1440000 buoc, RTF 0.7
+[SRV] 1445000 buoc, RTF 0.7
+[SRV] 1450000 buoc, RTF 0.7
+[SRV] 1455000 buoc, RTF 0.7
+[SRV] 1460000 buoc, RTF 0.7
+[SRV] 1465000 buoc, RTF 0.7
+[SRV] 1470000 buoc, RTF 0.7
+[SRV] 1475000 buoc, RTF 0.7
+[SRV] 1480000 buoc, RTF 0.7
+[SRV] 1485000 buoc, RTF 0.7
+[SRV] 1490000 buoc, RTF 0.7
+[SRV] 1495000 buoc, RTF 0.7
+[SRV] 1500000 buoc, RTF 0.7
+[SRV] 1505000 buoc, RTF 0.7
+[SRV] 1510000 buoc, RTF 0.7
+[SRV] 1515000 buoc, RTF 0.7
+[SRV] 1520000 buoc, RTF 0.7
+[SRV] 1525000 buoc, RTF 0.7
+[SRV] 1530000 buoc, RTF 0.7
+[SRV] 1535000 buoc, RTF 0.7

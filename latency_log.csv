@@ -1,0 +1,36 @@
+ts,path,stt_ms,brain_ms,exec_ms,total_ms,text
+07:56:14,reflex,0.0,0.0,0.0,649.2,đi thẳng 2 mét
+07:56:22,llm,0.0,184.2,0.0,1579.4,bạn tên gì
+07:56:29,emergency,0.0,0,0,494.2,dừng lại
+07:56:45,llm,0.0,600.9,0.1,2662.9,đi tới 1 mét rồi xoay trái chào
+07:57:49,reflex,0.0,0.0,0.0,641.4,đi tới 1 mét
+07:57:59,reflex,0.0,0.0,0.1,564.8,rẽ trái
+07:58:15,reflex,0.0,0.0,0.1,803.3,sang trái 45 độ
+07:58:31,llm,0.0,317.0,0.0,1986.4,xoay tại chỗ 2 vòng
+09:20:20,emergency,0.0,0,0,4.2,ơ khoan khoan dừng lại ngay
+09:20:28,llm,0.0,672.5,0.0,673.3,đang đi mà gặp người thì sao
+09:20:52,llm,0.0,600.9,0.0,601.7,đi tới trước 2 mét rồi xoay phải 90 độ rồi thả tim
+09:21:02,llm,0.0,945.3,0.0,946.3,chào xong nhảy một bài xong nằm xuống nghỉ
+09:21:10,reflex,0.0,0.0,0.0,1.3,xoay tại chỗ 2 vòng
+09:21:16,reflex,0.0,0.0,0.0,1.2,lùi lại ba mét
+09:21:18,reflex,0.0,0.0,0.0,1.0,lùi lại ba mét
+09:21:23,reflex,0.0,0.0,0.0,0.7,lùi lại ba mét
+09:22:45,llm,0.0,210.9,0.0,212.0,bạn thấy mình đẹp trai không
+09:23:00,llm,0.0,737.5,0.0,738.5,bay lên nóc nhà đi
+09:23:33,reflex,0.0,0.0,0.0,0.9,ra chỗ cái bàn rồi đứng yên đó chờ mình
+09:23:48,reflex,0.0,0.0,0.0,0.7,lùi lại ba mét
+09:24:01,reflex,0.0,0.0,0.0,0.7,xoay phải 90 độ
+09:24:19,reflex,0.0,0.0,0.0,0.8,quay 1 vòng
+09:24:45,reflex,0.0,0.0,0.1,1.3,đi tới 8m
+09:24:59,reflex,0.0,0.0,0.0,1.0,đi tới 10m
+21:53:47,reflex,255.0,0.0,0.0,255.9,đi tới.
+21:53:51,emergency,76.0,0,0,76.8,dừng lại.
+21:53:54,llm,85.5,304.5,0.0,392.4,quê oi cháy.
+21:54:01,reflex,80.7,0.0,0.0,81.4,rẽ trái.
+21:54:05,llm,78.5,409.3,0.0,488.7,hoa chải.
+21:54:08,llm,78.4,115.1,0.0,194.4,hoa chái.
+21:54:14,llm,89.1,361.1,0.0,451.0,đi trái ba mét.
+21:54:17,llm,156.4,173.6,0.0,330.8,tổng thống mỹ lân sthanh trước quốc hội đảng đã xây dựng đất nước ngoài công.
+21:54:22,llm,288.1,193.3,0.0,482.7,tổng thống mỹ lý thuyết phục tổng thống mỹ đức cho biết ông đoàn đã thi công thay đổi công tác thành công.
+21:54:28,llm,79.1,418.5,0.0,498.5,xay vòng.
+21:54:37,llm,79.7,440.3,0.0,520.8,xoay vòng.

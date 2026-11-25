@@ -1,44 +1,79 @@
 # ============================================================
-#  config.yaml — DEMO chi noi tren JETSON (toi uu TOC DO)
+#  GoVoice — cau hinh trung tam
+#  Doi mode khi chuyen tu laptop sang Jetson (xem HUONG_DAN.md)
 # ============================================================
 
 llm:
-  endpoint: "http://127.0.0.1:8080"
+  endpoint: "http://127.0.0.1:8080"   # llama-server (llama.cpp)
   temperature: 0.2
-  n_predict: 80                        # GIAM 200->80: cau lenh JSON ngan, sinh it token = nhanh
+  n_predict: 200                       # so token toi da cho 1 cau tra loi
   timeout_s: 60
-  fewshot: false                       # model DA FINE-TUNE
+  fewshot: false                       # false = model DA FINE-TUNE (vi du da hoc roi)
+                                       # true  = model GOC (can vi du mau trong prompt)
 
 stt:
-  backend: transducer
-  transducer_model: /home/unitree/NhanHuynh/go2_jetson_demo/models/zipformer-vi-30M
-  hotwords_file: /home/unitree/NhanHuynh/go2_jetson_demo/hotwords.txt
-  hotwords_score: 3.0
-  device: cpu
-
-audio:
-  backend: local
-  input_device: "CS202"
-  silence_end_ms: 200      # cat cau nhanh hon (270->200) -> phan hoi lien hon; neu bi cat giua cau thi tang lai
-  mic_gain: 25             # % gain thu ALSA. 25 = diem ngot cua CS202 (100 = +32dB -> vo tieng, VAD truot cau)
-
-robot:
-  # dry_run: robot GIA (chi in lenh). De TRUE cho an toan; muon chay THAT thi
-  # chay:  python3 assistant_realtime.py --mode voice --real   (co --real moi cu dong)
-  dry_run: true
-  iface: eth0
-  # Toc do CHAM cho an toan khi demo (m/s, rad/s)
-  max_vx: 0.3
-  max_vy: 0.25
-  max_vyaw: 0.8
-  max_duration: 3.0
-  # MOI: moi lenh di chuyen toi da ~0.5m (50cm) -> khoi di ca met, so dung do vat
-  max_step_m: 0.5
-  require_stand_before_move: true
+  # Duong dan model CTranslate2 (PhoWhisper da convert), hoac ten model
+  # faster-whisper goc nhu "small" / "tiny" (tu tai ve).
+  # NANG CAP do chinh xac: convert PhoWhisper-MEDIUM roi tro vao day
+  #   (xem HUONG_DAN.md A3 — thay "small" bang "medium" trong lenh convert)
+  model: "models/phowhisper-small-ct2"
+  fallback_model: "small"              # neu model tren chua co thi dung cai nay
+  device: "cuda"                       # cuda | cpu   (Jetson: thu "cpu" truoc)
+  compute_type: "int8_float16"         # cuda: int8_float16 | cpu: int8
+  language: "vi"
+  beam_size: 5                         # 5 = chinh xac hon (GPU van nhanh); 1 = nhanh nhat
+  max_words: 25                        # cau nghe duoc dai hon = tieng nen (TV, nguoi khac) -> bo
+  wake_words: []                       # vd ["gô ơi", "chó ơi"]: chi nghe cau co goi ten. [] = tat
+  command_gate: true                   # mic chi nhan cau CO tu lenh (đi, tới, xoay, ten do vat...) -> chan tieng TV
+  # initial_prompt: "..."              # de trong = dung bo tu vung lenh robot mac dinh
 
 tts:
   enabled: true
-  output: robot                     # ← ra LOA ROBOT qua WebRTC
-  speaker_port: 17891
-  voice: /home/unitree/NhanHuynh/go2_jetson_demo/models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx
-  piper_bin: /home/unitree/piper/piper
+  voice: "models/piper/vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx"
+  output: "local"                      # local = loa may | wav = chi ghi file (cho loa robot)
+  wav_dir: "tts_out"                   # noi luu wav khi output=wav
+
+audio:
+  backend: "local"                     # local = mic may tinh | udp = mic robot (go2_audio_bridge.py)
+  udp_host: "127.0.0.1"
+  udp_port: 17890
+  sample_rate: 16000
+  vad_aggressiveness: 3                # 0-3, cang cao cang "kho tinh" voi tieng on (3 = chong TV/nhieu nen)
+  max_utterance_s: 12
+  min_utterance_s: 0.45
+  silence_end_ms: 270                  # im lang bao nhieu ms thi CHOT cau roi xu ly.
+                                       #   nho = phan hoi LIEN hon (210 rat lien) | 360 = an toan, khong cat giua cau
+
+robot:
+  dry_run: true                        # true = chi in lenh (test laptop) | false = dieu khien that (Jetson)
+  iface: "eth0"                        # card mang DDS toi robot (tren Jetson la eth0)
+  waypoints_file: "waypoints.yaml"
+  max_vx: 0.6                          # gioi han an toan (m/s)
+  max_vy: 0.4
+  max_vyaw: 1.0                        # rad/s
+  max_duration: 6.0                    # giay
+
+logging:
+  csv: "latency_log.csv"               # log do tre tung khau (de viet bao)
+
+sim:                                   # chi dung cho run_sim.py (Go2 trong Gazebo)
+  waypoints_file: "waypoints_sim.yaml" # cac diem trong nha mo phong voice_house.sdf
+  closed_loop: true                    # move() di DU met/do theo odom Gazebo (gait sim cham)
+  # spawn: {go2_0: [x, y, yaw]}        # chi khi odom bat dau tu 0 (gazebo/odom da la toa do world)
+  # names:                             # ten rieng de goi tung con (tuy chon)
+  #   go2_0: ["mực", "đen"]
+  #   go2_1: ["vàng", "bông"]
+
+real:                                  # chi dung cho run_real_ros.py (Go2 that, co ne vat can)
+  ns: "go2"                            # topic cua go2_hardware_bridge: /go2/cmd_vel, /go2/odom...
+  odom_topic: "{ns}/odom"
+  cloud_topic: "{ns}/lidar/points"     # bridge phai chay voi --lidar-rate 10
+  depth_topic: "/camera/camera/depth/image_rect_raw"   # realsense-ros (16UC1, mm)
+  waypoints_file: "waypoints_real.yaml"  # day bang giong noi: "lưu chỗ này là bếp"
+  # objects_file: "objects_real.yaml"  # do vat + mau trong nha that (tuy chon)
+  d435i_x: 0.30                        # GIA DO CUA BAN: m truoc tam than
+  d435i_z: 0.05                        # m cao hon tam than
+  d435i_pitch: 0.35                    # rad, > 0 = cui xuong (0.35 = 20 do)
+  base_height: 0.32                    # than Go2 that khi dung
+  goto_speed: 0.3                      # m/s khi tu lai (an toan)
+  ask_who: false                       # 1 robot: khong hoi "con nao"

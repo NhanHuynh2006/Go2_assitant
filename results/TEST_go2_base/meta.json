@@ -1,0 +1,1 @@
+{"suite": "gen", "seeds": "100000-101386", "tasks": "", "regime": "go2", "oracle": false, "crowd_model": "base", "crowd_only": true, "trials": 1}

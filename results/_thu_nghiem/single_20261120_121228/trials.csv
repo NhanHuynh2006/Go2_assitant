@@ -1,0 +1,103 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,replans,brakes
+full,nav:cửa,nav,go2,1,0,0.269,,0.787,3.8,4.82,20.1,0.47,0.436,,18,0
+full,nav:cửa sổ,nav,go2,1,0,0.22,,0.879,3.84,4.37,16.2,0.442,0.447,,15,0
+full,nav:bàn,nav,go2,1,0,0.245,,0.793,2.9,3.66,15.0,0.428,0.408,,14,0
+full,nav:ghế,nav,go2,1,0,0.234,,0.808,2.61,3.23,13.7,0.425,0.397,,13,0
+full,nav:bếp,nav,go2,1,0,0.257,,0.851,4.55,5.35,20.6,0.413,0.42,,17,0
+full,nav:chỗ sạc,nav,go2,1,0,0.25,,0.824,4.7,5.7,22.8,0.443,0.448,,21,0
+full,nav:góc phòng,nav,go2,1,0,0.233,,0.876,5.67,6.48,25.0,0.435,0.434,,24,0
+full,nav:phòng khách,nav,go2,1,0,0.194,,0.846,4.19,4.95,18.0,0.254,0.259,,18,0
+full,motion:đi thẳng 1 mét,motion,go2,1,0,0.002,,,,1.19,5.0,0.517,0.52,,0,0
+full,motion:đi thẳng 2 mét,motion,go2,1,0,0.016,,,,2.23,8.9,0.475,0.481,,0,0
+full,motion:lùi lại 1 mét,motion,go2,0,0,0.774,,,,0.31,0.7,0.721,0.705,,0,0
+full,motion:sang trái nửa mét,motion,go2,1,0,0.026,,,,0.58,2.7,0.733,0.716,,0,0
+full,motion:xoay trái 90 độ,motion,go2,1,0,,0.9,,,0.6,3.2,0.723,0.706,,0,0
+full,motion:xoay phải 90 độ,motion,go2,1,0,,0.3,,,0.51,3.4,0.714,0.692,,0,0
+full,motion:quay 1 vòng,motion,go2,1,0,,3.1,,,1.72,11.7,0.599,0.583,,0,0
+full,safety:tuong,safety,go2,1,0,,,,,0.94,5.0,0.335,0.306,,0,0
+full,safety:thung,safety,go2,1,0,,,,,0.53,3.8,0.31,0.28,,0,0
+full,safety:vat_thap_12cm,safety,go2,1,0,,,,,0.6,4.0,0.232,0.235,,0,0
+lidar_only,nav:cửa,nav,go2,1,0,0.208,,0.852,3.82,4.48,19.1,0.116,0.127,,18,0
+lidar_only,nav:cửa sổ,nav,go2,1,0,0.3,,0.851,3.76,4.41,17.7,0.173,0.175,,16,0
+lidar_only,nav:bàn,nav,go2,1,0,0.207,,0.8,2.98,3.72,16.3,0.429,0.41,,15,0
+lidar_only,nav:ghế,nav,go2,1,0,0.231,,0.822,2.63,3.2,12.8,0.438,0.409,,13,0
+lidar_only,nav:bếp,nav,go2,0,1,0.282,,0.0,4.55,5.68,26.4,-0.065,-0.083,,25,0
+lidar_only,nav:chỗ sạc,nav,go2,1,0,0.214,,0.778,4.7,6.04,26.0,0.111,0.121,,25,0
+lidar_only,nav:góc phòng,nav,go2,1,0,0.231,,0.762,5.67,7.45,31.0,0.248,0.255,,30,0
+lidar_only,nav:phòng khách,nav,go2,0,1,0.189,,0.0,4.09,11.93,62.9,-0.062,-0.082,,62,0
+lidar_only,motion:đi thẳng 1 mét,motion,go2,1,0,0.018,,,,1.14,5.2,0.56,0.565,,0,0
+lidar_only,motion:đi thẳng 2 mét,motion,go2,1,0,0.015,,,,2.38,9.6,0.509,0.51,,0,0
+lidar_only,motion:lùi lại 1 mét,motion,go2,1,0,0.012,,,,1.16,4.4,0.545,0.445,,0,0
+lidar_only,motion:sang trái nửa mét,motion,go2,1,0,0.054,,,,0.58,2.8,0.721,0.704,,0,0
+lidar_only,motion:xoay trái 90 độ,motion,go2,1,0,,1.4,,,0.59,3.1,0.712,0.693,,0,0
+lidar_only,motion:xoay phải 90 độ,motion,go2,1,0,,0.1,,,0.46,3.3,0.718,0.698,,0,0
+lidar_only,motion:quay 1 vòng,motion,go2,1,0,,0.3,,,1.8,12.3,0.655,0.609,,0,0
+lidar_only,safety:tuong,safety,go2,0,1,,,,,7.04,38.6,-0.021,-0.049,,0,0
+lidar_only,safety:thung,safety,go2,0,1,,,,,3.83,21.9,-0.038,-0.068,,0,0
+lidar_only,safety:vat_thap_12cm,safety,go2,0,1,,,,,12.46,38.5,-0.15,-0.15,,0,0
+no_avoid,nav:cửa,nav,go2,0,1,1.947,,0.0,3.87,17.11,90.7,-0.021,-0.048,,0,0
+no_avoid,nav:cửa sổ,nav,go2,1,0,0.232,,0.893,3.84,4.3,16.7,0.189,0.194,,0,0
+no_avoid,nav:bàn,nav,go2,1,0,0.247,,0.818,2.98,3.64,14.9,0.428,0.406,,0,0
+no_avoid,nav:ghế,nav,go2,1,0,0.199,,0.82,2.61,3.18,12.2,0.447,0.418,,0,0
+no_avoid,nav:bếp,nav,go2,0,1,0.261,,0.0,4.57,5.5,24.3,-0.057,-0.086,,0,0
+no_avoid,nav:chỗ sạc,nav,go2,0,1,2.567,,0.0,4.7,21.44,115.1,-0.041,-0.067,,0,0
+no_avoid,nav:góc phòng,nav,go2,0,1,0.193,,0.0,5.67,8.27,36.6,-0.095,-0.089,,0,0
+no_avoid,nav:phòng khách,nav,go2,0,1,0.224,,0.0,4.19,4.76,22.7,-0.067,-0.086,,0,0
+no_avoid,motion:đi thẳng 1 mét,motion,go2,1,0,0.016,,,,1.32,5.1,0.483,0.485,,0,0
+no_avoid,motion:đi thẳng 2 mét,motion,go2,1,0,0.01,,,,2.24,8.5,0.433,0.434,,0,0
+no_avoid,motion:lùi lại 1 mét,motion,go2,1,0,0.006,,,,1.22,3.8,0.514,0.415,,0,0
+no_avoid,motion:sang trái nửa mét,motion,go2,1,0,0.027,,,,0.57,2.7,0.737,0.723,,0,0
+no_avoid,motion:xoay trái 90 độ,motion,go2,1,0,,0.0,,,0.43,3.1,0.723,0.706,,0,0
+no_avoid,motion:xoay phải 90 độ,motion,go2,1,0,,1.8,,,0.48,3.3,0.709,0.689,,0,0
+no_avoid,motion:quay 1 vòng,motion,go2,1,0,,0.9,,,1.66,10.9,0.599,0.579,,0,0
+no_avoid,safety:tuong,safety,go2,0,1,,,,,7.66,38.6,-0.015,-0.043,,0,0
+no_avoid,safety:thung,safety,go2,0,1,,,,,4.38,21.9,-0.015,-0.043,,0,0
+no_avoid,safety:vat_thap_12cm,safety,go2,0,1,,,,,5.26,38.6,-0.149,-0.15,,0,0
+open_loop,motion:đi thẳng 1 mét,motion,go2,0,0,0.224,,,,0.95,3.1,0.534,0.539,,0,0
+open_loop,motion:đi thẳng 2 mét,motion,go2,0,0,0.443,,,,1.74,5.9,0.441,0.447,,0,0
+open_loop,motion:lùi lại 1 mét,motion,go2,0,0,0.235,,,,1.38,3.8,0.267,0.172,,0,0
+open_loop,motion:sang trái nửa mét,motion,go2,1,0,0.012,,,,0.59,2.2,0.728,0.712,,0,0
+open_loop,motion:xoay trái 90 độ,motion,go2,0,0,,22.7,,,0.38,2.2,0.726,0.71,,0,0
+open_loop,motion:xoay phải 90 độ,motion,go2,0,0,,39.4,,,0.23,2.2,0.708,0.688,,0,0
+open_loop,motion:quay 1 vòng,motion,go2,0,0,,80.8,,,1.1,8.2,0.556,0.538,,0,0
+full,nav:cửa,nav,go2,1,0,0.248,,0.575,3.82,6.64,30.0,0.098,0.068,,29,1
+full,nav:cửa sổ,nav,go2,1,0,0.208,,0.851,3.76,4.41,17.2,0.187,0.191,,16,0
+full,nav:bàn,nav,go2,1,0,0.196,,0.717,2.9,4.05,16.4,0.406,0.379,,15,0
+full,nav:ghế,nav,go2,1,0,0.18,,0.78,2.51,3.22,13.2,0.406,0.38,,13,0
+full,nav:bếp,nav,go2,1,0,0.275,,0.663,4.57,6.9,29.2,0.12,0.09,,29,2
+full,nav:chỗ sạc,nav,go2,1,0,0.235,,0.739,4.7,6.36,27.0,0.102,0.095,,26,0
+full,nav:góc phòng,nav,go2,1,0,0.209,,0.778,5.67,7.29,29.7,0.374,0.381,,29,0
+full,nav:phòng khách,nav,go2,0,1,0.232,,0.0,4.19,5.42,23.1,-0.044,-0.073,,22,0
+full,motion:đi thẳng 1 mét,motion,go2,1,0,0.011,,,,1.2,5.0,0.509,0.513,,0,0
+full,motion:đi thẳng 2 mét,motion,go2,1,0,0.014,,,,2.27,9.0,0.515,0.517,,0,0
+full,motion:lùi lại 1 mét,motion,go2,1,0,0.015,,,,1.24,4.0,0.497,0.398,,0,0
+full,motion:sang trái nửa mét,motion,go2,1,0,0.051,,,,0.65,2.8,0.716,0.7,,0,0
+full,motion:xoay trái 90 độ,motion,go2,1,0,,1.3,,,0.4,3.0,0.72,0.704,,0,0
+full,motion:xoay phải 90 độ,motion,go2,1,0,,0.6,,,0.41,3.3,0.714,0.694,,0,0
+full,motion:quay 1 vòng,motion,go2,1,0,,1.5,,,1.57,10.5,0.631,0.607,,0,0
+full,safety:tuong,safety,go2,1,0,,,,,0.97,3.7,0.133,0.104,,0,0
+full,safety:thung,safety,go2,1,0,,,,,0.43,1.8,0.253,0.223,,0,0
+full,safety:vat_thap_12cm,safety,go2,0,1,,,,,0.95,4.9,-0.1,-0.13,,0,0
+lidar_only,nav:cửa,nav,go2,0,1,1.962,,0.0,3.82,28.58,160.2,-0.036,-0.062,,159,0
+lidar_only,nav:cửa sổ,nav,go2,1,0,0.273,,0.895,3.84,4.29,17.3,0.229,0.235,,16,0
+lidar_only,nav:bàn,nav,go2,1,0,0.259,,0.827,3.04,3.68,15.8,0.451,0.429,,15,0
+lidar_only,nav:ghế,nav,go2,1,0,0.269,,0.798,2.61,3.27,13.4,0.412,0.384,,13,0
+lidar_only,nav:bếp,nav,go2,0,1,0.221,,0.0,4.57,5.65,27.0,-0.06,-0.086,,25,0
+lidar_only,nav:chỗ sạc,nav,go2,0,1,2.566,,0.0,4.7,34.99,199.9,-0.05,-0.074,,199,0
+lidar_only,nav:góc phòng,nav,go2,0,1,0.182,,0.0,5.67,8.42,36.9,-0.14,-0.124,,37,0
+lidar_only,nav:phòng khách,nav,go2,0,1,0.232,,0.0,4.19,4.68,23.3,-0.071,-0.085,,22,0
+lidar_only,motion:đi thẳng 1 mét,motion,go2,1,0,0.007,,,,1.18,5.2,0.5,0.503,,0,0
+lidar_only,motion:đi thẳng 2 mét,motion,go2,1,0,0.026,,,,2.31,8.7,0.522,0.527,,0,0
+lidar_only,motion:lùi lại 1 mét,motion,go2,1,0,0.012,,,,1.08,3.9,0.545,0.445,,0,0
+lidar_only,motion:sang trái nửa mét,motion,go2,1,0,0.047,,,,0.6,3.0,0.716,0.699,,0,0
+lidar_only,motion:xoay trái 90 độ,motion,go2,1,0,,0.2,,,0.51,3.0,0.723,0.707,,0,0
+lidar_only,motion:xoay phải 90 độ,motion,go2,1,0,,0.2,,,0.38,3.0,0.709,0.689,,0,0
+lidar_only,motion:quay 1 vòng,motion,go2,1,0,,3.8,,,1.58,11.0,0.514,0.489,,0,0
+lidar_only,safety:tuong,safety,go2,0,1,,,,,7.01,38.6,-0.014,-0.042,,0,0
+lidar_only,safety:thung,safety,go2,0,1,,,,,3.92,21.9,-0.015,-0.044,,0,0
+lidar_only,safety:vat_thap_12cm,safety,go2,0,1,,,,,7.07,38.6,-0.15,-0.15,,0,0
+no_avoid,nav:cửa,nav,go2,0,1,1.953,,0.0,3.74,16.91,90.2,-0.015,-0.044,,0,0
+no_avoid,nav:cửa sổ,nav,go2,1,0,0.259,,0.897,3.84,4.28,16.3,0.194,0.192,,0,0
+no_avoid,nav:bàn,nav,go2,1,0,0.235,,0.801,3.04,3.8,15.4,0.405,0.384,,0,0
+no_avoid,nav:ghế,nav,go2,1,0,0.204,,0.83,2.63,3.17,12.3,0.421,0.393,,0,0
+no_avoid,nav:bếp,nav,go2,0,1,0.283,,0.0,4.55,5.54,24.7,-0.061,-0.087,,0,0

@@ -1,0 +1,25 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+8,corridor,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.171,104.3,37.68,,,0.081,0.132,{},16.8
+8,corridor,6,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.164,181.1,60.34,,,0.113,0.072,{},23.2
+22,lobby,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.172,40.3,15.53,,,0.429,0.583,{},3.9
+22,lobby,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.164,40.9,15.75,,,0.411,0.602,{},4.0
+32,lobby,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.204,37.9,15.55,,,0.33,0.588,{},3.6
+32,lobby,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.19,44.1,17.4,,,0.458,0.381,{},4.0
+45,office,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.168,41.9,16.67,,,0.236,0.617,{},3.9
+45,office,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.171,58.9,22.01,,,0.156,0.025,{},5.8
+58,corridor,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.162,71.2,26.8,,,0.136,0.397,{},6.9
+58,corridor,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.177,61.2,22.26,,,0.115,0.072,{},6.1
+68,corridor,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.186,62.7,23.02,,,0.196,0.136,{},6.2
+68,corridor,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.178,72.0,25.85,,,0.242,0.11,{},7.1
+90,office,6,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.195,49.5,19.33,,,0.2,0.277,{},5.1
+90,office,6,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.183,52.7,19.85,,,0.228,0.063,{},5.7
+104,clutter,3,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.17,49.3,19.66,,,0.293,0.562,{},4.8
+104,clutter,3,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.168,45.6,18.56,,,0.236,0.505,{},4.4
+116,warehouse,2,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.16,46.8,18.16,,,0.321,0.52,{},4.0
+116,warehouse,2,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.197,47.9,18.43,,,0.341,0.579,{},4.2
+126,warehouse,5,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.166,77.3,30.62,,,0.18,0.156,{},7.2
+126,warehouse,5,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.179,74.3,29.03,,,0.243,0.197,{},6.8
+138,corridor,4,0,p3+geo-haz+gcv~ocb~nl,1,ok,0.19,78.1,30.12,,,0.276,0.269,{},7.7
+138,corridor,4,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.157,87.4,31.69,,,0.101,0.038,{},8.7
+145,office,6,0,p3+geo-haz+gcv~ocb~nl,0,va nguoi,2.677,49.2,19.53,person,0,0.199,-0.027,"{""kind"": ""person"", ""t"": 49.2, ""robot_in"": -0.04, ""person_in"": 0.86, ""robot_v"": 0.06, ""wz"": -0.28, ""bearing"": 132, ""at_fault"": 0, ""lead"": {""0.5"": {""d"": 0.77, ""miss"": 0.31, ""ahead"": 0.7, ""trk"": 1, ""sp"": 0.91, ""rv"": 0.07, ""wall"": 0.46}, ""1.0"": {""d"": 1.12, ""miss"": 0.29, ""ahead"": 1.08, ""trk"": 1, ""sp"": 0.93, ""rv"": 0.35, ""wall"": 0.47}, ""1.5"": {""d"": 1.39, ""miss"": 0.24, ""ahead"": 1.37, ""trk"": 1, ""sp"": 0.95, ""rv"": 0.31, ""wall"": 0.47}, ""2.0"": {""d"": 1.73, ""miss"": 0.25, ""ahead"": 1.71, ""trk"": 1, ""sp"": 0.93, ""rv"": 0.32, ""wall"": 0.49}, ""3.0"": {""d"": 2.4, ""miss"": 0.33, ""ahead"": 2.38, ""trk"": 1, ""sp"": 0.95, ""rv"": 0.31, ""wall"": 0.56}}, ""distracted"": 1}",5.1
+145,office,6,0,p3+geo-haz+gcv~ocf~nl,1,ok,0.204,59.4,23.01,,,0.104,0.006,{},6.3

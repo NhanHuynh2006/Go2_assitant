@@ -1,0 +1,65 @@
+{
+  "rl": {
+    "install": {
+      "ppo": "rl_nav/runs/ppo_r_s0/best.npz",
+      "td3": "rl_nav/runs/td3_v2/best.npz",
+      "sac": "rl_nav/runs/sac_r_s0/best.npz"
+    },
+    "value_from": "rl_nav/runs/ppo_r_s0",
+    "best_algo": "ppo",
+    "note": "PPO tot nhat va deu nhat (3 seed 93.5-93.8%, hon TD3/SAC p~0.001-0.003). td3_v2 (cung 20 phut, train cam bien ly tuong) do duoi cam bien thuc te 94.1% - hon ro 3 TD3 'thuc te', ngang PPO (p=0.60), loi KHAC kieu (it va nguoi) -> oracle ppo+td3_v2 96.2% la cap bu tot nhat. SAC chi +0.6 khi them -> giu de thu, khong mac dinh. Critic tu ppo_r_s0 (cung chuan hoa quan sat voi goi y PPO). Chi tiet: RESEARCH_NOTES 7.7."
+  },
+  "select_configs": [
+    "prism",
+    "prism@ppo",
+    "prism@ppo+td3+sac",
+    "prism@ppo+sac",
+    "prism~t0",
+    "prism_noprior",
+    "mppi"
+  ],
+  "final": {
+    "configs": [
+      "prism@ppo+sac",
+      "prism@ppo",
+      "prism",
+      "prism@ppo+td3+sac",
+      "prism_noprior",
+      "prism_noadapt@ppo+sac",
+      "prism_novis@ppo+sac",
+      "prism_nounc@ppo+sac",
+      "prism_noadaptratio@ppo+sac",
+      "prism_novalue@ppo+sac",
+      "prism~t0@ppo+sac",
+      "mppi",
+      "dwa",
+      "log_mppi",
+      "pgmppi",
+      "apmppi",
+      "apmppi_multi",
+      "bmppi",
+      "rl",
+      "rl@td3",
+      "rl@sac",
+      "rl_ens",
+      "rl_safe",
+      "pp"
+    ],
+    "trials": 5,
+    "house_configs": [
+      "prism@ppo+sac",
+      "prism",
+      "prism_noprior",
+      "mppi",
+      "dwa",
+      "log_mppi",
+      "pgmppi",
+      "apmppi_multi",
+      "rl",
+      "rl_safe",
+      "pp"
+    ],
+    "house_trials": 3,
+    "note": "PRISM chinh = prism@ppo+sac (chon tren buoc select = tap kiem dinh, KHONG chon lai sau luot chinh thuc): 12/16, dam dong 4/6, 1 loi do robot. Cac bien the goi y khac + moi ablation (tren chinh ban ppo+sac) + moi baseline: khong bo gi. Chi tiet RESEARCH_NOTES 7.8."
+  }
+}

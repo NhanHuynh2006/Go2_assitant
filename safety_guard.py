@@ -18,25 +18,21 @@ Cac tang bao ve:
 import math
 import time
 
-# Dong tac AN TOAN cho phep qua giong noi (khop ACTION_MAP + acrobatic trong robot_tools)
+# Dong tac AN TOAN cho phep qua giong noi (khop ACTION_MAP trong robot_tools)
 SAFE_ACTIONS = {"hello", "dance1", "dance2", "stretch", "heart",
-                "standup", "standdown", "balance",
-                # acrobatic da mo khoa theo yeu cau (RUI RO: can khong gian trong)
-                "walkupright", "handstand", "frontjump", "frontpounce"}
+                "standup", "standdown", "balance"}
 
-# Dong tac NGUY HIEM nhat — van tu choi (lon nhao de nga ngua/chan thuong robot)
-BLOCKED_ACTIONS = {"frontflip", "backflip", "leftflip"}
+# Dong tac NGUY HIEM — tu choi du model co sinh ra
+BLOCKED_ACTIONS = {"handstand", "walkupright", "frontflip", "backflip", "jump"}
 
 
 class SafetyGuard:
     def __init__(self, max_vx=0.6, max_vy=0.4, max_vyaw=1.0,
-                 max_duration=6.0, require_stand_before_move=True,
-                 max_step_m=0.5):
+                 max_duration=6.0, require_stand_before_move=True):
         self.max_vx = max_vx
         self.max_vy = max_vy
         self.max_vyaw = max_vyaw
         self.max_duration = max_duration
-        self.max_step_m = float(max_step_m)   # moi lenh di toi da bao nhieu MET
         self.require_stand = require_stand_before_move
         self.is_standing = False        # theo doi trang thai (da dung chua)
         self.emergency = False
@@ -65,18 +61,23 @@ class SafetyGuard:
             return {"tool": "action", "args": {"name": name}}, f"action '{name}' OK"
 
         if tool == "move":
+            # NaN / inf / chu: TU CHOI. Truoc day min(0.6, nan) tra ve 0.6 -> "vx": "nan"
+            # tu LLM thanh DI TOI HET TOC (tim ra boi test_adversarial.py).
+            try:
+                raw = [float(args.get(k, d)) for k, d in
+                       (("vx", 0.0), ("vy", 0.0), ("vyaw", 0.0), ("duration", 2.0))]
+            except (TypeError, ValueError):
+                return None, "tham so move khong phai so — bo qua"
+            if not all(math.isfinite(v) for v in raw):
+                return None, "tham so move NaN/inf — bo qua"
             # CLAMP ve gioi han an toan (du LLM xuat bao nhieu)
             vx = self._clamp(args.get("vx", 0.0), self.max_vx)
             vy = self._clamp(args.get("vy", 0.0), self.max_vy)
             vyaw = self._clamp(args.get("vyaw", 0.0), self.max_vyaw)
             dur = max(0.1, min(float(args.get("duration", 2.0)), self.max_duration))
-            # CHAN KHOANG CACH ~max_step_m: rut ngan thoi gian neu di qua xa (chong dung)
-            speed = math.hypot(vx, vy)
-            if speed > 1e-6 and speed * dur > self.max_step_m:
-                dur = self.max_step_m / speed
             safe = {"tool": "move",
                     "args": {"vx": vx, "vy": vy, "vyaw": vyaw, "duration": dur}}
-            note = f"move OK (da clamp, <= {self.max_step_m*100:.0f}cm)"
+            note = "move OK (da clamp)"
             # neu chua dung ma doi di -> bao caller can stand truoc
             if self.require_stand and not self.is_standing:
                 return safe, "STAND_FIRST"     # caller se chen stand-up truoc

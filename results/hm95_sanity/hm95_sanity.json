@@ -1,0 +1,129 @@
+{
+ "grad": {
+  "n": 1995,
+  "max_abs_err": 4.4305306090564045e-08,
+  "max_rel_err": 6.623501296626507e-09,
+  "median_rel": 1.4495544387727614e-10,
+  "static_check": [
+   0.2497179534307668,
+   0.24971795343076675
+  ]
+ },
+ "headon": {
+  "hm95": {
+   "0.0": {
+    "min_centre_dist": 0.321,
+    "min_surface_gap": -0.119,
+    "max_lateral_dev": 0.0,
+    "passed": false,
+    "t_pass": null,
+    "x_final": [
+     4.84,
+     5.16
+    ]
+   },
+   "0.05": {
+    "min_centre_dist": 0.614,
+    "min_surface_gap": 0.174,
+    "max_lateral_dev": 0.408,
+    "passed": true,
+    "t_pass": 4.5,
+    "x_final": [
+     23.59,
+     -13.59
+    ]
+   },
+   "0.3": {
+    "min_centre_dist": 0.716,
+    "min_surface_gap": 0.276,
+    "max_lateral_dev": 0.293,
+    "passed": true,
+    "t_pass": 4.3,
+    "x_final": [
+     23.83,
+     -13.83
+    ]
+   }
+  },
+  "helb": {
+   "0.0": {
+    "min_centre_dist": 0.503,
+    "min_surface_gap": 0.063,
+    "max_lateral_dev": 0.771,
+    "passed": true,
+    "t_pass": 6.050000000000001,
+    "x_final": [
+     21.59,
+     -11.58
+    ]
+   },
+   "0.05": {
+    "min_centre_dist": 0.502,
+    "min_surface_gap": 0.062,
+    "max_lateral_dev": 0.777,
+    "passed": true,
+    "t_pass": 6.0,
+    "x_final": [
+     21.62,
+     -11.61
+    ]
+   },
+   "0.3": {
+    "min_centre_dist": 0.574,
+    "min_surface_gap": 0.134,
+    "max_lateral_dev": 0.75,
+    "passed": true,
+    "t_pass": 4.6000000000000005,
+    "x_final": [
+     23.29,
+     -13.28
+    ]
+   }
+  }
+ },
+ "lanes": {
+  "hm95": {
+   "phi": [
+    0.55,
+    0.58,
+    0.55
+   ],
+   "phi_null": [
+    0.555,
+    0.576,
+    0.562
+   ],
+   "overlap_pairs_per_frame": [
+    5.43,
+    4.58,
+    5.28
+   ]
+  },
+  "helb": {
+   "phi": [
+    0.791,
+    0.847,
+    0.808
+   ],
+   "phi_null": [
+    0.483,
+    0.484,
+    0.512
+   ],
+   "overlap_pairs_per_frame": [
+    0.07,
+    0.08,
+    0.08
+   ]
+  }
+ },
+ "stats_hm95": {
+  "steps": 6600,
+  "pp_pairs": 77114400,
+  "pp_overlap": 56080,
+  "wall_checks": 650400,
+  "wall_pen": 21,
+  "centre_inside": 0,
+  "nonfinite": 0
+ }
+}

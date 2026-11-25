@@ -1,0 +1,24 @@
+luot 2400; the gioi du 4 cau hinh 600; bo vi EXC o moi cau hinh 0; dung 600
+  N=4: 600 the gioi, N=8: 0
+
+| cau hinh | thanh cong (Wilson 95 %) | nga | va nguoi | va tinh | ket/het gio | EXC |
+|---|---|---|---|---|---|---|
+| C1 | 531/600 = 88.5 % [85.7, 90.8] | 8 (1.3 %) | 59 | 2 | 0 | 0 |
+| B1 | 477/600 = 79.5 % [76.1, 82.5] | 30 (5.0 %) | 86 | 7 | 0 | 0 |
+| PGIF* | 470/600 = 78.3 % [74.9, 81.4] | 19 (3.2 %) | 107 | 4 | 0 | 0 |
+| DRA* | 523/600 = 87.2 % [84.3, 89.6] | 14 (2.3 %) | 61 | 2 | 0 | 0 |
+
+Phep chinh (McNemar chinh xac 2 phia, Holm trong 3):
+  C1 vs B1: C1 thang 88, thua 34, chenh +9.0 diem; p = 1.08e-06; Holm = 2.16e-06
+  C1 vs PGIF*: C1 thang 90, thua 29, chenh +10.2 diem; p = 1.86e-08; Holm = 5.57e-08
+  C1 vs DRA*: C1 thang 48, thua 40, chenh +1.3 diem; p = 0.456; Holm = 0.456
+
+Tach theo N (kiem tinh hop ly):
+  N=4 (n=600): C1 88.5 % (nga 8), B1 79.5 % (nga 30), PGIF* 78.3 % (nga 19), DRA* 87.2 % (nga 14)
+
+Dong thu hang voi fastsim TEST (cung the gioi):
+  TEST_champ2_base (n=600): fastsim C1 82.2, B1 70.2, PGIF* 73.7, DRA* 78.0 | Kendall tau +0.67 | C1-B1 fastsim +12.0 vs Isaac +9.0 | C1 tung luot giong 82 %
+  TEST_champ2_helb (n=600): fastsim C1 84.7, B1 79.0, PGIF* 80.0, DRA* 80.2 | Kendall tau +0.67 | C1-B1 fastsim +5.7 vs Isaac +9.0 | C1 tung luot giong 83 %
+  TEST_champ_base (n=600): fastsim C1 82.3, B1 72.7, PGIF* 73.8, DRA* 80.0 | Kendall tau +0.67 | C1-B1 fastsim +9.7 vs Isaac +9.0 | C1 tung luot giong 80 %
+  TEST_go2_base (n=600): fastsim C1 90.5, B1 84.8, PGIF* 83.8, DRA* 89.7 | Kendall tau +1.00 | C1-B1 fastsim +5.7 vs Isaac +9.0 | C1 tung luot giong 86 %
+  TEST_go2_helb (n=600): fastsim C1 91.2, B1 90.0, PGIF* 88.8, DRA* 89.8 | Kendall tau +0.67 | C1-B1 fastsim +1.2 vs Isaac +9.0 | C1 tung luot giong 86 %

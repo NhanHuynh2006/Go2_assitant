@@ -1,0 +1,8 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+19,clutter,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.142,46.1,17.17,,,0.386,0.371,{},7.5
+19,clutter,5,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.183,48.2,20.38,,,0.245,0.984,{},6.9
+19,clutter,5,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.18,68.5,27.12,,,0.215,0.304,{},11.8
+19,clutter,5,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.198,49.6,19.36,,,0.114,0.307,{},7.2
+19,clutter,5,0,mppi:ppl=32,1,ok,0.189,47.4,19.84,,,0.062,0.07,{},6.2
+19,clutter,5,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.183,48.0,18.36,,,0.112,0.607,{},5.6
+19,clutter,5,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.144,121.4,42.83,,,0.179,1.137,{},15.5

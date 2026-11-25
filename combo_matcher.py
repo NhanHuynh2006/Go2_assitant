@@ -24,12 +24,34 @@ from reflex_matcher import ReflexMatcher, norm
 CONNECTIVES = ["roi sau do", "sau do", "tiep theo", "roi", "xong", "tiep"]
 
 # Tu khoi dong go_to (DA BO DAU) — phai co it nhat 1 cai thi ve moi la go_to
-GOTO_TRIGGERS = ["toi", "den", "ra", "lai", "ve", "chay toi", "di toi", "di ra"]
+GOTO_TRIGGERS = ["toi", "den", "ra", "lai", "ve", "vao", "chay toi", "di toi", "di ra", "di vao"]
 
 # Tu vung dia diem mac dinh = 9 diem trong gen_dataset (canonical CO DAU).
 # Production: truyen waypoints.yaml keys vao de mo rong.
 DEFAULT_LOCATIONS = ["cửa sổ", "cửa", "bàn", "ghế", "chỗ sạc", "góc phòng",
                      "bếp", "phòng khách", "chỗ cũ"]
+
+
+# Lenh chi DO VAT cu the ("ghế gỗ màu cam", "bên trái cái tủ", "cách bàn 2 mét"):
+# luat chi biet 9 ten diem -> se cat "ghế gỗ màu cam" thanh "ghế" (sai do vat),
+# Reflex con hieu "chạy tới ghế gỗ" thanh di thang. Gap cac cau nay -> NHUONG LLM.
+DEFER = "defer"
+_RELATION = re.compile(r"\b(truoc|sau|trai|phai|canh|cach|giua|doi dien)\b")
+_AFTER_OK = {"ngay", "lien", "luon", "voi", "thoi", "nhanh", "giup", "minh", "cho",
+             "coi", "nao", "nha", "nhe", "di", "a", "duoc", "khong", "ko", "ban", "oi",
+             "em", "anh", "chi", "ha", "ah", "len", "vay", "the", "nhe", "nghe"}
+
+
+def _object_words():
+    try:
+        from objects import NOUNS
+    except Exception:                                   # noqa: BLE001
+        return []
+    al = {norm(a) for _k, (_p, aliases) in NOUNS.items() for a in aliases}
+    return sorted(al, key=len, reverse=True)
+
+
+_OBJ = _object_words()
 
 
 def _split_clauses(text):
@@ -75,9 +97,21 @@ class ComboMatcher:
         if not any(re.search(r"\b" + re.escape(g) + r"\b", c) for g in GOTO_TRIGGERS):
             return None
         for loc in self.locations:                 # da sap dai-truoc
-            if re.search(r"\b" + re.escape(norm(loc)) + r"\b", c):   # \b chong 'cho cu' lot vao 'cho cua'
+            m = re.search(r"\b" + re.escape(norm(loc)) + r"\b", c)   # \b chong 'cho cu' lot vao 'cho cua'
+            if m:
+                rest = [w for w in re.findall(r"\w+", c[m.end():]) if w not in _AFTER_OK]
+                if rest or _RELATION.search(c[:m.start()]):
+                    return DEFER                   # "ghế gỗ", "bàn trà", "bên trái ghế" -> LLM
                 return {"tool": "go_to", "args": {"location": loc}}
+        if any(re.search(r"\b" + re.escape(o) + r"\b", c) for o in _OBJ):
+            return DEFER                           # do vat ngoai 9 diem ("tủ lạnh", "chậu cây")
+        if re.search(r"\b(cai|chiec)\s+\w+", c):
+            return DEFER                           # "đi tới cái giường": la -> LLM/hoi lai, KHONG di thang
         return None
+
+    def needs_llm(self, text):
+        """True neu cau co ve nhac DO VAT cu the -> khong de Reflex doan bua."""
+        return any(self._match_goto(_strip_tail(c)) == DEFER for c in _split_clauses(text))
 
     def _match_clause(self, clause):
         """Giai 1 ve -> list[action] hoac None. go_to uu tien hon move
@@ -86,6 +120,8 @@ class ComboMatcher:
         if not clause:
             return None
         g = self._match_goto(clause)
+        if g == DEFER:
+            return None
         if g is not None:
             return [g]
         r = self.reflex.match(clause)
@@ -100,16 +136,7 @@ class ComboMatcher:
         if len(_split_clauses(text)) >= 2:
             return None                            # cau nhieu ve -> de combo/LLM lo (tranh DROP buoc)
         g = self._match_goto(_strip_tail(norm(text)))
-        if g is None:
-            return None
-        # CHONG VA CHAM DAU: bo dau thi 'bạn'==bàn, 'của'==cửa, 'tôi'==tới... khien
-        # cau CHAT ("bạn có yêu tôi không") bi hieu nham la go_to. Xac nhan: dia diem
-        # VA it nhat 1 tu khoi dong phai xuat hien DUNG DAU trong cau goc.
-        low = re.sub(r"\s+", " ", (text or "").lower()).strip()
-        loc = str(g["args"]["location"]).lower()
-        trig_acc = ["tới", "đến", "ra ", "lại", "về", "qua ", "chạy tới", "đi tới"]
-        if loc not in low or not any(t.strip() and re.search(r"\b" + re.escape(t.strip()) + r"\b", low)
-                                     for t in trig_acc):
+        if g is None or g == DEFER:
             return None
         return {"intent": "go_to", "say": "Dạ tới đó liền!", "actions": [g]}
 

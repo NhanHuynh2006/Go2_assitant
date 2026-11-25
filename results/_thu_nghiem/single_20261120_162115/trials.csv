@@ -1,0 +1,3 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s
+full,detour:vat_thap_12cm,detour,go2,1,0,0.262,,0.133,3.59,27.11,152.4,0.249,0.227,,,447,102,0.4
+lidar_only,detour:vat_thap_12cm,detour,go2,0,0,2.508,,0.0,3.65,0.82,7.5,0.232,0.202,,,447,102,0.4

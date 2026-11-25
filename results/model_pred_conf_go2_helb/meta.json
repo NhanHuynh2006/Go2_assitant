@@ -1,0 +1,1 @@
+{"suite": "gen", "seeds": "150-299", "regime": "go2", "oracle": false, "crowd_model": "helb", "crowd_only": true, "trials": 1, "pred": "/home/nhanhuynh/Documents/Go2_assitant/rl_nav/pred/mix_h256.npz"}

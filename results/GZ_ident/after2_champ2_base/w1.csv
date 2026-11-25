@@ -1,0 +1,15 @@
+world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu
+1,warehouse,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.204,53.2,21.07,,,0.328,0.613,{},7.5
+1,warehouse,5,0,mppi~t3~nl:ppl=100;ppl_len=0.5,0,va nguoi,9.91,39.8,15.66,person,1,0.275,-0.041,"{""kind"": ""person"", ""t"": 39.8, ""robot_in"": 0.08, ""person_in"": 0.75, ""robot_v"": 0.09, ""wz"": 0.5, ""bearing"": 136, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 1.03, ""miss"": 0.24, ""ahead"": 1.01, ""trk"": 1, ""sp"": 1.04, ""rv"": 0.23, ""wall"": 0.63}, ""1.0"": {""d"": 1.59, ""miss"": 0.13, ""ahead"": 1.58, ""trk"": 1, ""sp"": 1.0, ""rv"": 0.33, ""wall"": 0.61}, ""1.5"": {""d"": 2.08, ""miss"": 0.17, ""ahead"": 2.08, ""trk"": 1, ""sp"": 1.09, ""rv"": 0.33, ""wall"": 0.68}, ""2.0"": {""d"": 2.71, ""miss"": 0.45, ""ahead"": 2.67, ""trk"": 1, ""sp"": 1.06, ""rv"": 0.33, ""wall"": 0.74}, ""3.0"": {""d"": 3.68, ""miss"": 2.18, ""ahead"": 2.96, ""trk"": 1, ""sp"": 0.94, ""rv"": 0.33, ""wall"": 1.0}}, ""distracted"": 1}",6.1
+1,warehouse,5,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.175,58.4,23.17,,,0.332,0.372,{},9.1
+1,warehouse,5,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.178,58.2,22.79,,,0.342,0.581,{},6.2
+1,warehouse,5,0,mppi:ppl=32,1,ok,0.184,74.0,26.63,,,0.46,0.153,{},6.3
+1,warehouse,5,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.196,73.4,27.89,,,0.395,0.288,{},5.5
+1,warehouse,5,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,0,va nguoi,9.222,27.5,10.81,person,1,0.357,-0.02,"{""kind"": ""person"", ""t"": 27.5, ""robot_in"": -0.02, ""person_in"": 0.14, ""robot_v"": 0.33, ""wz"": 0.52, ""bearing"": 38, ""at_fault"": 1, ""lead"": {""0.5"": {""d"": 0.93, ""miss"": 0.18, ""ahead"": 0.91, ""trk"": 1, ""sp"": 0.95, ""rv"": 0.29, ""wall"": 1.09}, ""1.0"": {""d"": 1.48, ""miss"": 0.12, ""ahead"": 1.47, ""trk"": 1, ""sp"": 1.02, ""rv"": 0.27, ""wall"": 1.12}, ""1.5"": {""d"": 1.85, ""miss"": 0.12, ""ahead"": 1.85, ""trk"": 1, ""sp"": 1.03, ""rv"": 0.33, ""wall"": 1.21}, ""2.0"": {""d"": 2.19, ""miss"": 0.07, ""ahead"": 2.19, ""trk"": 1, ""sp"": 1.05, ""rv"": 0.33, ""wall"": 1.24}, ""3.0"": {""d"": 2.94, ""miss"": 0.04, ""ahead"": 2.94, ""trk"": 1, ""sp"": 1.07, ""rv"": 0.28, ""wall"": 1.36}}, ""distracted"": 0}",3.0
+20,office,2,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.176,61.1,22.66,,,0.256,0.481,{},5.3
+20,office,2,0,mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.18,67.4,25.44,,,0.068,0.224,{},5.4
+20,office,2,0,pgif~t3~nl:w_h=300;sig_scale=0.7;hard=5000,1,ok,0.173,64.5,24.04,,,0.265,0.566,{},5.9
+20,office,2,0,dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05,1,ok,0.163,58.7,22.08,,,0.302,0.531,{},5.2
+20,office,2,0,mppi:ppl=32,1,ok,0.169,66.8,23.46,,,0.34,0.543,{},4.8
+20,office,2,0,dwa~t3~nl:ppl=100;ppl_len=0.3,1,ok,0.192,78.1,29.06,,,0.111,0.249,{},4.8
+20,office,2,0,log_mppi~t3~nl:ppl=100;ppl_len=0.5,1,ok,0.178,66.7,24.82,,,0.238,0.123,{},5.8

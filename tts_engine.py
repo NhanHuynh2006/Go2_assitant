@@ -18,30 +18,19 @@ import os
 import shutil
 import socket
 import subprocess
-import threading
 import time
 import wave
 
 
 class TTS:
     def __init__(self, voice_path, enabled=True, output="local", wav_dir="tts_out",
-                 piper_bin=None, robot_host="127.0.0.1", robot_port=17891,
-                 pa_host=None, pa_port=17892):
+                 piper_bin=None, robot_host="127.0.0.1", robot_port=17891):
         self.enabled = bool(enabled)
-        # "local"     loa may (Jetson trong Go2 CHI co HDMI -> gan nhu vo dung)
-        # "wav"       chi ghi file
-        # "robot"     loa Go2 qua WebRTC (go2_tts_speaker.py)
-        # "pa"        LOA HOI TRUONG: gui wav qua mang cho pc_speaker.py chay tren LAPTOP,
-        #             laptop phat ra loa to (qua Bluetooth cua laptop hoac day jack 3.5).
-        #             Dung khi bieu dien truoc dong nguoi — loa robot qua nho.
-        # "robot+pa"  ra CA HAI (loa robot + loa hoi truong)
-        self.output = output
+        self.output = output             # "local" loa may | "wav" ghi file | "robot" loa Go2 qua WebRTC
         self.wav_dir = wav_dir
         self.robot_addr = (robot_host, int(robot_port))   # cau go2_tts_speaker.py nghe o day
-        self.pa_addr = (pa_host, int(pa_port)) if pa_host else None
         self.voice = None
         self.sample_rate = 22050
-        self.last_audio_s = 0.0          # thoi luong (giay) cua audio VUA phat -> de mute mic dung han (chong echo loa robot)
         self._new_api = False
         self._can_stream = False
         self.mode_binary = False           # fallback: goi piper BINARY (Jetson thieu piper_phonemize)
@@ -138,12 +127,6 @@ class TTS:
         path = f"/tmp/govoice_robot_{int(time.time()*1000)}.wav"
         with open(path, "wb") as f:
             f.write(wav_bytes)
-        # Nho thoi luong audio -> pipeline giu mute mic het cau (loa robot phat cham qua WebRTC).
-        try:
-            with wave.open(io.BytesIO(wav_bytes), "rb") as _wf:
-                self.last_audio_s = _wf.getnframes() / float(_wf.getframerate() or self.sample_rate)
-        except Exception:
-            self.last_audio_s = 0.0
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             s.sendto(path.encode("utf-8"), self.robot_addr)
@@ -151,57 +134,9 @@ class TTS:
         except Exception as e:
             print(f"[tts] gui loa robot loi: {e}")
 
-    def _wav_seconds(self, wav_bytes):
-        try:
-            with wave.open(io.BytesIO(wav_bytes), "rb") as wf:
-                return wf.getnframes() / float(wf.getframerate() or self.sample_rate)
-        except Exception:
-            return 0.0
-
-    def _send_to_pa(self, wav_bytes):
-        """Gui NGUYEN BYTE wav qua TCP cho pc_speaker.py tren LAPTOP -> phat ra loa hoi truong.
-
-        Gui byte (khong phai duong dan nhu _send_to_robot) vi laptop la MAY KHAC,
-        khong doc duoc /tmp cua Jetson. Khung: 4 byte do dai (big-endian) + du lieu wav.
-        Chay o thread rieng + timeout ngan: laptop rut day giua chung cung KHONG treo robot.
-        """
-        if not self.pa_addr:
-            print("[tts] output='pa' nhung thieu tts.pa_host trong config -> bo qua")
-            return
-        self.last_audio_s = max(self.last_audio_s, self._wav_seconds(wav_bytes))
-        addr = self.pa_addr
-
-        def _worker():
-            try:
-                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                s.settimeout(2.0)
-                s.connect(addr)
-                s.sendall(len(wav_bytes).to_bytes(4, "big") + wav_bytes)
-                s.close()
-            except Exception as e:
-                print(f"[tts] loa hoi truong ({addr[0]}:{addr[1]}) loi: {e} "
-                      f"— laptop da chay pc_speaker.py chua?")
-
-        threading.Thread(target=_worker, daemon=True).start()
-
     def _emit(self, wav_bytes, ms):
         """Dua audio ra dau ra theo self.output."""
-        # ⚠️ "robot+bt" — CA HAI cung luc, va day la LUOI AN TOAN co chu y.
-        # Tiet muc phong van chi hoi MOT con, nhung khong biet truoc la A hay B,
-        # va loa BTC co the hong ngay hom do. Phat song song ra CA loa robot lan
-        # ngo ra mac dinh cua Jetson (= loa Bluetooth neu da ghep): loa BTC chet
-        # thi loa robot van keu, khong phai lam gi ca.
-        # Gui loa robot TRUOC vi duong WebRTC lau hon, de hai ben ra tieng gan
-        # nhau hon.
-        if self.output == "robot+bt":
-            self._send_to_robot(wav_bytes)
-            self._play_file(wav_bytes)
-        elif self.output == "robot+pa":
-            self._send_to_pa(wav_bytes)
-            self._send_to_robot(wav_bytes)
-        elif self.output == "pa":
-            self._send_to_pa(wav_bytes)
-        elif self.output == "robot":
+        if self.output == "robot":
             self._send_to_robot(wav_bytes)
         elif self.output == "wav":
             os.makedirs(self.wav_dir, exist_ok=True)

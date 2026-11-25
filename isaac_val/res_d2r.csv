@@ -1,0 +1,10 @@
+body,tilt,world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu,foot,foot_t,succ_foot,wall,dux_p95,duy_p95,duw_p95,wz_flip,n_cmd
+isaac,1,303,corridor,4,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.182,30.3,13.89,,,0.412,0.753,{},47.7,,,1,47.7,0.758,0.574,2.124,3,303
+body,tilt,world,kind,npeople,trial,config,success,why,err,time,travel,col,fault,min_static,min_person,info,cpu,foot,foot_t,succ_foot,wall,dux_p95,duy_p95,duw_p95,wz_flip,n_cmd
+isaac,1,302,lobby,6,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.196,41.7,17.62,,,0.287,0.46,{},66.8,,,1,66.8,0.716,0.548,2.193,10,417
+isaac,1,304,clutter,2,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.195,43.2,15.16,,,0.522,1.587,{},62.1,,,1,62.1,0.694,0.386,1.297,0,433
+isaac,1,306,warehouse,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.186,88.9,29.64,,,0.18,0.608,{},130.6,,,1,130.6,0.966,0.606,2.32,9,889
+isaac,1,307,lobby,5,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.192,40.1,17.75,,,0.58,0.917,{},61.0,,,1,61.0,0.679,0.424,1.844,3,402
+isaac,1,309,clutter,4,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.197,47.8,15.42,,,0.298,0.736,{},69.5,,,1,69.5,0.821,0.596,2.027,7,479
+isaac,1,312,lobby,4,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.155,40.6,16.62,,,0.36,1.15,{},56.0,,,1,56.0,0.805,0.45,2.096,6,406
+isaac,1,311,warehouse,6,0,p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5,1,ok,0.183,83.5,27.2,,,0.333,0.139,{},116.2,,,1,116.2,1.266,0.754,2.715,17,834

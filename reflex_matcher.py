@@ -18,14 +18,11 @@ import math
 import re
 import unicodedata
 
-# ---- Toc do mac dinh (se bi robot_tools/guard clamp lai theo config) ----
-VX = 0.5       # m/s tien/lui (cu 0.35) — di dut khoat hon
-VY = 0.3       # m/s sang ngang (cu 0.25)
-VYAW = 1.2     # rad/s xoay (cu 0.8) — xoay nhanh hon
-DUR = 2.0      # giay mac dinh cho 1 lenh di chuyen (khong co so met/giay)
-# Moi lenh di duoc gui LIEN TUC trong 1 khuc dai (khong che nho) -> robot di MUOT,
-# khong StopMove giua chung. Guard/robot_tools van clamp theo max_duration cua config.
-MAX_CHUNK_S = 30.0
+# ---- Toc do mac dinh (se bi robot_tools clamp lai lan nua) ----
+VX = 0.35      # m/s tien/lui
+VY = 0.25      # m/s sang ngang
+VYAW = 0.8     # rad/s xoay
+DUR = 2.0      # giay mac dinh cho 1 lenh di chuyen
 
 
 def strip_accents(s: str) -> str:
@@ -94,7 +91,7 @@ def _move_with_amount(t, vx=0.0, vy=0.0, vyaw=0.0, say="Ok!"):
     actions = []
     left = dur
     while left > 0.05:
-        d = round(min(left, MAX_CHUNK_S), 2)
+        d = round(min(left, 6.0), 2)
         actions.append({"tool": "move",
                         "args": {"vx": vx, "vy": vy, "vyaw": vyaw, "duration": d}})
         left -= d
@@ -117,22 +114,6 @@ _RULES = [
     (["nam xuong", "ngoi xuong", "nam nghi", "nam di", "nam ra"],
      lambda t: _action("standdown", "Ok, n\u1eb1m xu\u1ed1ng ngh\u1ec9 n\u00e8.")),
 
-    # --- ACROBATIC (dat TRUOC dance/di-thang de bat dung y) ---
-    # Trong chuoi = dung 2 chan TRUOC (check truoc walkupright vi cung chua '2 chan')
-    (["trong chuoi", "chong chuoi", "trong cay chuoi", "hai chan truoc", "2 chan truoc",
-      "dung bang chan truoc", "dung chan truoc", "chong hai tay", "dung bang tay", "dung nguoc"],
-     lambda t: _action("handstand", "Xem m\u00ecnh tr\u1ed3ng chu\u1ed1i n\u00e8!")),
-    # Dung/di bang 2 chan SAU (nhu nguoi)
-    (["dung hai chan", "dung 2 chan", "dung bang hai chan", "dung bang 2 chan", "hai chan sau",
-      "2 chan sau", "chan sau", "di bang hai chan", "di 2 chan", "dung thang nguoi",
-      "dung nhu nguoi", "dung len nhu nguoi"],
-     lambda t: _action("walkupright", "M\u00ecnh \u0111\u1ee9ng b\u1eb1ng hai ch\u00e2n n\u00e8, oai kh\u00f4ng!")),
-    # Bat VE PHIA TRUOC (khac nhay mua Dance1)
-    (["bat ve phia truoc", "bat len phia truoc", "nhay ve phia truoc", "nhay ve truoc",
-      "bat ve truoc", "bat toi truoc", "nhay toi truoc", "phong ve phia truoc",
-      "bat nhay ve truoc", "nhay ra phia truoc", "bat ra phia truoc"],
-     lambda t: _action("frontjump", "B\u1eadt t\u1edbi n\u00e0o!")),
-
     (["di thang", "tien len", "di toi", "di len", "tien toi", "di ve phia truoc", "tien"],
      lambda t: _move_with_amount(t, vx=VX, say="\u0110i th\u1eb3ng n\u00e8!")),
 
@@ -145,10 +126,10 @@ _RULES = [
     (["sang phai", "qua phai", "di ben phai", "buoc sang phai", "di phai"],
      lambda t: _move_with_amount(t, vy=-VY, say="Sang ph\u1ea3i n\u00e8!")),
 
-    (["xoay trai", "quay trai", "re trai", "quay ben trai", "xoay ben trai", "xoay qua trai"],
+    (["xoay trai", "quay trai", "re trai", "quay ben trai"],
      lambda t: _move_with_amount(t, vyaw=VYAW, say="Xoay tr\u00e1i!")),
 
-    (["xoay phai", "quay phai", "re phai", "quay ben phai", "xoay ben phai", "xoay qua phai"],
+    (["xoay phai", "quay phai", "re phai", "quay ben phai"],
      lambda t: _move_with_amount(t, vyaw=-VYAW, say="Xoay ph\u1ea3i!")),
 
     (["chao", "bat tay", "hello", "vay tay"],
@@ -163,89 +144,8 @@ _RULES = [
     (["vuon vai", "duoi nguoi", "gian co"],
      lambda t: _action("stretch", "V\u01b0\u01a1n vai c\u00e1i n\u00e0o!")),
 
-    # Nguoi ta hay noi "BAN tim" chu khong chi "THA tim"; STT con nghe chech thanh
-    # "bat tim"/"ban tiem". Da THU va BO cach dua may cum nay vao knowledge.yaml cho
-    # tang FAQ lo: FAQ so khop n-gram KY TU nen cum ngan "ban tim di" hut luon MOI cau
-    # co chu "tim/tim" ("b\u1ea1n c\u00f3 tim kh\u00f4ng", "t\u00f4i t\u00ecm c\u00e1i b\u00e0n") -> nhan nham tu 1/8 len 5/8.
-    # Dat o reflex (khop chuoi con) thi chinh xac hon HAN: chi "ban tim" moi dinh
-    # "b\u1ea1n t\u00ecm ...", con lai deu an dung.
-    (["tha tim", "ban tim", "bat tim", "ban tiem", "trai tim", "tim nao", "thuong"],
+    (["tha tim", "trai tim", "tim nao", "thuong"],
      lambda t: _action("heart", "Th\u01b0\u01a1ng b\u1ea1n nhi\u1ec1u!")),
-]
-
-
-# ============================================================================
-#  CHAT / HOI-DAP: cau hoi giao tiep thuong gap -> tra loi SAN, KHONG qua LLM.
-#  M\u1ed7i entry: (danh_sach_tu_khoa DA BO DAU, cau_tra_loi CO DAU, ten_dong_tac|None).
-#  Dung cum >=2 tu de tranh dinh nham lenh dieu khien. Persona: "G\u00f4" - cho robot Go2.
-# ============================================================================
-_CHAT_RULES = [
-    # --- Danh tinh / ten ---
-    (["ban la ai", "la ai vay", "con la ai", "ban la con gi", "cau la ai",
-      "may la ai", "la ai do", "la ai the"],
-     "M\u00ecnh l\u00e0 G\u00f4, ch\u00fa ch\u00f3 robot Go2 c\u1ee7a lab ISLab, Tr\u01b0\u1eddng \u0110\u1ea1i h\u1ecdc C\u00f4ng ngh\u1ec7 "
-     "K\u1ef9 thu\u1eadt Th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed Minh. R\u1ea5t vui \u0111\u01b0\u1ee3c g\u1eb7p b\u1ea1n, g\u00e2u g\u00e2u!", None),
-    (["ten gi", "ten la gi", "ten ban", "may ten", "gioi thieu", "ten cau",
-      "ten la j", "ban ten"],
-     "M\u00ecnh t\u00ean l\u00e0 G\u00f4, ch\u00fa ch\u00f3 robot Go2 d\u1ec5 th\u01b0\u01a1ng \u0111\u00e2y! G\u00e2u g\u00e2u!", None),
-    # --- Kha nang ---
-    (["lam duoc gi", "biet lam gi", "lam nhung gi", "co the lam gi", "lam gi duoc",
-      "biet nhung gi", "lam duoc nhung gi", "co the lam nhung gi", "biet gi khong"],
-     "M\u00ecnh bi\u1ebft \u0111i t\u1edbi \u0111i l\u00f9i, xoay tr\u00e1i ph\u1ea3i, nh\u1ea3y m\u00faa, ch\u00e0o, th\u1ea3 tim, v\u01b0\u01a1n vai, "
-     "\u0111\u1ee9ng b\u1eb1ng hai ch\u00e2n, tr\u1ed3ng chu\u1ed1i v\u00e0 b\u1eadt t\u1edbi tr\u01b0\u1edbc n\u1eefa. C\u1ee9 ra l\u1ec7nh l\u00e0 m\u00ecnh l\u00e0m li\u1ec1n!", None),
-    # --- Suc khoe / cam xuc ---
-    (["khoe khong", "co khoe khong", "the nao roi", "dao nay sao", "on khong"],
-     "M\u00ecnh kh\u1ecfe re, pin \u0111\u1ea7y, s\u1eb5n s\u00e0ng qu\u1eady! G\u00e2u g\u00e2u!", None),
-    # --- Cam on ---
-    (["cam on", "cam on nhe", "cam on go", "cam on nha", "cam on ban"],
-     "Kh\u00f4ng c\u00f3 chi, m\u00ecnh vui l\u1eafm n\u00e8!", None),
-    # --- Tuoi ---
-    (["bao nhieu tuoi", "may tuoi", "tuoi may", "sinh nam nao", "tuoi gi"],
-     "M\u00ecnh l\u00e0 robot n\u00ean tr\u1ebb ho\u00e0i \u00e0, kh\u00f4ng c\u00f3 gi\u00e0 \u0111\u00e2u! G\u00e2u g\u00e2u!", None),
-    # --- Ai tao ra / cua ai ---
-    (["ai tao ra", "ai lam ra", "ai che tao", "ai san xuat", "ban cua ai",
-      "chu cua ban", "ai so huu", "ai lap trinh"],
-     "M\u00ecnh \u0111\u01b0\u1ee3c c\u00e1c anh ch\u1ecb \u1edf lab ISLab - Intelligent System Lab, d\u01b0\u1edbi s\u1ef1 h\u01b0\u1edbng "
-     "d\u1eabn c\u1ee7a th\u1ea7y Ph\u00f3 Gi\u00e1o S\u01b0 Ti\u1ebfn S\u0129 L\u00ea M\u1ef9 H\u00e0, l\u1eadp tr\u00ecnh n\u00ean \u0111\u00f3!", None),
-    # --- Den tu dau ---
-    (["den tu dau", "tu dau toi", "que o dau", "que quan", "o dau den"],
-     "M\u00ecnh \u0111\u1ebfn t\u1eeb lab ISLab, Tr\u01b0\u1eddng \u0110\u1ea1i h\u1ecdc C\u00f4ng ngh\u1ec7 K\u1ef9 thu\u1eadt Th\u00e0nh ph\u1ed1 H\u1ed3 Ch\u00ed "
-     "Minh, t\u00ean c\u0169 l\u00e0 \u0110\u1ea1i h\u1ecdc S\u01b0 ph\u1ea1m K\u1ef9 thu\u1eadt \u0111\u00f3!", None),
-    # --- Dang lam gi ---
-    (["dang lam gi", "lam gi do", "dang lam chi", "lam chi do"],
-     "M\u00ecnh \u0111ang \u0111\u1ee9ng ch\u1edd l\u1ec7nh c\u1ee7a b\u1ea1n n\u00e8, ra l\u1ec7nh \u0111i!", None),
-    # --- Cho that hay robot ---
-    (["cho that khong", "co phai cho that", "la cho that", "cho hay nguoi",
-      "nguoi hay cho", "robot hay cho", "cho robot a", "cho gia"],
-     "M\u00ecnh l\u00e0 ch\u00f3 ROBOT nha, kh\u00f4ng ph\u1ea3i ch\u00f3 th\u1eadt, nh\u01b0ng d\u1ec5 th\u01b0\u01a1ng y chang \u0111\u00fang kh\u00f4ng? G\u00e2u g\u00e2u!", None),
-    # --- Yeu / thuong (kem tha tim) ---
-    (["co yeu", "yeu toi khong", "yeu minh khong", "co thuong toi", "yeu ban"],
-     "Th\u01b0\u01a1ng b\u1ea1n nhi\u1ec1u l\u1eafm n\u00e8!", "heart"),
-    # --- Tam biet ---
-    (["tam biet", "chao tam biet", "bye bye", "hen gap lai", "minh ve day"],
-     "T\u1ea1m bi\u1ec7t b\u1ea1n, h\u1eb9n g\u1eb7p l\u1ea1i nha! G\u00e2u g\u00e2u!", None),
-    # --- Khen ---
-    (["gioi lam", "gioi qua", "hay lam", "hay qua", "tuyet voi", "gioi ghe",
-      "dinh qua", "lam tot lam", "gioi that"],
-     "H\u00ed h\u00ed, c\u1ea3m \u01a1n b\u1ea1n, m\u00ecnh s\u1ebd c\u1ed1 g\u1eafng n\u1eefa n\u00e8!", None),
-    # --- So thich ---
-    (["thich gi", "so thich", "thich lam gi"],
-     "M\u00ecnh th\u00edch ch\u1ea1y nh\u1ea3y v\u00e0 bi\u1ec3u di\u1ec5n cho m\u1ecdi ng\u01b0\u1eddi xem! G\u00e2u g\u00e2u!", None),
-    # --- Gioi tinh ---
-    (["trai hay gai", "con trai hay", "gioi tinh", "nam hay nu", "la nam hay"],
-     "M\u00ecnh l\u00e0 robot n\u00ean kh\u00f4ng c\u00f3 trai hay g\u00e1i \u0111\u00e2u, c\u1ee9 g\u1ecdi m\u00ecnh l\u00e0 G\u00f4 l\u00e0 \u0111\u01b0\u1ee3c! G\u00e2u g\u00e2u!", None),
-    # --- Biet noi ---
-    (["biet noi khong", "noi duoc khong", "biet noi tieng viet", "noi tieng gi"],
-     "M\u00ecnh n\u00f3i \u0111\u01b0\u1ee3c ti\u1ebfng Vi\u1ec7t n\u00e8, \u0111ang tr\u00f2 chuy\u1ec7n v\u1edbi b\u1ea1n \u0111\u00e2y th\u00f4i! G\u00e2u g\u00e2u!", None),
-    # --- Sua / keu ---
-    (["sua di", "sua nghe", "biet sua khong", "keu di", "sua mot cai", "sua coi"],
-     "G\u00e2u g\u00e2u g\u00e2u! M\u00ecnh s\u1ee7a \u0111\u01b0\u1ee3c n\u00e8, hay kh\u00f4ng?", None),
-    # --- Doi / an ---
-    (["co doi khong", "doi bung khong", "an com chua", "an gi chua", "doi khong"],
-     "M\u00ecnh ch\u1ea1y b\u1eb1ng pin ch\u1ee9 kh\u00f4ng \u0103n c\u01a1m \u0111\u00e2u, nh\u01b0ng c\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 quan t\u00e2m n\u00e8!", None),
-    # --- May gio ---
-    (["may gio roi", "gio gi roi", "biet may gio", "gio nao roi"],
-     "M\u00ecnh kh\u00f4ng \u0111eo \u0111\u1ed3ng h\u1ed3 n\u00ean ch\u1ecbu, h\u1ecfi \u0111i\u1ec7n tho\u1ea1i gi\u00f9m m\u00ecnh nha! G\u00e2u g\u00e2u!", None),
 ]
 
 
@@ -288,7 +188,7 @@ class ReflexMatcher:
             actions = []
             left = min(total, 30.0)
             while left > 0.05:                    # che tung lenh <= 6s (du goc)
-                d = round(min(left, MAX_CHUNK_S), 2)
+                d = round(min(left, 6.0), 2)
                 actions.append({"tool": "move",
                                 "args": {"vx": 0, "vy": 0, "vyaw": sgn * VYAW,
                                          "duration": d}})
@@ -313,7 +213,7 @@ class ReflexMatcher:
             actions = []
             left = total
             while left > 0.05:                        # che thanh tung lenh <= 6s
-                d = round(min(left, MAX_CHUNK_S), 2)
+                d = round(min(left, 6.0), 2)
                 actions.append({"tool": "move",
                                 "args": {"vx": 0, "vy": 0, "vyaw": sgn * VYAW,
                                          "duration": d}})
@@ -327,18 +227,6 @@ class ReflexMatcher:
                 out = builder(t)
                 out["intent"] = keywords[0]
                 return out
-
-        # ---- CHAT/HOI-DAP: tra loi san cho cau giao tiep (khong qua LLM) ----
-        # Cau co "mui" truong/lab/thay -> KHONG dung chat chung chung, nhuong FAQ
-        # (knowledge.yaml) tra loi chinh xac (vd 'truong ban ten gi' != 'ban ten gi').
-        _topic = ("truong", "lab", "islab", "thay", "nghien cuu", "sinh vien",
-                  "hieu truong", "khoa", "nganh")
-        if not any(w in t for w in _topic):
-            for kws, say, action_name in _CHAT_RULES:
-                if any(k in t for k in kws):
-                    acts = ([{"tool": "action", "args": {"name": action_name}}]
-                            if action_name else [])
-                    return {"intent": "chat", "say": say, "actions": acts}
         return None
 
 

@@ -17,7 +17,8 @@ Tool ho tro:
 import os
 import time
 import math
-import threading
+
+from reflex_matcher import norm as _norm
 
 # Cac dong tac SportClient DA XAC MINH tren Go2 cua ban.
 # (Co y KHONG dua HandStand/WalkUpright vao voice — nguy hiem khi kich hoat bang loi noi)
@@ -32,34 +33,13 @@ ACTION_MAP = {
     "balance": "BalanceStand",
 }
 
-# ---- Dong tac ACROBATIC (dung 2 chan / bat nhay) ----
-# RUI RO: robot de MAT THANG BANG/NGA. Can KHONG GIAN TRONG + nen phang, va robot
-# phai o che do AI sport (advanced) thi SDK moi thuc thi. Firmware KHONG cho cat
-# giua chung -> 'dung lai' se doi lam xong dong tac moi dung han.
-_ACRO_ONESHOT = {                       # 1-phat, khong tham so
-    "frontjump": "FrontJump",           # bat VE PHIA TRUOC
-    "frontpounce": "FrontPounce",       # chom/vo ve phia truoc
-}
-_ACRO_TOGGLE = {                        # nhan flag bool: bat True -> giu -> ha xuong
-    "walkupright": ("WalkUpright", 4.0),  # dung/di bang 2 chan SAU (nhu nguoi)
-    "handstand":   ("HandStand", 4.0),    # trong chuoi: dung bang 2 chan TRUOC
-}
-
 
 class RobotTools:
     def __init__(self, dry_run=True, iface="eth0", waypoints_file=None,
-                 max_vx=0.6, max_vy=0.4, max_vyaw=1.0, max_duration=6.0,
-                 max_step_m=0.5, motion_mode=None):
+                 max_vx=0.6, max_vy=0.4, max_vyaw=1.0, max_duration=6.0):
         self.dry_run = dry_run
         self.iface = iface
         self.limits = (max_vx, max_vy, max_vyaw, max_duration)
-        self.max_step_m = float(max_step_m)   # moi lenh di toi da bao nhieu MET (chong dung)
-        # Che do dong co: "ai" = mo khoa acrobatic (WalkUpright/HandStand/FrontJump...);
-        # "normal" = co dien; None = khong tu chuyen (giu nguyen mode robot dang o).
-        self.motion_mode = motion_mode
-        # Co huy khan cap: emergency_stop() bat co -> vong move() dang chay
-        # thoat trong ~0.1s thay vi di het duration. enqueue() lenh moi se xoa co.
-        self.abort = threading.Event()
         self.client = None
         self.waypoints = self._load_waypoints(waypoints_file)
         if not dry_run:
@@ -74,22 +54,6 @@ class RobotTools:
         self.client.SetTimeout(10.0)
         self.client.Init()
         print(f"[robot] SportClient OK (iface={self.iface})")
-        # TU CHUYEN che do dong co (khoi phai bat trong app dien thoai moi lan).
-        # 'ai' -> mo khoa dong tac acrobatic (dung 2 chan/trong chuoi/bat toi...).
-        if self.motion_mode:
-            try:
-                from unitree_sdk2py.comm.motion_switcher.motion_switcher_client import \
-                    MotionSwitcherClient
-                msc = MotionSwitcherClient()
-                msc.SetTimeout(5.0)
-                msc.Init()
-                ret = msc.SelectMode(self.motion_mode)
-                print(f"[robot] chuyen che do dong co -> '{self.motion_mode}' (ret={ret}) "
-                      f"— cho ~3s controller san sang...")
-                time.sleep(3.0)
-            except Exception as e:
-                print(f"[robot] ⚠️  khong chuyen duoc che do '{self.motion_mode}' "
-                      f"(acrobatic co the loi): {e}")
 
     def _load_waypoints(self, path):
         if not path or not os.path.exists(path):
@@ -98,7 +62,8 @@ class RobotTools:
             import yaml
             with open(path, "r", encoding="utf-8") as f:
                 data = yaml.safe_load(f) or {}
-            return {str(k).lower(): v for k, v in data.items()}
+            # so khop KHONG DAU: Combo tra ve 'cửa', waypoints.yaml ghi 'cua'
+            return {_norm(str(k)): v for k, v in data.items()}
         except Exception as e:
             print(f"[robot] khong doc duoc waypoints: {e}")
             return {}
@@ -129,26 +94,11 @@ class RobotTools:
         vy = max(-mvy, min(mvy, vy))
         vyaw = max(-mvyaw, min(mvyaw, vyaw))
         duration = max(0.1, min(mdur, duration))
-        # CHAN KHOANG CACH: quang duong = toc do x thoi gian. Neu vuot max_step_m
-        # (vd 0.5m) thi RUT NGAN thoi gian lai -> robot chi di dung ~50cm roi dung,
-        # du LLM/reflex co xuat toc do/thoi gian lon the nao (so dung do vat).
-        speed = math.hypot(vx, vy)
-        if speed > 1e-6 and speed * duration > self.max_step_m:
-            duration = self.max_step_m / speed
         if self.dry_run:
-            dist = speed * duration
-            return (f"[DRY] Move vx={vx:.2f} vy={vy:.2f} vyaw={vyaw:.2f} "
-                    f"trong {duration:.1f}s (~{dist*100:.0f}cm)")
-        # Lenh van toc phai gui lien tuc ~10Hz trong suot thoi gian di.
-        # Moi vong kiem tra co abort -> "dung lai" cat duoc giua chung trong ~0.1s
-        # (truoc day StopMove cua emergency bi chinh vong nay gui Move de len).
-        if self.abort.is_set():
-            return "Da huy (emergency)"
+            return f"[DRY] Move vx={vx:.2f} vy={vy:.2f} vyaw={vyaw:.2f} trong {duration:.1f}s"
+        # Lenh van toc phai gui lien tuc ~10Hz trong suot thoi gian di
         t_end = time.time() + duration
         while time.time() < t_end:
-            if self.abort.is_set():
-                self.client.StopMove()
-                return "🛑 Da dung giua chung (emergency)"
             self.client.Move(vx, vy, vyaw)
             time.sleep(0.1)
         self.client.StopMove()
@@ -166,45 +116,9 @@ class RobotTools:
 
     def action(self, name: str) -> str:
         key = name.lower().strip()
-        known = key in ACTION_MAP or key in _ACRO_TOGGLE or key in _ACRO_ONESHOT
-        if not known:
+        method = ACTION_MAP.get(key)
+        if not method:
             return f"[robot] khong biet dong tac '{name}'"
-        # dong tac dong goi / acrobatic khong the cat giua chung -> chan neu dang emergency
-        if self.abort.is_set() and key not in ("standup", "balance"):
-            return "Da huy (emergency)"
-
-        # --- ACROBATIC dung 2 chan (WalkUpright/HandStand): bat -> giu -> ha an toan ---
-        if key in _ACRO_TOGGLE:
-            method, hold = _ACRO_TOGGLE[key]
-            if self.dry_run:
-                return f"[DRY] {method}(True) giu {hold:.0f}s roi ha xuong (RecoveryStand)"
-            try:
-                self.client.BalanceStand(); time.sleep(0.5)   # dung vung truoc da
-                getattr(self.client, method)(True)            # dung len 2 chan
-                time.sleep(hold)
-                getattr(self.client, method)(False); time.sleep(0.3)
-                self.client.RecoveryStand()                   # ve tu the an toan
-            except Exception as e:
-                try:
-                    self.client.RecoveryStand()
-                except Exception:
-                    pass
-                return f"[robot] loi {method} (robot co o che do AI sport khong?): {e}"
-            return f"Da lam: {method}"
-
-        # --- ACROBATIC 1-phat (FrontJump/FrontPounce) ---
-        if key in _ACRO_ONESHOT:
-            method = _ACRO_ONESHOT[key]
-            if self.dry_run:
-                return f"[DRY] SportClient.{method}()"
-            try:
-                getattr(self.client, method)()
-            except Exception as e:
-                return f"[robot] loi {method} (robot co o che do AI sport khong?): {e}"
-            return f"Da lam: {method}"
-
-        # --- dong tac thuong ---
-        method = ACTION_MAP[key]
         if self.dry_run:
             return f"[DRY] SportClient.{method}()"
         getattr(self.client, method)()
@@ -216,9 +130,7 @@ class RobotTools:
 
     def go_to(self, location: str) -> str:
         """Gui goal toi Nav2 (/goal_pose). Can he Nav2 + map dang chay (xem HUONG_DAN.md)."""
-        if self.abort.is_set():
-            return "Da huy (emergency)"
-        loc = location.lower().strip()
+        loc = _norm(location)
         wp = self.waypoints.get(loc)
         if not wp:
             known = ", ".join(self.waypoints.keys()) or "(chua co waypoint nao)"

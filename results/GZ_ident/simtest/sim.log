@@ -1,0 +1,992 @@
+[INFO] [launch]: All log files can be found below /home/nhanhuynh/.ros/log/2026-11-24-12-21-05-116737-Nolan-443747
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo-1]: process started with pid [443759]
+[INFO] [robot_state_publisher-2]: process started with pid [443760]
+[INFO] [create-3]: process started with pid [443761]
+[INFO] [parameter_bridge-4]: process started with pid [443763]
+[INFO] [parameter_bridge-5]: process started with pid [443764]
+[INFO] [quadruped_controller_node-6]: process started with pid [443765]
+[INFO] [state_estimation_node-7]: process started with pid [443766]
+[INFO] [ekf_node-8]: process started with pid [443767]
+[INFO] [ekf_node-9]: process started with pid [443779]
+[INFO] [static_transform_publisher-10]: process started with pid [443780]
+[INFO] [static_transform_publisher-11]: process started with pid [443781]
+[robot_state_publisher-2] [INFO] [1795497665.613241801] [robot_state_publisher]: Robot initialized
+[create-3] [INFO] [1795497665.614709333] [ros_gz_sim]: Requesting list of world names.
+[quadruped_controller_node-6] [INFO] [1795497665.623964522] [rclcpp]: Successfully parsed urdf file
+[ekf_node-8] [INFO] [1795497665.626038777] [base_to_footprint_ekf]: Waiting for clock to start...
+[state_estimation_node-7] [INFO] [1795497665.628484664] [rclcpp]: Successfully parsed urdf file
+[parameter_bridge-5] [INFO] [1795497665.631169203] [ground_truth_bridge]: Creating GZ->ROS Bridge: [/model/go2/pose (gz.msgs.Pose_V) -> /model/go2/pose (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.631559833] [gazebo_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[static_transform_publisher-11] [INFO] [1795497665.631654819] [base_link_to_base_footprint_tf_node]: Spinning until stopped - publishing transform
+[static_transform_publisher-11] translation: ('0.000000', '0.000000', '-0.280000')
+[static_transform_publisher-11] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-11] from 'base_link' to 'base_footprint'
+[parameter_bridge-4] [INFO] [1795497665.632152307] [gazebo_bridge]: Creating GZ->ROS Bridge: [/imu/data (gz.msgs.IMU) -> /imu/data (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.634232499] [gazebo_bridge]: Creating ROS->GZ Bridge: [/imu/data (sensor_msgs/msg/Imu) -> /imu/data (gz.msgs.IMU)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.635118242] [gazebo_bridge]: Creating GZ->ROS Bridge: [/tf (gz.msgs.Pose_V) -> /tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[static_transform_publisher-10] [INFO] [1795497665.636104908] [map_to_odom_tf_node]: Spinning until stopped - publishing transform
+[static_transform_publisher-10] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-10] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-10] from 'map' to 'odom'
+[parameter_bridge-4] [INFO] [1795497665.636636829] [gazebo_bridge]: Creating ROS->GZ Bridge: [/tf (tf2_msgs/msg/TFMessage) -> /tf (gz.msgs.Pose_V)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.637573628] [gazebo_bridge]: Creating GZ->ROS Bridge: [/joint_states (gz.msgs.Model) -> /joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.638309769] [gazebo_bridge]: Creating ROS->GZ Bridge: [/joint_states (sensor_msgs/msg/JointState) -> /joint_states (gz.msgs.Model)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.638898681] [gazebo_bridge]: Creating GZ->ROS Bridge: [/velodyne_points/points (gz.msgs.PointCloudPacked) -> /velodyne_points/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.640327032] [gazebo_bridge]: Creating ROS->GZ Bridge: [/velodyne_points/points (sensor_msgs/msg/PointCloud2) -> /velodyne_points/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.641091668] [gazebo_bridge]: Creating GZ->ROS Bridge: [/unitree_lidar/points (gz.msgs.PointCloudPacked) -> /unitree_lidar/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.641781504] [gazebo_bridge]: Creating ROS->GZ Bridge: [/unitree_lidar/points (sensor_msgs/msg/PointCloud2) -> /unitree_lidar/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.642410785] [gazebo_bridge]: Creating GZ->ROS Bridge: [/odom (gz.msgs.Odometry) -> /odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[ekf_node-9] [INFO] [1795497665.642499834] [footprint_to_odom_ekf]: Waiting for clock to start...
+[parameter_bridge-4] [INFO] [1795497665.646060619] [gazebo_bridge]: Creating ROS->GZ Bridge: [/odom (nav_msgs/msg/Odometry) -> /odom (gz.msgs.Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.647271689] [gazebo_bridge]: Creating GZ->ROS Bridge: [/gps/fix (gz.msgs.NavSat) -> /gps/fix (sensor_msgs/msg/NavSatFix)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.647876037] [gazebo_bridge]: Creating GZ->ROS Bridge: [/rgb_image (gz.msgs.Image) -> /rgb_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.648360465] [gazebo_bridge]: Creating ROS->GZ Bridge: [/rgb_image (sensor_msgs/msg/Image) -> /rgb_image (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.649021804] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/image (gz.msgs.Image) -> /d455/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.649858867] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/depth_image (gz.msgs.Image) -> /d455/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.650666248] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/points (gz.msgs.PointCloudPacked) -> /d455/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.651459380] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d455/camera_info (gz.msgs.CameraInfo) -> /d455/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.652181273] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/image (gz.msgs.Image) -> /d435i/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.652797494] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/depth_image (gz.msgs.Image) -> /d435i/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.653433899] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/points (gz.msgs.PointCloudPacked) -> /d435i/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.654040622] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/camera_info (gz.msgs.CameraInfo) -> /d435i/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.654639033] [gazebo_bridge]: Creating GZ->ROS Bridge: [/d435i/imu (gz.msgs.IMU) -> /d435i/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.655255254] [gazebo_bridge]: Creating ROS->GZ Bridge: [/cmd_vel (geometry_msgs/msg/Twist) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.655763429] [gazebo_bridge]: Creating ROS->GZ Bridge: [/joint_group_effort_controller/joint_trajectory (trajectory_msgs/msg/JointTrajectory) -> /joint_group_effort_controller/joint_trajectory (gz.msgs.JointTrajectory)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1795497665.672933318] [gazebo_bridge]: Passing message from ROS trajectory_msgs/msg/JointTrajectory to Gazebo gz.msgs.JointTrajectory (showing msg only once per type)
+[create-3] [INFO] [1795497667.831724277] [ros_gz_sim]: Waiting messages on topic [robot_description].
+[create-3] [INFO] [1795497667.926794482] [ros_gz_sim]: Entity creation successful.
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="rgb_camera"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="d435i_rgbd_camera"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="d435i_imu"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="navsat_sensor"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="imu_sensor"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="lidar_l1"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="velodyne-VLP16"]/gz_frame_id:<urdf-string>:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="go2"]/link[@name="base_link"]/sensor[@name="velodyne-VLP16"]/lidar/frame_id:<urdf-string>:L0]: XML Element[frame_id], child of element[lidar], not defined in SDF. Copying[frame_id] as children of [lidar].
+[gazebo-1] [INFO] [1795497668.061704149] [gz_ros_control]: Loading controller_manager
+[INFO] [create-3]: process has finished cleanly [pid 443761]
+[gazebo-1] [INFO] [1795497668.074585425] [controller_manager]: Using ROS clock for triggering controller manager cycles.
+[gazebo-1] [WARN] [1795497668.074617483] [controller_manager]: The resource manager is not yet initialized, will wait for the robot description to initialize it..
+[gazebo-1] [INFO] [1795497668.079504508] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[gazebo-1] [WARN] [1795497668.079556750] [gz_ros_control]: Waiting RM to load and initialize hardware...
+[gazebo-1] [INFO] [1795497668.081064651] [controller_manager]: Received robot description from topic.
+[gazebo-1] [INFO] [1795497668.081140640] [controller_manager]: Enforcing command limits is enabled...
+[gazebo-1] [INFO] [1795497668.084142195] [gz_ros_control]: Using JointLimiter for joint 'rf_lower_leg_joint' in hardware 'rf' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084164754] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_lower_leg_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795497668.084186126] [gz_ros_control]: Using JointLimiter for joint 'rf_upper_leg_joint' in hardware 'rf' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084195624] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_upper_leg_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795497668.084205123] [gz_ros_control]: Using JointLimiter for joint 'rf_hip_joint' in hardware 'rf' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084215809] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rf_hip_joint' in hardware 'rf'
+[gazebo-1] [INFO] [1795497668.084226495] [gz_ros_control]: Using JointLimiter for joint 'lf_lower_leg_joint' in hardware 'lf' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084235993] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_lower_leg_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795497668.084246679] [gz_ros_control]: Using JointLimiter for joint 'lf_upper_leg_joint' in hardware 'lf' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084257365] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_upper_leg_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795497668.084268051] [gz_ros_control]: Using JointLimiter for joint 'lf_hip_joint' in hardware 'lf' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084278737] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lf_hip_joint' in hardware 'lf'
+[gazebo-1] [INFO] [1795497668.084288235] [gz_ros_control]: Using JointLimiter for joint 'rh_lower_leg_joint' in hardware 'rh' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084298921] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_lower_leg_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795497668.084329792] [gz_ros_control]: Using JointLimiter for joint 'rh_upper_leg_joint' in hardware 'rh' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084340478] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_upper_leg_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795497668.084351164] [gz_ros_control]: Using JointLimiter for joint 'rh_hip_joint' in hardware 'rh' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084360662] [gz_ros_control]: Creating JointSaturationLimiter for joint 'rh_hip_joint' in hardware 'rh'
+[gazebo-1] [INFO] [1795497668.084372535] [gz_ros_control]: Using JointLimiter for joint 'lh_lower_leg_joint' in hardware 'lh' : '  has position limits: true [-2.7227, -0.83776]
+[gazebo-1]   has velocity limits: true [20.06]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [35.55]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084384409] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_lower_leg_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795497668.084396282] [gz_ros_control]: Using JointLimiter for joint 'lh_upper_leg_joint' in hardware 'lh' : '  has position limits: true [-1.5708, 3.4907]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084405780] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_upper_leg_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795497668.084416466] [gz_ros_control]: Using JointLimiter for joint 'lh_hip_joint' in hardware 'lh' : '  has position limits: true [-1.0472, 1.0472]
+[gazebo-1]   has velocity limits: true [30.1]
+[gazebo-1]   has acceleration limits: false [nan]
+[gazebo-1]   has deceleration limits: false [nan]
+[gazebo-1]   has jerk limits: false [nan]
+[gazebo-1]   has effort limits: true [23.7]
+[gazebo-1]   angle wraparound: false'
+[gazebo-1] [INFO] [1795497668.084425965] [gz_ros_control]: Creating JointSaturationLimiter for joint 'lh_hip_joint' in hardware 'lh'
+[gazebo-1] [INFO] [1795497668.087408522] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795497668.087457203] [gz_ros_control]: Loading joint: rf_hip_joint
+[gazebo-1] [INFO] [1795497668.087470263] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.087482136] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.087494010] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.087504696] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.087514194] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.087529629] [gz_ros_control]: Loading joint: rf_upper_leg_joint
+[gazebo-1] [INFO] [1795497668.087539128] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.087548627] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.087558125] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.087568811] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.087577122] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.087590183] [gz_ros_control]: Loading joint: rf_lower_leg_joint
+[gazebo-1] [INFO] [1795497668.087599681] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.087607993] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.087618679] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.087628177] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.087637676] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.087822898] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795497668.087835959] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.087846645] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.087856143] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795497668.087865642] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.087885827] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.088023556] [gz_ros_control]: Initialize hardware 'rf' 
+[gazebo-1] [INFO] [1795497668.094470724] [gz_ros_control]: Successful initialization of hardware 'rf'
+[gazebo-1] [INFO] [1795497668.094608454] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795497668.094642886] [gz_ros_control]: Loading joint: lf_hip_joint
+[gazebo-1] [INFO] [1795497668.094657134] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.094669007] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.094682068] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.094693941] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.094705814] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.094725999] [gz_ros_control]: Loading joint: lf_upper_leg_joint
+[gazebo-1] [INFO] [1795497668.094736685] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.094744996] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.094762806] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.094772305] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.094784178] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.094800800] [gz_ros_control]: Loading joint: lf_lower_leg_joint
+[gazebo-1] [INFO] [1795497668.094811486] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.094820985] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.094832858] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.094843544] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.094853043] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.094872040] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795497668.094885100] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.094898161] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.094911221] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795497668.094923095] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.094933781] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.094991960] [gz_ros_control]: Initialize hardware 'lf' 
+[gazebo-1] [INFO] [1795497668.101474747] [gz_ros_control]: Successful initialization of hardware 'lf'
+[gazebo-1] [INFO] [1795497668.101583981] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795497668.101618414] [gz_ros_control]: Loading joint: rh_hip_joint
+[gazebo-1] [INFO] [1795497668.101631474] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.101644535] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.101656408] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.101669469] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.101680155] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.101699152] [gz_ros_control]: Loading joint: rh_upper_leg_joint
+[gazebo-1] [INFO] [1795497668.101711025] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.101722898] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.101733584] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.101744270] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.101759705] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.101775140] [gz_ros_control]: Loading joint: rh_lower_leg_joint
+[gazebo-1] [INFO] [1795497668.101784639] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.101794138] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.101803636] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.101815509] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.101827383] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.101844005] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795497668.101854691] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.101865377] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.101876063] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795497668.101886749] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.101896247] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.101953239] [gz_ros_control]: Initialize hardware 'rh' 
+[gazebo-1] [INFO] [1795497668.108405157] [gz_ros_control]: Successful initialization of hardware 'rh'
+[gazebo-1] [INFO] [1795497668.108508454] [gz_ros_control]: The position_proportional_gain has been set to: 0.1
+[gazebo-1] [INFO] [1795497668.108558321] [gz_ros_control]: Loading joint: lh_hip_joint
+[gazebo-1] [INFO] [1795497668.108570195] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.108580880] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.108591566] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.108599878] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.108608189] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.108623624] [gz_ros_control]: Loading joint: lh_upper_leg_joint
+[gazebo-1] [INFO] [1795497668.108634310] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.108643809] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.108652120] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.108660431] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.108669930] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.108680616] [gz_ros_control]: Loading joint: lh_lower_leg_joint
+[gazebo-1] [INFO] [1795497668.108688927] [gz_ros_control]: 	State:
+[gazebo-1] [INFO] [1795497668.108697238] [gz_ros_control]: 		 position
+[gazebo-1] [INFO] [1795497668.108706737] [gz_ros_control]: 		 velocity
+[gazebo-1] [INFO] [1795497668.108717423] [gz_ros_control]: 	Command:
+[gazebo-1] [INFO] [1795497668.108725734] [gz_ros_control]: 		 effort
+[gazebo-1] [INFO] [1795497668.108737607] [gz_ros_control]: Loading sensor: d435i_imu
+[gazebo-1] [INFO] [1795497668.108745918] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.108781538] [gz_ros_control]: IMU sensor 'd435i_imu' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.108793411] [gz_ros_control]: Loading sensor: imu_sensor
+[gazebo-1] [INFO] [1795497668.108802910] [gz_ros_control]: 	State:
+[gazebo-1] [WARN] [1795497668.108811221] [gz_ros_control]: IMU sensor 'imu_sensor' not found in hardware_info, skipping.
+[gazebo-1] [INFO] [1795497668.108853965] [gz_ros_control]: Initialize hardware 'lh' 
+[gazebo-1] [INFO] [1795497668.115157467] [gz_ros_control]: Successful initialization of hardware 'lh'
+[gazebo-1] [INFO] [1795497668.115275012] [controller_manager]: Activating component 'rh'.
+[gazebo-1] [INFO] [1795497668.115297571] [resource_manager]: 'configure' hardware 'rh' 
+[gazebo-1] [INFO] [1795497668.115307070] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795497668.115317756] [resource_manager]: Successful 'configure' of hardware 'rh'
+[gazebo-1] [INFO] [1795497668.115329629] [resource_manager]: 'activate' hardware 'rh' 
+[gazebo-1] [INFO] [1795497668.115355750] [resource_manager]: Successful 'activate' of hardware 'rh'
+[gazebo-1] [INFO] [1795497668.115399681] [controller_manager]: Activating component 'lf'.
+[gazebo-1] [INFO] [1795497668.115410367] [resource_manager]: 'configure' hardware 'lf' 
+[gazebo-1] [INFO] [1795497668.115413929] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795497668.115423428] [resource_manager]: Successful 'configure' of hardware 'lf'
+[gazebo-1] [INFO] [1795497668.115426990] [resource_manager]: 'activate' hardware 'lf' 
+[gazebo-1] [INFO] [1795497668.115431739] [resource_manager]: Successful 'activate' of hardware 'lf'
+[gazebo-1] [INFO] [1795497668.115444799] [controller_manager]: Activating component 'lh'.
+[gazebo-1] [INFO] [1795497668.115454298] [resource_manager]: 'configure' hardware 'lh' 
+[gazebo-1] [INFO] [1795497668.115459047] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795497668.115467359] [resource_manager]: Successful 'configure' of hardware 'lh'
+[gazebo-1] [INFO] [1795497668.115473295] [resource_manager]: 'activate' hardware 'lh' 
+[gazebo-1] [INFO] [1795497668.115478044] [resource_manager]: Successful 'activate' of hardware 'lh'
+[gazebo-1] [INFO] [1795497668.115488730] [controller_manager]: Activating component 'rf'.
+[gazebo-1] [INFO] [1795497668.115498229] [resource_manager]: 'configure' hardware 'rf' 
+[gazebo-1] [INFO] [1795497668.115502978] [gz_ros_control]: System Successfully configured!
+[gazebo-1] [INFO] [1795497668.115510102] [resource_manager]: Successful 'configure' of hardware 'rf'
+[gazebo-1] [INFO] [1795497668.115514852] [resource_manager]: 'activate' hardware 'rf' 
+[gazebo-1] [INFO] [1795497668.115518413] [resource_manager]: Successful 'activate' of hardware 'rf'
+[gazebo-1] [WARN] [1795497668.115530287] [controller_manager]: Component 'rh' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795497668.115538598] [controller_manager]: Component 'lf' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795497668.115548097] [controller_manager]: Component 'lh' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [WARN] [1795497668.115569468] [controller_manager]: Component 'rf' does not have read or write statistics initialized, skipping registration.
+[gazebo-1] [INFO] [1795497668.115580154] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[gazebo-1] [WARN] [1795497670.156431865] [gz_ros_control]:  Desired controller update period (0.004 s) is slower than the gazebo simulation period (0.001 s).
+[parameter_bridge-4] [INFO] [1795497670.158900311] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/Imu to Gazebo gz.msgs.IMU (showing msg only once per type)
+[gazebo-1] libEGL warning: pci id for fd 89: 10de:28e0, driver (null)
+[gazebo-1] 
+[gazebo-1] pci id for fd 90: 10de:28e0, driver (null)
+[gazebo-1] pci id for fd 91: 10de:28e0, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 89: 10de:28e0, driver (null)
+[gazebo-1] 
+[gazebo-1] pci id for fd 90: 10de:28e0, driver (null)
+[gazebo-1] pci id for fd 91: 10de:28e0, driver (null)
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: pci id for fd 89: 10de:28e0, driver (null)
+[gazebo-1] 
+[parameter_bridge-4] [INFO] [1795497670.944931230] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/Image to Gazebo gz.msgs.Image (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795497670.956431649] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/PointCloud2 to Gazebo gz.msgs.PointCloudPacked (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795497670.976220775] [gazebo_bridge]: Passing message from ROS nav_msgs/msg/Odometry to Gazebo gz.msgs.Odometry (showing msg only once per type)
+[parameter_bridge-4] [INFO] [1795497670.977936458] [gazebo_bridge]: Passing message from ROS tf2_msgs/msg/TFMessage to Gazebo gz.msgs.Pose_V (showing msg only once per type)
+[INFO] [spawner-12]: process started with pid [444188]
+[spawner-12] [INFO] [1795497685.969884728] [spawner_joint_states_controller]: Setting controller param "params_file" to "['/tmp/launch_params_nt9vg8i1']" for joint_states_controller
+[gazebo-1] [INFO] [1795497685.971417563] [controller_manager]: Loading controller : 'joint_states_controller' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[gazebo-1] [INFO] [1795497685.971459120] [controller_manager]: Loading controller 'joint_states_controller'
+[gazebo-1] [INFO] [1795497685.973616487] [controller_manager]: Controller 'joint_states_controller' node arguments: '--ros-args --params-file /tmp/launch_params_nt9vg8i1 --param use_sim_time:=true'
+[spawner-12] [INFO] [1795497685.985052790] [spawner_joint_states_controller]: Loaded joint_states_controller
+[gazebo-1] [INFO] [1795497685.986216367] [controller_manager]: Configuring controller: 'joint_states_controller'
+[gazebo-1] [INFO] [1795497685.986420587] [joint_states_controller]: 'joints' or 'interfaces' parameter is empty. Will try to publish all available state interfaces of the URDF joints.
+[gazebo-1] [INFO] [1795497685.993057727] [controller_manager]: Activating controllers: [ joint_states_controller ]
+[gazebo-1] [INFO] [1795497685.995542796] [controller_manager]: Requested controller switch from non-realtime loop
+[gazebo-1] [INFO] [1795497685.995703085] [controller_manager]: Successfully switched controllers!
+[parameter_bridge-4] [INFO] [1795497686.000001197] [gazebo_bridge]: Passing message from ROS sensor_msgs/msg/JointState to Gazebo gz.msgs.Model (showing msg only once per type)
+[spawner-12] [INFO] [1795497686.000704092] [spawner_joint_states_controller]: Configured and activated joint_states_controller
+[INFO] [spawner-12]: process has finished cleanly [pid 444188]
+[INFO] [bash-13]: process started with pid [444226]
+[bash-13] Checking controller status:
+[bash-13] joint_states_controller joint_state_broadcaster/JointStateBroadcaster  active
+[INFO] [bash-13]: process has finished cleanly [pid 444226]
+[INFO] [spawner-14]: process started with pid [444307]
+[spawner-14] [INFO] [1795497695.972733981] [spawner_joint_group_effort_controller]: Setting controller param "params_file" to "['/home/nhanhuynh/ros2_ws/install/unitree_go2_sim/share/unitree_go2_sim/config/ros_control/ros_control.yaml', '/tmp/launch_params_m6lbqp9u']" for joint_group_effort_controller
+[gazebo-1] [INFO] [1795497695.980436151] [controller_manager]: Loading controller : 'joint_group_effort_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+[gazebo-1] [INFO] [1795497695.980471770] [controller_manager]: Loading controller 'joint_group_effort_controller'
+[gazebo-1] [INFO] [1795497695.984163160] [controller_manager]: Controller 'joint_group_effort_controller' node arguments: '--ros-args --params-file /home/nhanhuynh/ros2_ws/install/unitree_go2_sim/share/unitree_go2_sim/config/ros_control/ros_control.yaml --params-file /tmp/launch_params_m6lbqp9u --param use_sim_time:=true'
+[spawner-14] [INFO] [1795497695.997772266] [spawner_joint_group_effort_controller]: Loaded joint_group_effort_controller
+[gazebo-1] [INFO] [1795497695.998634263] [controller_manager]: Configuring controller: 'joint_group_effort_controller'
+[gazebo-1] [INFO] [1795497695.998864604] [joint_group_effort_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[gazebo-1] [INFO] [1795497695.998950091] [joint_group_effort_controller]: Command interfaces are [effort] and state interfaces are [position velocity].
+[gazebo-1] [INFO] [1795497695.998985711] [joint_group_effort_controller]: Using 'splines' interpolation method.
+[gazebo-1] [INFO] [1795497696.005633537] [joint_group_effort_controller]: Goals with partial set of joints are allowed
+[gazebo-1] [INFO] [1795497696.005665594] [joint_group_effort_controller]: Action status changes will be monitored at 20.00 Hz.
+[gazebo-1] [INFO] [1795497696.014410234] [joint_group_effort_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+[gazebo-1] [INFO] [1795497696.019110849] [controller_manager]: Activating controllers: [ joint_group_effort_controller ]
+[gazebo-1] [INFO] [1795497696.020938140] [controller_manager]: Requested controller switch from non-realtime loop
+[gazebo-1] [INFO] [1795497696.021256343] [controller_manager]: Successfully switched controllers!
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.022) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.023) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.024) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.025) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[spawner-14] [INFO] [1795497696.025721868] [spawner_joint_group_effort_controller]: Configured and activated joint_group_effort_controller
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.026) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.027) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.028) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.029) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.030) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.031) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.032) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.033) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.034) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.035) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.036) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.037) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.038) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.039) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.040) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.041) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.042) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.043) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.044) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.045) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.046) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.047) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.048) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.049) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.050) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.051) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.052) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.053) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.054) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.055) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.056) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.057) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.058) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.059) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.060) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.061) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.062) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.063) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.064) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.065) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.066) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.067) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.068) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.069) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.070) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.071) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [lh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rf_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_hip_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_upper_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] (2026-11-24 12:21:36.072) [error] [JointFeatures.cc:136] Invalid joint force value [nan] set on joint [rh_lower_leg_joint DOF 0]. The value will be ignored
+[gazebo-1] [ERROR] [1795497696.072830127] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_upper_leg_joint', (actual: [Joint: 'lf_upper_leg_joint', position: 0.011921, velocity: 0.000000], command: [Joint: 'lf_upper_leg_joint', effort: 156.382931], limited: [Joint: 'lf_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[INFO] [spawner-14]: process has finished cleanly [pid 444307]
+[parameter_bridge-4] [INFO] [1795497733.605118776] [gazebo_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[gazebo-1] [ERROR] [1795497735.064963080] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.258324, velocity: -3.649732], command: [Joint: 'lf_lower_leg_joint', effort: 41.496643], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497748.442305325] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.249896, velocity: -0.629913], command: [Joint: 'rh_lower_leg_joint', effort: 36.651456], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497750.556384044] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.249184, velocity: -1.064024], command: [Joint: 'rh_lower_leg_joint', effort: 35.629407], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497754.011372841] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_upper_leg_joint', (actual: [Joint: 'lh_upper_leg_joint', position: 0.958296, velocity: 1.185822], command: [Joint: 'lh_upper_leg_joint', effort: 23.956207], limited: [Joint: 'lh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497756.114902188] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.228893, velocity: 1.323648], command: [Joint: 'lf_lower_leg_joint', effort: 36.330783], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497760.606872290] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.332475, velocity: -0.127931], command: [Joint: 'rf_lower_leg_joint', effort: 37.791660], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497768.810731254] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.320266, velocity: 1.698184], command: [Joint: 'lf_lower_leg_joint', effort: 35.927872], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497771.178866397] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.226645, velocity: -1.292765], command: [Joint: 'rh_lower_leg_joint', effort: 37.029654], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497773.852206687] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.305148, velocity: 2.708767], command: [Joint: 'rf_lower_leg_joint', effort: 36.304911], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497776.699785558] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_lower_leg_joint', (actual: [Joint: 'lh_lower_leg_joint', position: -2.229382, velocity: -1.495892], command: [Joint: 'lh_lower_leg_joint', effort: 37.379586], limited: [Joint: 'lh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497781.235522790] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.245859, velocity: 0.956000], command: [Joint: 'rh_lower_leg_joint', effort: 42.383986], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497790.678349397] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.244564, velocity: -0.417054], command: [Joint: 'rh_lower_leg_joint', effort: 36.134774], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497797.291689574] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.308705, velocity: 1.905369], command: [Joint: 'lf_lower_leg_joint', effort: 36.701848], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497799.946742702] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lh_upper_leg_joint', (actual: [Joint: 'lh_upper_leg_joint', position: 1.052655, velocity: -1.002760], command: [Joint: 'lh_upper_leg_joint', effort: 25.101179], limited: [Joint: 'lh_upper_leg_joint', effort: 23.700000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497801.787992220] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rh_lower_leg_joint', (actual: [Joint: 'rh_lower_leg_joint', position: -2.232329, velocity: -2.815124], command: [Joint: 'rh_lower_leg_joint', effort: 35.850075], limited: [Joint: 'rh_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497809.088037743] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'lf_lower_leg_joint', (actual: [Joint: 'lf_lower_leg_joint', position: -2.278303, velocity: 1.161554], command: [Joint: 'lf_lower_leg_joint', effort: 35.775370], limited: [Joint: 'lf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.
+[gazebo-1] [ERROR] [1795497810.571684327] [gz_ros_control]: Command of at least one joint is out of limits (throttled log). Joint: 'rf_lower_leg_joint', (actual: [Joint: 'rf_lower_leg_joint', position: -2.250557, velocity: 0.835936], command: [Joint: 'rf_lower_leg_joint', effort: 35.618739], limited: [Joint: 'rf_lower_leg_joint', effort: 35.550000]) with desired period : 0.010000 sec.

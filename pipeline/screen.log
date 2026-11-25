@@ -1,0 +1,1025 @@
+
+===== 2026-11-21 16:59:29 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python -u eval_sim.py --suite office --configs prism mppi apmppi_multi pgmppi bmppi rl rl_ens rl_safe dwa log_mppi prism_noprior prism_noadaptratio prism_novalue prism_noadapt prism_novis prism_nounc pp --trials 1 --out /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 --resume
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+[resume] da co 0 luot trong /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514/trials.csv
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.26 m, 64 s, di 17.6 m, lap lai 39 lan)
+[1/1] prism      clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.265 t=63.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.19 m, 61 s, di 16.9 m, lap lai 34 lan)
+[1/1] prism      clutter:van_phong          go2    ok=1 col=0 err=0.188 t=61.2s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism      clutter:slalom_coc         go2    ok=0 col=0 err=0.414 t=52.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+Exception in thread Thread-1 (spin):
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/lyrical/lib/python3.14/site-packages/rclpy/executors.py", line 403, in spin
+    self._spin_once_impl()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/ros/lyrical/lib/python3.14/site-packages/rclpy/executors.py", line 1013, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        timeout_sec, None, wait_condition)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/lyrical/lib/python3.14/site-packages/rclpy/executors.py", line 983, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/lyrical/lib/python3.14/site-packages/rclpy/executors.py", line 889, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException
+Traceback (most recent call last):
+object address  : 0x77b45c1a57e0
+object refcount : 3
+object type     : 0xaa8840
+object type name: KeyboardInterrupt
+object repr     : KeyboardInterrupt()
+lost sys.stderr
+
+===== 2026-11-21 23:33:14 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python -u eval_sim.py --suite office --configs prism mppi apmppi_multi pgmppi bmppi rl rl_ens rl_safe dwa log_mppi prism_noprior prism_noadaptratio prism_novalue prism_noadapt prism_novis prism_nounc pp --trials 1 --out /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 --resume
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+[resume] da co 3 luot trong /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514/trials.csv
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.22 m, 79 s, di 22.7 m, lap lai 47 lan)
+[1/1] prism      clutter:loi_pallet         go2    ok=1 col=0 err=0.231 t=79.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+Traceback (most recent call last):
+object address  : 0x7077b851b580
+object refcount : 3
+object type     : 0xaa8840
+object type name: KeyboardInterrupt
+object repr     : 
+lost sys.stderr
+
+===== 2026-11-21 23:36:26 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python -u eval_sim.py --suite office --configs prism mppi apmppi_multi pgmppi bmppi rl rl_ens rl_safe dwa log_mppi prism_noprior prism_noadaptratio prism_novalue prism_noadapt prism_novis prism_nounc pp --trials 1 --out /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 --resume
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+[resume] da co 4 luot trong /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514/trials.csv
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism      clutter:bep_xa             go2    ok=0 col=0 err=9.085 t=48.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.13 m, 56 s, di 17.4 m, lap lai 34 lan)
+[1/1] prism      crowd:sanh_8_nguoi         go2    ok=1 col=0 err=0.123 t=56.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.14 m, 95 s, di 27.4 m, lap lai 56 lan)
+[1/1] prism      crowd:kho_xe_day           go2    ok=1 col=0 err=0.146 t=95.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.21 m, 88 s, di 24.6 m, lap lai 51 lan)
+[1/1] prism      crowd:van_phong_dong       go2    ok=1 col=0 err=0.205 t=87.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được sảnh vào được rồi.
+🗨️  (TTS tat) Mình không tới được sảnh vào được rồi.   [go2] ✅ [go2] go_to 'sảnh vào' THAT BAI: ket
+
+[1/1] mppi       clutter:qua_khoi_so_le     go2    ok=0 col=0 err=2.325 t=56.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.21 m, 63 s, di 15.9 m, lap lai 36 lan)
+[1/1] mppi       clutter:van_phong          go2    ok=1 col=0 err=0.196 t=62.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] mppi       clutter:slalom_coc         go2    ok=0 col=0 err=0.436 t=56.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.24 m, 87 s, di 24.3 m, lap lai 55 lan)
+[1/1] mppi       clutter:loi_pallet         go2    ok=1 col=0 err=0.254 t=86.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.27 m, 98 s, di 25.3 m, lap lai 60 lan)
+[1/1] mppi       clutter:bep_xa             go2    ok=1 col=0 err=0.244 t=98.2s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.14 m, 70 s, di 20.0 m, lap lai 43 lan)
+[1/1] mppi       crowd:sanh_8_nguoi         go2    ok=1 col=0 err=0.15 t=70.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] mppi       crowd:kho_xe_day           go2    ok=0 col=1 err=5.545 t=231.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] mppi       crowd:van_phong_dong       go2    ok=0 col=0 err=8.869 t=76.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.18 m, 49 s, di 14.7 m, lap lai 29 lan)
+[1/1] apmppi_multi clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.176 t=49.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.08 m, 51 s, di 14.8 m, lap lai 31 lan)
+[1/1] apmppi_multi clutter:van_phong          go2    ok=1 col=0 err=0.101 t=51.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] apmppi_multi clutter:slalom_coc         go2    ok=0 col=0 err=0.46 t=48.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.22 m, 78 s, di 22.3 m, lap lai 46 lan)
+[1/1] apmppi_multi clutter:loi_pallet         go2    ok=1 col=0 err=0.224 t=77.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.20 m, 122 s, di 34.4 m, lap lai 75 lan)
+[1/1] apmppi_multi clutter:bep_xa             go2    ok=1 col=0 err=0.201 t=122.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.17 m, 89 s, di 26.5 m, lap lai 55 lan)
+[1/1] apmppi_multi crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.183 t=89.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+Exception in thread Thread-1 (spin):
+object address  : 0x7f635e6df8e0
+object refcount : 3
+object type     : 0xaa8840
+object type name: KeyboardInterrupt
+object repr     : KeyboardInterrupt()
+lost sys.stderr
+
+===== 2026-11-22 00:04:00 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python -u eval_sim.py --suite office --configs prism mppi apmppi_multi pgmppi bmppi rl rl_ens rl_safe dwa log_mppi prism_noprior prism_noadaptratio prism_novalue prism_noadapt prism_novis prism_nounc pp --trials 1 --out /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 --resume
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+[resume] da co 22 luot trong /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514/trials.csv
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.51 m, 191 s, di 53.2 m, lap lai 118 lan)
+[1/1] apmppi_multi crowd:kho_xe_day           go2    ok=0 col=0 err=0.506 t=190.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+object address  : 0x7c33e05ad9c0
+object refcount : 3
+object type     : 0xaa8840
+object type name: KeyboardInterrupt
+object repr     : KeyboardInterrupt()
+lost sys.stderr
+
+===== 2026-11-22 00:09:21 $ /home/nhanhuynh/Documents/Go2_assitant/venv/bin/python -u eval_sim.py --suite office --configs prism mppi apmppi_multi pgmppi bmppi rl rl_ens rl_safe dwa log_mppi prism_noprior prism_noadaptratio prism_novalue prism_noadapt prism_novis prism_nounc pp --trials 1 --out /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514 --resume
+[sim] the gioi: voice_office (32 x 22 m)
+⚠️  llama-server chua chay -> cau phuc tap se loi (lenh don van chay qua Reflex).
+[robot] che do: GIA (dry-run)
+[sim] 113 do vat trong nha (go "có gì" de xem lai)
+[sim] go2: ns='/' odom=OK LiDAR/D435i=OK origin=[0.0, 0.0, 0.0] ne_vat_can=BAT
+[sim] RViz: rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz  (hoac launch voice_sim rviz:=true)
+[sim] Robot biet nhung cho nay (hoi "trong phòng có gì" bat ky luc nao):
+   📍 Địa điểm: bếp, chỗ sạc, cuối kho, cửa chính, góc kho, kho hàng, phòng họp, phòng khách, sảnh, sảnh vào, văn phòng
+   🪑 Đồ vật:  thảm chùi chân màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, hộp đồ chơi màu vàng, thùng carton màu nâu, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, ghế bành màu tím, ghế bành màu hồng, bàn trà màu đen, ghế sofa màu xanh dương, quầy lễ tân màu trắng, ghế dài màu nâu, ghế dài màu nâu, bậc chắn màu đỏ, chậu cây màu xanh lá, thùng rác màu xám, chậu cây màu xanh lá, chậu cây màu xanh lá, chậu cây màu xanh lá, bàn họp màu nâu, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, ghế gỗ màu đen, bảng trắng màu trắng, chậu cây màu xanh lá, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu cam, bàn làm việc màu cam, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu trắng, bàn làm việc màu trắng, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, bàn làm việc màu xanh dương, bàn làm việc màu xanh dương, ghế gỗ màu đen, ghế gỗ màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, thùng carton màu nâu, ghế gỗ màu đen, thùng rác màu xám, cột màu xám, cột màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, tủ hồ sơ màu xám, máy in màu trắng, cây nước màu xanh dương, quầy bếp màu xám, tủ lạnh màu trắng, bàn ăn màu nâu, ghế gỗ màu nâu, ghế gỗ màu nâu, trạm sạc màu xanh lá, kệ hàng màu cam, kệ hàng màu cam, kệ hàng màu xanh dương, kệ hàng màu xanh dương, kệ hàng màu vàng, kệ hàng màu vàng, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, pallet màu nâu, thùng carton màu nâu, thùng carton màu nâu
+   💡 Ví dụ: "đi tới bếp", "đi tới cái bàn màu đen", "ra bên trái ghế sofa", "cách tủ lạnh 1 mét", "lưu chỗ này là góc đọc sách"
+[resume] da co 23 luot trong /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514/trials.csv
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.25 m, 76 s, di 22.3 m, lap lai 44 lan)
+[1/1] apmppi_multi crowd:van_phong_dong       go2    ok=1 col=0 err=0.239 t=76.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.20 m, 61 s, di 16.3 m, lap lai 38 lan)
+[1/1] pgmppi     clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.198 t=61.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.21 m, 54 s, di 15.1 m, lap lai 31 lan)
+[1/1] pgmppi     clutter:van_phong          go2    ok=1 col=0 err=0.222 t=54.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] pgmppi     clutter:slalom_coc         go2    ok=0 col=0 err=0.474 t=48.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+[1/1] pgmppi     clutter:loi_pallet         go2    ok=0 col=0 err=6.672 t=300.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.29 m, 94 s, di 25.5 m, lap lai 57 lan)
+[1/1] pgmppi     clutter:bep_xa             go2    ok=1 col=0 err=0.277 t=94.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.14 m, 78 s, di 23.2 m, lap lai 47 lan)
+[1/1] pgmppi     crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.161 t=78.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+🗨️  (TTS tat) Dạ tới đó liền!
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] pgmppi     crowd:kho_xe_day           go2    ok=0 col=0 err=0.471 t=170.2s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.27 m, 85 s, di 25.0 m, lap lai 51 lan)
+[1/1] pgmppi     crowd:van_phong_dong       go2    ok=1 col=0 err=0.271 t=85.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.17 m, 63 s, di 16.8 m, lap lai 38 lan)
+[1/1] bmppi      clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.171 t=63.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.17 m, 54 s, di 15.9 m, lap lai 32 lan)
+[1/1] bmppi      clutter:van_phong          go2    ok=1 col=0 err=0.169 t=54.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] bmppi      clutter:slalom_coc         go2    ok=0 col=0 err=0.471 t=48.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] bmppi      clutter:loi_pallet         go2    ok=0 col=0 err=7.553 t=185.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.17 m, 84 s, di 24.8 m, lap lai 53 lan)
+[1/1] bmppi      clutter:bep_xa             go2    ok=1 col=0 err=0.157 t=83.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.20 m, 62 s, di 18.5 m, lap lai 38 lan)
+[1/1] bmppi      crowd:sanh_8_nguoi         go2    ok=1 col=0 err=0.202 t=62.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.36 m, 113 s, di 31.9 m, lap lai 69 lan)
+[1/1] bmppi      crowd:kho_xe_day           go2    ok=0 col=1 err=0.348 t=112.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.24 m, 116 s, di 31.5 m, lap lai 74 lan)
+[1/1] bmppi      crowd:van_phong_dong       go2    ok=1 col=0 err=0.228 t=116.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.07 m, 55 s, di 17.2 m, lap lai 32 lan)
+[1/1] rl         clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.072 t=55.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.14 m, 46 s, di 15.3 m, lap lai 27 lan)
+[1/1] rl         clutter:van_phong          go2    ok=1 col=0 err=0.145 t=46.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.18 m, 27 s, di 10.1 m, lap lai 17 lan)
+[1/1] rl         clutter:slalom_coc         go2    ok=1 col=0 err=0.172 t=26.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+[1/1] rl         clutter:loi_pallet         go2    ok=0 col=1 err=7.77 t=300.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.
+   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.18 m, 65 s, di 21.0 m, lap lai 37 lan)
+[1/1] rl         clutter:bep_xa             go2    ok=1 col=0 err=0.17 t=65.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.13 m, 49 s, di 17.4 m, lap lai 31 lan)
+[1/1] rl         crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.145 t=49.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] rl         crowd:kho_xe_day           go2    ok=0 col=1 err=0.487 t=137.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.11 m, 69 s, di 23.0 m, lap lai 41 lan)
+[1/1] rl         crowd:van_phong_dong       go2    ok=1 col=0 err=0.091 t=68.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.19 m, 50 s, di 15.1 m, lap lai 29 lan)
+[1/1] rl_ens     clutter:qua_khoi_so_le     go2    ok=0 col=1 err=0.177 t=50.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.15 m, 49 s, di 15.7 m, lap lai 29 lan)
+[1/1] rl_ens     clutter:van_phong          go2    ok=1 col=0 err=0.151 t=49.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 24 s, di 9.4 m, lap lai 16 lan)
+[1/1] rl_ens     clutter:slalom_coc         go2    ok=1 col=0 err=0.171 t=24.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.11 m, 68 s, di 21.9 m, lap lai 41 lan)
+[1/1] rl_ens     clutter:loi_pallet         go2    ok=1 col=0 err=0.117 t=68.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.15 m, 66 s, di 20.9 m, lap lai 39 lan)
+[1/1] rl_ens     clutter:bep_xa             go2    ok=1 col=0 err=0.13 t=66.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.17 m, 49 s, di 17.9 m, lap lai 31 lan)
+[1/1] rl_ens     crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.176 t=49.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] rl_ens     crowd:kho_xe_day           go2    ok=0 col=1 err=8.586 t=28.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 19 = 19ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] rl_ens     crowd:van_phong_dong       go2    ok=0 col=1 err=2.44 t=80.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.22 m, 73 s, di 22.3 m, lap lai 42 lan)
+[1/1] rl_safe    clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.23 t=72.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.16 m, 45 s, di 15.0 m, lap lai 26 lan)
+[1/1] rl_safe    clutter:van_phong          go2    ok=1 col=0 err=0.161 t=45.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.19 m, 27 s, di 10.3 m, lap lai 17 lan)
+[1/1] rl_safe    clutter:slalom_coc         go2    ok=1 col=0 err=0.193 t=26.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+[1/1] rl_safe    clutter:loi_pallet         go2    ok=0 col=0 err=7.426 t=300.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.01 m, 73 s, di 25.1 m, lap lai 43 lan)
+[1/1] rl_safe    clutter:bep_xa             go2    ok=1 col=0 err=0.023 t=73.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.06 m, 55 s, di 19.6 m, lap lai 33 lan)
+[1/1] rl_safe    crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.09 t=54.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] rl_safe    crowd:kho_xe_day           go2    ok=0 col=0 err=6.063 t=194.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] rl_safe    crowd:van_phong_dong       go2    ok=0 col=1 err=7.291 t=165.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.17 m, 53 s, di 14.9 m, lap lai 31 lan)
+[1/1] dwa        clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.154 t=53.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.23 m, 55 s, di 14.6 m, lap lai 33 lan)
+[1/1] dwa        clutter:van_phong          go2    ok=1 col=0 err=0.209 t=55.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] dwa        clutter:slalom_coc         go2    ok=1 col=0 err=0.253 t=48.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.21 m, 74 s, di 21.7 m, lap lai 46 lan)
+[1/1] dwa        clutter:loi_pallet         go2    ok=1 col=0 err=0.206 t=74.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.19 m, 81 s, di 24.2 m, lap lai 49 lan)
+[1/1] dwa        clutter:bep_xa             go2    ok=1 col=0 err=0.194 t=81.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.20 m, 70 s, di 21.2 m, lap lai 44 lan)
+[1/1] dwa        crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.197 t=70.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.15 m, 160 s, di 48.7 m, lap lai 99 lan)
+[1/1] dwa        crowd:kho_xe_day           go2    ok=1 col=0 err=0.159 t=160.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.20 m, 84 s, di 26.3 m, lap lai 51 lan)
+[1/1] dwa        crowd:van_phong_dong       go2    ok=1 col=0 err=0.199 t=84.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.15 m, 60 s, di 15.7 m, lap lai 35 lan)
+[1/1] log_mppi   clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.147 t=60.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.19 m, 67 s, di 17.4 m, lap lai 39 lan)
+[1/1] log_mppi   clutter:van_phong          go2    ok=1 col=0 err=0.215 t=66.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] log_mppi   clutter:slalom_coc         go2    ok=0 col=0 err=0.463 t=52.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] log_mppi   clutter:loi_pallet         go2    ok=0 col=1 err=3.938 t=72.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.29 m, 94 s, di 24.4 m, lap lai 56 lan)
+[1/1] log_mppi   clutter:bep_xa             go2    ok=1 col=0 err=0.308 t=94.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.18 m, 73 s, di 21.1 m, lap lai 45 lan)
+[1/1] log_mppi   crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.198 t=72.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] log_mppi   crowd:kho_xe_day           go2    ok=0 col=0 err=7.27 t=101.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.24 m, 124 s, di 30.2 m, lap lai 76 lan)
+[1/1] log_mppi   crowd:van_phong_dong       go2    ok=1 col=0 err=0.226 t=124.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.14 m, 95 s, di 26.5 m, lap lai 58 lan)
+[1/1] prism_noprior clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.132 t=95.4s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được văn phòng được rồi.
+🗨️  (TTS tat) Mình không tới được văn phòng được rồi.   [go2] ✅ [go2] go_to 'văn phòng' THAT BAI: ket
+
+[1/1] prism_noprior clutter:van_phong          go2    ok=0 col=0 err=1.839 t=68.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism_noprior clutter:slalom_coc         go2    ok=0 col=0 err=1.355 t=44.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.30 m, 72 s, di 21.5 m, lap lai 43 lan)
+[1/1] prism_noprior clutter:loi_pallet         go2    ok=1 col=0 err=0.271 t=72.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism_noprior clutter:bep_xa             go2    ok=0 col=0 err=9.198 t=52.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được kho hàng được rồi.
+🗨️  (TTS tat) Mình không tới được kho hàng được rồi.   [go2] ✅ [go2] go_to 'kho hàng' THAT BAI: ket
+
+[1/1] prism_noprior crowd:sanh_8_nguoi         go2    ok=0 col=1 err=8.225 t=56.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] prism_noprior crowd:kho_xe_day           go2    ok=0 col=1 err=2.266 t=81.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.
+   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+[1/1] prism_noprior crowd:van_phong_dong       go2    ok=0 col=0 err=8.958 t=56.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.18 m, 48 s, di 15.0 m, lap lai 29 lan)
+[1/1] prism_noadaptratio clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.152 t=47.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.12 m, 63 s, di 17.9 m, lap lai 40 lan)
+[1/1] prism_noadaptratio clutter:van_phong          go2    ok=1 col=0 err=0.121 t=63.2s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism_noadaptratio clutter:slalom_coc         go2    ok=0 col=0 err=1.302 t=40.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.27 m, 66 s, di 20.9 m, lap lai 39 lan)
+[1/1] prism_noadaptratio clutter:loi_pallet         go2    ok=1 col=0 err=0.275 t=65.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.14 m, 63 s, di 20.2 m, lap lai 38 lan)
+[1/1] prism_noadaptratio clutter:bep_xa             go2    ok=1 col=0 err=0.122 t=63.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.19 m, 64 s, di 19.8 m, lap lai 39 lan)
+[1/1] prism_noadaptratio crowd:sanh_8_nguoi         go2    ok=1 col=0 err=0.189 t=63.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.
+   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+[1/1] prism_noadaptratio crowd:kho_xe_day           go2    ok=0 col=1 err=0.469 t=117.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.21 m, 73 s, di 21.4 m, lap lai 42 lan)
+[1/1] prism_noadaptratio crowd:van_phong_dong       go2    ok=1 col=0 err=0.212 t=72.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.19 m, 79 s, di 19.6 m, lap lai 46 lan)
+[1/1] prism_novalue clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.186 t=79.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được văn phòng được rồi.
+🗨️  (TTS tat) Mình không tới được văn phòng được rồi.   [go2] ✅ [go2] go_to 'văn phòng' THAT BAI: ket
+
+[1/1] prism_novalue clutter:van_phong          go2    ok=0 col=0 err=1.767 t=60.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism_novalue clutter:slalom_coc         go2    ok=0 col=0 err=0.477 t=53.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.24 m, 67 s, di 21.1 m, lap lai 40 lan)
+[1/1] prism_novalue clutter:loi_pallet         go2    ok=1 col=0 err=0.223 t=67.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism_novalue clutter:bep_xa             go2    ok=0 col=0 err=9.169 t=48.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.18 m, 73 s, di 21.6 m, lap lai 46 lan)
+[1/1] prism_novalue crowd:sanh_8_nguoi         go2    ok=1 col=0 err=0.184 t=73.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.13 m, 222 s, di 69.0 m, lap lai 137 lan)
+[1/1] prism_novalue crowd:kho_xe_day           go2    ok=1 col=0 err=0.119 t=222.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.14 m, 94 s, di 29.7 m, lap lai 59 lan)
+[1/1] prism_novalue crowd:van_phong_dong       go2    ok=0 col=1 err=0.142 t=94.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.17 m, 50 s, di 15.3 m, lap lai 29 lan)
+[1/1] prism_noadapt clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.162 t=49.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.14 m, 50 s, di 16.1 m, lap lai 30 lan)
+[1/1] prism_noadapt clutter:van_phong          go2    ok=1 col=0 err=0.14 t=49.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism_noadapt clutter:slalom_coc         go2    ok=0 col=0 err=0.446 t=52.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: ket
+
+[1/1] prism_noadapt clutter:loi_pallet         go2    ok=0 col=0 err=6.105 t=173.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.16 m, 76 s, di 24.9 m, lap lai 46 lan)
+[1/1] prism_noadapt clutter:bep_xa             go2    ok=1 col=0 err=0.158 t=76.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.15 m, 73 s, di 22.9 m, lap lai 44 lan)
+[1/1] prism_noadapt crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.149 t=72.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+[1/1] prism_noadapt crowd:kho_xe_day           go2    ok=0 col=0 err=5.074 t=300.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.20 m, 90 s, di 26.8 m, lap lai 54 lan)
+[1/1] prism_noadapt crowd:van_phong_dong       go2    ok=0 col=1 err=0.207 t=89.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.13 m, 61 s, di 17.0 m, lap lai 37 lan)
+[1/1] prism_novis clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.138 t=61.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 29 = 29ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.09 m, 57 s, di 16.8 m, lap lai 34 lan)
+[1/1] prism_novis clutter:van_phong          go2    ok=1 col=0 err=0.093 t=56.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[1/1] prism_novis clutter:slalom_coc         go2    ok=0 col=0 err=0.45 t=52.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.27 m, 70 s, di 21.2 m, lap lai 40 lan)
+[1/1] prism_novis clutter:loi_pallet         go2    ok=1 col=0 err=0.278 t=70.3s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism_novis clutter:bep_xa             go2    ok=0 col=0 err=9.156 t=44.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.14 m, 60 s, di 19.3 m, lap lai 36 lan)
+[1/1] prism_novis crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.135 t=59.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 1.93 m, 103 s, di 31.0 m, lap lai 63 lan)
+[1/1] prism_novis crowd:kho_xe_day           go2    ok=0 col=0 err=1.919 t=102.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism_novis crowd:van_phong_dong       go2    ok=0 col=0 err=9.04 t=81.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.08 m, 51 s, di 14.7 m, lap lai 28 lan)
+[1/1] prism_nounc clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.067 t=50.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.08 m, 42 s, di 13.8 m, lap lai 25 lan)
+[1/1] prism_nounc clutter:van_phong          go2    ok=1 col=0 err=0.095 t=42.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.
+   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+[1/1] prism_nounc clutter:slalom_coc         go2    ok=0 col=0 err=0.436 t=44.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.21 m, 67 s, di 20.9 m, lap lai 39 lan)
+[1/1] prism_nounc clutter:loi_pallet         go2    ok=1 col=0 err=0.197 t=66.9s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.26 m, 106 s, di 31.6 m, lap lai 62 lan)
+[1/1] prism_nounc clutter:bep_xa             go2    ok=1 col=0 err=0.257 t=105.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.20 m, 54 s, di 17.7 m, lap lai 33 lan)
+[1/1] prism_nounc crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.193 t=54.6s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.50 m, 111 s, di 32.2 m, lap lai 67 lan)
+[1/1] prism_nounc crowd:kho_xe_day           go2    ok=0 col=0 err=0.481 t=110.8s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/1] prism_nounc crowd:van_phong_dong       go2    ok=0 col=1 err=10.06 t=82.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+[1/1] pp         clutter:qua_khoi_so_le     go2    ok=0 col=0 err=2.12 t=300.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được sảnh vào được rồi.
+🗨️  (TTS tat) Mình không tới được sảnh vào được rồi.   [go2] ✅ [go2] go_to 'sảnh vào' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.15 m, 56 s, di 15.1 m, lap lai 69 lan)
+[1/1] pp         clutter:van_phong          go2    ok=1 col=0 err=0.146 t=56.7s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.18 m, 31 s, di 9.0 m, lap lai 31 lan)
+[1/1] pp         clutter:slalom_coc         go2    ok=1 col=0 err=0.189 t=31.5s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+[1/1] pp         clutter:loi_pallet         go2    ok=0 col=0 err=7.532 t=300.0s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+[1/1] pp         clutter:bep_xa             go2    ok=0 col=0 err=10.423 t=300.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'kho hàng' (lech 0.15 m, 228 s, di 55.2 m, lap lai 858 lan)
+[1/1] pp         crowd:sanh_8_nguoi         go2    ok=0 col=1 err=0.145 t=228.2s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+[1/1] pp         crowd:kho_xe_day           go2    ok=0 col=0 err=7.065 t=300.1s
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+
+[1/1] pp         crowd:van_phong_dong       go2    ok=0 col=1 err=11.147 t=300.1s
+
+| config | loai | n | thanh cong | va cham | sai so TB | SPL | thoi gian TB (s) | ho min TB (m) | ho min Go2 that (m) | khung (lan) | dung (s) | toc do TB (m/s) | lac huong |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| apmppi_multi | clutter | 5 | 80 % | 0 % | 0.232 m | 0.53 | 69.9 | 0.21 | 0.17 | 0.6 | 2.2 | 0.30 | 19.8 |
+| apmppi_multi | crowd | 3 | 33 % | 33 % | 0.309 m | 0.44 | 118.9 | 0.23 | 0.20 | 1.3 | 5.0 | 0.28 | 31.3 |
+| bmppi | clutter | 5 | 60 % | 0 % | 1.704 m | 0.40 | 87.1 | 0.20 | 0.16 | 0.4 | 1.5 | 0.30 | 22.2 |
+| bmppi | crowd | 3 | 67 % | 33 % | 0.259 m | 0.59 | 97.0 | 0.23 | 0.19 | 0.0 | 1.2 | 0.30 | 27.7 |
+| dwa | clutter | 5 | 100 % | 0 % | 0.203 m | 0.73 | 62.6 | 0.25 | 0.22 | 0.0 | 0.1 | 0.30 | 10.6 |
+| dwa | crowd | 3 | 67 % | 33 % | 0.185 m | 0.55 | 105.1 | 0.22 | 0.20 | 0.7 | 2.8 | 0.30 | 23.0 |
+| log_mppi | clutter | 5 | 60 % | 20 % | 1.014 m | 0.39 | 69.3 | 0.17 | 0.15 | 1.4 | 3.2 | 0.27 | 14.2 |
+| log_mppi | crowd | 3 | 33 % | 33 % | 2.565 m | 0.43 | 99.3 | 0.20 | 0.19 | 3.7 | 8.7 | 0.26 | 23.3 |
+| mppi | clutter | 5 | 60 % | 0 % | 0.691 m | 0.42 | 72.2 | 0.31 | 0.30 | 1.4 | 5.3 | 0.25 | 18.0 |
+| mppi | crowd | 3 | 33 % | 33 % | 4.855 m | 0.24 | 126.2 | 0.22 | 0.20 | 3.3 | 8.2 | 0.26 | 37.7 |
+| pgmppi | clutter | 5 | 60 % | 0 % | 1.569 m | 0.40 | 111.8 | 0.18 | 0.16 | 1.6 | 3.6 | 0.29 | 28.8 |
+| pgmppi | crowd | 3 | 33 % | 33 % | 0.301 m | 0.44 | 111.2 | 0.21 | 0.19 | 3.0 | 4.7 | 0.29 | 35.0 |
+| pp | clutter | 5 | 40 % | 0 % | 4.082 m | 0.35 | 197.7 | 0.20 | 0.15 | 24.6 | 41.0 | 0.22 | 30.0 |
+| pp | crowd | 3 | 0 % | 67 % | 6.119 m | 0.09 | 276.1 | 0.20 | 0.13 | 33.7 | 66.0 | 0.19 | 76.3 |
+| prism | clutter | 5 | 60 % | 0 % | 2.037 m | 0.38 | 61.2 | 0.24 | 0.20 | 1.8 | 3.4 | 0.28 | 15.2 |
+| prism | crowd | 3 | 100 % | 0 % | 0.158 m | 0.67 | 79.7 | 0.21 | 0.18 | 1.0 | 1.8 | 0.30 | 25.0 |
+| prism_noadapt | clutter | 5 | 60 % | 0 % | 1.402 m | 0.41 | 80.4 | 0.23 | 0.18 | 1.6 | 4.2 | 0.29 | 27.0 |
+| prism_noadapt | crowd | 3 | 0 % | 67 % | 1.810 m | 0.43 | 154.2 | 0.23 | 0.21 | 2.0 | 4.7 | 0.29 | 48.3 |
+| prism_noadaptratio | clutter | 5 | 80 % | 0 % | 0.394 m | 0.59 | 56.2 | 0.18 | 0.17 | 1.4 | 2.2 | 0.30 | 16.4 |
+| prism_noadaptratio | crowd | 3 | 67 % | 33 % | 0.290 m | 0.51 | 84.7 | 0.24 | 0.21 | 1.3 | 2.8 | 0.30 | 24.0 |
+| prism_noprior | clutter | 5 | 40 % | 0 % | 2.559 m | 0.22 | 66.8 | 0.30 | 0.28 | 1.8 | 6.4 | 0.25 | 18.6 |
+| prism_noprior | crowd | 3 | 0 % | 67 % | 6.483 m | 0.00 | 64.8 | 0.37 | 0.34 | 1.3 | 3.2 | 0.27 | 15.0 |
+| prism_nounc | clutter | 5 | 80 % | 0 % | 0.210 m | 0.56 | 62.1 | 0.24 | 0.21 | 0.6 | 1.0 | 0.33 | 13.0 |
+| prism_nounc | crowd | 3 | 0 % | 67 % | 3.578 m | 0.26 | 82.7 | 0.13 | 0.10 | 1.0 | 3.3 | 0.30 | 20.0 |
+| prism_novalue | clutter | 5 | 40 % | 0 % | 2.364 m | 0.24 | 61.9 | 0.22 | 0.20 | 0.8 | 3.7 | 0.27 | 17.0 |
+| prism_novalue | crowd | 3 | 67 % | 33 % | 0.148 m | 0.49 | 129.7 | 0.23 | 0.20 | 1.7 | 4.5 | 0.29 | 34.3 |
+| prism_novis | clutter | 5 | 60 % | 0 % | 2.023 m | 0.40 | 57.2 | 0.26 | 0.23 | 1.2 | 2.6 | 0.29 | 13.0 |
+| prism_novis | crowd | 3 | 0 % | 33 % | 3.698 m | 0.24 | 81.3 | 0.27 | 0.25 | 3.0 | 7.8 | 0.27 | 22.7 |
+| rl | clutter | 5 | 80 % | 20 % | 1.666 m | 0.59 | 98.7 | 0.10 | 0.07 | 0.0 | 0.6 | 0.35 | 41.2 |
+| rl | crowd | 3 | 33 % | 67 % | 0.241 m | 0.53 | 85.2 | 0.03 | 0.00 | 0.3 | 1.5 | 0.33 | 31.0 |
+| rl_ens | clutter | 5 | 80 % | 20 % | 0.149 m | 0.65 | 51.7 | 0.08 | 0.06 | 0.2 | 0.2 | 0.33 | 25.2 |
+| rl_ens | crowd | 3 | 0 % | 100 % | 3.734 m | 0.27 | 53.0 | 0.06 | 0.04 | 2.0 | 2.8 | 0.29 | 23.7 |
+| rl_safe | clutter | 5 | 80 % | 0 % | 1.607 m | 0.54 | 103.7 | 0.11 | 0.08 | 0.0 | 1.2 | 0.34 | 42.6 |
+| rl_safe | crowd | 3 | 0 % | 67 % | 4.481 m | 0.24 | 138.3 | 0.07 | 0.04 | 2.0 | 7.3 | 0.32 | 51.0 |
+
+-> /home/nhanhuynh/Documents/Go2_assitant/results/office_20261121_164514
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: bi dung
+

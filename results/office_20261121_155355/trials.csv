@@ -1,0 +1,7 @@
+config,task,cat,robot,success,collision,err_m,err_deg,spl,shortest_m,travel_m,time_s,min_clear_m,min_clear_real_m,min_robot_gap_m,min_person_gap_m,replans,brakes,react_s,stops,stop_s,mean_v,osc,col_info
+prism,crowd:sanh_8_nguoi,crowd,go2,0,1,0.204,,0.725,14.54,20.06,61.5,0.301,0.275,,-0.055,37,4,0.51,0,0.5,0.329,18,"{""t"": 21.3, ""d"": -0.055, ""robot_in"": 0.39, ""person_in"": 0.11, ""robot_v"": 0.46}"
+prism,crowd:kho_xe_day,crowd,go2,0,1,4.913,,0.0,13.79,25.64,101.3,0.169,0.14,,-0.021,65,73,0.41,1,2.0,0.286,15,"{""t"": 64.7, ""d"": -0.021, ""robot_in"": -0.01, ""person_in"": -0.0, ""robot_v"": 0.07}"
+prism,crowd:van_phong_dong,crowd,go2,1,0,0.206,,0.784,18.69,23.84,78.2,0.237,0.21,,0.039,47,4,0.51,1,1.5,0.3,15,"{""t"": 73.6, ""d"": 0.039, ""robot_in"": 0.04, ""person_in"": 0.24, ""robot_v"": 0.06}"
+mppi,crowd:sanh_8_nguoi,crowd,go2,1,0,0.202,,0.753,14.54,19.31,67.5,0.318,0.293,,0.037,42,8,0.51,1,1.0,0.292,19,"{""t"": 2.8, ""d"": 0.037, ""robot_in"": 0.0, ""person_in"": 0.0, ""robot_v"": 0.07}"
+mppi,crowd:kho_xe_day,crowd,go2,0,1,3.595,,0.0,13.79,34.91,121.3,0.095,0.032,,-0.012,78,93,0.41,4,9.0,0.26,38,"{""t"": 79.4, ""d"": -0.012, ""robot_in"": -0.0, ""person_in"": -0.0, ""robot_v"": 0.05}"
+mppi,crowd:van_phong_dong,crowd,go2,0,1,6.472,,0.0,18.69,28.94,113.0,0.099,0.021,,-0.102,71,188,0.62,9,17.5,0.233,38,"{""t"": 69.9, ""d"": -0.102, ""robot_in"": -0.01, ""person_in"": -0.01, ""robot_v"": 0.12}"
