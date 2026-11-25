@@ -9,6 +9,16 @@
 ---
 
 ## 00. KẾ HOẠCH TỔNG TỚI KHI CÓ KẾT QUẢ VIẾT BÁO (23h30 22/11 — người dùng giao toàn quyền điều phối)
+**TRẠNG THÁI 25/11 23:50 — mọi phần KHÔNG cần chó đã xong:**
+- **Đã xong:** fastsim TEST, Gazebo TEST (C1 hơn B1 +15,0) kèm phần DRA* thăm dò (+12,9) và kiểm trôi, Isaac TEST.
+- **Các nhánh kiểm thêm:** vết ma, lỗi KeyError lúc khởi động, HM95, Py3.8, bản đồ office.
+- **Bài và đồ đi kèm:** bản thảo v0.2, gói triển khai `deploy/`, `CHECKLIST_CHO_THAT.md`, `DEMO_MO_PHONG.md`.
+- **GitHub:** đã đẩy lên nhánh `govoice-research-2026-11` (repo Go2_assitant) và nhánh `feat/gps-fusion` (repo Go2_sim).
+- **Việc còn lại (CẦN người dùng):**
+  - Buổi A: kiểm gói, ghi 10' có người, đo động học, chạy thử, S1–S2.
+  - Buổi B: S3–S5.
+  - Hạn IROS 2027 dự kiến 01/03/2027.
+
 Luật chung: `research/PROTOCOL.md`. Nhật ký mọi phép thử: `research/LOG.csv`. Báo cáo agent: `research/REPORT_*.md`.
 
 | Chặng | Việc | Dự kiến |

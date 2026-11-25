@@ -456,8 +456,9 @@ replicated across five seed sets. The same protocol exposed an unequal tuning bu
    pedestrians; Isaac shares rays, crowd and tracker with fastsim.
 10. **Real-robot dynamics partly assumed**: gain, delay and time constants of the real Go2 are literature values or assumptions.
 11. Other: the any-contact metric is sensitive to shallow contacts; pedestrian density and the distracted fraction are assumptions; the
-    Helbing-type model has not yet been checked line by line against [@helbing1995social]; confirmation seeds lie in the nominal development
+    Helbing-type model differs from [@helbing1995social] (circular surface-distance potential, continuous anisotropy; checked line by line, and a faithful elliptical re-implementation was run as a robustness arm, Section 6.10); confirmation seeds lie in the nominal development
     range; occlusion is not modelled explicitly; timing on the onboard computer is unmeasured.
+12. **Static local minima near goals (exploratory).** On a large 32 × 22 m office map (8 DEV routes × 3 runs), success did not differ (C1 17/27, B1 16/27, DRA* 14/27), but C1 failed 2/3 runs on a goal placed 0.75 m behind a 2.6 m reception desk: it kept 0.38–0.64 m from the desk corner where B1/DRA* passed at 0.25–0.42 m, stopped beside the desk and triggered the stuck detector. This matches the static-only arm (more stuck episodes for C1); an escape sample or a goal-proximity relaxation of the static margin is future work.
 
 ## 9. Conclusion
 For a quadruped that is about three times slower than surrounding pedestrians, a risk-aware MPPI with a discounted max-over-time

@@ -1,0 +1,2 @@
+XONG offA
+research/run_office_expl.sh: line 9: 1558314 Killed                     setsid ros2 launch go2_voice voice_sim.launch.py headless:=true rviz:=false world:=voice_office.sdf > "$OLDPWD/$4.sim.log" 2>&1

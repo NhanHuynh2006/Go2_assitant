@@ -73,11 +73,40 @@ Muốn nói bằng mic thay vì gõ phím thì bỏ `--no-tts` và thêm `--voic
 
 Bấm Ctrl+C ở mọi terminal. Nếu Gazebo còn treo, kiểm bằng `pgrep -fa "gz sim"` rồi tắt theo PID.
 
-## Lưu ý trước khi quay
+## Lưu ý trước khi quay (đã đo xong 25/11, xem `research/REPORT_OFFICE_EXPL.md`)
 
-- **C1 có thể kẹt trên bản đồ này.** Ngày 25/11, chạy thử nhanh 3 bài (khối so le, bếp xa, văn phòng có người):
-  - C1 kẹt cả 3 bài;
-  - B1 tới đích 2/3 bài.
+**Kết quả đo:** mỗi thuật toán chạy 8 bài, mỗi bài 3 lần.
 
-  Đang đo đủ 8 bài × 3 thuật toán × 3 lần (`results/OFFICE_EXPL/`). Xem kết quả trước để chọn cảnh quay cho đúng.
-- **Mỗi lần chạy mỗi khác.** Người đi bộ có ngẫu nhiên, nên một lượt thành công hay thất bại không đại diện cho cả thuật toán. Con số đại diện nằm trong bài báo, tính trên hàng nghìn lượt.
+| Thuật toán | Thành công |
+|---|---|
+| C1 | 17/27 |
+| B1 | 16/27 |
+| DRA* | 14/27 |
+
+Trên map này ba thuật toán **ngang nhau**. Lần C1 kẹt cả 3 bài lúc chạy thử nhanh chỉ là xui.
+
+**Cảnh nên quay** (C1 chạy tốt):
+
+| Bài | Tham số `--only` | C1 thành công |
+|---|---|---|
+| Văn phòng | `van_phong` | 3/3 |
+| Slalom cọc | `slalom` | 3/3 |
+| Lối pallet | `loi_pallet` | 3/3 |
+| Kho có xe đẩy | `kho_xe_day` | 2/3 |
+| Văn phòng có người | `van_phong_dong` | khoảng 50 %, hên xui |
+
+**Cảnh nên tránh:**
+- **Bếp xa** (`bep_xa`): thuật toán nào cũng kẹt ở khe hẹp giữa vách, cây nước và dãy bàn.
+- **Khối so le** (`qua_khoi`): C1 hay dừng cạnh quầy lễ tân vì giữ khoảng cách rộng. Đây là hạn chế đã ghi trong bài.
+- **Sảnh 8 người** (`sanh_8`): cả ba thuật toán đều va 2/3 lần. Chỉ quay nếu muốn nói về giới hạn.
+
+**Mỗi lần chạy mỗi khác.** Người đi bộ có yếu tố ngẫu nhiên, nên một lượt không đại diện cho cả thuật toán. Con số đại diện nằm trong bài báo, tính trên hàng nghìn lượt.
+
+**Câu lệnh gợi ý cho Cách A:**
+
+```bash
+venv/bin/python eval_sim.py --suite office --trials 1 --out results/demo_office --only van_phong,slalom,loi_pallet,kho_xe_day \
+  --configs "p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5" "mppi~t3~nl:ppl=100;ppl_len=0.5"
+```
+
+Lưu ý: `--only van_phong` khớp cả bài `van_phong_dong` (văn phòng có người).

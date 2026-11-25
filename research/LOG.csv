@@ -655,3 +655,4 @@ thoi_gian,agent,config,suite,n,success,ghi_chu
 2026-11-25 19:20,HM95,hm95b TEST,-,0,,KHONG CHAY theo quy tac coordinator: khong bien the a/b/c nao dat Phi-null>=0.2 o ca 2 seed
 2026-11-25 19:30,COORD,kiem troi: chay lai C1 nhom 0-19,Gazebo TEST (tham do),80,C1 60/80 vs goc 58/80,"khong troi (p 0.86); DRA* RTF thap hon chut (0.933 vs 0.967, do tai HM95), tercile RTF cao DRA* 74.6% van < C1"
 2026-11-25 22:10,COORD,THAM DO suite office (voice_office) C1/B1/DRA* x3,"office (DEV, khong phai TEST)",,,phat hien khi chuan bi demo: C1 ket 3/3 bai office (B1 2/3); chay 8 bai x 3 cau hinh x 3 lan de do
+2026-11-25 23:45,COORD,THAM DO suite office C1/B1/DRA* x3 (xong),office DEV,81,C1 17/27; B1 16/27; DRA* 14/27,khong khac; bep_xa ket o khe hep cho moi bo; qua_khoi C1 ket 2/3 do giu bien tinh ~0.4-0.6 m sau quay le tan

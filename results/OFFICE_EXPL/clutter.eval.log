@@ -21,3 +21,334 @@
 🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
 🗨️  (TTS tat) Dạ tới đó liền!
    ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.22 m, 53 s, di 14.7 m, lap lai 32 lan)
+[1/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.227 t=52.9s ctrl=PRISM3/v3/RespModel step95=12.0ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 49 s, di 13.1 m, lap lai 32 lan)
+[1/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:slalom_coc         go2    ok=1 col=0 err=0.175 t=49.6s ctrl=PRISM3/v3/RespModel step95=12.88ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.19 m, 84 s, di 25.5 m, lap lai 52 lan)
+[1/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.188 t=84.6s ctrl=PRISM3/v3/RespModel step95=12.064ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.20 m, 67 s, di 20.0 m, lap lai 41 lan)
+[1/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:bep_xa             go2    ok=1 col=0 err=0.187 t=66.7s ctrl=PRISM3/v3/RespModel step95=12.556ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.17 m, 210 s, di 59.9 m, lap lai 134 lan)
+[1/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 crowd:van_phong_dong       go2    ok=0 col=1 err=0.191 t=209.8s ctrl=PRISM3/v3/RespModel step95=18.79ms cmd50/95=0.101/0.111s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.09 m, 63 s, di 17.2 m, lap lai 39 lan)
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.091 t=63.1s ctrl=MPPI/v3/RespModel step95=12.682ms cmd50/95=0.101/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.17 m, 55 s, di 16.1 m, lap lai 35 lan)
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.156 t=55.5s ctrl=MPPI/v3/RespModel step95=11.865ms cmd50/95=0.101/0.107s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.19 m, 36 s, di 11.0 m, lap lai 25 lan)
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:slalom_coc         go2    ok=1 col=0 err=0.194 t=36.6s ctrl=MPPI/v3/RespModel step95=11.843ms cmd50/95=0.102/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.19 m, 76 s, di 23.1 m, lap lai 46 lan)
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.18 t=75.7s ctrl=MPPI/v3/RespModel step95=11.03ms cmd50/95=0.101/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:bep_xa             go2    ok=0 col=0 err=8.866 t=52.6s ctrl=MPPI/v3/RespModel step95=16.7ms cmd50/95=0.101/0.112s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/3] mppi~t3~nl:ppl=100;ppl_len=0.5 crowd:van_phong_dong       go2    ok=0 col=1 err=7.399 t=80.8s ctrl=MPPI/v3/RespModel step95=17.713ms cmd50/95=0.101/0.11s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.13 m, 47 s, di 14.7 m, lap lai 30 lan)
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.159 t=47.1s ctrl=DRAMPPI/v3/RespModel step95=11.352ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 19 = 19ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.22 m, 52 s, di 14.6 m, lap lai 31 lan)
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:van_phong          go2    ok=1 col=0 err=0.21 t=51.9s ctrl=DRAMPPI/v3/RespModel step95=10.622ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.19 m, 47 s, di 12.5 m, lap lai 33 lan)
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:slalom_coc         go2    ok=1 col=0 err=0.175 t=47.2s ctrl=DRAMPPI/v3/RespModel step95=10.6ms cmd50/95=0.101/0.107s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:loi_pallet         go2    ok=0 col=0 err=2.443 t=300.0s ctrl=DRAMPPI/v3/RespModel step95=11.942ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:bep_xa             go2    ok=0 col=0 err=8.863 t=93.1s ctrl=DRAMPPI/v3/RespModel step95=11.946ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: khong co duong
+
+[1/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 crowd:van_phong_dong       go2    ok=0 col=1 err=9.271 t=130.0s ctrl=DRAMPPI/v3/RespModel step95=16.76ms cmd50/95=0.1/0.11s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+   📢 [go2] Mình không tới được sảnh vào được rồi.
+🗨️  (TTS tat) Mình không tới được sảnh vào được rồi.   [go2] ✅ [go2] go_to 'sảnh vào' THAT BAI: ket
+
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:qua_khoi_so_le     go2    ok=0 col=0 err=2.356 t=93.5s ctrl=PRISM3/v3/RespModel step95=13.872ms cmd50/95=0.101/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.16 m, 47 s, di 14.3 m, lap lai 29 lan)
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.155 t=47.6s ctrl=PRISM3/v3/RespModel step95=11.293ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.17 m, 57 s, di 15.6 m, lap lai 38 lan)
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:slalom_coc         go2    ok=1 col=0 err=0.176 t=57.1s ctrl=PRISM3/v3/RespModel step95=13.281ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.20 m, 88 s, di 27.9 m, lap lai 55 lan)
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.208 t=88.6s ctrl=PRISM3/v3/RespModel step95=11.54ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:bep_xa             go2    ok=0 col=0 err=8.888 t=69.1s ctrl=PRISM3/v3/RespModel step95=13.479ms cmd50/95=0.101/0.111s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.18 m, 73 s, di 24.3 m, lap lai 46 lan)
+[2/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 crowd:van_phong_dong       go2    ok=1 col=0 err=0.171 t=72.8s ctrl=PRISM3/v3/RespModel step95=15.736ms cmd50/95=0.101/0.11s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.20 m, 51 s, di 14.7 m, lap lai 31 lan)
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.2 t=51.7s ctrl=MPPI/v3/RespModel step95=11.3ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.13 m, 47 s, di 15.2 m, lap lai 30 lan)
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.129 t=46.7s ctrl=MPPI/v3/RespModel step95=10.517ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được diem cheo được rồi.
+🗨️  (TTS tat) Mình không tới được diem cheo được rồi.   [go2] ✅ [go2] go_to 'diem cheo' THAT BAI: ket
+
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:slalom_coc         go2    ok=0 col=0 err=1.503 t=44.6s ctrl=MPPI/v3/RespModel step95=10.652ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.11 m, 82 s, di 26.8 m, lap lai 51 lan)
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.117 t=81.7s ctrl=MPPI/v3/RespModel step95=10.581ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:bep_xa             go2    ok=0 col=0 err=8.853 t=68.9s ctrl=MPPI/v3/RespModel step95=15.5ms cmd50/95=0.101/0.111s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.16 m, 95 s, di 27.5 m, lap lai 56 lan)
+[2/3] mppi~t3~nl:ppl=100;ppl_len=0.5 crowd:van_phong_dong       go2    ok=1 col=0 err=0.17 t=95.0s ctrl=MPPI/v3/RespModel step95=16.238ms cmd50/95=0.101/0.109s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 3 = 3ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.20 m, 67 s, di 17.7 m, lap lai 39 lan)
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:qua_khoi_so_le     go2    ok=0 col=1 err=0.197 t=66.8s ctrl=DRAMPPI/v3/RespModel step95=11.038ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.18 m, 52 s, di 15.2 m, lap lai 30 lan)
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:van_phong          go2    ok=1 col=0 err=0.19 t=52.3s ctrl=DRAMPPI/v3/RespModel step95=11.02ms cmd50/95=0.101/0.106s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.17 m, 45 s, di 12.9 m, lap lai 29 lan)
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:slalom_coc         go2    ok=1 col=0 err=0.168 t=45.0s ctrl=DRAMPPI/v3/RespModel step95=10.53ms cmd50/95=0.101/0.106s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:loi_pallet         go2    ok=0 col=0 err=7.345 t=300.1s ctrl=DRAMPPI/v3/RespModel step95=12.244ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   📢 [go2] Mình không tới được cuối kho được rồi.
+🗨️  (TTS tat) Mình không tới được cuối kho được rồi.   [go2] ✅ [go2] go_to 'cuối kho' THAT BAI: bi dung
+
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:bep_xa             go2    ok=0 col=0 err=8.891 t=80.9s ctrl=DRAMPPI/v3/RespModel step95=13.598ms cmd50/95=0.101/0.11s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.09 m, 216 s, di 58.7 m, lap lai 137 lan)
+[2/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 crowd:van_phong_dong       go2    ok=0 col=1 err=0.089 t=216.2s ctrl=DRAMPPI/v3/RespModel step95=17.972ms cmd50/95=0.101/0.112s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!
+   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.05 m, 89 s, di 25.3 m, lap lai 56 lan)
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.049 t=89.3s ctrl=PRISM3/v3/RespModel step95=12.912ms cmd50/95=0.101/0.108s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.21 m, 54 s, di 15.4 m, lap lai 32 lan)
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.214 t=54.6s ctrl=PRISM3/v3/RespModel step95=11.614ms cmd50/95=0.101/0.107s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.20 m, 36 s, di 11.3 m, lap lai 24 lan)
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:slalom_coc         go2    ok=1 col=0 err=0.201 t=36.6s ctrl=PRISM3/v3/RespModel step95=14.046ms cmd50/95=0.101/0.109s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.11 m, 162 s, di 52.0 m, lap lai 103 lan)
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.109 t=161.7s ctrl=PRISM3/v3/RespModel step95=11.8ms cmd50/95=0.101/0.107s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 clutter:bep_xa             go2    ok=0 col=0 err=8.901 t=105.0s ctrl=PRISM3/v3/RespModel step95=10.233ms cmd50/95=0.101/0.108s rtf=0.999 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[3/3] p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 crowd:van_phong_dong       go2    ok=0 col=1 err=8.994 t=217.9s ctrl=PRISM3/v3/RespModel step95=17.242ms cmd50/95=0.101/0.11s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.15 m, 45 s, di 14.6 m, lap lai 28 lan)
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:qua_khoi_so_le     go2    ok=1 col=0 err=0.149 t=44.9s ctrl=MPPI/v3/RespModel step95=9.943ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.14 m, 51 s, di 15.8 m, lap lai 32 lan)
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:van_phong          go2    ok=1 col=0 err=0.146 t=50.9s ctrl=MPPI/v3/RespModel step95=8.641ms cmd50/95=0.101/0.105s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.15 m, 30 s, di 10.7 m, lap lai 20 lan)
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:slalom_coc         go2    ok=1 col=0 err=0.161 t=30.0s ctrl=MPPI/v3/RespModel step95=9.107ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.18 m, 94 s, di 31.5 m, lap lai 58 lan)
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:loi_pallet         go2    ok=1 col=0 err=0.189 t=93.7s ctrl=MPPI/v3/RespModel step95=8.749ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 clutter:bep_xa             go2    ok=0 col=0 err=9.438 t=44.6s ctrl=MPPI/v3/RespModel step95=9.266ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+
+[3/3] mppi~t3~nl:ppl=100;ppl_len=0.5 crowd:van_phong_dong       go2    ok=0 col=0 err=9.424 t=93.0s ctrl=MPPI/v3/RespModel step95=16.032ms cmd50/95=0.101/0.11s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'sảnh vào' (lech 0.16 m, 78 s, di 23.4 m, lap lai 49 lan)
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:qua_khoi_so_le     go2    ok=0 col=1 err=0.156 t=78.0s ctrl=DRAMPPI/v3/RespModel step95=9.83ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'văn phòng' (lech 0.18 m, 48 s, di 14.6 m, lap lai 29 lan)
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:van_phong          go2    ok=1 col=0 err=0.177 t=48.3s ctrl=DRAMPPI/v3/RespModel step95=8.31ms cmd50/95=0.101/0.105s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+   [go2] ✅ [go2] Da toi 'diem cheo' (lech 0.16 m, 44 s, di 12.6 m, lap lai 29 lan)
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:slalom_coc         go2    ok=1 col=0 err=0.174 t=44.3s ctrl=DRAMPPI/v3/RespModel step95=8.918ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 0 = 0ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'cuối kho' (lech 0.15 m, 101 s, di 34.4 m, lap lai 64 lan)
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:loi_pallet         go2    ok=1 col=0 err=0.155 t=101.3s ctrl=DRAMPPI/v3/RespModel step95=9.048ms cmd50/95=0.101/0.106s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 1 = 1ms (robot dang lam o thread rieng)
+
+   📢 [go2] Mình không tới được bếp được rồi.
+🗨️  (TTS tat) Mình không tới được bếp được rồi.
+   [go2] ✅ [go2] go_to 'bếp' THAT BAI: ket
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 clutter:bep_xa             go2    ok=0 col=0 err=8.842 t=60.7s ctrl=DRAMPPI/v3/RespModel step95=11.06ms cmd50/95=0.101/0.107s rtf=1.0 sha=1
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
+🐶 Gô: Dạ tới đó liền!   [Reflex:go_to]
+🗨️  (TTS tat) Dạ tới đó liền!   ⏱️  STT 0 + len ke hoach 2 = 2ms (robot dang lam o thread rieng)
+
+   [go2] ✅ [go2] Da toi 'bếp' (lech 0.24 m, 170 s, di 53.7 m, lap lai 106 lan)
+[3/3] dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 crowd:van_phong_dong       go2    ok=1 col=0 err=0.254 t=169.7s ctrl=DRAMPPI/v3/RespModel step95=13.78ms cmd50/95=0.101/0.109s rtf=1.0 sha=1
+
+| config | loai | n | thanh cong | va cham | sai so TB | SPL | thoi gian TB (s) | ho min TB (m) | ho min Go2 that (m) | khung (lan) | dung (s) | toc do TB (m/s) | lac huong |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 | clutter | 15 | 53 % | 13 % | 2.543 m | 0.37 | 94.5 | 0.19 | 0.17 | 2.4 | 6.1 | 0.28 | 28.6 |
+| dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05 | crowd | 3 | 33 % | 67 % | 3.205 m | 0.22 | 172.0 | 0.04 | 0.01 | 6.3 | 20.5 | 0.27 | 59.3 |
+| mppi~t3~nl:ppl=100;ppl_len=0.5 | clutter | 15 | 73 % | 0 % | 2.025 m | 0.50 | 56.1 | 0.19 | 0.16 | 1.3 | 3.2 | 0.30 | 18.6 |
+| mppi~t3~nl:ppl=100;ppl_len=0.5 | crowd | 3 | 33 % | 33 % | 5.664 m | 0.22 | 89.6 | 0.18 | 0.16 | 1.3 | 5.3 | 0.29 | 30.0 |
+| p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | clutter | 15 | 73 % | 0 % | 1.624 m | 0.48 | 78.0 | 0.24 | 0.22 | 2.6 | 5.9 | 0.28 | 22.0 |
+| p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5 | crowd | 3 | 33 % | 67 % | 3.119 m | 0.36 | 166.8 | 0.16 | 0.12 | 4.0 | 11.8 | 0.28 | 48.0 |
+
+-> results/OFFICE_EXPL/clutter
+   [go2] 🛑 EMERGENCY STOP — da xoa hang doi va dung robot
