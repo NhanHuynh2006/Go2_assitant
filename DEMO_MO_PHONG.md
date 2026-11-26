@@ -69,6 +69,25 @@ GOVOICE_CONTROLLER='mppi~t3~nl:ppl=100;ppl_len=0.5' venv/bin/python run_sim.py -
 
 Muốn nói bằng mic thay vì gõ phím thì bỏ `--no-tts` và thêm `--voice`. Cần llama-server cho câu phức tạp; lệnh đơn vẫn chạy.
 
+## 3b. Cách C: GoVoice Studio, chấm lên bản đồ để chó đi (app có giao diện)
+
+```bash
+cd ~/Documents/Go2_assitant
+GOVOICE_CONTROLLER='p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5' python3 studio/govoice_studio.py
+```
+
+Muốn mở trên trình duyệt thay cho cửa sổ app thì thêm `--browser`. Muốn cài hẳn thì chạy `sudo apt install ./dist/govoice-studio_0.2.0_all.deb`, sau đó tìm **GoVoice Studio** trong menu.
+
+1. Bấm **▶ Chạy tất cả**. App tự bật mô phỏng, LLM và trợ lý, mất khoảng 40 s. Nếu sim đã chạy sẵn từ Terminal 1 thì app dùng luôn sim đó.
+2. Có nhiều cách ra lệnh:
+   - bấm lên bản đồ rồi bấm **▶ Đi tới đây**, hoặc **bấm đúp** để đi luôn;
+   - **⌖ Chấm nhanh** (phím G): bấm rồi kéo để chọn cả hướng quay mặt khi tới nơi;
+   - **Shift + bấm nhiều điểm** để tạo lộ trình, rồi bấm **▶ Đi lộ trình** hoặc **↻ Tuần tra**;
+   - gõ hoặc nói lệnh như "đi tới bếp".
+3. Bấm **E‑STOP** hoặc phím **Esc** để dừng ngay.
+
+Muốn có người đi bộ thì chạy thêm `movers.py` (Terminal 2 ở Cách B). Hướng dẫn đầy đủ nằm trong `studio/README.md`.
+
 ## 4. Tắt
 
 Bấm Ctrl+C ở mọi terminal. Nếu Gazebo còn treo, kiểm bằng `pgrep -fa "gz sim"` rồi tắt theo PID.
