@@ -89,6 +89,20 @@ Muốn mở trên trình duyệt thay cho cửa sổ app thì thêm `--browser`.
    - gõ hoặc nói lệnh như "đi tới bếp".
 3. Bấm **E‑STOP** hoặc phím **Esc** để dừng ngay.
 
+Trong Studio, sim có thêm hai điều chỉnh chỉ dùng cho demo:
+- Vận tốc ngang bị kẹp ở 0,15 m/s, giống bridge của chó thật. Muốn đổi thì đặt `GOVOICE_SIM_VY_CAP=0.25` trước lệnh mở Studio; đặt `0` để tắt.
+- Đường kế hoạch MPPI trên bản đồ chỉ vẽ lại tối đa 2 lần mỗi giây.
+
+Nút **C1+êm** là C1 cộng bộ nắn lệnh `~cs`, đúng cấu hình sẽ dùng cho chó thật.
+
+**Xem tia LiDAR và camera trước:** Studio không có hai khung này, phải mở RViz:
+
+```bash
+rviz2 -d ~/ros2_ws/src/unitree_go2_ros2/go2_voice/rviz/voice_sim.rviz
+```
+
+Chạy lệnh trên sau các dòng `source`/`export` ở mục 0.
+
 Muốn có người đi bộ thì chạy thêm `movers.py` (Terminal 2 ở Cách B). Hướng dẫn đầy đủ nằm trong `studio/README.md`.
 
 ## 4. Tắt

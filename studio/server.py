@@ -362,6 +362,23 @@ def _free_ahead(r, p):
         return None
 
 
+def _sim_vy_cap():
+    """CHI demo trong sim (Studio): kep |vy| <= GOVOICE_SIM_VY_CAP (mac dinh 0.15 m/s), giong bridge chó thật
+    (REAL_PREREG sua doi #1). Va trong tien trinh Studio, KHONG sua robot_ros.py (dong bang). 0 = tat."""
+    import robot_ros
+    cap = float(os.environ.get("GOVOICE_SIM_VY_CAP", "0.15"))
+    cls = robot_ros.RosRobotTools
+    if cap <= 0 or getattr(cls, "_vy_capped", False):
+        return
+    orig = cls._twist
+
+    def _twist(self, vx=0.0, vy=0.0, wz=0.0):
+        return orig(self, vx, max(-cap, min(cap, float(vy))), wz)
+
+    cls._twist, cls._vy_capped = _twist, True
+    print(f"[studio] sim: kep |vy| <= {cap} m/s (giong chó thật)")
+
+
 class Assistant:
     def __init__(self, real=False):
         self.real = real
@@ -398,6 +415,7 @@ class Assistant:
                                 backend_kw={"cfg_real": real, "sport": sport})
             else:
                 from robot_ros import discover_robots
+                _sim_vy_cap()                                  # demo sim: kep vy nhu bridge cho that
                 robots = []
                 for _ in range(10):
                     robots = discover_robots(wait_s=3.0)

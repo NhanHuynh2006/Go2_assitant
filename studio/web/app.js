@@ -113,6 +113,12 @@ function onState(st) {
   $("#splash").classList.toggle("hidden", ready || S.busyAll || simOn);
 
   // --- robot
+  // ke hoach MPPI doi 10 lan/s -> ve lai toi da 2 lan/s cho de nhin (chi hien thi)
+  const nowT = performance.now(); S.locT = S.locT || {}; S.locK = S.locK || {};
+  for (const r of st.robots) {
+    if (S.locK[r.key] && nowT - (S.locT[r.key] || 0) < 500 && r.local && r.local.length) r.local = S.locK[r.key];
+    else { S.locK[r.key] = r.local; S.locT[r.key] = nowT; }
+  }
   S.robots = st.robots; S.people = st.people;
   if (S.sel === null && S.robots.length) S.sel = S.robots[0].key;
   renderFleet(); renderTarget();
