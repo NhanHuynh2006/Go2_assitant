@@ -808,8 +808,10 @@ def make_app(args):
         gv = assistant.gv
         paper = ("p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5", "p3+geo-haz+gcv~t3~nl~cs:ppl=32;ppl_len=0.5", "mppi~t3~nl:ppl=100;ppl_len=0.5",
                  "dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05")      # C1, B1, DRA* (bai bao)
-        if gv is None or name not in ("mppi", "dwa", "pp", "rl", "rl_safe") + paper:
-            return {"ok": False}
+        if gv is None:
+            return {"ok": False, "msg": "Kết nối trợ lý trước"}
+        if name not in ("mppi", "dwa", "pp", "rl", "rl_safe") + paper:
+            return {"ok": False, "msg": "Bộ điều khiển này chưa có trong server — tắt Studio rồi mở lại"}
         from nav_local import BlobTracker
         for r in gv.robots.values():
             r.controller, r._ctrl = name, None

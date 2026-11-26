@@ -716,7 +716,7 @@ $("#moversBtn").addEventListener("click", async () => {
 });
 $$("#ctrlSeg button").forEach((b) => b.addEventListener("click", async () => {
   const r = await api("/api/controller", { name: b.dataset.c });
-  toast(r && r.ok ? `Né vật cản: ${b.textContent}` : "Kết nối trợ lý trước", !(r && r.ok));
+  toast(r && r.ok ? `Né vật cản: ${b.textContent}` : (r && r.msg) || "Studio đang chạy bản cũ — tắt Studio rồi mở lại", !(r && r.ok));
 }));
 $("#bannerBtn").addEventListener("click", async () => {
   await api("/api/restart", {}); toast("Đang nạp lại trợ lý cho bản đồ mới…");
