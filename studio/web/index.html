@@ -38,9 +38,9 @@
       <div class="proc" id="procSim">
         <div class="proc-l"><span class="dot"></span><div><b>Mô phỏng</b><small id="simInfo">đang tắt</small></div></div>
         <div class="proc-r">
-          <select id="simWorld" title="Bản đồ mô phỏng"><option value="voice_house">Nhà nhỏ</option><option value="voice_office">Văn phòng 30×20</option></select>
+          <select id="simWorld" title="Bản đồ mô phỏng"><option value="voice_house">Nhà nhỏ</option><option value="voice_office" selected>Văn phòng 30×20</option></select>
           <select id="simRobots" title="Số robot"><option value="1">1 con</option><option value="2">2 con</option></select>
-          <label class="chk" title="Mở cửa sổ Gazebo (tốn GPU)"><input type="checkbox" id="simGui">3D</label>
+          <label class="chk" title="Mở cửa sổ Gazebo (tốn GPU)"><input type="checkbox" id="simGui" checked>3D</label>
           <button class="btn sm" id="simBtn">Bật</button>
         </div>
       </div>
@@ -69,6 +69,9 @@
       <div class="ctrlrow" title="Thuật toán né vật cản khi đi tới đích">
         <span>Né vật cản</span>
         <div class="seg" id="ctrlSeg">
+          <button data-c="p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5" title="C1: MPPI nhận biết rủi ro (thuật toán trong bài báo)">C1</button>
+          <button data-c="mppi~t3~nl:ppl=100;ppl_len=0.5" title="B1: MPPI chuẩn đã chỉnh (baseline trong bài báo)">B1</button>
+          <button data-c="dra~t3~nl:w_soft=300;w_hard=0;sig_w=1.2;sig0=0.05" title="DRA*: DRA-MPPI cài lại (baseline trong bài báo)">DRA*</button>
           <button data-c="mppi" title="MPPI (Williams 2016, như Nav2): mượt, đi ngang được">MPPI</button>
           <button data-c="dwa" title="Dynamic Window (Fox 1997)">DWA</button>
           <button data-c="rl" title="Policy RL (PPO) học trong 100 triệu bước">RL</button>

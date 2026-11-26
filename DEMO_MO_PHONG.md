@@ -78,6 +78,9 @@ GOVOICE_CONTROLLER='p3+geo-haz+gcv~t3~nl:ppl=32;ppl_len=0.5' python3 studio/govo
 
 Muốn mở trên trình duyệt thay cho cửa sổ app thì thêm `--browser`. Muốn cài hẳn thì chạy `sudo apt install ./dist/govoice-studio_0.2.0_all.deb`, sau đó tìm **GoVoice Studio** trong menu.
 
+0. Ở dòng **Mô phỏng**, mặc định đã chọn bản đồ **Văn phòng 30×20** và tick **3D**; tick 3D thì cửa sổ Gazebo sẽ mở.
+   Ở hàng **bộ điều khiển**, bấm **C1** (thuật toán trong bài). Có thể bấm **B1** hoặc **DRA\*** để so sánh.
+   Nếu sim đang chạy sẵn bản đồ cũ (Nhà nhỏ), tắt nó trước.
 1. Bấm **▶ Chạy tất cả**. App tự bật mô phỏng, LLM và trợ lý, mất khoảng 40 s. Nếu sim đã chạy sẵn từ Terminal 1 thì app dùng luôn sim đó.
 2. Có nhiều cách ra lệnh:
    - bấm lên bản đồ rồi bấm **▶ Đi tới đây**, hoặc **bấm đúp** để đi luôn;
