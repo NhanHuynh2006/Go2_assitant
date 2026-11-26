@@ -43,7 +43,7 @@ Vạch xuất phát x = 0, hướng +x. Thùng carton 50 × 50 × 50 cm. Băng d
 ## 3. Thiết lập triển khai, khoá TRƯỚC lượt 1 và giữ nguyên CẢ phiên
 | mục | giá trị đăng ký | lý do |
 |---|---|---|
-| kẹp bridge (vx/vy/wz) | **0,30 / 0,25 / 0,50** (thí nghiệm chính). Chạy thử: 0,20 / 0,15 / 0,40 | trùng mức CHAMP cắt trong Gazebo TEST; người dùng yêu cầu bắt đầu ở 0,2 |
+| kẹp bridge (vx/vy/wz) | **0,30 / 0,15 / 0,50** (thí nghiệm chính; vy hạ từ 0,25, sửa đổi #1). Chạy thử: 0,20 / 0,15 / 0,40 | trùng mức CHAMP cắt trong Gazebo TEST; người dùng yêu cầu bắt đầu ở 0,2 |
 | goto_speed / goto_turn | 0,35 / 0,8 → vmax bộ điều khiển (0,595; 0,3; 1,0) | giá trị của fastsim.make_robot (đóng băng); bridge cắt giống Gazebo |
 | cảm biến LiDAR | `/go2/lidar/merged` (L1 + OS1). Chỉ dùng L1 nếu bench quá ngân sách (DEPLOY §6) | replay: L1 thấy rất ít (r95 ≈ 3,6 m, mù phía sau) |
 | D435i | quyết định theo DEPLOY §6 (mặc định TẮT) | CPU Orin; USB 2.1; thiếu camera_info |
@@ -196,8 +196,15 @@ Không dùng "hơn hẳn" hay "chắc chắn". Không gộp số chó thật v�
 
 ## 11. Khác với TEST mô phỏng (công bố trong bài)
 - Có `~cs` cho cả hai.
-- Tốc độ bị bridge kẹp 0,30/0,25/0,50, giống CHAMP trong Gazebo nhưng khác fastsim go2.
+- Tốc độ bị bridge kẹp 0,30/0,15/0,50: tiến và xoay giống CHAMP trong Gazebo, ngang thấp hơn (0,15 so với 0,25); khác fastsim go2.
 - Cảm biến LiDAR 3D gộp thay cho LiDAR 2D 360 tia; có hoặc không có depth.
 - Người thật đi theo kịch bản, không phải mô hình đám đông.
 - Không có PGIF\*/DRA\*/B0.
 - Số lượt ít, thứ tự kịch bản cố định.
+
+
+## Sửa đổi #1 (coordinator, 26/11/2026, TRƯỚC mọi lượt trên chó thật; người dùng yêu cầu)
+- **Thay đổi:** kẹp vận tốc ngang của bridge trong thí nghiệm chính hạ từ **0,25 xuống 0,15 m/s**. Chạy thử giữ 0,20/0,15/0,40. Giới hạn cứng của script giữ nguyên.
+- **Lý do:** trong Gazebo TEST, robot di chuyển lệch hướng thân khoảng 41–44° (trung vị). Nguyên nhân là MPPI dùng vận tốc ngang, trong khi CHAMP cắt tốc độ tiến ở 0,3 m/s nhưng cho ngang tới 0,25 m/s. Giảm đi chéo giúp người xung quanh dễ đoán hướng robot hơn.
+- **Phạm vi:** áp dụng như nhau cho C1 và B1. Bộ điều khiển, lịch chạy (REAL_SCHEDULE.csv) và tiêu chí thành công không đổi.
+- **Ảnh hưởng dự kiến:** đo trên DEV fastsim (champ2, vy 0,15 so với 0,25), xem research/LOG.csv ngày 26/11.

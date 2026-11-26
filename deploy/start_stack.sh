@@ -2,7 +2,7 @@
 # start_stack.sh (REALPREP) - CHAY TREN ORIN CUA CHO. Bat bridge (CO kep toc do) + cam bien cho deploy/real_trial.py.
 #
 #   VX=0.20 VY=0.15 WZ=0.40 MERGED=1 DEPTH=0 bash deploy/start_stack.sh      # chay thu (shakedown)
-#   VX=0.30 VY=0.25 WZ=0.50 MERGED=1 DEPTH=0 bash deploy/start_stack.sh      # thi nghiem chinh (= CHAMP Gazebo TEST)
+#   VX=0.30 VY=0.15 WZ=0.50 MERGED=1 DEPTH=0 bash deploy/start_stack.sh      # thi nghiem chinh (vy 0.15: sua doi #1 REAL_PREREG, 26/11)
 #   bash deploy/start_stack.sh stop                                         # dung MOI tien trinh do script nay bat (theo PID)
 #
 # Gioi han CUNG: script tu choi VX > 0.35, VY > 0.30, WZ > 0.80 (REAL_PREREG §3).

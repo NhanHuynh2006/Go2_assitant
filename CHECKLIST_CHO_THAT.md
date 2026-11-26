@@ -44,7 +44,7 @@ Khoảng 2 buổi: buổi A gồm bước 1–9 và S1–S2; buổi B gồm S3�
 | 6 | **Đo động học** (bridge vẫn chỉ đọc; không người trong ô 7 × 7). Các bước A–F theo `dyn/HUONG_DAN_DO.md` §2. Nghỉ ≥ 2' giữa các giai đoạn. Bước G (nền khác) để buổi khác | `python3 ~/govoice_real/dyn/sysid_real.py --check …` rồi `--go --stage 1 …` | 40 |
 | 7 | Tắt bridge chỉ đọc; bật bridge **kẹp 0,2** | `bash deploy/start_stack.sh stop; VX=0.20 VY=0.15 WZ=0.40 MERGED=1 DEPTH=0 bash deploy/start_stack.sh` | 5 |
 | 8 | **Chạy thử** 2 cặp S1 + 2 cặp S2 (P1 đi chậm). Thử 1 lần R gạt cần, xem runner ghi "remote". Xem log không có "loi xu ly LiDAR" | `--make-schedule --pairs 2 --scenarios S1,S2 --seed 1 --out ~/realprep/shakedown`, rồi `--run … --cs --no-depth` | 25 |
-| 9 | **Khoá đăng ký trước**: điền REAL_PREREG §9 (hash gói, verify, bench, quyết định cloud/depth/fast.so). Đổi sang kẹp 0,30/0,25/0,50 | `cp audit/REAL_SCHEDULE.csv ~/realprep/main/schedule.csv; sha256sum …` = cea711d1… | 10 |
+| 9 | **Khoá đăng ký trước**: điền REAL_PREREG §9 (hash gói, verify, bench, quyết định cloud/depth/fast.so). Đổi sang kẹp 0,30/0,15/0,50: `bash deploy/start_stack.sh stop; VX=0.30 VY=0.15 WZ=0.50 MERGED=1 DEPTH=0 bash deploy/start_stack.sh` | `cp audit/REAL_SCHEDULE.csv ~/realprep/main/schedule.csv; sha256sum …` = cea711d1… | 10 |
 | 10 | **S1** vật tĩnh, 40 lượt | `python3 deploy/real_trial.py --run --out ~/realprep/main --cloud /go2/lidar/merged --cs --no-depth` | 60 |
 | 11 | Nghỉ, sạc hoặc đổi pin, chép bag ra laptop | `rsync -a unitree@<ip>:realprep/ ~/realprep_backup/` | 20 |
 | 12 | **S2** 1 người cắt ngang, 40 lượt (P1) | runner tự tiếp từ lượt chưa xong | 70 |

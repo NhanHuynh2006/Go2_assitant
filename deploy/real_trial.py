@@ -114,7 +114,7 @@ class Session(object):
         real = dict(ns="go2", odom_topic="/go2/odom", cloud_topic=a.cloud, imu_topic="/go2/imu/data",
                     depth_topic=a.depth_topic, base_height=0.32)
         # goto_speed / goto_turn = gia tri cua fastsim.make_robot (dong bang): vmax bo dieu khien 0.595 m/s, wz 1.0;
-        # gioi han THAT do bridge kep (--max-vx ...), giong CHAMP kep 0.3/0.25/0.5 trong Gazebo TEST.
+        # gioi han THAT do bridge kep (--max-vx ...), thi nghiem chinh 0.30/0.15/0.50 (REAL_PREREG sua doi #1; CHAMP Gazebo TEST kep 0.3/0.25/0.5).
         os.environ["GOVOICE_CONTROLLER"] = CONFIGS["C1"]           # tracker v3 ngay tu dau (khong lan vet v2)
         self.r = RealRobotTools(cfg_real=real, sport=None, goto_speed=0.35, goto_turn=0.8,
                                 use_depth=not a.no_depth, shared_map=True)

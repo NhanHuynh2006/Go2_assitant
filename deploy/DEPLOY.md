@@ -55,7 +55,7 @@ cd ~/govoice_real
 VX=0.20 VY=0.15 WZ=0.40 MERGED=1 DEPTH=0 bash deploy/start_stack.sh    # CHẠY THỬ, tối đa 0,2 m/s
 # ... chạy thử xong và đạt §5 REAL_PREREG:
 bash deploy/start_stack.sh stop
-VX=0.30 VY=0.25 WZ=0.50 MERGED=1 DEPTH=0 bash deploy/start_stack.sh    # THÍ NGHIỆM CHÍNH (= mức CHAMP cắt trong Gazebo TEST)
+VX=0.30 VY=0.15 WZ=0.50 MERGED=1 DEPTH=0 bash deploy/start_stack.sh    # THÍ NGHIỆM CHÍNH (vy 0,15: sửa đổi #1 REAL_PREREG, 26/11)
 ```
 - Script **từ chối** VX > 0,35, VY > 0,30, WZ > 0,80.
 - Script không chạy nếu đã có bridge, go2_auto hoặc tour_driver.
