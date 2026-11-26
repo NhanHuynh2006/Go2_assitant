@@ -362,6 +362,9 @@ def _free_ahead(r, p):
         return None
 
 
+MAP_PERIOD = float(os.environ.get("GOVOICE_STUDIO_MAP_PERIOD", "0.2"))   # gui anh ban do moi 0.2 s (5 Hz = nhip robot ghi ban do); truoc: 1 s
+
+
 def _sim_vy_cap():
     """CHI demo trong sim (Studio): kep |vy| <= GOVOICE_SIM_VY_CAP (mac dinh 0.15 m/s), giong bridge chó thật
     (REAL_PREREG sua doi #1). Va trong tien trinh Studio, KHONG sua robot_ros.py (dong bang). 0 = tat."""
@@ -978,7 +981,7 @@ def make_app(args):
                     cache["ver"] += 1
             except Exception as e:                            # noqa: BLE001
                 print(f"[studio] map: {e!r}")
-            time.sleep(1.0)
+            time.sleep(MAP_PERIOD)
     threading.Thread(target=map_loop, daemon=True).start()
 
     wcache = {"t": 0.0, "w": None}
