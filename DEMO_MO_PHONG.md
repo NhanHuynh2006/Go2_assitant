@@ -105,6 +105,16 @@ Chạy lệnh trên sau các dòng `source`/`export` ở mục 0.
 
 Muốn có người đi bộ thì chạy thêm `movers.py` (Terminal 2 ở Cách B). Hướng dẫn đầy đủ nằm trong `studio/README.md`.
 
+## 3c. Chó bị lật trong sim
+
+Người ảo được dịch chuyển cưỡng bức theo từng bước, và 30 % trong số họ "mải nhìn điện thoại" nên không né robot. Vì vậy khi họ đâm vào, chó có thể bị đẩy lật. Lúc đó chạy:
+
+```bash
+bash ~/Documents/Go2_assitant/dung_cho_day.sh
+```
+
+Lệnh này dựng chó dậy tại chỗ, giữ nguyên hướng mặt. Sau đó ra lệnh đi tiếp như bình thường.
+
 ## 4. Tắt
 
 Bấm Ctrl+C ở mọi terminal. Nếu Gazebo còn treo, kiểm bằng `pgrep -fa "gz sim"` rồi tắt theo PID.
