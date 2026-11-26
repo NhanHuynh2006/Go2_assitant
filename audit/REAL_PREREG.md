@@ -207,4 +207,13 @@ Không dùng "hơn hẳn" hay "chắc chắn". Không gộp số chó thật v�
 - **Thay đổi:** kẹp vận tốc ngang của bridge trong thí nghiệm chính hạ từ **0,25 xuống 0,15 m/s**. Chạy thử giữ 0,20/0,15/0,40. Giới hạn cứng của script giữ nguyên.
 - **Lý do:** trong Gazebo TEST, robot di chuyển lệch hướng thân khoảng 41–44° (trung vị). Nguyên nhân là MPPI dùng vận tốc ngang, trong khi CHAMP cắt tốc độ tiến ở 0,3 m/s nhưng cho ngang tới 0,25 m/s. Giảm đi chéo giúp người xung quanh dễ đoán hướng robot hơn.
 - **Phạm vi:** áp dụng như nhau cho C1 và B1. Bộ điều khiển, lịch chạy (REAL_SCHEDULE.csv) và tiêu chí thành công không đổi.
-- **Ảnh hưởng dự kiến:** đo trên DEV fastsim (champ2, vy 0,15 so với 0,25), xem research/LOG.csv ngày 26/11.
+- **Ảnh hưởng đo được:** thăm dò trên DEV fastsim, chế độ champ2, seed 0–299, 205 thế giới có người. Thế giới ghép cặp giữa hai mức kẹp; chạy bằng `research/vy15_fastsim.py`.
+
+  | Cấu hình | vy kẹp 0,15 | vy kẹp 0,25 | Cặp bất đồng | p |
+  |---|---|---|---|---|
+  | C1 | 72,2 % | 75,1 % | 20/26 | 0,46 |
+  | B1 | 65,9 % | 69,3 % | 26/33 | 0,43 |
+
+  Chênh C1 − B1: +6,3 điểm (p = 0,12) ở mức 0,15, so với +5,9 điểm (p = 0,10) ở mức 0,25.
+
+  **Kết luận:** hạ kẹp làm cả hai cấu hình giảm khoảng 3 điểm (không có ý nghĩa thống kê); khoảng cách giữa C1 và B1 giữ nguyên.
