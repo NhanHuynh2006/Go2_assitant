@@ -101,15 +101,15 @@ select {
 
 /* ---------- processes ---------- */
 .proc {
-  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
   padding: 8px 0; border-top: 1px solid var(--line);
 }
 .proc:first-of-type { border-top: 0; }
-.proc-l { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.proc-l { display: flex; align-items: center; gap: 10px; min-width: 110px; flex: 1 1 110px; }
 .proc-l b { display: block; font-weight: 550; font-size: 12.5px; }
 .proc-l small { display: block; color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }
 .proc-l b { white-space: nowrap; }
-.proc-r { display: flex; align-items: center; gap: 6px; flex: none; }
+.proc-r { display: flex; align-items: center; gap: 6px; flex: 0 1 auto; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--dim); flex: none; }
 .proc.ok .dot { background: var(--ok); box-shadow: 0 0 8px var(--ok); }
 .proc.wait .dot { background: var(--warn); animation: blink 1s infinite; }

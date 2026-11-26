@@ -68,9 +68,13 @@ function onState(st) {
   const simOn = sim.running || sim.external;
   setProc("#procSim", sim.running ? (a.ready ? "ok" : "wait") : sim.external ? "ok" : "",
     sim.running ? `${sim.args.robots} con · ${fmtUp(sim.uptime)}` : sim.external ? "đang chạy ngoài app" : "đang tắt");
-  $("#simBtn").textContent = sim.running ? "Tắt" : "Bật";
-  $("#simBtn").classList.toggle("danger", sim.running);
-  $("#simBtn").disabled = sim.external && !sim.running;
+  $("#simBtn").textContent = simOn ? "Tắt" : "Bật";                 // sim ngoai app cung tat duoc (server don ca sim ngoai)
+  $("#simBtn").classList.toggle("danger", simOn);
+  $("#simBtn").disabled = false;
+  for (const id of ["#simRobots", "#simGui"]) {                       // chi ap dung khi BAT sim -> khoa khi dang chay
+    $(id).disabled = simOn;
+    $(id).title = simOn ? "Tắt mô phỏng trước để đổi số robot / 3D" : (id === "#simGui" ? "Mở cửa sổ Gazebo (tốn GPU)" : "Số robot");
+  }
   setPill("#pillSim", simOn ? (a.ready ? "ok" : "wait") : "");
   if (real) $("#procSim").classList.add("hidden");
 
